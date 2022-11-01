@@ -1,0 +1,146 @@
+unit UnitNote;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Classes,
+
+  JSDElphiSystem,
+  JS,
+  Web,
+
+  WEBLib.Graphics,
+  WEBLib.Controls,
+  WEBLib.Forms,
+  WEBLib.Dialogs,
+  WEBLib.WebCtrls,
+
+  Vcl.Controls, Vcl.StdCtrls, WEBLib.StdCtrls;
+
+type
+  TNoteForm = class(TWebForm)
+    divNoteHolder: TWebHTMLDiv;
+    divNoteHeader: TWebHTMLDiv;
+    divNoteFooter: TWebHTMLDiv;
+    divNoteContent: TWebHTMLDiv;
+    divNoteTitleHolder: TWebHTMLDiv;
+    divNoteTitle: TWebHTMLDiv;
+    btnNoteCancel: TWebButton;
+    btnNoteSave: TWebButton;
+    procedure WebFormCreate(Sender: TObject);
+    procedure btnNoteCancelClick(Sender: TObject);
+    procedure btnNoteSaveClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  NoteForm: TNoteForm;
+  suneditorNote: JSValue;
+
+implementation
+
+{$R *.dfm}
+
+procedure TNoteForm.btnNoteCancelClick(Sender: TObject);
+begin
+  ModalResult := mrCancel;
+end;
+
+procedure TNoteForm.btnNoteSaveClick(Sender: TObject);
+begin
+  ModalResult := mrOk;
+end;
+
+procedure TNoteForm.WebFormCreate(Sender: TObject);
+begin
+
+
+  asm
+    var SunEditorDefaultOptions = {
+      mode: "classic",
+      resizingBar: true,
+      charCounter: true,
+      charCounterLabel: "Character Count: ",
+      showPathLabel: true,
+      addTagsWhitelist: "i svg",
+      codeMirror: window.CodeMirror,
+//        src: CodeMirror,
+//        options: {
+//          theme: "custom",
+//          scrollbarStyle: "overlay"
+//        }
+//      },
+      katex: katex,
+      font: [
+        'Roboto',
+        'Roboto Condensed',
+        'Cairo'
+      ],
+      buttonList: [
+        ['undo', 'redo'],
+        ['font', 'fontSize', 'formatBlock'],
+        ['paragraphStyle', 'blockquote','horizontalRule'],
+        ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript', 'math'],
+        ['fontColor', 'hiliteColor', 'textStyle', 'removeFormat'],
+        ['list', 'outdent', 'indent', 'align', 'lineHeight'],
+        ['table', 'link', 'image', 'video', 'audio'],
+        ['fullScreen','showBlocks', 'codeView', 'print']
+      ],
+      icons: {
+        undo: '<span><i class="fas fa-undo"></i></span>',
+        save: '<span class="HTMLSave" style="margin-top: -2px;"><i class="fas fa-check fa-xl"></i></span>',
+        redo: '<span><i class="fas fa-redo"></i></span>',
+
+        paragraph_style: '<span><i class="fas fa-paragraph"></i></span>',
+        blockquote: '<span><i class="fas fa-quote-left"></i></span>',
+//        horizontal_rule: '<span><i class="fas fa-horizontal-rule"></i></span>',
+
+        bold: '<span><i class="fas fa-bold"></i></span>',
+        underline: '<span><i class="fas fa-underline"></i></span>',
+        italic: '<span><i class="fas fa-italic"></i></span>',
+        strike: '<span><i class="fas fa-strikethrough"></i></span>',
+        subscript: '<span><i class="fas fa-subscript"></i></span>',
+        superscript: '<span><i class="fas fa-superscript"></i></span>',
+        math: '<span><i class="fas fa-square-root-variable"></i></span>',
+
+        font_color: '<span><i class="fas fa-pen-nib"></i></span>',
+        highlight_color: '<span><i class="fas fa-highlighter"></i></span>',
+//        text_style: '<span><i class="fas fa-text"></i></span>',
+        erase: '<span><i class="fas fa-eraser"></i></span>',
+
+        list_bullets: '<span><i class="fas fa-list"></i></span>',
+        list_number: '<span><i class="fas fa-list-ol"></i></span>',
+        outdent: '<span><i class="fas fa-outdent"></i></span>',
+        indent: '<span><i class="fas fa-indent"></i></span>',
+        align_left: '<span><i class="fas fa-align-left"></i></span>',
+        align_right: '<span><i class="fas fa-align-right"></i></span>',
+        align_justify: '<span><i class="fas fa-align-justify"></i></span>',
+        align_center: '<span><i class="fas fa-align-center"></i></span>',
+        line_height: '<span><i class="fas fa-text-height"></i></span>',
+
+        table: '<span><i class="fas fa-table"></i></span>',
+        link: '<span><i class="fas fa-link"></i></span>',
+        image: '<span><i class="fas fa-image"></i></span>',
+        video: '<span><i class="fas fa-video"></i></span>',
+        audio: '<span><i class="fas fa-microphone"></i></span>',
+
+        expansion: '<span><i class="fas fa-expand"></i></span>',
+        reduction: '<span><i class="fas fa-compress"></i></span>',
+        show_blocks: '<span><i class="fas fa-tasks-alt"></i></span>',
+        code_view: '<span><i class="fas fa-code"></i></span>',
+        print: '<span><i class="fas fa-print"></i></span>'
+      }
+    };
+
+    SunEditorDefaultOptions["resizingBarContainer"] = "#divNoteFooter";
+    SunEditorDefaultOptions["toolbarContainer"] = "#divNoteHeader";
+    this.suneditorNote = SUNEDITOR.create('divNoteContentText', SunEditorDefaultOptions );
+
+  end;
+end;
+
+end.

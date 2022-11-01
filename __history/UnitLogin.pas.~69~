@@ -1,0 +1,240 @@
+unit UnitLogin;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Classes,
+
+  JSDelphiSystem,
+  JS,
+  Web,
+
+  XData.Web.Client,
+  XData.Web.Connection,
+
+  WEBLib.Graphics,
+  WEBLib.Controls,
+  WEBLib.Forms,
+  WEBLib.Dialogs,
+  WEBLib.StdCtrls,
+  WEBLib.WebCtrls,
+  WEBLib.WebTools,
+  WEBLib.JSON,
+
+  Vcl.StdCtrls,
+  Vcl.Controls, WEBLib.ExtCtrls;
+
+type
+  TLoginForm = class(TWebForm)
+    divLoginMain: TWebHTMLDiv;
+    WebHTMLDiv3: TWebHTMLDiv;
+    WebHTMLDiv4: TWebHTMLDiv;
+    edtLoginEMail: TWebEdit;
+    divLoginPasswordHolder: TWebHTMLDiv;
+    WebHTMLDiv2: TWebHTMLDiv;
+    edtLoginPassword: TWebEdit;
+    divLoginTitle: TWebHTMLDiv;
+    divLoginButtons: TWebHTMLDiv;
+    btnLogin: TWebButton;
+    btnForgot: TWebButton;
+    btnRegister: TWebButton;
+    labelLoginProgress: TWebLabel;
+    tmrOpen: TWebTimer;
+    [async] procedure btnLoginClick(Sender: TObject);
+    procedure edtLoginEMailKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure WebFormShow(Sender: TObject);
+    procedure tmrOpenTimer(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  LoginForm: TLoginForm;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1;
+
+procedure TLoginForm.btnLoginClick(Sender: TObject);
+var
+  Response: TXDataClientResponse;
+  ClientConn:   TXDataWebClient;
+  Data: JSValue;
+  Blob: JSValue;
+  JWTClaims: TJSONObject;
+begin
+
+  // Development server or Production server?
+  if GetQueryParam('Dev') <> '' then
+  begin
+    Form1.ServerName := 'http://localhost:2001/tms/xdata';
+    Form1.LogActivity('Development Mode Specified');
+  end
+  else
+  begin
+    Form1.ServerName := 'https://carnival.500foods.com:10101/tms/xdata';
+  end;
+  Form1.LogActivity('Connecting to '+Form1.ServerName);
+  labelLoginProgress.Caption := 'Connecting to '+Form1.ServerName;
+
+
+  // Try and establish a connection to the server
+  if not(Form1.ServerConn.Connected) then
+  begin
+    Form1.ServerConn.URL := Form1.ServerName;
+    try
+      await(Form1.ServerConn.OpenAsync);
+      Form1.LogActivity('Connected to '+Form1.ServerName);
+      labelLoginProgress.Caption := 'Connected to '+Form1.ServerName;
+
+    except on E: Exception do
+      begin
+        Form1.LogActivity('Connnection Error: ['+E.ClassName+'] '+E.Message);
+        console.log('Connnection Error: ['+E.ClassName+'] '+E.Message);
+        labelLoginProgress.Caption := 'Connection Failed - Please Try Again';
+      end;
+    end;
+  end;
+
+
+  // We've got a connection, let's make the request
+  Form1.LogActivity('Authorizing');
+  labelLoginProgress.Caption := 'Authorizing';
+  if (Form1.ServerConn.Connected) then
+  begin
+    try
+      ClientConn := TXDataWebClient.Create(nil);
+      ClientConn.Connection := Form1.ServerConn;
+      Form1.JWT := '';
+      Response := await(ClientConn.RawInvokeAsync('ISurveyAdminService.Login', [
+        edtLoginEmail.Text,
+        edtLoginPassword.Text
+      ]));
+      Blob := Response.Result;
+      asm
+        Data = Blob.value;
+      end;
+    except on E: Exception do
+      begin
+        Form1.LogActivity('Authorization Error: ['+E.ClassName+'] '+E.Message);
+        console.log('Authorization Error: ['+E.ClassName+'] '+E.Message);
+        labelLoginProgress.Caption := 'Authorization Error - Please Try Again';
+      end;
+    end;
+  end;
+
+
+  // Do we have any data?
+  if (Length(String(Data)) > 0) then
+  begin
+    // Yes we do!
+    if Copy(String(Data),1,7) = 'Bearer ' then
+    begin
+      Form1.JWT := String(Data);
+      Form1.LogActivity('Login Successful.');
+      labelLoginProgress.Caption := 'Login Successful';
+
+      // Get various claims values from the JWT
+      JWTClaims := TJSONObject.ParseJSONValue(Window.atob(Copy(Form1.JWT, Pos('.',Form1.JWT)+1, LastDelimiter('.',Form1.JWT)-Pos('.',Form1.JWT)-1))) as TJSONObject;
+      Form1.Account_ID := (JWTClaims.Get('account').JSONValue as TJSONString).Value;
+      Form1.Account_EMail := (JWTClaims.Get('email').JSONValue as TJSONString).Value;
+      Form1.Account_First := (JWTClaims.Get('first').JSONValue as TJSONString).Value;
+      Form1.Account_Last := (JWTClaims.Get('last').JSONValue as TJSONString).Value;
+      Form1.Account_Security := (JWTClaims.Get('security').JSONValue as TJSONString).Value;
+      JWTClaims.Free;
+
+      // Five elements in security field
+      // 1st - Access to Surveys tab
+      // 2rd - Accdss to Responses tab
+      // 3nd - Access to Questions tab
+      // 4th - Access to Administration tab
+      // 5th - Access to Logging Tab
+
+      // Hide buttons that aren't available
+      if Copy(Form1.Account_Security,1,1) = 'N' then Form1.btnSurveys.ElementHandle.remove;
+      if Copy(Form1.Account_Security,2,1) = 'N' then Form1.btnResponses.ElementHandle.remove;
+      if Copy(Form1.Account_Security,3,1) = 'N' then Form1.btnQuestions.ElementHandle.remove;
+      if Copy(Form1.Account_Security,4,1) = 'N' then Form1.btnAccounts.ElementHandle.remove;
+      if Copy(Form1.Account_Security,5,1) = 'N' then Form1.btnLogging.ElementHandle.remove;
+
+      // Set the interface to whatever the first available function is
+      if      Copy(Form1.Account_Security,1,1) <> 'N' then Form1.btnMainMenuClick(Form1.btnSurveys)
+      else if Copy(Form1.Account_Security,2,1) <> 'N' then Form1.btnMainMenuClick(Form1.btnResponses)
+      else if Copy(Form1.Account_Security,3,1) <> 'N' then Form1.btnMainMenuClick(Form1.btnQuestions)
+      else if Copy(Form1.Account_Security,4,1) <> 'N' then Form1.btnMainMenuClick(Form1.btnAccounts)
+      else if Copy(Form1.Account_Security,5,1) <> 'N' then Form1.btnMainMenuClick(Form1.btnLogging);
+
+      // Preload data for available functions
+      if Copy(Form1.Account_Security,1,1) <> 'N' then Form1.btnSurveyReloadClick(Sender);
+      if Copy(Form1.Account_Security,4,1) <> 'N' then Form1.btnAccountsReloadClick(Sender);
+      if Copy(Form1.Account_Security,4,1) <> 'N' then Form1.btnIssuessReloadClick(Sender);
+      if Copy(Form1.Account_Security,5,1) <> 'N' then Form1.btnLoggingReloadClick(Sender);
+
+      // Personalize Account button
+      Form1.btnAccount.Caption := '<div class="mx-2"><i class="fa-solid fa-user me-2 fa-xl"></i>'+Form1.Account_First+'</div>';
+      Form1.btnAccount.Hint := 'Change Account Settings for '+Form1.Account_First+' '+Form1.Account_Last;
+
+      // Close Login Form and continue in main application
+      ModalResult := mrOk;
+      Form1.divBlocker.Visible := False;
+    end
+    else
+    begin
+      Form1.LogActivity('Incorrect E-Mail / Password. Please Try Again.');
+      labelLoginProgress.Caption := 'Incorrect E-Mail or Password - Please Try Again';
+      edtLoginPassword.SetFocus;
+      edtLoginPassword.SelectAll;
+    end;
+  end;
+
+end;
+
+procedure TLoginForm.edtLoginEMailKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+  begin
+    if Trim(edtLoginEMail.Text) = '' then
+    begin
+      edtLoginEmail.SetFocus;
+    end
+    else if Trim(edtLoginPassword.Text) = '' then
+    begin
+      edtLoginPassword.SetFocus;
+    end
+    else
+    begin
+      btnLoginClick(Sender);
+    end;
+  end
+  else
+  begin
+    if labelLoginProgress.Caption <> 'Please Login'
+    then labelLoginProgress.Caption := 'Please Login';
+  end;
+
+end;
+
+procedure TLoginForm.tmrOpenTimer(Sender: TObject);
+begin
+  tmrOpen.Enabled := False;
+  asm
+    document.getElementById('edtLoginEMail').focus();
+    document.body.classList.add('Ready');
+  end;
+end;
+
+procedure TLoginForm.WebFormShow(Sender: TObject);
+begin
+  tmrOpen.Enabled := True;
+  divLoginMain.Top := ((Height - divLoginMain.Height) div 2);
+  divLoginMain.Left := ((Width - divLoginMain.Width) div 2);
+end;
+
+end.
