@@ -24,7 +24,7 @@ object NoteForm: TNoteForm
     Margins.Bottom = 4
     ElementClassName = 
       'd-flex resize-drag overflow-hidden rounded flex-column border bo' +
-      'rder-3 border-danger'
+      'rder-3 border-danger bg-danger'
     ElementID = 'divNoteHolder'
     Align = alClient
     ChildOrder = 2
@@ -32,14 +32,14 @@ object NoteForm: TNoteForm
     Role = ''
     object divNoteHeader: TWebHTMLDiv
       Left = 0
-      Top = 60
+      Top = 57
       Width = 632
       Height = 50
-      ElementClassName = 'order-2 align-self-start sun-editor'
+      ElementClassName = 'flex-shrink-0 order-2 align-self-start sun-editor'
       ElementID = 'divNoteHeader'
       HeightStyle = ssAuto
       WidthStyle = ssPercent
-      Align = alTop
+      ChildOrder = 2
       ElementPosition = epRelative
       ElementFont = efCSS
       Role = ''
@@ -48,18 +48,16 @@ object NoteForm: TNoteForm
       Left = 0
       Top = 456
       Width = 632
-      Height = 18
-      ElementClassName = 'order-4 align-self-end sun-editor d-flex overflow-hidden'
+      Height = 20
+      ElementClassName = 'flex-shrink-0 order-4 sun-editor d-flex overflow-hidden'
       ElementID = 'divNoteFooter'
-      WidthStyle = ssPercent
-      Align = alBottom
-      ChildOrder = 1
+      WidthStyle = ssAuto
+      ChildOrder = 4
       ElementPosition = epRelative
       ElementFont = efCSS
       Role = ''
     end
     object divNoteContent: TWebHTMLDiv
-      AlignWithMargins = True
       Left = 0
       Top = 110
       Width = 632
@@ -71,8 +69,7 @@ object NoteForm: TNoteForm
       ElementClassName = 'order-3 align-self-stretch flex-fill'
       ElementID = 'divNoteContent'
       WidthStyle = ssPercent
-      Align = alClient
-      ChildOrder = 2
+      ChildOrder = 3
       ElementPosition = epRelative
       ElementFont = efCSS
       HTML.Strings = (
@@ -97,9 +94,9 @@ object NoteForm: TNoteForm
         Top = 0
         Width = 632
         Height = 28
+        ElementClassName = 'flex-shrink-0'
         ElementID = 'divNoteTitle'
         WidthStyle = ssPercent
-        Align = alClient
         ElementPosition = epRelative
         ElementFont = efCSS
         HTML.Strings = (
@@ -155,11 +152,12 @@ object NoteForm: TNoteForm
       Top = 28
       Width = 632
       Height = 32
-      ElementClassName = 'd-none justify-content-center order-1  bg-secondary'
+      ElementClassName = 
+        'flex-shrink-0 d-none justify-content-center order-1  bg-secondar' +
+        'y'
       ElementID = 'divCategoriesHolder'
       WidthStyle = ssPercent
-      Align = alTop
-      ChildOrder = 4
+      ChildOrder = 1
       ElementPosition = epRelative
       ElementFont = efCSS
       Role = ''

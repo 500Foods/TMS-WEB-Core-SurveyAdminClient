@@ -57,172 +57,38 @@ type
     btnDiscord: TWebButton;
     tmrLaunch: TWebTimer;
     divSurveysSurveyHolder: TWebHTMLDiv;
-    splitterSurveyMain: TWebSplitter;
     divSurveysMain: TWebHTMLDiv;
     pageControlSurveys: TWebPageControl;
     pageConfig: TWebTabSheet;
     pageQuestion: TWebTabSheet;
     pagePreview: TWebTabSheet;
-    divSurveysOptions: TWebHTMLDiv;
-    splitterSurveyConfig: TWebSplitter;
-    pagecontrolSurveysConfig: TWebPageControl;
-    pageConfigBasic: TWebTabSheet;
-    pageBanner: TWebTabSheet;
-    pageChangeHistory: TWebTabSheet;
     divSurveysButtons: TWebHTMLDiv;
     divSurveysSurveyList: TWebHTMLDiv;
     btnSurveyNew: TWebButton;
     btnSurveyDelete: TWebButton;
     btnSurveyClone: TWebButton;
     divSurveyMenu: TWebHTMLDiv;
-    divSurveyMenuLeft: TWebPanel;
-    btnSurveyOptions: TWebButton;
-    btnSurveyQuestions: TWebButton;
-    btnSurveyPreview: TWebButton;
     divSurveyMenuRight: TWebPanel;
     btnSurveyCancel: TWebButton;
-    [async] btnSurveySave: TWebButton;
-    scrollConfigBasic: TWebScrollBox;
-    divConfigBasicName: TWebHTMLDiv;
-    divConfigBasicNameLabel: TWebHTMLDiv;
-    divConfigBasicID: TWebHTMLDiv;
-    divConfigBasicIDLabel: TWebHTMLDiv;
-    divConfigBasicLink: TWebHTMLDiv;
-    divConfigBasicLinkLabel: TWebHTMLDiv;
-    edtConfigBasicName: TWebEdit;
-    scrollConfigBanner: TWebScrollBox;
-    divConfigBannerTitle: TWebHTMLDiv;
-    divConfigBannerTitleLabel: TWebHTMLDiv;
-    edtConfigBannerTitle: TWebEdit;
-    divConfigBannerFooter: TWebHTMLDiv;
-    divConfigBannerFooterLabel: TWebHTMLDiv;
-    edtConfigBannerFooter: TWebEdit;
-    edtConfigBasicID: TWebEdit;
-    edtConfigBasicLink: TWebEdit;
+    btnSurveySave: TWebButton;
     ServerConn: TXDataWebConnection;
     btnSurveyReload: TWebButton;
     divBlocker: TWebHTMLDiv;
     btnLogging: TWebButton;
     pageLogging: TWebTabSheet;
-    divConfigBasicGroup: TWebHTMLDiv;
-    divConfigBasicGroupLabel: TWebHTMLDiv;
-    edtConfigBasicGroup: TWebEdit;
-    btnSurveyPermissions: TWebButton;
     divLoggingHolder: TWebHTMLDiv;
     divLoggingButtons: TWebHTMLDiv;
-    btnLoggingToday: TWebButton;
-    btnLogging7Days: TWebButton;
-    btnLoggingAllData: TWebButton;
     divLogging: TWebHTMLDiv;
     btnTicket: TWebButton;
     pagePermissions: TWebTabSheet;
-    btnLoggingReload: TWebButton;
-    divChangeHistoryHolder: TWebHTMLDiv;
-    divChangeHistoryButtons: TWebHTMLDiv;
-    btnChangeHistoryReload: TWebButton;
-    divChangeHistory: TWebHTMLDiv;
-    pageAvailability: TWebTabSheet;
-    pageBannerPre: TWebTabSheet;
-    pageBannerPause: TWebTabSheet;
-    pageBannerPost: TWebTabSheet;
-    pageAbout: TWebTabSheet;
-    pageFeedback: TWebTabSheet;
-    pageNotes: TWebTabSheet;
-    divAvailabilityHolder: TWebHTMLDiv;
-    divAvailabilityButtons: TWebHTMLDiv;
-    btnAvailabilityAdd: TWebButton;
-    divAvailability: TWebHTMLDiv;
-    labelAvailabilityCountdown: TWebLabel;
-    labelAvailabilityStatus: TWebLabel;
-    btnAvailabilityDelete: TWebButton;
-    divSurveyInfoHolder: TWebHTMLDiv;
-    divSurveyInfoButtons: TWebHTMLDiv;
-    btnSurveyInfoReload: TWebButton;
-    divSurveyInfo: TWebHTMLDiv;
-    divConfigBannerContentHolder: TWebHTMLDiv;
-    divConfigBannerContentHeader: TWebHTMLDiv;
-    divConfigBannerContentFooter: TWebHTMLDiv;
-    divConfigBannerContent: TWebHTMLDiv;
-    divNotesHolder: TWebHTMLDiv;
-    divNotesButtons: TWebHTMLDiv;
-    btnNotesAdd: TWebButton;
-    btnNotesDelete: TWebButton;
-    divNotes: TWebHTMLDiv;
-    scrollConfigBannerPause: TWebScrollBox;
-    divConfigBannerPauseTitle: TWebHTMLDiv;
-    divConfigBannerPauseTitleLabel: TWebHTMLDiv;
-    edtConfigBannerPauseTitle: TWebEdit;
-    divConfigBannerPauseFooter: TWebHTMLDiv;
-    divConfigBannerPauseFooterLabel: TWebHTMLDiv;
-    edtConfigBannerPauseFooter: TWebEdit;
-    divConfigBannerPauseContentHolder: TWebHTMLDiv;
-    divConfigBannerPauseContentHeader: TWebHTMLDiv;
-    divConfigBannerPauseContentFooter: TWebHTMLDiv;
-    divConfigBannerPauseContent: TWebHTMLDiv;
-    scrollConfigBannerPre: TWebScrollBox;
-    divConfigBannerPreTitle: TWebHTMLDiv;
-    divConfigBannerPreTitleLabel: TWebHTMLDiv;
-    edtConfigBannerPreTitle: TWebEdit;
-    divConfigBannerPreFooter: TWebHTMLDiv;
-    divConfigBannerPreFooterLabel: TWebHTMLDiv;
-    edtConfigBannerPreFooter: TWebEdit;
-    divConfigBannerPreContentHolder: TWebHTMLDiv;
-    divConfigBannerPreContentHeader: TWebHTMLDiv;
-    divConfigBannerPreContentFooter: TWebHTMLDiv;
-    divConfigBannerPreContent: TWebHTMLDiv;
-    scrollConfigBannerPost: TWebScrollBox;
-    divConfigBannerPostTitle: TWebHTMLDiv;
-    divConfigBannerPostTitleLabel: TWebHTMLDiv;
-    edtConfigBannerPostTitle: TWebEdit;
-    divConfigBannerPostFooter: TWebHTMLDiv;
-    divConfigBannerPostFooterLabel: TWebHTMLDiv;
-    edtConfigBannerPostFooter: TWebEdit;
-    divConfigBannerPostContentHolder: TWebHTMLDiv;
-    divConfigBannerPostContentHeader: TWebHTMLDiv;
-    divConfigBannerPostContentFooter: TWebHTMLDiv;
-    divConfigBannerPostContent: TWebHTMLDiv;
-    scrollConfigFeedback: TWebScrollBox;
-    divConfigFeedbackTitle: TWebHTMLDiv;
-    divConfigFeedbackTitleLabel: TWebHTMLDiv;
-    edtConfigFeedbackTitle: TWebEdit;
-    divConfigFeedbackContentHolder: TWebHTMLDiv;
-    divConfigFeedbackContentHeader: TWebHTMLDiv;
-    divConfigFeedbackContentFooter: TWebHTMLDiv;
-    divConfigFeedbackContent: TWebHTMLDiv;
-    scrollConfigAbout: TWebScrollBox;
-    divConfigAboutTitle: TWebHTMLDiv;
-    divConfigAboutTitleLabel: TWebHTMLDiv;
-    edtConfigAboutTitle: TWebEdit;
-    divConfigAboutContentHolder: TWebHTMLDiv;
-    divConfigAboutContentHeader: TWebHTMLDiv;
-    divConfigAboutContentFooter: TWebHTMLDiv;
-    divConfigAboutContent: TWebHTMLDiv;
-    divConfigBasicLiveLinkHolder: TWebHTMLDiv;
-    divConfigBasicLiveLinkLabel: TWebHTMLDiv;
-    divConfigBasicTestLinkHolder: TWebHTMLDiv;
-    divConfigBasicTestLinkLabel: TWebHTMLDiv;
-    divConfigBasicTestLink: TWebHTMLDiv;
-    divConfigBasicLiveLink: TWebHTMLDiv;
-    pageQRCode: TWebTabSheet;
-    divQRCodeHolder: TWebHTMLDiv;
-    divQRCodeConstraints: TWebHTMLDiv;
-    qrcode: TTMSFNCWXQRCode;
-    btnNotesReload: TWebButton;
-    btnLoggingPrint: TWebButton;
-    btnAvailabilityPrint: TWebButton;
-    btnChangeHistoryPrint: TWebButton;
-    btnNotesPrint: TWebButton;
     divAccountsHolder: TWebHTMLDiv;
     divAccountsButtons: TWebHTMLDiv;
     btnAccountsReload: TWebButton;
-    btnAccountsPrint: TWebButton;
     divAccounts: TWebHTMLDiv;
     divIssuesHolder: TWebHTMLDiv;
     divIssuesButtons: TWebHTMLDiv;
     btnIssuesReload: TWebButton;
-    btnIssuesPrint: TWebButton;
     divIssues: TWebHTMLDiv;
-    splitterAccounts: TWebSplitter;
     btnAddUser: TWebButton;
     btnDeleteUser: TWebButton;
     btnSetPassword: TWebButton;
@@ -231,47 +97,28 @@ type
     btnIssueStatusInProgress: TWebButton;
     btnIssueStatusClosed: TWebButton;
     divPermissionsHolder: TWebHTMLDiv;
-    WebHTMLDiv2: TWebHTMLDiv;
+    divPermissionsButtons: TWebHTMLDiv;
     btnPermissionsReload: TWebButton;
-    btnPermissionsPrint: TWebButton;
-    divPermissions: TWebHTMLDiv;
     divPreviewHolder: TWebHTMLDiv;
-    WebHTMLDiv3: TWebHTMLDiv;
+    divPreviewButtons: TWebHTMLDiv;
     btnPreviewReload: TWebButton;
-    scrollPreview: TWebScrollBox;
-    divPreview: TWebHTMLDiv;
-    WebPanel1: TWebPanel;
-    btnPreviewSize0: TWebButton;
-    btnPreviewSize2: TWebButton;
-    btnPreviewSize3: TWebButton;
-    btnPreviewSize4: TWebButton;
-    btnPreviewSize1: TWebButton;
+    panelPreviewSize: TWebPanel;
     btnViewActivityLog: TWebButton;
     divResponsesHolder: TWebHTMLDiv;
     divResponsesButtons: TWebHTMLDiv;
     btnResponsesReload: TWebButton;
-    btnResponsesPrint: TWebButton;
     divResponses: TWebHTMLDiv;
     divFeedbackHolder: TWebHTMLDiv;
     divFeedbackButtons: TWebHTMLDiv;
     btnFeedbackReload: TWebButton;
-    btnFeedbackPrint: TWebButton;
     btnFeedbackStatusNew: TWebButton;
     btnFeedbackStatusInProgress: TWebButton;
     btnFeedbackStatusClosed: TWebButton;
     btnFeedbackActivityLog: TWebButton;
     divFeedback: TWebHTMLDiv;
-    splitterResponses: TWebSplitter;
-    WebPanel2: TWebPanel;
-    btnPreviewActive: TWebButton;
-    btnPreviewPause: TWebButton;
-    btnPreviewPost: TWebButton;
-    btnPreviewPre: TWebButton;
-    btnPreviewAuto: TWebButton;
-    btnAvailabilityReload: TWebButton;
+    panelPreviewStatus: TWebPanel;
     tmrCountdown: TWebTimer;
     divQuestionsHolder: TWebHTMLDiv;
-    splitterQuestions: TWebSplitter;
     divQuestion: TWebHTMLDiv;
     divQuestionTypeHolder: TWebHTMLDiv;
     divQuestionType: TWebHTMLDiv;
@@ -325,14 +172,246 @@ type
     divQuestionFooterHolder: TWebHTMLDiv;
     divQuestionFooter: TWebHTMLDiv;
     edtQuestionFooter: TWebEdit;
-    procedure btnMainMenuClick(Sender: TObject);
+    btnResponsesClearFilters: TWebButton;
+    panelResponsesExport: TWebPanel;
+    panelAccountsExport: TWebPanel;
+    panelIssuesExport: TWebPanel;
+    panelPermissionsExport: TWebPanel;
+    divSurveyMenuLeft: TWebHTMLDiv;
+    panelFeedbackExport: TWebPanel;
+    divResponsesGroupingHolder: TWebHTMLDiv;
+    comboResponsesGrouping: TWebComboBox;
+    btnSurveyOptions: TWebButton;
+    btnSurveyQuestions: TWebButton;
+    btnSurveyPermissions: TWebButton;
+    btnSurveyPreview: TWebButton;
+    btnLogging7Days: TWebButton;
+    btnLoggingAllData: TWebButton;
+    btnLoggingClearFilters: TWebButton;
+    btnLoggingReload: TWebButton;
+    btnLoggingToday: TWebButton;
+    divLoggingDateRangeHolder: TWebHTMLDiv;
+    labelLoggingDateRange: TWebLabel;
+    divLoggingStart: TWebHTMLDiv;
+    divLoggingEnd: TWebHTMLDiv;
+    divLoggingGroupingHolder: TWebHTMLDiv;
+    labelLoggingGroupingLabel: TWebLabel;
+    comboLoggingGrouping: TWebComboBox;
+    panelLoggingExport: TWebPanel;
+    btnLoggingExport: TWebButton;
+    btnLoggingExportCSV: TWebButton;
+    btnLoggingExportExcel: TWebButton;
+    btnLoggingExportJSON: TWebButton;
+    btnLoggingExportPDF: TWebButton;
+    btnLoggingExportPrint: TWebButton;
+    divConfigHolder: TWebHTMLDiv;
+    pagecontrolSurveysConfig: TWebPageControl;
+    pageConfigBasic: TWebTabSheet;
+    divConfigBasicGroup: TWebHTMLDiv;
+    divConfigBasicGroupLabel: TWebHTMLDiv;
+    edtConfigBasicGroup: TWebEdit;
+    divConfigBasicID: TWebHTMLDiv;
+    divConfigBasicIDLabel: TWebHTMLDiv;
+    edtConfigBasicID: TWebEdit;
+    divConfigBasicLink: TWebHTMLDiv;
+    divConfigBasicLinkLabel: TWebHTMLDiv;
+    edtConfigBasicLink: TWebEdit;
+    divConfigBasicLiveLinkHolder: TWebHTMLDiv;
+    divConfigBasicLiveLinkLabel: TWebHTMLDiv;
+    divConfigBasicLiveLink: TWebHTMLDiv;
+    divConfigBasicName: TWebHTMLDiv;
+    divConfigBasicNameLabel: TWebHTMLDiv;
+    edtConfigBasicName: TWebEdit;
+    divConfigBasicTestLinkHolder: TWebHTMLDiv;
+    divConfigBasicTestLinkLabel: TWebHTMLDiv;
+    divConfigBasicTestLink: TWebHTMLDiv;
+    divSurveyInfoHolder: TWebHTMLDiv;
+    divSurveyInfoButtons: TWebHTMLDiv;
+    btnSurveyInfoReload: TWebButton;
+    panelSurveyInfoExport: TWebPanel;
+    divSurveyInfo: TWebHTMLDiv;
+    pageNotes: TWebTabSheet;
+    divNotesHolder: TWebHTMLDiv;
+    divNotesButtons: TWebHTMLDiv;
+    btnNotesAdd: TWebButton;
+    btnNotesDelete: TWebButton;
+    btnNotesReload: TWebButton;
+    panelNotesExport: TWebPanel;
+    divNotes: TWebHTMLDiv;
+    pageAvailability: TWebTabSheet;
+    divAvailabilityHolder: TWebHTMLDiv;
+    divAvailabilityButtons: TWebHTMLDiv;
+    labelAvailabilityCountdown: TWebLabel;
+    btnAvailabilityAdd: TWebButton;
+    btnAvailabilityDelete: TWebButton;
+    btnAvailabilityReload: TWebButton;
+    btnAvailabilityStatus: TWebButton;
+    panelAvailabiltyExport: TWebPanel;
+    divAvailability: TWebHTMLDiv;
+    pageBanner: TWebTabSheet;
+    divConfigBannerContentHolder: TWebHTMLDiv;
+    divConfigBannerContentHeader: TWebHTMLDiv;
+    divConfigBannerContentFooter: TWebHTMLDiv;
+    divConfigBannerContent: TWebHTMLDiv;
+    divConfigBannerFooter: TWebHTMLDiv;
+    divConfigBannerFooterLabel: TWebHTMLDiv;
+    edtConfigBannerFooter: TWebEdit;
+    divConfigBannerTitle: TWebHTMLDiv;
+    divConfigBannerTitleLabel: TWebHTMLDiv;
+    edtConfigBannerTitle: TWebEdit;
+    pageBannerPre: TWebTabSheet;
+    divConfigBannerPreContentHolder: TWebHTMLDiv;
+    divConfigBannerPreContentHeader: TWebHTMLDiv;
+    divConfigBannerPreContentFooter: TWebHTMLDiv;
+    divConfigBannerPreContent: TWebHTMLDiv;
+    divConfigBannerPreFooter: TWebHTMLDiv;
+    divConfigBannerPreFooterLabel: TWebHTMLDiv;
+    edtConfigBannerPreFooter: TWebEdit;
+    divConfigBannerPreTitle: TWebHTMLDiv;
+    divConfigBannerPreTitleLabel: TWebHTMLDiv;
+    edtConfigBannerPreTitle: TWebEdit;
+    pageBannerPause: TWebTabSheet;
+    divConfigBannerPauseContentHolder: TWebHTMLDiv;
+    divConfigBannerPauseContentHeader: TWebHTMLDiv;
+    divConfigBannerPauseContentFooter: TWebHTMLDiv;
+    divConfigBannerPauseContent: TWebHTMLDiv;
+    divConfigBannerPauseFooter: TWebHTMLDiv;
+    divConfigBannerPauseFooterLabel: TWebHTMLDiv;
+    edtConfigBannerPauseFooter: TWebEdit;
+    divConfigBannerPauseTitle: TWebHTMLDiv;
+    divConfigBannerPauseTitleLabel: TWebHTMLDiv;
+    edtConfigBannerPauseTitle: TWebEdit;
+    pageBannerPost: TWebTabSheet;
+    divConfigBannerPostContentHolder: TWebHTMLDiv;
+    divConfigBannerPostContentHeader: TWebHTMLDiv;
+    divConfigBannerPostContentFooter: TWebHTMLDiv;
+    divConfigBannerPostContent: TWebHTMLDiv;
+    divConfigBannerPostFooter: TWebHTMLDiv;
+    divConfigBannerPostFooterLabel: TWebHTMLDiv;
+    edtConfigBannerPostFooter: TWebEdit;
+    divConfigBannerPostTitle: TWebHTMLDiv;
+    divConfigBannerPostTitleLabel: TWebHTMLDiv;
+    edtConfigBannerPostTitle: TWebEdit;
+    pageAbout: TWebTabSheet;
+    divConfigAboutContentHolder: TWebHTMLDiv;
+    divConfigAboutContentHeader: TWebHTMLDiv;
+    divConfigAboutContentFooter: TWebHTMLDiv;
+    divConfigAboutContent: TWebHTMLDiv;
+    divConfigAboutTitle: TWebHTMLDiv;
+    divConfigAboutTitleLabel: TWebHTMLDiv;
+    edtConfigAboutTitle: TWebEdit;
+    pageFeedback: TWebTabSheet;
+    divConfigFeedbackContentHolder: TWebHTMLDiv;
+    divConfigFeedbackContentHeader: TWebHTMLDiv;
+    divConfigFeedbackContentFooter: TWebHTMLDiv;
+    divConfigFeedbackContent: TWebHTMLDiv;
+    divConfigFeedbackTitle: TWebHTMLDiv;
+    divConfigFeedbackTitleLabel: TWebHTMLDiv;
+    edtConfigFeedbackTitle: TWebEdit;
+    pageChangeHistory: TWebTabSheet;
+    divChangeHistoryHolder: TWebHTMLDiv;
+    divChangeHistoryButtons: TWebHTMLDiv;
+    btnChangeHistoryReload: TWebButton;
+    panelChangeHistoryExport: TWebPanel;
+    divChangeHistory: TWebHTMLDiv;
+    pageQRCode: TWebTabSheet;
+    divQRCodeHolder: TWebHTMLDiv;
+    divQRCodeConstraints: TWebHTMLDiv;
+    qrcode: TTMSFNCWXQRCode;
+    btnSurveyInfoExport: TWebButton;
+    btnSurveyInfoExportCSV: TWebButton;
+    btnSurveyInfoExportExcel: TWebButton;
+    btnSurveyInfoExportJSON: TWebButton;
+    btnSurveyInfoExportPDF: TWebButton;
+    btnSurveyInfoExportPrint: TWebButton;
+    btnNotesExport: TWebButton;
+    btnNotesExportCSV: TWebButton;
+    btnNotesExportExcel: TWebButton;
+    btnNotesExportJSON: TWebButton;
+    btnNotesExportPDF: TWebButton;
+    btnNotesExportPrint: TWebButton;
+    btnAvailabilityExport: TWebButton;
+    btnAvailabilityExportCSV: TWebButton;
+    btnAvailabilityExportExcel: TWebButton;
+    btnAvailabilityExportJSON: TWebButton;
+    btnAvailabilityExportPDF: TWebButton;
+    btnAvailabilityExportPrint: TWebButton;
+    btnChangeHistoryExport: TWebButton;
+    btnChangeHistoryExportCSV: TWebButton;
+    btnChangeHistoryExportExcel: TWebButton;
+    btnChangeHistoryExportJSON: TWebButton;
+    btnChangeHistoryExportPDF: TWebButton;
+    btnChangeHistoryExportPrint: TWebButton;
+    divSurveysHolderResize: TWebHTMLDiv;
+    divSurveysOptionsHolder: TWebHTMLDiv;
+    divSurveysOptionsResize: TWebHTMLDiv;
+    divSurveysOptions: TWebHTMLDiv;
+    divQuestionsHolderResize: TWebHTMLDiv;
+    btnPermissionsExport: TWebButton;
+    btnPermissionsExportCSV: TWebButton;
+    btnPermissionsExportExcel: TWebButton;
+    btnPermissionsExportJSON: TWebButton;
+    btnPermissionsExportPDF: TWebButton;
+    btnPermissionsExportPrint: TWebButton;
+    divPermissions: TWebHTMLDiv;
+    btnPreviewSize0: TWebButton;
+    btnPreviewSize1: TWebButton;
+    btnPreviewSize2: TWebButton;
+    btnPreviewSize3: TWebButton;
+    btnPreviewSize4: TWebButton;
+    btnPreviewAuto: TWebButton;
+    btnPreviewActive: TWebButton;
+    btnPreviewPre: TWebButton;
+    btnPreviewPause: TWebButton;
+    btnPreviewPost: TWebButton;
+    divPreview: TWebHTMLDiv;
+    btnPreviewAvailabilityStatus: TWebButton;
+    labelPreviewAvailabilityCountdown: TWebLabel;
+    btnPreviewPrint: TWebButton;
+    divResponsesHolderResize: TWebHTMLDiv;
+    btnResponsesExport: TWebButton;
+    btnResponsesExportCSV: TWebButton;
+    btnResponsesExportExcel: TWebButton;
+    btnResponsesExportJSON: TWebButton;
+    btnResponsesExportPDF: TWebButton;
+    btnResponsesExportPrint: TWebButton;
+    btnResponsesGrouping: TWebButton;
+    btnFeedbackExport: TWebButton;
+    btnFeedbackExportCSV: TWebButton;
+    btnFeedbackExportExcel: TWebButton;
+    btnFeedbackExportJSON: TWebButton;
+    btnFeedbackExportPDF: TWebButton;
+    btnFeedbackExportPrint: TWebButton;
+    divAccountsHolderResize: TWebHTMLDiv;
+    btnAccountsExport: TWebButton;
+    btnAccountsExportCSV: TWebButton;
+    btnAccountsExportExcel: TWebButton;
+    btnAccountsExportJSON: TWebButton;
+    btnAccountsExportPDF: TWebButton;
+    btnAccountsExportPrint: TWebButton;
+    btnIssuesExport: TWebButton;
+    btnIssuesExportCSV: TWebButton;
+    btnIssuesExportExcel: TWebButton;
+    btnIssuesExportJSON: TWebButton;
+    btnIssuesExportPDF: TWebButton;
+    btnIssuesExportPrint: TWebButton;
     procedure btnSurveyMenuClick(Sender: TObject);
+    [async] procedure btnMainMenuClick(Sender: TObject);
+    procedure MenuResponsesExport(Sender: TObject);
+    procedure MenuLoggingExport(Sender: TObject);
+    procedure MenuAvailabilityExport(Sender: TObject);
+    procedure MenuSurveyInfoExport(Sender: TObject);
+    procedure MenuNotesExport(Sender: TObject);
+    procedure MenuChangeHistoryExport(Sender: TObject);
+    procedure MenuPermissionsExport(Sender: TObject);
+    procedure MenuIssuesExport(Sender: TObject);
+    procedure MenuFeedbackExport(Sender: TObject);
+    procedure MenuAccountsExport(Sender: TObject);
     procedure btnPreviewSizeClick(Sender: TObject);
     procedure btnPreviewTimeClick(Sender: TObject);
     procedure WebFormCreate(Sender: TObject);
     procedure WebFormShow(Sender: TObject);
     procedure tmrLaunchTimer(Sender: TObject);
-    procedure splitterSurveyMainMove(Sender: TObject);
     [async] procedure btnLogoutClick(Sender: TObject);
     procedure ServerConnRequest(Args: TXDataWebConnectionRequest);
     [async] procedure btnAccountClick(Sender: TObject);
@@ -347,43 +426,34 @@ type
     [async] procedure QuestionSelect (QuestionID: String);
     procedure SurveyChanged(Sender: TObject);
     procedure QuestionChanged(Sender: TObject);
-    procedure btnLoggingTodayClick(Sender: TObject);
+    [async] procedure btnLoggingTodayClick(Sender: TObject);
     procedure btnLogging7DaysClick(Sender: TObject);
     procedure btnLoggingAllDataClick(Sender: TObject);
     [async] procedure btnSurveySaveClick(Sender: TObject);
     procedure btnSurveyCancelClick(Sender: TObject);
     [async] function GetSurveyByID(SurveyID: String; SurveyName: String; SurveyGroup: String):String;
-    procedure btnLoggingReloadClick(Sender: TObject);
+    [async] procedure btnLoggingReloadClick(Sender: TObject);
     [async] procedure btnChangeHistoryReloadClick(Sender: TObject);
     procedure WebFormResize(Sender: TObject);
     procedure btnAvailabilityDeleteClick(Sender: TObject);
     procedure btnAvailabilityAddClick(Sender: TObject);
-    procedure btnSurveyInfoReloadClick(Sender: TObject);
-    procedure splitterSurveyConfigMove(Sender: TObject);
+    [async] procedure btnSurveyInfoReloadClick(Sender: TObject);
     procedure edtConfigBasicLinkChange(Sender: TObject);
-    procedure edtConfigBasicLiveLinkClick(Sender: TObject);
     procedure ResizeQRCode;
     [async] procedure btnNotesReloadClick(Sender: TObject);
     [async] procedure btnNotesAddClick(Sender: TObject);
     [async] procedure btnNotesDeleteClick(Sender: TObject);
-    procedure btnLoggingPrintClick(Sender: TObject);
-    procedure btnAvailabilityPrintClick(Sender: TObject);
-    procedure btnChangeHistoryPrintClick(Sender: TObject);
-    procedure btnNotesPrintClick(Sender: TObject);
     procedure btnDiscordClick(Sender: TObject);
     procedure btnEmailClick(Sender: TObject);
     [async] procedure btnTicketClick(Sender: TObject);
     [async] procedure btnAccountsReloadClick(Sender: TObject);
     procedure btnGitHubClick(Sender: TObject);
     [async] procedure AccountChanged(AccountID: String);
-    procedure btnIssuesPrintClick(Sender: TObject);
     [async] procedure btnIssuesReloadClick(Sender: TObject);
-    procedure btnAccountsPrintClick(Sender: TObject);
     [async] procedure btnAddUserClick(Sender: TObject);
     [async] procedure btnDeleteUserClick(Sender: TObject);
     [async] procedure btnSetPasswordClick(Sender: TObject);
     [async] procedure btnIssueStatusNewClick(Sender: TObject);
-    procedure btnPermissionsPrintClick(Sender: TObject);
     procedure btnPermissionsReloadClick(Sender: TObject);
     [async] procedure TogglePermissions(AccountID: String; FirstName: String; LastName: String; Access: Integer);
     procedure btnPreviewReloadClick(Sender: TObject);
@@ -393,18 +463,35 @@ type
     [async] procedure btnFeedbackActivityLogClick(Sender: TObject);
     procedure btnAvailabilityReloadClick(Sender: TObject);
     procedure tmrCountdownTimer(Sender: TObject);
-    procedure splitterLibraryMove(Sender: TObject);
-    procedure splitterQuestionsMove(Sender: TObject);
-    procedure splitterAccountsMove(Sender: TObject);
-    procedure splitterResponsesMove(Sender: TObject);
     [async] procedure btnQuestionsReloadClick(Sender: TObject);
     procedure NewQuestionTypeSelected(QuestionID: String; typeid: integer; icon: string; hint: string; desc: string; info: string; update: boolean);
     procedure ddQuestionTypeDropDown(Sender: TObject);
     procedure btnQuestionsNewClick(Sender: TObject);
     procedure btnQuestionsDeleteClick(Sender: TObject);
     [async] procedure btnResponsesReloadClick(Sender: TObject);
-    procedure btnResponsesPrintClick(Sender: TObject);
     procedure btnQuestionsCloneClick(Sender: TObject);
+    procedure btnResponsesClearFiltersClick(Sender: TObject);
+    procedure btnLoggingClearFiltersClick(Sender: TObject);
+    procedure btnResponsesExportClick(Sender: TObject);
+    procedure btnSurveyInfoExportClick(Sender: TObject);
+    procedure pageLoggingShow(Sender: TObject);
+    procedure pageAccountsShow(Sender: TObject);
+    procedure btnLoggingExportClick(Sender: TObject);
+    procedure comboLoggingGroupingChange(Sender: TObject);
+    procedure labelLoggingGroupingLabelClick(Sender: TObject);
+    [async] procedure LoggingDatesChanged(StartDate: String; EndDate: String);
+    procedure btnAvailabilityExportClick(Sender: TObject);
+    procedure btnNotesExportClick(Sender: TObject);
+    procedure btnChangeHistoryExportClick(Sender: TObject);
+    procedure btnPermissionsExportClick(Sender: TObject);
+    procedure pageResponsesShow(Sender: TObject);
+    procedure pageSurveysShow(Sender: TObject);
+    procedure btnIssuesExportClick(Sender: TObject);
+    procedure btnFeedbackExportClick(Sender: TObject);
+    procedure comboResponsesGroupingChange(Sender: TObject);
+    procedure btnAccountsExportClick(Sender: TObject);
+    procedure btnPreviewPrintClick(Sender: TObject);
+    procedure btnResponsesGroupingClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -412,6 +499,7 @@ type
     { Public declarations }
     AppVer: String;
     AppRel: String;
+    AppRelH: String;
     ActivityLog: TStringList;
     ServerName: String;
     JWT: String;
@@ -452,6 +540,7 @@ type
     CurrentSurveyGroup: String;
     CurrentSurveyLink: String;
     CurrentSurveyPermissions: String;
+    CurrentPreviewPageSize: String;
 
     CurrentSurveyData: String;
     CurrentSurveyQuestions: String;
@@ -462,16 +551,31 @@ type
     NewSurveyData: String;
     NewSurveyDifferences: String;
 
+    LoggingStart: JSValue;
+    LoggingEnd: JSValue;
+
     procedure SwitchOption(Option: Integer);
     procedure LogActivity(Activity: String);
   end;
 
 var
   Form1: TForm1;
+
   MainMenuButtons: Array of TWebButton;
   SurveyMenuButtons: Array of TWebButton;
   PreviewSizeButtons: Array of TWebButton;
   PreviewTimeButtons: Array of TWebButton;
+  ResponsesExportButtons: Array of TWebButton;
+  SurveyInfoExportButtons: Array of TWebButton;
+  LoggingExportButtons: Array of TWebButton;
+  AvailabilityExportButtons: Array of TWebButton;
+  NotesExportButtons: Array of TWebButton;
+  ChangeHistoryExportButtons: Array of TWebButton;
+  PermissionsExportButtons: Array of TWebButton;
+  IssuesExportButtons: Array of TWebButton;
+  FeedbackExportButtons: Array of TWebButton;
+  AccountsExportButtons: Array of TWebButton;
+
   PreviewSize: Integer;
   PreviewTime: Integer;
 
@@ -558,9 +662,49 @@ begin
   SurveyChanged(Sender);
 end;
 
-procedure TForm1.btnAvailabilityPrintClick(Sender: TObject);
+procedure TForm1.btnAvailabilityExportClick(Sender: TObject);
+var
+  Current: String;
 begin
-  asm this.tabAvailability.print(); end;
+  Current := FormatDateTime('yyyyMMdd-HHnnss',Now);
+
+  // CSV
+  if btnAvailabilityExport.Tag = 0 then
+  begin
+    asm
+      this.tabAvailability.download("csv", "SurveyAdminClient-Availability-"+Current+".csv")
+    end
+  end
+  // XLSX
+  else if btnAvailabilityExport.Tag = 1 then
+  begin
+    asm
+      this.tabAvailability.download("xlsx", "SurveyAdminClient-Availability-"+Current+".xlsx")
+    end
+  end
+  // JSON
+  else if btnAvailabilityExport.Tag = 2 then
+  begin
+    asm
+      this.tabAvailability.download("json", "SurveyAdminClient-Availability-"+Current+".json")
+    end
+  end
+  // PDF
+  else if btnAvailabilityExport.Tag = 3 then
+  begin
+    asm
+      this.tabAvailability.download("pdf", "SurveyAdminClient-Availability-"+Current+".pdf")
+    end
+  end
+  // Print
+  else if btnAvailabilityExport.Tag = 4 then
+  begin
+    asm
+      this.tabAvailability.deselectRow();
+      this.tabAvailability.print("active",true);
+    end
+  end
+
 end;
 
 procedure TForm1.btnAvailabilityReloadClick(Sender: TObject);
@@ -606,38 +750,47 @@ begin
       }
 
       if (Status == '') {
-        Status = 'Active';
+        Status = '<i class="fa-solid fa-play me-1"></i> Active';
         Color = 'btn-success';
       }
       else if (Status.indexOf('Active') > -1) {
-        Status = 'Active';
+        Status = '<i class="fa-solid fa-play me-1"></i> Active';
         Color = 'btn-success';
       }
       else if ((Status.indexOf('Pre') > -1) && (Status.indexOf('Post') == -1)) {
-        Status = 'Pre';
+        Status = '<i class="fa-solid fa-pause me-1"></i> Preview';
         Countdown = next.toISO();
         Color = 'btn-primary';
       }
       else if ((Status.indexOf('Post') > -1) && (Status.indexOf('Pre') == -1)) {
-        Status = 'Post';
+        Status = '<i class="fa-solid fa-stop me-1"></i> Ended';
         Countdown = '';
         Color = 'btn-secondary';
       }
       else if (Status.indexOf('Error') == -1) {
-        Status = 'Pause';
+        Status = '<i class="fa-solid fa-pause me-1"></i> Paused';
         Color = 'btn-primary';
         Countdown = next.toISO();
       }
     }
   end;
-  if Status = '' then Status := 'Active';
+  if Status = '' then
+  begin
+    Status := '<i class="fa-solid fa-play me-1"></i> Active';
+    Color := 'btn-success';
+  end;
 
-  labelAvailabilityStatus.Caption := Status;
-  labelAvailabilityStatus.ElementClassName := 'ShortButton btn '+Color;
+  btnAvailabilityStatus.Caption := Status;
+  btnAvailabilityStatus.ElementClassName := 'ButtonBarEnd order-4 rounded-1 btn '+Color+' border border-1 border-dark';
+  btnPreviewAvailabilityStatus.Caption := Status;
+  btnPreviewAvailabilityStatus.ElementClassName := 'ButtonBarEnd order-4 rounded-1 btn '+Color+' border border-1 border-dark';
+
   if (Countdown = '') then
   begin
     labelAvailabilityCountdown.Caption := '';
     labelAvailabilityCountdown.Visible := False;
+    labelPreviewAvailabilityCountdown.Caption := '';
+    labelPreviewAvailabilityCountdown.Visible := False;
     tmrCountdown.Enabled := False;
   end
   else
@@ -645,6 +798,8 @@ begin
     CountdownTimer := CountDown;
     labelAvailabilityCountdown.Caption := '0d 00h 00m 00s';
     labelAvailabilityCountdown.Visible := True;
+    labelPreviewAvailabilityCountdown.Caption := '0d 00h 00m 00s';
+    labelPreviewAvailabilityCountdown.Visible := True;
     tmrCountdown.Enabled := True;
   end;
 
@@ -655,9 +810,49 @@ begin
   window.open('https://www.tmssoftware.com/site/blog.asp?post=1015','_blank');
 end;
 
-procedure TForm1.btnChangeHistoryPrintClick(Sender: TObject);
+procedure TForm1.btnChangeHistoryExportClick(Sender: TObject);
+var
+  Current: String;
 begin
-  asm this.tabChangeHistory.print(); end;
+  Current := FormatDateTime('yyyyMMdd-HHnnss',Now);
+
+  // CSV
+  if btnChangeHistoryExport.Tag = 0 then
+  begin
+    asm
+      this.tabChangeHistory.download("csv", "SurveyAdminClient-ChangeHistory-"+Current+".csv")
+    end
+  end
+  // XLSX
+  else if btnChangeHistoryExport.Tag = 1 then
+  begin
+    asm
+      this.tabChangeHistory.download("xlsx", "SurveyAdminClient-ChangeHistory-"+Current+".xlsx")
+    end
+  end
+  // JSON
+  else if btnChangeHistoryExport.Tag = 2 then
+  begin
+    asm
+      this.tabChangeHistory.download("json", "SurveyAdminClient-ChangeHistory-"+Current+".json")
+    end
+  end
+  // PDF
+  else if btnChangeHistoryExport.Tag = 3 then
+  begin
+    asm
+      this.tabChangeHistory.download("pdf", "SurveyAdminClient-ChangeHistory-"+Current+".pdf")
+    end
+  end
+  // Print
+  else if btnChangeHistoryExport.Tag = 4 then
+  begin
+    asm
+      this.tabChangeHistory.deselectRow();
+      this.tabChangeHistory.print("active",true);
+    end
+  end
+
 end;
 
 procedure TForm1.btnChangeHistoryReloadClick(Sender: TObject);
@@ -726,6 +921,51 @@ begin
   window.open('mailto:concierge@500surveys.ca','_blank');
 end;
 
+procedure TForm1.btnFeedbackExportClick(Sender: TObject);
+var
+  Current: String;
+begin
+  Current := FormatDateTime('yyyyMMdd-HHnnss',Now);
+
+  // CSV
+  if btnFeedbackExport.Tag = 0 then
+  begin
+    asm
+      this.tabFeedback.download("csv", "SurveyAdminClient-Feedback-"+Current+".csv")
+    end
+  end
+  // XLSX
+  else if btnFeedbackExport.Tag = 1 then
+  begin
+    asm
+      this.tabFeedback.download("xlsx", "SurveyAdminClient-Feedback-"+Current+".xlsx")
+    end
+  end
+  // JSON
+  else if btnFeedbackExport.Tag = 2 then
+  begin
+    asm
+      this.tabFeedback.download("json", "SurveyAdminClient-Feedback-"+Current+".json")
+    end
+  end
+  // PDF
+  else if btnFeedbackExport.Tag = 3 then
+  begin
+    asm
+      this.tabFeedback.download("pdf", "SurveyAdminClient-Feedback-"+Current+".pdf")
+    end
+  end
+  // Print
+  else if btnFeedbackExport.Tag = 4 then
+  begin
+    asm
+      this.tabFeedback.deselectRow();
+      this.tabFeedback.print("active",true);
+    end
+  end
+
+end;
+
 procedure TForm1.btnFeedbackActivityLogClick(Sender: TObject);
 var
  NewNote: TNoteForm;
@@ -779,6 +1019,13 @@ end;
 procedure TForm1.btnFeedbackReloadClick(Sender: TObject);
 begin
   await(  UpdateTable('ISurveyAdminService.GetAllFeedback', [], tabFeedback, btnFeedbackReload));
+
+  asm
+    if (this.tabFeedback.getDataCount() > 0) {
+      this.tabFeedback.selectRow(this.tabFeedback.getRows()[0]);
+    }
+  end;
+
 end;
 
 procedure TForm1.btnGitHubClick(Sender: TObject);
@@ -786,14 +1033,60 @@ begin
   window.open('https://github.com/500Foods/TMS-Web-Core-SurveyAdminClient','_blank');
 end;
 
-procedure TForm1.btnIssuesPrintClick(Sender: TObject);
+procedure TForm1.btnIssuesExportClick(Sender: TObject);
+var
+  Current: String;
 begin
-  asm this.tabIssues.print(); end;
+  Current := FormatDateTime('yyyyMMdd-HHnnss',Now);
+
+  // CSV
+  if btnIssuesExport.Tag = 0 then
+  begin
+    asm
+      this.tabIssues.download("csv", "SurveyAdminClient-Issues-"+Current+".csv")
+    end
+  end
+  // XLSX
+  else if btnIssuesExport.Tag = 1 then
+  begin
+    asm
+      this.tabIssues.download("xlsx", "SurveyAdminClient-Issues-"+Current+".xlsx")
+    end
+  end
+  // JSON
+  else if btnIssuesExport.Tag = 2 then
+  begin
+    asm
+      this.tabIssues.download("json", "SurveyAdminClient-Issues-"+Current+".json")
+    end
+  end
+  // PDF
+  else if btnIssuesExport.Tag = 3 then
+  begin
+    asm
+      this.tabIssues.download("pdf", "SurveyAdminClient-Issues-"+Current+".pdf")
+    end
+  end
+  // Print
+  else if btnIssuesExport.Tag = 4 then
+  begin
+    asm
+      this.tabIssues.deselectRow();
+      this.tabIssues.print("active",true);
+    end
+  end
+
 end;
 
 procedure TForm1.btnIssuesReloadClick(Sender: TObject);
 begin
   await(  UpdateTable('ISurveyAdminService.GetAllIssues', [], tabIssues, btnIssuesReload));
+
+  asm
+    if (this.tabIssues.getDataCount() > 0) {
+      this.tabIssues.selectRow(this.tabIssues.getRows()[0]);
+    }
+  end;
 end;
 
 procedure TForm1.btnIssueStatusNewClick(Sender: TObject);
@@ -836,21 +1129,79 @@ begin
   btnLoggingReload.Tag := 0;
 end;
 
-procedure TForm1.btnLoggingPrintClick(Sender: TObject);
+procedure TForm1.btnLoggingClearFiltersClick(Sender: TObject);
 begin
-  asm this.tabLogging.print(); end;
+  asm this.tabLogging.clearHeaderFilter(); end;
+end;
+
+procedure TForm1.btnLoggingExportClick(Sender: TObject);
+var
+  Current: String;
+begin
+  Current := FormatDateTime('yyyyMMdd-HHnnss',Now);
+
+  // CSV
+  if btnLoggingExport.Tag = 0 then
+  begin
+    asm
+      this.tabLogging.download("csv", "SurveyAdminClient-ServerLog-"+Current+".csv")
+    end
+  end
+  // XLSX
+  else if btnLoggingExport.Tag = 1 then
+  begin
+    asm
+      this.tabLogging.download("xlsx", "SurveyAdminClient-ServerLog-"+Current+".xlsx")
+    end
+  end
+  // JSON
+  else if btnLoggingExport.Tag = 2 then
+  begin
+    asm
+      this.tabLogging.download("json", "SurveyAdminClient-ServerLog-"+Current+".json")
+    end
+  end
+  // PDF
+  else if btnLoggingExport.Tag = 3 then
+  begin
+    asm
+      this.tabLogging.download("pdf", "SurveyAdminClient-ServerLog-"+Current+".pdf")
+    end
+  end
+  // Print
+  else if btnLoggingExport.Tag = 4 then
+  begin
+    asm
+      this.tabLogging.deselectRow();
+      this.tabLogging.print("active",true);
+    end
+  end
 end;
 
 procedure TForm1.btnLoggingReloadClick(Sender: TObject);
 begin
-  if btnLoggingReload.Tag = 1 then btnLoggingTodayClick(Sender);
+  divLogging.Tag := 1;
+
+  if btnLoggingReload.Tag = 1 then await(btnLoggingTodayClick(Sender));
   if btnLoggingReload.Tag = 7 then btnLogging7DaysClick(Sender);
   if btnLoggingReload.Tag = 0 then btnLoggingAllDataClick(Sender);
+
+  if btnLoggingReload.tag = 99 then
+  begin
+    asm
+      pas.Unit1.Form1.LoggingDatesChanged(
+        pas.Unit1.Form1.LoggingStart.selectedDates[0].toISOString().substr(0,10),
+        pas.Unit1.Form1.LoggingEnd.selectedDates[0].toISOString().substr(0,10)
+      );
+    end;
+  end;
+
+  pageLoggingShow(Sender);
 end;
 
 procedure TForm1.btnLoggingTodayClick(Sender: TObject);
 begin
-  UpdateTable('ISurveyAdminService.GetHistory', [1], tabLogging, btnLoggingReload);
+  await(UpdateTable('ISurveyAdminService.GetHistory', [1], tabLogging, btnLoggingReload));
   btnLoggingReload.Tag := 1;
 end;
 
@@ -869,16 +1220,107 @@ end;
 procedure TForm1.btnMainMenuClick(Sender: TObject);
 var
   i: Integer;
+  group: String;
 begin
   if (Sender is TWebButton) then
   begin
+
+    // Block tables from being redrawn (incorrectly) when they are hidden
+    asm
+      this.tabSurveyInfo.blockRedraw();
+      this.tabNotes.blockRedraw();
+      this.tabAvailability.blockRedraw();
+      this.tabChangeHistory.blockRedraw();
+      this.tabPermissions.blockRedraw();
+
+      this.tabResponses.blockRedraw();
+      this.tabFeedback.blockRedraw();
+      this.tabAccounts.blockRedraw();
+      this.tabIssues.blockRedraw();
+      this.tabLogging.blockRedraw();
+    end;
+
+
+    // Highlight the selected button
     for i := 0 to Length(MainMenuButtons) - 1 do
     begin
       if (Sender as TWebButton) = MainMenuButtons[i]
       then MainMenuButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
       else MainMenuButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
     end;
+
+
+    // If data hasn't already been loaded, then load data
+    // Page 0 is loaded initially, so no need to check
+    if ( (Sender as TWebButton).Tag = 1) and (divResponses.Tag = 0) then
+    begin
+      await(btnResponsesReloadClick(Sender));
+      btnFeedbackReloadClick(Sender);
+
+      // Split the page
+//      divResponsesHolder.Width := (pageResponses.Width - 24) div 2;
+
+      // make sure the table is updated
+      asm
+        this.tabResponses.restoreRedraw();
+        group = '';
+        if (this.tabResponses.getGroups().length > 0){
+          group = this.tabResponses.getGroups()[0].getField();
+        }
+      end;
+
+      // If we've got a group, update the Logging combobox to show it
+      if group = '' then comboResponsesGrouping.ItemIndex := 0
+      else if group = 'SurveyGroup' then comboResponsesGrouping.ItemIndex := 1
+      else if group = 'SurveyClient' then comboResponsesGrouping.ItemIndex := 2
+      else if group = 'QuestionName' then comboResponsesGrouping.ItemIndex := 3
+      else if group = 'SurveyIP' then comboResponsesGrouping.ItemIndex := 4;
+    end
+    else if ( (Sender as TWebButton).Tag = 3) and (divAccounts.Tag = 0) then
+    begin
+      btnAccountsReloadClick(Sender);
+      btnIssuesReloadClick(Sender);
+
+      // Split the page
+//      divAccountsHolder.Width := (pageAccounts.Width - 24) div 2;
+
+    end
+    else if ( (Sender as TWebButton).Tag = 4) and (divLogging.Tag = 0) then
+    begin
+      // extra care so we can determine the hard way if any grouping data is available
+      await(btnLoggingReloadClick(Sender));
+
+      // make sure the table is updated
+      asm
+        this.tabLogging.restoreRedraw();
+        group = '';
+        if (this.tabLogging.getGroups().length > 0){
+          group = this.tabLogging.getGroups()[0].getField();
+        }
+      end;
+
+      // If we've got a group, update the Logging combobox to show it
+      if group = '' then comboLoggingGrouping.ItemIndex := 0
+      else if group = 'survey_group' then comboLoggingGrouping.ItemIndex := 1
+      else if group = 'account_id' then comboLoggingGrouping.ItemIndex := 2
+      else if group = 'email' then comboLoggingGrouping.ItemIndex := 3
+      else if group = 'ipaddr' then comboLoggingGrouping.ItemIndex := 4
+      else if group = 'endpoint' then comboLoggingGrouping.ItemIndex := 5
+      else if group = 'client_ver' then comboLoggingGrouping.ItemIndex := 6;
+    end;
+
+
+    // Actually change the page
     pagecontrolMain.TabIndex := (Sender as TWebButton).Tag;
+
+
+    // Refresh tabs explicitly unfortunately.  restoreRedraw() should be called here
+    if pageControlMain.TabIndex = 0 then pageSurveysShow(Sender);
+    if pageControlMain.TabIndex = 1 then pageResponsesShow(Sender);
+//    if pageControlMain.TabIndex = 2 then pageAccountsShow(Sender);
+    if pageControlMain.TabIndex = 3 then pageAccountsShow(Sender);
+    if pageControlMain.TabIndex = 4 then pageLoggingShow(Sender);
+
   end;
 end;
 
@@ -969,9 +1411,49 @@ begin
   end;
 
 end;
-procedure TForm1.btnNotesPrintClick(Sender: TObject);
+procedure TForm1.btnNotesExportClick(Sender: TObject);
+var
+  Current: String;
 begin
-  asm this.tabNotes.print(); end;
+  Current := FormatDateTime('yyyyMMdd-HHnnss',Now);
+
+  // CSV
+  if btnNotesExport.Tag = 0 then
+  begin
+    asm
+      this.tabNotes.download("csv", "SurveyAdminClient-Notes-"+Current+".csv")
+    end
+  end
+  // XLSX
+  else if btnNotesExport.Tag = 1 then
+  begin
+    asm
+      this.tabNotes.download("xlsx", "SurveyAdminClient-Notes-"+Current+".xlsx")
+    end
+  end
+  // JSON
+  else if btnNotesExport.Tag = 2 then
+  begin
+    asm
+      this.tabNotes.download("json", "SurveyAdminClient-Notes-"+Current+".json")
+    end
+  end
+  // PDF
+  else if btnNotesExport.Tag = 3 then
+  begin
+    asm
+      this.tabNotes.download("pdf", "SurveyAdminClient-Notes-"+Current+".pdf")
+    end
+  end
+  // Print
+  else if btnNotesExport.Tag = 4 then
+  begin
+    asm
+      this.tabNotes.deselectRow();
+      this.tabNotes.print("active",true);
+    end
+  end
+
 end;
 
 procedure TForm1.btnNotesReloadClick(Sender: TObject);
@@ -985,11 +1467,11 @@ begin
   end;
 end;
 
-// Menu at the top of the survey page
 procedure TForm1.btnSurveyMenuClick(Sender: TObject);
 var
   i: Integer;
 begin
+  // Menu at the top of the survey page
   if (Sender is TWebButton) then
   begin
     for i := 0 to Length(SurveyMenuButtons) - 1 do
@@ -998,7 +1480,247 @@ begin
       then SurveyMenuButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
       else SurveyMenuButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
     end;
+
     pagecontrolSurveys.TabIndex := (Sender as TWebButton).Tag;
+
+    // Load the preview if it wasn't loaded previously.
+    // We don't want to load it on startup, but after that assume user will referesh when needed
+    if pageControlSurveys.TabIndex = 3 then
+    begin
+      if divPreview.Tag = 0 then
+      begin
+        divPreview.Tag := 1;
+        btnPreviewReloadClick(Sender);
+      end;
+    end;
+
+    // Update SurveyInfo table
+    if PagecontrolSurveys.TabIndex = 0 then
+    begin
+      asm this.tabSurveyInfo.redraw(); end;
+    end;
+
+
+  end;
+end;
+
+procedure TForm1.MenuResponsesExport(Sender: TObject);
+var
+  i: Integer;
+begin
+  // Menu on Responses tab
+  if (Sender is TWebButton) then
+  begin
+    for i := 0 to Length(ResponsesExportButtons) - 1 do
+    begin
+      if (Sender as TWebButton) = ResponsesExportButtons[i]
+      then ResponsesExportButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
+      else ResponsesExportButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
+    end;
+
+    // The idea was to use this as an "export" selector, but after clikcing the print button
+    // a zillion times, might as well call the function as well
+    if (btnResponsesExport.Tag <> (Sender as TWebButton).Tag)
+    then btnResponsesExport.Tag := (Sender as TWebButton).Tag;
+    btnResponsesExportClick(Sender);
+  end;
+end;
+
+procedure TForm1.MenuAccountsExport(Sender: TObject);
+var
+  i: Integer;
+begin
+  // Menu on Accounts tab
+  if (Sender is TWebButton) then
+  begin
+    for i := 0 to Length(AccountsExportButtons) - 1 do
+    begin
+      if (Sender as TWebButton) = AccountsExportButtons[i]
+      then AccountsExportButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
+      else AccountsExportButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
+    end;
+
+    // The idea was to use this as an "export" selector, but after clikcing the print button
+    // a zillion times, might as well call the function as well
+    if (btnAccountsExport.Tag <> (Sender as TWebButton).Tag)
+    then btnAccountsExport.Tag := (Sender as TWebButton).Tag;
+    btnAccountsExportClick(Sender);
+  end;
+end;
+
+procedure TForm1.MenuAvailabilityExport(Sender: TObject);
+var
+  i: Integer;
+begin
+  // Menu on Availability tab
+  if (Sender is TWebButton) then
+  begin
+    for i := 0 to Length(AvailabilityExportButtons) - 1 do
+    begin
+      if (Sender as TWebButton) = AvailabilityExportButtons[i]
+      then AvailabilityExportButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
+      else AvailabilityExportButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
+    end;
+
+    // The idea was to use this as an "export" selector, but after clikcing the print button
+    // a zillion times, might as well call the function as well
+    if (btnAvailabilityExport.Tag <> (Sender as TWebButton).Tag)
+    then btnAvailabilityExport.Tag := (Sender as TWebButton).Tag;
+    btnAvailabilityExportClick(Sender);
+  end;
+end;
+
+procedure TForm1.MenuChangeHistoryExport(Sender: TObject);
+var
+  i: Integer;
+begin
+  // Menu on ChangeHistory tab
+  if (Sender is TWebButton) then
+  begin
+    for i := 0 to Length(ChangeHistoryExportButtons) - 1 do
+    begin
+      if (Sender as TWebButton) = ChangeHistoryExportButtons[i]
+      then ChangeHistoryExportButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
+      else ChangeHistoryExportButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
+    end;
+
+    // The idea was to use this as an "export" selector, but after clikcing the print button
+    // a zillion times, might as well call the function as well
+    if (btnChangeHistoryExport.Tag <> (Sender as TWebButton).Tag)
+    then btnChangeHistoryExport.Tag := (Sender as TWebButton).Tag;
+    btnChangeHistoryExportClick(Sender);
+  end;
+end;
+
+procedure TForm1.MenuFeedbackExport(Sender: TObject);
+var
+  i: Integer;
+begin
+  // Menu on Feedback tab
+  if (Sender is TWebButton) then
+  begin
+    for i := 0 to Length(FeedbackExportButtons) - 1 do
+    begin
+      if (Sender as TWebButton) = FeedbackExportButtons[i]
+      then FeedbackExportButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
+      else FeedbackExportButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
+    end;
+
+    // The idea was to use this as an "export" selector, but after clikcing the print button
+    // a zillion times, might as well call the function as well
+    if (btnFeedbackExport.Tag <> (Sender as TWebButton).Tag)
+    then btnFeedbackExport.Tag := (Sender as TWebButton).Tag;
+    btnFeedbackExportClick(Sender);
+  end;
+end;
+
+procedure TForm1.MenuIssuesExport(Sender: TObject);
+var
+  i: Integer;
+begin
+  // Menu on Issues tab
+  if (Sender is TWebButton) then
+  begin
+    for i := 0 to Length(IssuesExportButtons) - 1 do
+    begin
+      if (Sender as TWebButton) = IssuesExportButtons[i]
+      then IssuesExportButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
+      else IssuesExportButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
+    end;
+
+    // The idea was to use this as an "export" selector, but after clikcing the print button
+    // a zillion times, might as well call the function as well
+    if (btnIssuesExport.Tag <> (Sender as TWebButton).Tag)
+    then btnIssuesExport.Tag := (Sender as TWebButton).Tag;
+    btnIssuesExportClick(Sender);
+  end;
+end;
+
+procedure TForm1.MenuLoggingExport(Sender: TObject);
+var
+  i: Integer;
+begin
+  // Menu on Logging tab
+  if (Sender is TWebButton) then
+  begin
+    for i := 0 to Length(LoggingExportButtons) - 1 do
+    begin
+      if (Sender as TWebButton) = LoggingExportButtons[i]
+      then LoggingExportButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
+      else LoggingExportButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
+    end;
+
+    // The idea was to use this as an "export" selector, but after clikcing the print button
+    // a zillion times, might as well call the function as well
+    if (btnLoggingExport.Tag <> (Sender as TWebButton).Tag)
+    then btnLoggingExport.Tag := (Sender as TWebButton).Tag;
+    btnLoggingExportClick(Sender);
+  end;
+end;
+
+procedure TForm1.MenuNotesExport(Sender: TObject);
+var
+  i: Integer;
+begin
+  // Menu on Notes tab
+  if (Sender is TWebButton) then
+  begin
+    for i := 0 to Length(NotesExportButtons) - 1 do
+    begin
+      if (Sender as TWebButton) = NotesExportButtons[i]
+      then NotesExportButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
+      else NotesExportButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
+    end;
+
+    // The idea was to use this as an "export" selector, but after clikcing the print button
+    // a zillion times, might as well call the function as well
+    if (btnNotesExport.Tag <> (Sender as TWebButton).Tag)
+    then btnNotesExport.Tag := (Sender as TWebButton).Tag;
+    btnNotesExportClick(Sender);
+  end;
+end;
+
+procedure TForm1.MenuPermissionsExport(Sender: TObject);
+var
+  i: Integer;
+begin
+  // Menu on Permissions tab
+  if (Sender is TWebButton) then
+  begin
+    for i := 0 to Length(PermissionsExportButtons) - 1 do
+    begin
+      if (Sender as TWebButton) = PermissionsExportButtons[i]
+      then PermissionsExportButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
+      else PermissionsExportButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
+    end;
+
+    // The idea was to use this as an "export" selector, but after clikcing the print button
+    // a zillion times, might as well call the function as well
+    if (btnPermissionsExport.Tag <> (Sender as TWebButton).Tag)
+    then btnPermissionsExport.Tag := (Sender as TWebButton).Tag;
+    btnPermissionsExportClick(Sender);
+  end;
+end;
+
+procedure TForm1.MenuSurveyInfoExport(Sender: TObject);
+var
+  i: Integer;
+begin
+  // Menu on SurveyInfo tab
+  if (Sender is TWebButton) then
+  begin
+    for i := 0 to Length(SurveyInfoExportButtons) - 1 do
+    begin
+      if (Sender as TWebButton) = SurveyInfoExportButtons[i]
+      then SurveyInfoExportButtons[i].ElementHandle.classList.replace('btn-dark','btn-primary')
+      else SurveyInfoExportButtons[i].ElementHandle.classList.replace('btn-primary','btn-dark');
+    end;
+
+    // The idea was to use this as an "export" selector, but after clikcing the print button
+    // a zillion times, might as well call the function as well
+    if (btnSurveyInfoExport.Tag <> (Sender as TWebButton).Tag)
+    then btnSurveyInfoExport.Tag := (Sender as TWebButton).Tag;
+    btnSurveyInfoExportClick(Sender);
   end;
 end;
 
@@ -1092,10 +1814,74 @@ begin
 end;
 
 
+procedure TForm1.btnSurveyInfoExportClick(Sender: TObject);
+var
+  Current: String;
+begin
+  Current := FormatDateTime('yyyyMMdd-HHnnss',Now);
+
+  // CSV
+  if btnSurveyInfoExport.Tag = 0 then
+  begin
+    asm
+      this.tabSurveyInfo.download("csv", "SurveyAdminClient-SurveyInfo-"+Current+".csv")
+    end
+  end
+  // XLSX
+  else if btnSurveyInfoExport.Tag = 1 then
+  begin
+    asm
+      this.tabSurveyInfo.download("xlsx", "SurveyAdminClient-SurveyInfo-"+Current+".xlsx")
+    end
+  end
+  // JSON
+  else if btnSurveyInfoExport.Tag = 2 then
+  begin
+    asm
+      this.tabSurveyInfo.download("json", "SurveyAdminClient-SurveyInfo-"+Current+".json")
+    end
+  end
+  // PDF
+  else if btnSurveyInfoExport.Tag = 3 then
+  begin
+    asm
+      this.tabSurveyInfo.download("pdf", "SurveyAdminClient-SurveyInfo-"+Current+".pdf")
+    end
+  end
+  // Print
+  else if btnSurveyInfoExport.Tag = 4 then
+  begin
+    asm
+      this.tabSurveyInfo.deselectRow();
+      this.tabSurveyInfo.print();
+    end
+  end
+
+end;
 procedure TForm1.btnSurveyInfoReloadClick(Sender: TObject);
 begin
-  UpdateTable('ISurveyAdminService.GetSurveyInfo', [CurrentSurveyID, CurrentSurveyName, CurrentSurveyGroup], tabSurveyInfo, btnSurveyInfoReload);
+  await(UpdateTable('ISurveyAdminService.GetSurveyInfo', [CurrentSurveyID, CurrentSurveyName, CurrentSurveyGroup], tabSurveyInfo, btnSurveyInfoReload));
+
+  asm
+    this.tabSurveyInfo.addRow({
+      ID: 97,
+      KEY: "Client Name",
+      VALUE: "Survey Admin Client"
+    });
+    this.tabSurveyInfo.addRow({
+      ID: 98,
+      KEY: "Client Version",
+      VALUE: this.AppVer
+    });
+    this.tabSurveyInfo.addRow({
+      ID: 98,
+      KEY: "Client Release",
+      VALUE: this.AppRelH
+    });
+
+  end;
 end;
+
 
 function TForm1.GetSurveyByID(SurveyID: String; SurveyName: String; SurveyGroup: String):String;
 var
@@ -1121,6 +1907,22 @@ begin
       end;
     end;
   end;
+end;
+
+procedure TForm1.labelLoggingGroupingLabelClick(Sender: TObject);
+begin
+  if labelLoggingGroupingLabel.Tag = 0 then
+  begin
+    labelLoggingGroupingLabel.Tag := 1;
+    labelLoggingGroupingLabel.HTML := '<i class="fa-solid fa-bars-staggered fa-fw me-1"></i> Group:';
+  end
+  else
+  begin
+    LabelLoggingGroupingLabel.Tag := 0;
+    labelLoggingGroupingLabel.HTML := '<i class="fa-solid fa-bars fa-fw me-1"></i> Group:';
+  end;
+
+  comboLoggingGroupingChange(Sender);
 end;
 
 procedure TForm1.UpdateTable(Endpoint: String; Params: Array of JSValue; Table: JSValue; Progress: TWebButton);
@@ -1363,6 +2165,146 @@ begin
 
 end;
 
+procedure TForm1.comboLoggingGroupingChange(Sender: TObject);
+var
+  Expanded: Boolean;
+begin
+
+  if labelLoggingGroupingLabel.Tag = 0
+  then Expanded := False
+  else Expanded := True;
+
+  if comboLoggingGrouping.Text = 'No Grouping' then
+  begin
+    asm
+      this.tabLogging.blockRedraw();
+      this.tabLogging.setGroupBy();
+      this.tabLogging.setGroupStartOpen();
+      this.tabLogging.restoreRedraw();
+    end;
+  end
+  else if comboLoggingGrouping.Text = 'by Survey' then
+  begin
+    asm
+      this.tabLogging.blockRedraw();
+      this.tabLogging.setGroupBy();
+      this.tabLogging.setGroupBy(['survey_group', 'survey_name']);
+      this.tabLogging.setGroupStartOpen([true, Expanded]);
+      this.tabLogging.restoreRedraw();
+    end
+  end
+  else if comboLoggingGrouping.Text = 'by Account' then
+  begin
+    asm
+      this.tabLogging.blockRedraw();
+      this.tabLogging.setGroupBy();
+      this.tabLogging.setGroupBy('account_id');
+      this.tabLogging.setGroupStartOpen(Expanded);
+      this.tabLogging.restoreRedraw();
+    end
+  end
+  else if comboLoggingGrouping.Text = 'by E-Mail' then
+  begin
+    asm
+      this.tabLogging.blockRedraw();
+      this.tabLogging.setGroupBy();
+      this.tabLogging.setGroupBy('email');
+      this.tabLogging.setGroupStartOpen(Expanded);
+      this.tabLogging.restoreRedraw();
+    end
+  end
+  else if comboLoggingGrouping.Text = 'by IP Address' then
+  begin
+    asm
+      this.tabLogging.blockRedraw();
+      this.tabLogging.setGroupBy();
+      this.tabLogging.setGroupBy('ipaddr');
+      this.tabLogging.setGroupStartOpen(Expanded);
+      this.tabLogging.restoreRedraw();
+    end
+  end
+  else if comboLoggingGrouping.Text = 'by Endpoint' then
+  begin
+    asm
+      this.tabLogging.blockRedraw();
+      this.tabLogging.setGroupBy();
+      this.tabLogging.setGroupBy('endpoint');
+      this.tabLogging.setGroupStartOpen(Expanded);
+      this.tabLogging.restoreRedraw();
+    end
+  end
+  else if comboLoggingGrouping.Text = 'by Version' then
+  begin
+    asm
+      this.tabLogging.blockRedraw();
+      this.tabLogging.setGroupBy();
+      this.tabLogging.setGroupBy('client_ver');
+      this.tabLogging.setGroupStartOpen(Expanded);
+      this.tabLogging.restoreRedraw();
+    end
+  end;
+end;
+
+procedure TForm1.comboResponsesGroupingChange(Sender: TObject);
+var
+  Expanded: Boolean;
+begin
+
+  if btnResponsesGrouping.Tag = 0
+  then Expanded := False
+  else Expanded := True;
+
+  if comboResponsesGrouping.Text = 'No Grouping' then
+  begin
+    asm
+      this.tabResponses.blockRedraw();
+      this.tabResponses.setGroupBy();
+      this.tabResponses.setGroupStartOpen();
+      this.tabResponses.restoreRedraw();
+    end;
+  end
+  else if comboResponsesGrouping.Text = 'by Survey' then
+  begin
+    asm
+      this.tabResponses.blockRedraw();
+      this.tabResponses.setGroupBy();
+      this.tabResponses.setGroupBy(['SurveyGroup', 'SurveyName']);
+      this.tabResponses.setGroupStartOpen([true, Expanded]);
+      this.tabResponses.restoreRedraw();
+    end
+  end
+  else if comboResponsesGrouping.Text = 'by Client ID' then
+  begin
+    asm
+      this.tabResponses.blockRedraw();
+      this.tabResponses.setGroupBy();
+      this.tabResponses.setGroupBy('SurveyClient');
+      this.tabResponses.setGroupStartOpen(Expanded);
+      this.tabResponses.restoreRedraw();
+    end
+  end
+  else if comboResponsesGrouping.Text = 'by Question' then
+  begin
+    asm
+      this.tabResponses.blockRedraw();
+      this.tabResponses.setGroupBy();
+      this.tabResponses.setGroupBy('QuestionName');
+      this.tabResponses.setGroupStartOpen(Expanded);
+      this.tabResponses.restoreRedraw();
+    end
+  end
+  else if comboResponsesGrouping.Text = 'by IP Address' then
+  begin
+    asm
+      this.tabResponses.blockRedraw();
+      this.tabResponses.setGroupBy();
+      this.tabResponses.setGroupBy('SurveyIP');
+      this.tabResponses.setGroupStartOpen(Expanded);
+      this.tabResponses.restoreRedraw();
+    end
+  end;
+end;
+
 procedure TForm1.ddQuestionTypeDropDown(Sender: TObject);
 begin
   asm
@@ -1370,14 +2312,65 @@ begin
   end;
 end;
 
-procedure TForm1.btnPermissionsPrintClick(Sender: TObject);
+procedure TForm1.btnPermissionsExportClick(Sender: TObject);
+var
+  Current: String;
 begin
-  asm this.tabPermissions.print(); end;
+  Current := FormatDateTime('yyyyMMdd-HHnnss',Now);
+
+  // CSV
+  if btnPermissionsExport.Tag = 0 then
+  begin
+    asm
+      this.tabPermissions.download("csv", "SurveyAdminClient-Permissions-"+Current+".csv")
+    end
+  end
+  // XLSX
+  else if btnPermissionsExport.Tag = 1 then
+  begin
+    asm
+      this.tabPermissions.download("xlsx", "SurveyAdminClient-Permissions-"+Current+".xlsx")
+    end
+  end
+  // JSON
+  else if btnPermissionsExport.Tag = 2 then
+  begin
+    asm
+      this.tabPermissions.download("json", "SurveyAdminClient-Permissions-"+Current+".json")
+    end
+  end
+  // PDF
+  else if btnPermissionsExport.Tag = 3 then
+  begin
+    asm
+      this.tabPermissions.download("pdf", "SurveyAdminClient-Permissions-"+Current+".pdf")
+    end
+  end
+  // Print
+  else if btnPermissionsExport.Tag = 4 then
+  begin
+    asm
+      this.tabPermissions.deselectRow();
+      this.tabPermissions.print("active",true);
+    end
+  end
 end;
 
 procedure TForm1.btnPermissionsReloadClick(Sender: TObject);
 begin
   UpdateTable('ISurveyAdminService.GetSurveyPermissions', [CurrentSurveyID, CurrentSurveyName, CurrentSurveyGroup], tabPermissions, btnPermissionsReload);
+end;
+
+procedure TForm1.btnPreviewPrintClick(Sender: TObject);
+begin
+  asm
+    printJS({
+      printable: 'SurveyPreview',
+      type: 'html',
+      documentTitle: 'Survey Preview: '+ this.CurrentSurveyGroup+' / '+this.CurrentSurveyName+' ( '+this.CurrentPreviewPageSize+' )',
+      header: 'Survey Preview: '+ this.CurrentSurveyGroup+' / '+this.CurrentSurveyName+' ( '+this.CurrentPreviewPageSize+' )'
+    });
+  end;
 end;
 
 procedure TForm1.btnPreviewReloadClick(Sender: TObject);
@@ -1402,6 +2395,7 @@ begin
   else if (PreviewSize = 2) then PageSize := 'width=375 height=750'
   else if (PreviewSize = 3) then PageSize := 'width=400 height=800'
   else                           PageSize := 'width=500 height=900';
+  CurrentPreviewPageSize := PageSize;
 
   // Easy way to test the availability conditions
   if      (PreviewTime = 0) then PageTime := ''
@@ -1420,7 +2414,7 @@ begin
                                 divConfigBasicTestLink.HTML.Text+'<br />'+
                                 PageSize+'<br />'+
                           '</div>'+
-                          '<iframe src="'+URL+'&CacheBuster='+CacheBuster+PageTime+'" '+PageSize+'>';
+                          '<iframe id="SurveyPreview" style="margin:auto; position:absolute;" src="'+URL+'&CacheBuster='+CacheBuster+PageTime+'" '+PageSize+'>';
 
   // ....but if it is is too tall, we'll need to display it top-aligned
   asm
@@ -1539,14 +2533,24 @@ begin
 
   await(UpdateTable('ISurveyAdminService.GetQuestions', [CurrentSurveyID], tabQuestions, btnQuestionsReload));
 
-  // Select last selected survey if we know what it was
+  // Select last selected question if we know what it was
   if SelectedQuestionID <> '' then
   begin
     asm
-      this.tabQuestions.selectRow(SelectedQuestionID);
+      var rows = this.tabQuestions.searchRows('question_id', '=', SelectedQuestionID);
+      if (rows.length > 0) {
+        this.tabQuestions.selectRow(SelectedQuestionID);
+      }
+      else if (this.tabQuestions.getDataCount() > 0) {
+        this.tabQuestions.selectRow(this.tabQuestions.getRows()[0]);
+        SelectedQuestionID = this.tabQuestions.getRows()[0].getCell('question_id').getValue();
+      }
+      else {
+        SelectedQuestionID = '';
+      }
     end;
   end
-  // Otherwise, select any question if one is available
+  // Otherwise, select first question if one is available
   else
   begin
     asm
@@ -1568,23 +2572,136 @@ begin
   SurveyChanged(Sender);
 end;
 
-procedure TForm1.btnResponsesPrintClick(Sender: TObject);
+procedure TForm1.btnResponsesClearFiltersClick(Sender: TObject);
 begin
-  asm this.tabResponses.print(); end;
+  asm this.tabResponses.clearHeaderFilter(); end;
+end;
+
+procedure TForm1.btnResponsesExportClick(Sender: TObject);
+var
+  Current: String;
+begin
+  Current := FormatDateTime('yyyyMMdd-HHnnss',Now);
+
+  // CSV
+  if btnResponsesExport.Tag = 0 then
+  begin
+    asm
+      this.tabResponses.download("csv", "SurveyAdminClient-Responses-"+Current+".csv")
+    end
+  end
+  // XLSX
+  else if btnResponsesExport.Tag = 1 then
+  begin
+    asm
+      this.tabResponses.download("xlsx", "SurveyAdminClient-Responses-"+Current+".xlsx")
+    end
+  end
+  // JSON
+  else if btnResponsesExport.Tag = 2 then
+  begin
+    asm
+      this.tabResponses.download("json", "SurveyAdminClient-Responses-"+Current+".json")
+    end
+  end
+  // PDF
+  else if btnResponsesExport.Tag = 3 then
+  begin
+    asm
+      this.tabResponses.download("pdf", "SurveyAdminClient-Responses-"+Current+".pdf")
+    end
+  end
+  // Print
+  else if btnResponsesExport.Tag = 4 then
+  begin
+    asm
+      this.tabResponses.deselectRow();
+      this.tabResponses.print("active",true);
+    end
+  end
+
+end;
+
+procedure TForm1.btnResponsesGroupingClick(Sender: TObject);
+begin
+  if btnResponsesGrouping.Tag = 0 then
+  begin
+    btnResponsesGrouping.Tag := 1;
+    btnResponsesGrouping.Caption := '<i class="fa-solid fa-bars-staggered fa-xl fa-fw me-1"></i> Group';
+  end
+  else
+  begin
+    btnResponsesGrouping.Tag := 0;
+    btnResponsesGrouping.Caption := '<i class="fa-solid fa-bars fa-xl fa-fw me-1"></i> Group';
+  end;
+
+  comboResponsesGroupingChange(Sender);
 end;
 
 procedure TForm1.btnResponsesReloadClick(Sender: TObject);
 begin
+  divResponses.Tag := 1;
+
   await(UpdateTable('ISurveyAdminService.GetAllResponses', [], tabResponses, btnResponsesReload));
+
+  asm
+    if (this.tabResponses.getDataCount() > 0) {
+      this.tabResponses.selectRow(this.tabResponses.getRows()[0]);
+    }
+  end;
+
+  pageResponsesShow(Sender);
 end;
 
-procedure TForm1.btnAccountsPrintClick(Sender: TObject);
+procedure TForm1.btnAccountsExportClick(Sender: TObject);
+var
+  Current: String;
 begin
-  asm this.tabAccounts.print(); end;
+  Current := FormatDateTime('yyyyMMdd-HHnnss',Now);
+
+  // CSV
+  if btnAccountsExport.Tag = 0 then
+  begin
+    asm
+      this.tabAccounts.download("csv", "SurveyAdminClient-Accounts-"+Current+".csv")
+    end
+  end
+  // XLSX
+  else if btnAccountsExport.Tag = 1 then
+  begin
+    asm
+      this.tabAccounts.download("xlsx", "SurveyAdminClient-Accounts-"+Current+".xlsx")
+    end
+  end
+  // JSON
+  else if btnAccountsExport.Tag = 2 then
+  begin
+    asm
+      this.tabAccounts.download("json", "SurveyAdminClient-Accounts-"+Current+".json")
+    end
+  end
+  // PDF
+  else if btnAccountsExport.Tag = 3 then
+  begin
+    asm
+      this.tabAccounts.download("pdf", "SurveyAdminClient-Accounts-"+Current+".pdf")
+    end
+  end
+  // Print
+  else if btnAccountsExport.Tag = 4 then
+  begin
+    asm
+      this.tabAccounts.deselectRow();
+      this.tabAccounts.print("active",true);
+    end
+  end
+
 end;
 
 procedure TForm1.btnAccountsReloadClick(Sender: TObject);
 begin
+  divAccounts.Tag := 1;
+
   await(UpdateTable('ISurveyAdminService.GetAccounts', [], tabAccounts, btnAccountsReload));
 
   asm
@@ -1593,6 +2710,7 @@ begin
     }
   end;
 
+  pageAccountsShow(Sender);
 end;
 
 procedure TForm1.btnAddUserClick(Sender: TObject);
@@ -1638,46 +2756,47 @@ begin
   then qrcode.text := 'https://www.500surveys.ca/?SurveyID='+edtconfigBasicLink.Text;
 end;
 
-procedure TForm1.edtConfigBasicLiveLinkClick(Sender: TObject);
-begin
-  showmessage('ot a clik here');
-end;
-
 procedure TForm1.LogActivity(Activity: String);
 begin
   // Add timestamped entry to the Activity Log
   ActivityLog.Add(FormatDateTime('yyyy-mm-dd hh:nn:ss.zzz', Now)+'  '+Activity);
 end;
 
+procedure TForm1.LoggingDatesChanged(StartDate, EndDate: String);
+begin
+  UpdateTable('ISurveyAdminService.GetHistoryRange', [StartDate, EndDate], tabLogging, btnLoggingReload);
+  btnLoggingReload.Tag := 99;
+end;
+
 procedure TForm1.Login;
-var
- NewLogin: TLoginForm;
+//var
+// NewLogin: TLoginForm;
 
 begin
-  // Display Login panel and go from there
-
-  NewLogin := TLoginForm.Create(Self);
-  NewLogin.Popup := True;
-  NewLogin.PopupOpacity := 0.7;
-
-  // Load the form
-  await( TLoginForm, NewLogin.Load );
-
-  NewLogin.divLoginTitle.HTML.Text := '<div style="width:100%; text-align:center;">Survey Admin Client v'+AppVer;
-
-  // Wait for the form to be closed, and then act accordingly
-  try
-    await( TModalResult, NewLogin.Execute );
-  finally
-    NewLogin.Free;
-  end;
+//  // Display Login panel and go from there
+//
+//  NewLogin := TLoginForm.Create(Self);
+//  NewLogin.Popup := True;
+//  NewLogin.PopupOpacity := 0.7;
+//
+//  // Load the form
+//  await( TLoginForm, NewLogin.Load );
+//
+//  NewLogin.divLoginTitle.HTML.Text := '<div style="width:100%; text-align:center;">Survey Admin Client<span style="margin-left:25px;;font-size: 14px; opacity:0.5;">Ver. '+AppVer+' &nbsp;&nbsp; Rel. '+AppRelH+'</span></div>';
+//
+//  // Wait for the form to be closed, and then act accordingly
+//  try
+//    await( TModalResult, NewLogin.Execute );
+//  finally
+//    NewLogin.Free;
+//  end;
 
 
 end;
 
 procedure TForm1.NewQuestionTypeSelected(QuestionID: String; typeid: integer; icon, hint, desc: string; info: string; update: boolean);
 begin
-  ddQuestionType.Text := '<div style="margin-left: 2px; margin-right:10px;">'+icon+'</div><div class="btn btn-sm btn-secondary bg-info text-dark me-2">'+hint+'</div><div style="margin-bottom:2px;">'+desc+'</div>';
+  ddQuestionType.Text := '<div style="margin-left: 2px; margin-right:13px;margin-top:1px;">'+icon+'</div><div style="width: 100px; height:32px;text-align:left;padding-left:4px;" class="btn btn-sm btn-secondary bg-info text-dark me-2">'+hint+'</div><div style="margin-bottom:2px;">'+desc+'</div>';
   ddQuestionType.Tag := typeid;
   divQuestionOptionsInfo.HTML.Text := info;
   if update then
@@ -1701,6 +2820,52 @@ begin
   end;
 end;
 
+
+procedure TForm1.pageAccountsShow(Sender: TObject);
+begin
+  asm
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+      this.tabAccounts.restoreRedraw();
+      this.tabIssues.restoreRedraw();
+    }, 0);
+  end;
+end;
+
+procedure TForm1.pageLoggingShow(Sender: TObject);
+begin
+  asm
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+      this.tabLogging.restoreRedraw();
+    }, 0);
+  end;
+end;
+
+procedure TForm1.pageResponsesShow(Sender: TObject);
+begin
+  asm
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+      this.tabResponses.restoreRedraw();
+      this.tabFeedback.restoreRedraw();
+    }, 0);
+  end;
+end;
+
+procedure TForm1.pageSurveysShow(Sender: TObject);
+begin
+  asm
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+      this.tabSurveyInfo.restoreRedraw();
+      this.tabNotes.restoreRedraw();
+      this.tabAvailability.restoreRedraw();
+      this.tabChangeHistory.restoreRedraw();
+      this.tabPermissions.restoreRedraw();
+    }, 0);
+  end;
+end;
 
 procedure TForm1.QuestionChanged(Sender: TObject);
 var
@@ -1787,71 +2952,35 @@ end;
 
 procedure TForm1.ResizeQRCode;
 begin
-  if Trim(edtconfigBasicLink.Text) <> ''
-  then qrcode.text := 'https://www.500surveys.ca/?SurveyID='+edtconfigBasicLink.Text;
+  if  (pagecontrolMain.TabIndex = 0)    // survey
+  and (pagecontrolSurveys.TabIndex = 0) // config options
+  and (pagecontrolSurveysConfig.TabIndex = 10) then  // QR Code tab
+  begin
 
-  divQRCodeConstraints.Width := min( 400, divQRCodeHolder.Width);
-  divQRCodeConstraints.height := min( 400, divQRCodeHolder.Height);
+    if Trim(edtconfigBasicLink.Text) <> ''
+    then qrcode.text := 'https://www.500surveys.ca/?SurveyID='+edtconfigBasicLink.Text;
 
-  divQRCodeConstraints.Width := min(divQRCodeConstraints.width, divQRCodeConstraints.Height);
-  divQRCodeConstraints.Height := min(divQRCodeConstraints.width, divQRCodeConstraints.Height);
+    divQRCodeConstraints.Width := min( 400, trunc(divQRCodeHolder.ElementHandle.offsetWidth));
+    divQRCodeConstraints.height := min( 400, trunc(divQRCodeHolder.ElementHandle.offsetHeight));
 
-  divQRCodeConstraints.Left := (divQRCodeHolder.Width - divQRCodeConstraints.Width) div 2;
-  divQRCodeConstraints.Top := (divQRCodeHolder.Height - divQRCodeConstraints.Height) div 2;
+    divQRCodeConstraints.Width := min(divQRCodeConstraints.width, divQRCodeConstraints.Height);
+    divQRCodeConstraints.Height := min(divQRCodeConstraints.width, divQRCodeConstraints.Height);
+
+    divQRCodeConstraints.Left := (trunc(divQRCodeHolder.ElementHandle.offsetWidth) - divQRCodeConstraints.Width) div 2;
+    divQRCodeConstraints.Top := (trunc(divQRCodeHolder.ElementHandle.offsetHeight) - divQRCodeConstraints.Height) div 2;
+  end;
+
+//  console.log('top: '+IntToStr(divQRCodeConstraints.Top));
+//  console.log('left: '+IntToStr(divQRCodeConstraints.Left));
+//  console.log('width: '+IntToStr(divQRCodeConstraints.Width));
+//  console.log('height: '+IntToStr(divQRCodeConstraints.Height));
+//  console.log('width: '+IntToStr(trunc(divQRCodeHolder.ElementHandle.offsetWidth)));
+//  console.log('height: '+IntToStr(trunc(divQRCodeHolder.ElementHandle.offsetHeight)));
 end;
 
 procedure TForm1.ServerConnRequest(Args: TXDataWebConnectionRequest);
 begin
   Args.Request.Headers.SetValue('Authorization', JWT);
-end;
-
-procedure TForm1.splitterAccountsMove(Sender: TObject);
-begin
-  if divAccountsHolder.Width < 400
-  then divAccountsHolder.Width := 400;
-  if divAccountsHolder.Width > 800
-  then divAccountsHolder.Width := 800;
-end;
-
-procedure TForm1.splitterLibraryMove(Sender: TObject);
-begin
-  if divLibraryListHolder.Width < 250
-  then divLibraryListHolder.Width := 250;
-  if divLibraryListHolder.Width > 750
-  then divLibraryListHolder.Width := 750;
-end;
-
-procedure TForm1.splitterQuestionsMove(Sender: TObject);
-begin
-  if divQuestionsHolder.Width < 250
-  then divQuestionsHolder.Width := 250;
-  if divQuestionsHolder.Width > 750
-  then divQuestionsHolder.Width := 750;
-end;
-
-procedure TForm1.splitterResponsesMove(Sender: TObject);
-begin
-  if divResponsesHolder.Width < 400
-  then divResponsesHolder.Width := 400;
-
-end;
-
-procedure TForm1.splitterSurveyConfigMove(Sender: TObject);
-begin
-  if divSurveysOptions.Width < 150
-  then divSurveysOptions.Width := 150;
-  if divSurveysOptions.Width > 450
-  then divSurveysOptions.Width := 450;
-
-  ResizeQRCode;
-end;
-
-procedure TForm1.splitterSurveyMainMove(Sender: TObject);
-begin
-  if divSurveysSurveyHolder.Width < 250
-  then divSurveysSurveyHolder.Width := 250;
-  if divSurveysSurveyHolder.Width > 750
-  then divSurveysSurveyHolder.Width := 750;
 end;
 
 procedure TForm1.SurveyChanged(Sender: TObject);
@@ -2185,6 +3314,7 @@ begin
       }
     end;
     labelAvailabilityCountdown.Caption := DisplayTime;
+    labelPreviewAvailabilityCountdown.Caption := DisplayTime;
   end;
 end;
 
@@ -2251,32 +3381,40 @@ begin
 end;
 
 procedure TForm1.WebFormCreate(Sender: TObject);
+var
+  ElapsedTime: TDateTime;
 begin
+
+  // Just for fun, let's time how long this initialization takes
+  ElapsedTime := Now;
+
+
 
   // Output Version Information
   asm
     this.AppVer = ProjectName.replaceAll('_','.').substr(ProjectName.indexOf('_')+1);
-    this.AppRel = document.lastModified;
+    this.AppRel = luxon.DateTime.fromJSDate(new Date(document.lastModified)).toISO();
+    this.AppRelH = luxon.DateTime.fromJSDate(new Date(document.lastModified)).toFormat('yyyy-MMM-dd');
   end;
+
+
 
   // Initialize the Activity Log and add the version information
   ActivityLog := TStringList.Create;
   LogActivity('Survey Admin Client App Initializing');
   LogActivity('');
   LogActivity('AppVersion: '+AppVer);
-  LogActivity('AppRelease: '+AppRel);
+  LogActivity('AppRelease: '+AppRelH);
   LogActivity('TMSWEBCore: '+Application.Version);
   LogActivity('');
 
-  // Hopefully the only thing this app outputs to the console
-  console.log(ActivityLog.Text);
 
-  // Set Page Title
-  Caption := 'Survey Admin Client '+AppVer;
 
   // Other Defaults
   CurrentSurveyData := '[]';
   CurrentSurveyQuestions := '[]';
+
+
 
   // Set default pages for TWebPageControls
   SwitchOption(0);
@@ -2284,6 +3422,26 @@ begin
   pagecontrolSurveys.TabIndex := 0;
   pagecontrolSurveysConfig.TabIndex := 0;
 
+
+
+  // These are set to Visible := False in the IDE so that when the form
+  // is loaded, the components aren't all being redrawn - this drops the
+  // form load time (LoadDFMvalues) from ~5s to ~1s
+  pagecontrolMain.Visible := True;
+  pagecontrolSurveys.Visible := True;
+  pagecontrolSurveysConfig.Visible := True;
+
+
+
+  // Set Default Widths of controls that have a "splitter" attached
+  // Note: Currently this is implemented with InteractJS instead of an actual splitter
+  asm
+    divSurveysSurveyHolder.style.width = '250px';
+    divSurveysOptionsHolder.style.width = '250px';
+    divQuestionsHolder.style.width = '250px';
+    divResponsesHolder.style.width = '800px';
+    divAccountsHolder.style.width = '800px';
+  end;
 
 
 
@@ -2294,12 +3452,14 @@ begin
   MainMenuButtons[2] := btnQuestions;
   MainMenuButtons[3] := btnAccounts;
   MainMenuButtons[4] := btnLogging;
+  // Default: Surveys
 
   SetLength(SurveyMenuButtons, 4);
   SurveyMenuButtons[0] := btnSurveyOptions;
   SurveyMenuButtons[1] := btnSurveyQuestions;
   SurveyMenuButtons[2] := btnSurveyPermissions;
   SurveyMenuButtons[3] := btnSurveyPreview;
+  // Default: Options
 
   SetLength(PreviewSizeButtons, 5);
   PreviewSizeButtons[0] := btnPreviewSize0;
@@ -2307,7 +3467,7 @@ begin
   PreviewSizeButtons[2] := btnPreviewSize2;
   PreviewSizeButtons[3] := btnPreviewSize3;
   PreviewSizeButtons[4] := btnPreviewSize4;
-  PreviewSize := 2; // default = middle size
+  PreviewSize := 2; // Default: Middle size
 
   SetLength(PreviewSizeButtons, 5);
   PreviewTimeButtons[0] := btnPreviewAuto;
@@ -2315,14 +3475,116 @@ begin
   PreviewTimeButtons[2] := btnPreviewPre;
   PreviewTimeButtons[3] := btnPreviewPause;
   PreviewTimeButtons[4] := btnPreviewPost;
-  PreviewTime := 0; // default = auto
+  PreviewTime := 0; // Default = Auto
+
+  // Hmmm...  Maybe this wasn't the best approach, but the
+  // Export buttons are just copied & pasted which means
+  // this is a prime candidate for some kind of refactoring
+
+  SetLength(ResponsesExportButtons, 5);
+  ResponsesExportButtons[0] := btnResponsesExportCSV;
+  ResponsesExportButtons[1] := btnResponsesExportExcel;
+  ResponsesExportButtons[2] := btnResponsesExportJSON;
+  ResponsesExportButtons[3] := btnResponsesExportPDF;
+  ResponsesExportButtons[4] := btnResponsesExportPrint;
+  // Default: Print
+
+  SetLength(LoggingExportButtons, 5);
+  LoggingExportButtons[0] := btnLoggingExportCSV;
+  LoggingExportButtons[1] := btnLoggingExportExcel;
+  LoggingExportButtons[2] := btnLoggingExportJSON;
+  LoggingExportButtons[3] := btnLoggingExportPDF;
+  LoggingExportButtons[4] := btnLoggingExportPrint;
+  // Default: Print
+
+  SetLength(ChangeHistoryExportButtons, 5);
+  ChangeHistoryExportButtons[0] := btnChangeHistoryExportCSV;
+  ChangeHistoryExportButtons[1] := btnChangeHistoryExportExcel;
+  ChangeHistoryExportButtons[2] := btnChangeHistoryExportJSON;
+  ChangeHistoryExportButtons[3] := btnChangeHistoryExportPDF;
+  ChangeHistoryExportButtons[4] := btnChangeHistoryExportPrint;
+  // Default: Print
+
+  SetLength(NotesExportButtons, 5);
+  NotesExportButtons[0] := btnNotesExportCSV;
+  NotesExportButtons[1] := btnNotesExportExcel;
+  NotesExportButtons[2] := btnNotesExportJSON;
+  NotesExportButtons[3] := btnNotesExportPDF;
+  NotesExportButtons[4] := btnNotesExportPrint;
+  // Default: Print
+
+  SetLength(AccountsExportButtons, 5);
+  AccountsExportButtons[0] := btnAccountsExportCSV;
+  AccountsExportButtons[1] := btnAccountsExportExcel;
+  AccountsExportButtons[2] := btnAccountsExportJSON;
+  AccountsExportButtons[3] := btnAccountsExportPDF;
+  AccountsExportButtons[4] := btnAccountsExportPrint;
+  // Default: Print
+
+  SetLength(IssuesExportButtons, 5);
+  IssuesExportButtons[0] := btnIssuesExportCSV;
+  IssuesExportButtons[1] := btnIssuesExportExcel;
+  IssuesExportButtons[2] := btnIssuesExportJSON;
+  IssuesExportButtons[3] := btnIssuesExportPDF;
+  IssuesExportButtons[4] := btnIssuesExportPrint;
+  // Default: Print
+
+  SetLength(FeedbackExportButtons, 5);
+  FeedbackExportButtons[0] := btnFeedbackExportCSV;
+  FeedbackExportButtons[1] := btnFeedbackExportExcel;
+  FeedbackExportButtons[2] := btnFeedbackExportJSON;
+  FeedbackExportButtons[3] := btnFeedbackExportPDF;
+  FeedbackExportButtons[4] := btnFeedbackExportPrint;
+  // Default: Print
+
+  SetLength(PermissionsExportButtons, 5);
+  PermissionsExportButtons[0] := btnPermissionsExportCSV;
+  PermissionsExportButtons[1] := btnPermissionsExportExcel;
+  PermissionsExportButtons[2] := btnPermissionsExportJSON;
+  PermissionsExportButtons[3] := btnPermissionsExportPDF;
+  PermissionsExportButtons[4] := btnPermissionsExportPrint;
+  // Default: Print
+
+  SetLength(AvailabilityExportButtons, 5);
+  AvailabilityExportButtons[0] := btnAvailabilityExportCSV;
+  AvailabilityExportButtons[1] := btnAvailabilityExportExcel;
+  AvailabilityExportButtons[2] := btnAvailabilityExportJSON;
+  AvailabilityExportButtons[3] := btnAvailabilityExportPDF;
+  AvailabilityExportButtons[4] := btnAvailabilityExportPrint;
+  // Default: Print
+
+  SetLength(SurveyInfoExportButtons, 5);
+  SurveyInfoExportButtons[0] := btnSurveyInfoExportCSV;
+  SurveyInfoExportButtons[1] := btnSurveyInfoExportExcel;
+  SurveyInfoExportButtons[2] := btnSurveyInfoExportJSON;
+  SurveyInfoExportButtons[3] := btnSurveyInfoExportPDF;
+  SurveyInfoExportButtons[4] := btnSurveyInfoExportPrint;
+  // Default: Print
 
 
+
+  //////////////////////////////////////////////////////////////////////////////
+  // TABULATOR
+  //
+  // All the tables used in this app use Tabulator to do their thing.  Each of
+  // these tables is defined and configured here.
+  //////////////////////////////////////////////////////////////////////////////
+
+  //////////////////////////////////////////////////////////////////////////////
   // Tabulator defaults - apply to all tables
+  // Note: If a table has its own columnDefaults, then
+  // it replaces these columDefaults, rather than adding to them
+  //////////////////////////////////////////////////////////////////////////////
   asm
     Tabulator.defaultOptions.layout = "fitColumns";
     Tabulator.defaultOptions.index = 'ID';
     Tabulator.defaultOptions.selectable = 1;
+    Tabulator.defaultOptions.visible = true;
+    Tabulator.defaultOptions.printAsHtml = true;
+    Tabulator.defaultOptions.printStyle = true;
+    Tabulator.defaultOptions.printRowRange = "active";
+    Tabulator.defaultOptions.groupToggleElement = "header";
+    Tabulator.defaultOptions.layoutColumnsOnNewData = true,
     Tabulator.defaultOptions.columnHeaderSortMulti = true,
     Tabulator.defaultOptions.clipboard = "copy";
     Tabulator.defaultOptions.placeholder = 'No Data';
@@ -2332,9 +3594,105 @@ begin
     };
   end;
 
+  //////////////////////////////////////////////////////////////////////////////
+  // Next we have some common functions that are used in various tables.
+  // Easier to define them once here and apply as needed.
+  //////////////////////////////////////////////////////////////////////////////
+
+  //////////////////////////////////////////////////////////////////////////////
+  // headerMenu
+  //
+  // Tabulator: http://tabulator.info/docs/5.2/menu
+  // Define column header menu as column visibility toggle.  Used for both
+  // Tabulator tables, basically appears on all columns
+  //////////////////////////////////////////////////////////////////////////////
+  asm
+    var headerMenu = function(){
+      var menu = [];
+      var columns = this.getColumns();
+      var table = this;
+
+      for (let column of columns){
+
+        if (!(column.getDefinition().title == null)) {
+
+          // Build menu item
+          var label = document.createElement("div");
+          label.classList.add("d-flex", "flex-fill");
+
+          // Create checkbox element using font awesome icons
+          var icon = document.createElement("i");
+          if (column.isVisible()) {
+            icon.classList.add("flex-grow-0", "ColVis", "fa-solid", "fa-check-square");
+          }
+          else
+          {
+            icon.classList.add("flex-grow-0", "ColVis", "fa-solid", "fa-square");
+          }
+
+          // Menu Title
+          let title = document.createElement("div");
+          title.classList.add("ps-1", "ColVis", "flex-grow-1");
+          title.innerText = column.getDefinition().title;
+          label.append(icon, title);
+
+          //create menu item
+          menu.push({
+            label: label,
+            action: function(e){
+              e.stopPropagation();
+
+              // Toggle current column visibility
+              column.toggle();
+              if (column.isVisible()) {
+                e.currentTarget.firstElementChild.firstElementChild.classList.replace("fa-square","fa-check-square");
+              }
+              else {
+                e.currentTarget.firstElementChild.firstElementChild.classList.replace("fa-check-square","fa-square");
+              }
+            }
+          });
+        }
+      }
+      return menu;
+    };
+  end;
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Other common table functions
+  //////////////////////////////////////////////////////////////////////////////
+  asm
+
+    // Used in BottomCalcs to show unique values rather than "sum" or "count"
+    var distinctCount = function(values, data, calcParams) {
+                          return new Set(values).size;
+                        }
+
+    // Formatter for large integers to include commas
+    var commaFormat = function(cell, formatterParams, onRendered) {
+                           var el = document.createElement('span');
+                           el.innerHTML = cell.getValue().toLocaleString();
+                           return el;
+                         }
+
+    // Formatter for distinct values to wrap with <em> and also include commas
+    // This is so at the bottom of a table you can tell between "count" and "distinct"
+    var distinctFormat = function(cell, formatterParams, onRendered) {
+                           var el = document.createElement('em');
+                           el.innerHTML = cell.getValue().toLocaleString();
+                           return el;
+                         }
+  end;
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Each Tabulator table is defined here.  Order not particularly important.
+  //////////////////////////////////////////////////////////////////////////////
 
 
+
+  //////////////////////////////////////////////////////////////////////////////
   // Main Survey List
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabSurveys = new Tabulator("#divSurveysSurveyList",{
       data: JSON.parse(this.CurrentSurveyData),
@@ -2346,20 +3704,23 @@ begin
       columns: [
         { title: "ID", field: "survey_id", visible: false },
         { title: "Group", field: "survey_group", visible: false },
-        { title: "Survey", field: "survey_name", bottomCalc: "count" },
+        { title: "Survey", field: "survey_name", bottomCalc: "count", bottomCalcFormatter: commaFormat },
         { title: "Permissions", field: "permissions", minWidth: 28, width: 28,
             formatter: function(cell, formatterParams, onRendered) {
-              var superv = (cell.getValue().substr(0,1) == 'Y');
-              var editor = (cell.getValue().substr(1,1) == 'Y');
-              var viewer = (cell.getValue().substr(2,1) == 'Y');
-              var reader = (cell.getValue().substr(3,1) == 'Y');
-              var deletr = (cell.getValue().substr(4,1) == 'Y');
+              if (typeof cell.getValue() === 'string' || cell.getValue() instanceof String) {
+                var superv = (cell.getValue().substr(0,1) == 'Y');
+                var editor = (cell.getValue().substr(1,1) == 'Y');
+                var viewer = (cell.getValue().substr(2,1) == 'Y');
+                var reader = (cell.getValue().substr(3,1) == 'Y');
+                var deletr = (cell.getValue().substr(4,1) == 'Y');
 
-              if (superv) { return '<i class="fa-solid fa-key fa-fw"></i>'; }
-              else if (editor) { return '<i class="fa-solid fa-pencil fa-fw"></i>'; }
-              else if (viewer) { return '<i class="fa-solid fa-eye fa-fw"></i>'; }
-              else if (reader) { return '<i class="fa-solid fa-clipboard fa-fw"></i>'; }
-              else { return '<i class="fa-solid fa-ban fa-fw"></i>'; }
+                if (superv) { return '<i class="fa-solid fa-key fa-fw"></i>'; }
+                else if (editor) { return '<i class="fa-solid fa-pencil fa-fw"></i>'; }
+                else if (viewer) { return '<i class="fa-solid fa-eye fa-fw"></i>'; }
+                else if (reader) { return '<i class="fa-solid fa-clipboard fa-fw"></i>'; }
+                else { return '<i class="fa-solid fa-ban fa-fw"></i>'; }
+              }
+              else { return '' }
             }
         }
       ]
@@ -2372,17 +3733,19 @@ begin
 
 
 
+  //////////////////////////////////////////////////////////////////////////////
   // Main Survey Options
+  //////////////////////////////////////////////////////////////////////////////
   asm
     var dataSurveyOptions = [
       {"ID":1, "OPTION":"Basic Information" },
       {"ID":11, "OPTION":"Survey QR Code" },
       {"ID":2, "OPTION":"Project Notes" },
       {"ID":3, "OPTION":"Availability" },
-      {"ID":4, "OPTION":"Banner Active" },
-      {"ID":5, "OPTION":"Banner Pre" },
-      {"ID":6, "OPTION":"Banner Pause" },
-      {"ID":7, "OPTION":"Banner Post" },
+      {"ID":4, "OPTION":"Banner: Active" },
+      {"ID":5, "OPTION":"Banner: Preview" },
+      {"ID":6, "OPTION":"Banner: Paused" },
+      {"ID":7, "OPTION":"Banner: Ended" },
       {"ID":8, "OPTION":"About Page" },
       {"ID":9, "OPTION":"Feedback Page" },
       {"ID":10, "OPTION":"Change History" }
@@ -2393,11 +3756,11 @@ begin
       headerVisible: false,
       columns: [
         { title: "ID", field: "ID", visible: false },
-        { title: "Options", field: "OPTION", bottomCalc: "count" },
-        { title: "Items", field: "ITEMS", width:40, minWidth: 45,
+        { title: "Options", field: "OPTION", bottomCalc: "count", bottomCalcFormatter: commaFormat },
+        { title: "Items", field: "ITEMS", width:40, minWidth: 55,
             formatter: function(cell, formatterParams, onRendered) {
               if ((cell.getValue() !== undefined) && (cell.getValue() !== 0)) {
-                return '<div class="d-flex justify-content-end align-items-start"><div style="height: 22px; line-height:12px; font-size: 12px;" class="btn btn-sm text-white btn-secondary rounded-pill">'+cell.getValue()+'</div></div>';
+                return '<div class="d-flex justify-content-end align-items-start"><div style="height: 22px; line-height:12px; font-size: 12px;" class="btn btn-sm text-white btn-secondary rounded-pill">'+cell.getValue().toLocaleString()+'</div></div>';
               }
               else {
                 return '';
@@ -2418,7 +3781,9 @@ begin
 
 
 
+  //////////////////////////////////////////////////////////////////////////////
   // Survey Availability
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabAvailability = new Tabulator("#divAvailability",{
       initialSort: [{column:"opening", dir:"asc"}],
@@ -2452,7 +3817,7 @@ begin
               }
             }
         },
-        { title: "Description", field: "description", visible: true, minWidth: 250, bottomCalc: "count", editor: "input",
+        { title: "Description", field: "description", visible: true, minWidth: 250, bottomCalc: "count", editor: "input", bottomCalcFormatter: commaFormat,
             cellEdited: function(cell){ pas.Unit1.Form1.SurveyChanged(null); }
         }
       ]
@@ -2465,13 +3830,16 @@ begin
 
 
 
+  //////////////////////////////////////////////////////////////////////////////
   // Survey Info
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabSurveyInfo = new Tabulator("#divSurveyInfo",{
       headerVisible: false,
+      initialSort: [{column:"ID", dir:"asc"}],
       columns: [
         { title: "ID", field: "ID", visible: false },
-        { title: "Key", field: "KEY", visible: true, width: 200 },
+        { title: "Key", field: "KEY", visible: true, width: 200, bottomCalc: "count", bottomCalcFormatter: commaFormat },
         { title: "Value", field: "VALUE" }
       ]
     });
@@ -2482,22 +3850,45 @@ begin
 
 
 
+  //////////////////////////////////////////////////////////////////////////////
   // Accounts
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabAccounts = new Tabulator("#divAccounts",{
       index: "account_id",
+      initialSort: [{column:"last_name", dir:"asc"}, {column:"first_name", dir:"asc"}],
+      persistence: {
+        sort: true,
+        filter: true,
+        group: true,
+        columns: ["visible","width"]
+      },
+      groupBy: "",
+      columnCalcs: "both",
+      groupToggleElement:"header",
+      movableColumns: true,
+      columnDefaults: {
+        visible: true,
+        headerMenu: headerMenu,
+        headerSortTristate: true,
+        bottomCalc: distinctCount,
+        bottomCalcFormatter: distinctFormat,
+        resizable: true,
+        headerFilter: "input",
+        headerFilterParams: { valuesLookup: true, sort: "asc" }
+      },
       columns: [
-        { title: "ID", field: "account_id", visible: false },
-        { title: "First", field: "first_name", visible: true, bottomCalc: "count", editor: "input",
+        { title: "ID", field: "account_id", visible: false, minWidth: 70 },
+        { title: "First", field: "first_name", bottomCalc: "count", editor: "input", minWidth: 170, bottomCalcFormatter: commaFormat,
             cellEdited: function(cell){ pas.Unit1.Form1.AccountChanged(cell.getRow().getCell("account_id").getValue()); }
         },
-        { title: "Last", field: "last_name", visible: true, editor: "input",
+        { title: "Last", field: "last_name", editor: "input", minWidth: 170,
             cellEdited: function(cell){ pas.Unit1.Form1.AccountChanged(cell.getRow().getCell("account_id").getValue()); }
         },
-        { title: "E-Mail", field: "email", widthGrow: 2, visible: true, editor: "input",
+        { title: "E-Mail", field: "email", widthGrow: 2, editor: "input", minWidth: 270,
             cellEdited: function(cell){ pas.Unit1.Form1.AccountChanged(cell.getRow().getCell("account_id").getValue()); }
         },
-        { title: '<i class="fa-solid fa-tag"></i>', field: "openissues", width: 50, visible: true, bottomCalc: "sum" }
+        { title: '<i class="fa-solid fa-tag"></i>', field: "openissues", minWidth: 70, bottomCalc: "sum" }
       ]
     });
     this.tabAccounts.on('rowClick', function(e,row) {
@@ -2506,6 +3897,10 @@ begin
   end;
 
 
+
+  //////////////////////////////////////////////////////////////////////////////
+  // List of Question Types
+  //////////////////////////////////////////////////////////////////////////////
 
   asm
     var caret = '<i class="fa-solid fa-caret-right fa-fw mx-1"></i>';
@@ -2634,6 +4029,10 @@ begin
   end;
 
 
+
+  //////////////////////////////////////////////////////////////////////////////
+  // QuestionTypes
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabQuestionTypes = new Tabulator("#panelQuestionTypes",{
       data: typedata,
@@ -2666,7 +4065,9 @@ begin
 
 
 
+  //////////////////////////////////////////////////////////////////////////////
   // Questions
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabQuestions = new Tabulator("#divQuestions",{
       data: JSON.parse(this.CurrentSurveyQuestions),
@@ -2675,7 +4076,7 @@ begin
       movableRows: true,
       columns: [
         { title: "ID", field: "question_id", visible: false },
-        { title: "Type", field: "question_type", visible: true, width: 40, bottomCalc: "count",
+        { title: "Type", field: "question_type", visible: true, width: 40, bottomCalc: "count", bottomCalcFormatter: commaFormat,
             formatter: function(cell, formatterParams, onRendered) {
               var typeicon = typedata[0].ICON;
               var typehint = typedata[0].HINT;
@@ -2691,7 +4092,8 @@ begin
         { title: "Title", field: "question_title", visible: false },
         { title: "Footer", field: "question_footer", visible: false },
         { title: "Options", field: "question_options", visible: false },
-        { title: "Question", field: "question", visible: false }
+        { title: "Question", field: "question", visible: false },
+        { rowHandle: true, formatter: "handle", frozen: true, width: 30, minWidth: 30}
       ]
     });
     this.tabQuestions.on('rowClick', function(e,row) {
@@ -2703,7 +4105,11 @@ begin
     });
   end;
 
+
+
+  //////////////////////////////////////////////////////////////////////////////
   // Library
+  //////////////////////////////////////////////////////////////////////////////
   asm
 
     this.tabLibrary = new Tabulator("#divLibraryList",{
@@ -2712,7 +4118,7 @@ begin
       index: "library_id",
       columns: [
         { title: "ID", field: "library_id", visible: false },
-        { title: "library Type", field: "library_type", visible: true, width: 45, bottomCalc: "count",
+        { title: "library Type", field: "library_type", visible: true, width: 45, bottomCalc: "count", bottomCalcFormatter: commaFormat,
             formatter: function(cell, formatterParams, onRendered) {
               var typeicon = typedata[0];
               if (cell !== undefined) {
@@ -2730,7 +4136,10 @@ begin
   end;
 
 
+
+  //////////////////////////////////////////////////////////////////////////////
   // Notes
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabNotes = new Tabulator("#divNotes",{
       initialSort: [{column:"utc_stamp", dir:"desc"}],
@@ -2738,30 +4147,34 @@ begin
       resizableRows: true,
       columns: [
         { title: "ID", field: "note_id", visible: false },
-        { title: "When", field: "utc_stamp", visible: true, width: 200, bottomCalc: "count",
-            formatterPrint: false,
+        { title: "When", field: "utc_stamp", visible: true, width: 200, bottomCalc: "count", bottomCalcFormatter: commaFormat,
             formatter: function(cell, formatterParams, onRendered) {
-              var start  = luxon.DateTime.fromFormat(cell.getValue(), "yyyy-MM-dd HH:mm:ss.SSS");
-              var finish = luxon.DateTime.now();
-              var coded = finish.diff(start).shiftTo('years','months','days','hours','minutes','seconds').toObject();
-              var human = '';
-              var i = 0;
-              for (var dur in coded) {
-                if ((coded[dur] !== 0) && (dur !== 'seconds') && (i < 2)) {
-                  if (coded[dur] == 1) {
-                    human += coded[dur]+' '+dur.slice(0,-1)+' ';
-                  } else {
-                    human += coded[dur]+' '+dur+' ';
+              if (typeof cell.getValue() === 'string' || cell.getValue() instanceof String) {
+                var start  = luxon.DateTime.fromFormat(cell.getValue(), "yyyy-MM-dd HH:mm:ss.SSS");
+                var finish = luxon.DateTime.now();
+                var coded = finish.diff(start).shiftTo('years','months','days','hours','minutes','seconds').toObject();
+                var human = '';
+                var i = 0;
+                for (var dur in coded) {
+                  if ((coded[dur] !== 0) && (dur !== 'seconds') && (i < 2)) {
+                    if (coded[dur] == 1) {
+                      human += coded[dur]+' '+dur.slice(0,-1)+' ';
+                    } else {
+                      human += coded[dur]+' '+dur+' ';
+                    }
+                    i++;
                   }
-                  i++;
                 }
-              }
-              if (human == '') {
+                if (human == '') {
                 human = 'just now'
-              } else {
-                human += 'ago'
+                } else {
+                  human += 'ago'
+                }
+                return start.toFormat('yyyy-MMM-dd (ccc) HH:mm')+'<br /><span class="text-secondary">'+human+'</span>';
               }
-              return start.toFormat('yyyy-MMM-dd (ccc) HH:mm')+'<br /><span class="text-secondary">'+human+'</span>';
+              else {
+                return '';
+              }
             }
         },
         { title: "Who", field: "first_name", visible: true, width: 200, resizable: true,
@@ -2782,13 +4195,15 @@ begin
 
 
 
+  //////////////////////////////////////////////////////////////////////////////
   // Survey Permissions
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabPermissions = new Tabulator("#divPermissions",{
       index: "account_id",
       columns: [
         { title: "ID", field: "account_id", visible: false },
-        { title: '<i class="fa-solid fa-eye fa-fw fa-lg "></i>', field: "access", width: 60, bottomCalc: "count",
+        { title: '<i class="fa-solid fa-eye fa-fw fa-lg "></i>', field: "access", width: 60, bottomCalc: "count", bottomCalcFormatter: commaFormat,
             formatter: "tickCross",
             formatterParams: {
               allowEmpty: true,
@@ -2803,9 +4218,9 @@ begin
                                                 cell.getValue());
             },
         },
-        { title: "First", field: "first_name"},
-        { title: "Last", field: "last_name" },
-        { title: "EMail", field: "email", widthGrow: 2},
+        { title: "First", field: "first_name", minWidth: 150 },
+        { title: "Last", field: "last_name", minWidth: 150 },
+        { title: "EMail", field: "email", minWidth: 150, widthGrow: 3 },
         { title: "Permissions", field: "permissions", width:200 }
       ]
     });
@@ -2816,18 +4231,39 @@ begin
 
 
 
+  //////////////////////////////////////////////////////////////////////////////
   // Issues
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabIssues = new Tabulator("#divIssues",{
+      index: "issue_id",
       initialSort: [{column:"utc_stamp", dir:"desc"}],
       resizableRows: true,
-      index: "issue_id",
+      persistence: {
+        sort: true,
+        filter: true,
+        group: true,
+        columns: ["visible","width"]
+      },
+      groupBy: "",
+      columnCalcs: "both",
+      groupToggleElement:"header",
+      movableColumns: true,
+      columnDefaults: {
+        visible: true,
+        headerMenu: headerMenu,
+        headerSortTristate: true,
+        bottomCalc: distinctCount,
+        bottomCalcFormatter: distinctFormat,
+        resizable: true,
+        headerFilter: "list",
+        headerFilterParams: { valuesLookup: true, sort: "asc" }
+      },
       columns: [
-        { title: "ID", field: "issue_id", visible: false },
-        { title: "When", field: "utc_stamp", visible: true, width: 200, bottomCalc: "count",
-            formatterPrint: false,
+        { title: "ID", field: "issue_id", visible: false, minWidth: 70 },
+        { title: "When", field: "utc_stamp", bottomCalc: "count", minWidth: 170, bottomCalcFormatter: commaFormat,
             formatter: function(cell, formatterParams, onRendered) {
-              if (cell.getValue() !== undefined) {
+              if (typeof cell.getValue() === 'string' || cell.getValue() instanceof String) {
                 var start  = luxon.DateTime.fromFormat(cell.getValue(), "yyyy-MM-dd HH:mm:ss.SSS");
                 var finish = luxon.DateTime.now();
                 var coded = finish.diff(start).shiftTo('years','months','days','hours','minutes','seconds').toObject();
@@ -2848,41 +4284,45 @@ begin
                 } else {
                   human += 'ago'
                 }
-                return start.toFormat('yyyy-MMM-dd (ccc) HH:mm')+'<br /><span class="text-secondary">'+human+'</span>';
+                return start.toFormat('yyyy-MMM-dd (ccc) HH:mm')+'<br /><span style="opacity:0.75">'+human+'</span>';
               }
               else {
                 return '';
               }
             }
         },
-        { title: "Who", field: "first_name", visible: true, width: 200, resizable: true,
+        { title: "Who", field: "first_name", minWidth: 125,
             formatter: function(cell, formatterParams, onRendered) {
               return cell.getValue()+' '+cell.getRow().getCell('last_name').getValue()+'<br />'+
                      '<a href="mailto:'+cell.getRow().getCell('email').getValue()+'">'+cell.getRow().getCell('email').getValue()+'</a>';
             }
          },
-        { title: "Last Name", field: "last_name", visible: false },
+        { title: "Last Name", field: "last_name", visible: false, minWidth: 125 },
         { title: "E-Mail", field: "email", visible: false },
-        { title: "Category", field: "category", visible: true, width: 200, resizable: true,
-            formatterPrint: false,
+        { title: "Category", field: "category", minWidth: 125,
             formatter: function(cell, formatterParams, onRendered) {
               var highlight = '';
               var rescolor = 'text-secondary';
-              var resolution = cell.getRow().getCell('resolution').getValue();
-              if (resolution !== undefined) {
-                if (resolution.indexOf('New') > -1) { highlight = 'var(--bs-warning)'; };
-                if (resolution.indexOf('In Progress') > -1) { highlight = 'var(--bs-primary)'; rescolor = 'text-info';};
-                if (resolution.indexOf('Closed') > -1) { highlight = 'var(--bs-success)'; rescolor = 'text-white'};
-                if (highlight !== '') { cell.getElement().style.backgroundColor = highlight; }
+              if (typeof cell.getValue() === 'string' || cell.getValue() instanceof String) {
+                var resolution = cell.getRow().getCell('resolution').getValue();
+                if (resolution !== undefined) {
+                  if (resolution.indexOf('New') > -1) { highlight = 'HighlightWarning'; };
+                  if (resolution.indexOf('In Progress') > -1) { highlight = 'HighlightPrimary';};
+                  if (resolution.indexOf('Closed') > -1) { highlight = 'HighlightSuccess'};
+                  if (highlight !== '') { cell.getElement().classList.add(highlight) }
+                }
+                return cell.getValue()+'<br />'+
+                       '<span style="opacity:0.75;">'+cell.getRow().getCell("resolution").getValue()+'</span>'+
+                       ' [ '+(parseInt(cell.getRow().getCell("activitylog_size").getValue()/1024)+1)+' kB ]';
               }
-              return cell.getValue()+'<br />'+
-                     '<span class="'+rescolor+'">'+cell.getRow().getCell("resolution").getValue()+'</span>'+
-                     ' [ '+(parseInt(cell.getRow().getCell("activitylog_size").getValue()/1024)+1)+' kB ]';
+              else {
+                return '';
+              }
             }
          },
-        { title: "Resolution", field: "resolution", visible: false  },
-        { title: "Log Size", field: "activitylog_size", visible: false  },
-        { title: "Issue", field: "issue", visible: true, resizable: true, cssClass: "HTMLOverflow", formatter: "html" }
+        { title: "Resolution", field: "resolution", visible: false, minWidth: 125 },
+        { title: "Size", field: "activitylog_size", visible: false, minWidth: 70  },
+        { title: "Issue", field: "issue", cssClass: "HTMLOverflow", formatter: "html", minWidth: 250 }
       ]
     });
     this.tabIssues.on('rowClick', function(e,row) {
@@ -2892,36 +4332,101 @@ begin
 
 
 
+  //////////////////////////////////////////////////////////////////////////////
   // Responses
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabResponses = new Tabulator("#divResponses",{
-      resizableRows: true,
-      layout: "fitData",
+      index: "ID",
+      initialSort: [{column:"SurveyTime", dir:"desc"}],
+      persistence: {
+        sort: true,
+        filter: true,
+        group: true,
+        columns: ["visible","width"]
+      },
+      groupBy: "",
+      columnCalcs: "both",
+      groupToggleElement:"header",
+      movableColumns: true,
+      columnDefaults: {
+        visible: true,
+        headerMenu: headerMenu,
+        headerSortTristate: true,
+        bottomCalc: distinctCount,
+        bottomCalcFormatter: distinctFormat,
+        resizable: true,
+        headerFilter: "list",
+        headerFilterParams: { valuesLookup: true, sort: "asc" }
+      },
       columns: [
-        { title: "SurveyID", field: "SurveyID", visible: false },
-        { title: "Group", field: "SurveyGroup", visible: true, minWidth: 100, headerFilter: true, bottomCalc: "count", resizable: true },
-        { title: "Name", field: "SurveyName", visible: true, minWidth: 100, headerFilter: true, resizable: true },
-        { title: "Time", field: "SurveyTime", visible: true, minWidth: 100, headerFilter: true, resizable: true },
-        { title: "Question", field: "QuestionName", visible: true, minWidth: 100, headerFilter: true, resizable: true },
-        { title: "Response", field: "Response", visible: true, minWidth: 100, headerFilter: true, resizable: true }
+        { title: "ID", field: "ID", visible: false, minWidth: 70, bottomCalcFormatter: commaFormat },
+        { title: "Ref", field: "Order", visible: false, minWidth: 70 },
+        { title: "SurveyID", field: "SurveyID", visible: false, minWidth: 310 },
+        { title: "Survey Group", field: "SurveyGroup", minWidth: 125 },
+        { title: "Survey Name", field: "SurveyName", minWidth: 125 },
+        { title: "IP Address", field: "SurveyIP", visible: false, minWidth: 125 },
+        { title: "ClientID", field: "SurveyClient", visible: false, minWidth: 310 },
+        { title: "Timestamp", field: "SurveyTime", headerFilter: "input", minWidth: 170,
+            accessorDownload: function(value, data, type, params, column){
+              if (value !== undefined) {
+                try {
+                  return luxon.DateTime.fromFormat(value, "yyyy-MM-dd HH:mm:ss.SSS").toISO();
+                }
+                catch {
+                  return value;
+                }
+              }
+              else {
+                return '';
+              }
+            }
+        },
+        { title: "QuestionID", field: "QuestionID", visible: false, minWidth: 310 },
+        { title: "Question", field: "QuestionName", minWidth: 125 },
+        { title: "Response", field: "Response", maxWidth: 1000, formatter: "textarea", minWidth: 250 }
       ]
+    });
+    this.tabResponses.on('rowClick', function(e,row) {
+      row.select();
     });
   end;
 
 
 
-  // Feedback - eerily similar to Feedback
+  //////////////////////////////////////////////////////////////////////////////
+  // Feedback - eerily similar to Issues
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabFeedback = new Tabulator("#divFeedback",{
+      index: "feedback_id",
       initialSort: [{column:"utc_stamp", dir:"desc"}],
       resizableRows: true,
-      index: "feedback_id",
+      persistence: {
+        sort: true,
+        filter: true,
+        group: true,
+        columns: ["visible","width"]
+      },
+      groupBy: "",
+      columnCalcs: "both",
+      groupToggleElement:"header",
+      movableColumns: true,
+      columnDefaults: {
+        visible: true,
+        headerMenu: headerMenu,
+        headerSortTristate: true,
+        bottomCalc: distinctCount,
+        bottomCalcFormatter: distinctFormat,
+        resizable: true,
+        headerFilter: "list",
+        headerFilterParams: { valuesLookup: true, sort: "asc" }
+      },
       columns: [
-        { title: "ID", field: "feedback_id", visible: false },
-        { title: "When", field: "utc_stamp", visible: true, width: 200, bottomCalc: "count",
-            formatterPrint: false,
+        { title: "ID", field: "feedback_id", visible: false, minWidth: 70 },
+        { title: "When", field: "utc_stamp", bottomCalc: "count", minWidth: 170, bottomCalcFormatter: commaFormat,
             formatter: function(cell, formatterParams, onRendered) {
-              if (cell.getValue() !== undefined) {
+              if (typeof cell.getValue() === 'string' || cell.getValue() instanceof String) {
                 var start  = luxon.DateTime.fromFormat(cell.getValue(), "yyyy-MM-dd HH:mm:ss.SSS");
                 var finish = luxon.DateTime.now();
                 var coded = finish.diff(start).shiftTo('years','months','days','hours','minutes','seconds').toObject();
@@ -2942,39 +4447,42 @@ begin
                 } else {
                   human += 'ago'
                 }
-                return start.toFormat('yyyy-MMM-dd (ccc) HH:mm')+'<br /><span class="text-secondary">'+human+'</span>';
+                return start.toFormat('yyyy-MMM-dd (ccc) HH:mm')+'<br /><span style="opacity:0.75;">'+human+'</span>';
               }
               else {
                 return '';
               }
             }
         },
-        { title: "Survey Name", field: "survey_name", visible: true, width: 200, resizable: true,
+        { title: "Survey Name", field: "survey_name", minWidth: 125,
             formatter: function(cell, formatterParams, onRendered) {
               return cell.getRow().getCell('survey_group').getValue()+'<br />'+cell.getValue();
             }
         },
-        { title: "Survey Group", field: "survey_group", visible: false },
-        { title: "Stage", field: "stage", visible: true, width: 200, resizable: true,
-            formatterPrint: false,
+        { title: "Survey Group", field: "survey_group", visible: false, minWidth: 125 },
+        { title: "Stage", field: "stage", minWidth: 125,
             formatter: function(cell, formatterParams, onRendered) {
               var highlight = '';
-              var rescolor = 'text-secondary';
-              var resolution = cell.getRow().getCell('resolution').getValue();
-              if (resolution !== undefined) {
-                if (resolution.indexOf('New') > -1) { highlight = 'var(--bs-warning)'; };
-                if (resolution.indexOf('In Progress') > -1) { highlight = 'var(--bs-primary)'; rescolor = 'text-info';};
-                if (resolution.indexOf('Closed') > -1) { highlight = 'var(--bs-success)'; rescolor = 'text-white'};
-                if (highlight !== '') { cell.getElement().style.backgroundColor = highlight; }
+              if (typeof cell.getValue() === 'string' || cell.getValue() instanceof String) {
+                var resolution = cell.getRow().getCell('resolution').getValue();
+                if (resolution !== undefined) {
+                  if (resolution.indexOf('New') > -1) { highlight = 'HighlightWarning'; };
+                  if (resolution.indexOf('In Progress') > -1) { highlight = 'HighlightPrimary';};
+                  if (resolution.indexOf('Closed') > -1) { highlight = 'HighlightSuccess';};
+                  if (highlight !== '') { cell.getElement().classList.add(highlight) }
+                }
+                return cell.getValue()+'<br />'+
+                       '<span style="opacity:0.75;">'+cell.getRow().getCell("resolution").getValue()+'</span>'+
+                       ' [ '+(parseInt(cell.getRow().getCell("activitylog_size").getValue()/1024)+1)+' kB ]';
               }
-              return cell.getValue()+'<br />'+
-                     '<span class="'+rescolor+'">'+cell.getRow().getCell("resolution").getValue()+'</span>'+
-                     ' [ '+(parseInt(cell.getRow().getCell("activitylog_size").getValue()/1024)+1)+' kB ]';
+              else {
+                return '';
+              }
             }
          },
-        { title: "Resolution", field: "resolution", visible: false  },
-        { title: "Log Size", field: "activitylog_size", visible: false  },
-        { title: "Feedback", field: "feedback", visible: true, resizable: true, cssClass: "HTMLOverflow", formatter: "html" }
+        { title: "Resolution", field: "resolution", visible: false, minWidth: 125  },
+        { title: "Size", field: "activitylog_size", visible: false, minWidth: 70  },
+        { title: "Feedback", field: "feedback", cssClass: "HTMLOverflow", formatter: "textarea", minWidth: 250 }
       ]
     });
     this.tabFeedback.on('rowClick', function(e,row) {
@@ -2984,36 +4492,42 @@ begin
 
 
 
+  //////////////////////////////////////////////////////////////////////////////
   // Change History Log
+  //////////////////////////////////////////////////////////////////////////////
   asm
     this.tabChangeHistory = new Tabulator("#divChangeHistory",{
       initialSort: [{column:"utc_stamp", dir:"desc"}],
       columns: [
         { title: "ID", field: "ID", visible: false },
-        { title: "When", field: "utc_stamp", visible: true, width: 200, bottomCalc: "count",
-            formatterPrint: false,
+        { title: "When", field: "utc_stamp", visible: true, width: 200, bottomCalc: "count", bottomCalcFormatter: commaFormat,
             formatter: function(cell, formatterParams, onRendered) {
-              var start  = luxon.DateTime.fromFormat(cell.getValue(), "yyyy-MM-dd HH:mm:ss.SSS");
-              var finish = luxon.DateTime.now();
-              var coded = finish.diff(start).shiftTo('years','months','days','hours','minutes','seconds').toObject();
-              var human = '';
-              var i = 0;
-              for (var dur in coded) {
-                if ((coded[dur] !== 0) && (dur !== 'seconds') && (i < 2)) {
-                  if (coded[dur] == 1) {
-                    human += coded[dur]+' '+dur.slice(0,-1)+' ';
-                  } else {
-                    human += coded[dur]+' '+dur+' ';
+              if (typeof cell.getValue() === 'string' || cell.getValue() instanceof String) {
+                var start  = luxon.DateTime.fromFormat(cell.getValue(), "yyyy-MM-dd HH:mm:ss.SSS");
+                var finish = luxon.DateTime.now();
+                var coded = finish.diff(start).shiftTo('years','months','days','hours','minutes','seconds').toObject();
+                var human = '';
+                var i = 0;
+                for (var dur in coded) {
+                  if ((coded[dur] !== 0) && (dur !== 'seconds') && (i < 2)) {
+                    if (coded[dur] == 1) {
+                      human += coded[dur]+' '+dur.slice(0,-1)+' ';
+                    } else {
+                      human += coded[dur]+' '+dur+' ';
+                    }
+                    i++;
                   }
-                  i++;
                 }
+                if (human == '') {
+                  human = 'just now'
+                } else {
+                  human += 'ago'
+                }
+                return start.toFormat('yyyy-MMM-dd (ccc) HH:mm')+'<br /><span class="text-secondary">'+human+'</span>';
               }
-              if (human == '') {
-                human = 'just now'
-              } else {
-                human += 'ago'
+              else {
+                return '';
               }
-              return start.toFormat('yyyy-MMM-dd (ccc) HH:mm')+'<br /><span class="text-secondary">'+human+'</span>';
             }
         },
         { title: "Who", field: "first_name", visible: true, width: 200, resizable: true,
@@ -3034,36 +4548,77 @@ begin
 
 
 
+  //////////////////////////////////////////////////////////////////////////////
   // Server Log
+  //////////////////////////////////////////////////////////////////////////////
   asm
-    var distinctCount = function(values, data, calcParams) {
-                          return new Set(values).size;
-                        }
     this.tabLogging = new Tabulator("#divLogging",{
       printAsHtml: true,
+      printStyle: true,
+      printRowRange: "active",
+      persistence: {
+        sort: true,
+        filter: true,
+        group: true,
+        columns: ["visible","width"]
+      },
+      groupBy: "",
+      columnCalcs: "both",
+      groupToggleElement:"header",
+      movableColumns: true,
+      columnDefaults: {
+        visible: true,
+        headerSortTristate: true,
+        headerMenu: headerMenu,
+        bottomCalc: distinctCount,
+        bottomCalcFormatter: distinctFormat,
+        resizable: true,
+        headerFilter: "list",
+        headerFilterParams: { valuesLookup: true, sort: "asc" }
+      },
+      initialSort: [{column:"utc_stamp", dir:"desc"}],
       columns: [
         { title: "ID", field: "ID", visible: false },
-        { title: "Timestamp", field: "utc_stamp", visible: true, width: 200, bottomCalc: "count", headerFilter: true },
-        { title: "IP Address", field: "ipaddr", visible: true, width: 150, resizable: true, headerFilter: true, bottomCalc: distinctCount },
-        { title: "Endpoint", field: "endpoint", visible: true, minWidth: 250, widthGrow:4,resizable: true, headerFilter: true, bottomCalc: distinctCount,
-            formatterPrint: false,
+        { title: "Timestamp", field: "utc_stamp", bottomCalc: "count", headerFilter: "input", minWidth: 170,
+            bottomCalcFormatter: commaFormat,
+            formatter: "datetime",
+            formatterParams: {
+              inputFormat: "yyyy-MM-dd HH:mm:ss.SSS",
+              outputFormat: "yyyy-MM-dd HH:mm:ss.SSS"
+            }
+         },
+        { title: "IP Address", field: "ipaddr", minWidth: 170 },
+        { title: "Survey ID", field: "survey_id", minWidth: 310 },
+        { title: "Survey Name", field: "survey_name", minWidth: 125 },
+        { title: "Survey Group", field: "survey_group", minWidth:125 },
+        { title: "Endpoint", field: "endpoint", minWidth: 125,
             formatter: function(cell, formatterParams, onRendered) {
               var highlight = '';
-              if (cell.getValue() !== undefined) {
-                if (cell.getValue().indexOf(' Started') > -1) { highlight = 'yellow'; };
-                if (cell.getValue().indexOf('Database Created') > -1) { highlight = 'yellow'; };
-                if (cell.getValue().indexOf('Version: ') > -1 ) { highlight = 'yellow'; };
-                if (cell.getValue().indexOf('Release: ') > -1) { highlight = 'yellow'; };
-                if (cell.getValue().indexOf('Login [ Successful') > -1) { highlight = 'lightgreen'; };
-                if (cell.getValue().indexOf('Login [ Failed') > -1) { highlight = 'lightpink'; };
-                if (highlight !== '') { cell.getElement().style.backgroundColor = highlight; }
+              if (typeof cell.getValue() === 'string' || cell.getValue() instanceof String)  {
+                if (cell.getValue().indexOf(' Started') > -1) { highlight = 'Highlight1'; };
+                if (cell.getValue().indexOf('Login [ Successful') > -1) { highlight = 'Highlight2'; };
+                if (cell.getValue().indexOf('Login [ Failed') > -1) { highlight = 'Highlight3'; };
+                if (highlight !== '') { cell.getElement().classList.add(highlight) }
+                return cell.getValue();
               }
-              return cell.getValue();
+              else {
+                return '';
+              }
             }
         },
-        { title: "First Name", field: "first_name", visible: true, minWidth: 100, resizable: true, headerFilter: true, bottomCalc: distinctCount },
-        { title: "Last Name", field: "last_name", visible: true, minWidth: 100, resizable: true, headerFilter: true, bottomCalc: distinctCount },
-        { title: "E-Mail", field: "email", visible: true, minWidth: 200, widthGrow: 2, resizable: true, headerFilter:true, bottomCalc: distinctCount }
+        { title: "Account ID", field: "account_id", minWidth: 310 },
+        { title: "First Name", field: "first_name", minWidth: 125 },
+        { title: "Last Name", field: "last_name", minWidth: 125 },
+        { title: "E-Mail", field: "email", minWidth: 200 },
+        { title: "Version", field: "client_ver", minWidth: 125 },
+        { title: "Released", field: "client_rel", headerFilter: "input", bottomCalc: "count", minWidth: 170,
+            bottomCalcFormatter: commaFormat,
+            formatter: "datetime",
+            formatterParams: {
+              inputFormat: "iso",
+              outputFormat: "yyyy-MM-dd HH:mm:ss.SSS"
+            }
+        }
       ]
     });
     this.tabLogging.on('rowClick', function(e,row) {
@@ -3073,7 +4628,14 @@ begin
 
 
 
+  //////////////////////////////////////////////////////////////////////////////
   // HTML Editors (SunEditor + CodeMirror)
+  //
+  // These are all the same, but multiple instances are created.  The list of
+  // default options is below.  The variation for the individual instances is
+  // just a matter of adjusting some of the element references for the header,
+  // content, and footer elements assigned to the editor.
+  //////////////////////////////////////////////////////////////////////////////
   asm
     var SunEditorDefaultOptions = {
       mode: "classic",
@@ -3083,7 +4645,7 @@ begin
       showPathLabel: true,
       addTagsWhitelist: "i|svg|label|input|select|option|textarea",
       attributesWhitelist: {
-        input: "type|id|value|name|style|class",
+        input: "type|id|maxlength|value|name|style|class",
         label: "id|for|style|class",
         textarea: "id|maxlength|rows|cols|style|class|resize"
       },
@@ -3098,7 +4660,9 @@ begin
       font: [
         'Roboto',
         'Roboto Condensed',
-        'Cairo'
+        'Cairo',
+        'Encode Sans Reg',
+        'Encode Sans Bold'
       ],
       buttonList: [
         ['undo', 'redo'],
@@ -3199,7 +4763,9 @@ begin
 
 
 
-  // InteractJS Setup for .draggable and .resize-drag
+  //////////////////////////////////////////////////////////////////////////////
+  // InteractJS Setup for various classes, as indicated below
+  //////////////////////////////////////////////////////////////////////////////
   asm
     // This is used to drag around popup forms
     function draggableListener (event) {
@@ -3245,9 +4811,96 @@ begin
         ignoreFrom: '.sun-editor'
       });
 
+    interact('.RightSplitter')
+      .resizable({
+        edges: { right: '.ResizeElement' },
+        listeners: {
+          move (event) {
+            var target = event.target
+            var x = (parseFloat(target.getAttribute('data-x')) || 0)
+            target.style.width = event.rect.width + 'px'
+            x += event.deltaRect.left
+            target.setAttribute('data-x', x)
+            // If QR Code is displayed, resize to fit new window size
+            setTimeout(() => { pas.Unit1.Form1.ResizeQRCode();  }, 0);
+          }
+        }
+      });
+
   end;
 
+
+
+  //////////////////////////////////////////////////////////////////////////////
+  // FlatPickr
+  //
+  // Used first for selecting a date range for the Server Log UI
+  // TODO: Use for selecting dates/times for the Availability UI
+  //////////////////////////////////////////////////////////////////////////////
+  asm
+    divLoggingStart.innerHTML =
+      '<div id="divLoggingStartFP" class="d-flex align-items-center overflow-hidden" style="position:absolute; outline:none !important; height:18px; top:1px; border:none;">'+
+        '<input type="text" class="border border-0" style="width:75px; outline: none !important;box-shadow:none !important;" data-input placeholder="Starting...">'+
+        '<a '+
+            'class="input-button bg-none text-success" '+
+            'data-toggle '+
+            'style="margin: 1px 0px 0px 0px;" '+
+            '>'+
+          '<i class="fa-solid fa-calendar"></i>'+
+        '</a>'+
+      '</div>';
+
+    divLoggingEnd.innerHTML =
+      '<div id="divLoggingEndFP" class="d-flex align-items-center overflow-hidden" style="position:absolute; outline:none !important; height:18px; top:1px; border:none;">'+
+        '<input type="text" class="border border-0" style="width:75px; outline: none !important; box-shadow:none !important;" data-input placeholder="Ending...">'+
+        '<a '+
+            'class="input-button bg-none text-success" '+
+            'data-toggle '+
+            'style="margin: 1px 0px 0px 0px;" '+
+            '>'+
+          '<i class="fa-solid fa-calendar"></i>'+
+        '</a>'+
+      '</div>';
+
+    this.LoggingStart = flatpickr("#divLoggingStartFP", {
+      wrap: true,
+      weekNumbers: true,
+      defaultDate: new Date(),
+      onChange: function(selectedDates, dateStr, instance) {
+        pas.Unit1.Form1.LoggingDatesChanged(
+          pas.Unit1.Form1.LoggingStart.selectedDates[0].toISOString().substr(0,10),
+          pas.Unit1.Form1.LoggingEnd.selectedDates[0].toISOString().substr(0,10)
+        );
+      }
+    });
+
+    this.LoggingEnd = flatpickr("#divLoggingEndFP", {
+      wrap: true,
+      weekNumbers: true,
+      defaultDate: new Date(),
+      onChange: function(selectedDates, dateStr, instance) {
+        pas.Unit1.Form1.LoggingDatesChanged(
+          pas.Unit1.Form1.LoggingStart.selectedDates[0].toISOString().substr(0,10),
+          pas.Unit1.Form1.LoggingEnd.selectedDates[0].toISOString().substr(0,10)
+        );
+      }
+    });
+
+  end;
+
+
+
+  //////////////////////////////////////////////////////////////////////////////
+  // All done!
+  //
+  // Hopefully the only thing this app normally outputs to the console
+  //////////////////////////////////////////////////////////////////////////////
+  LogActivity('Survey Admin Client App Initialized: '+IntToStr(MillisecondsBetween(Now,ElapsedTime))+'ms');
+  console.log(ActivityLog.Text);
+  LogActivity('');
+
 end;
+
 
 procedure TForm1.WebFormResize(Sender: TObject);
 begin

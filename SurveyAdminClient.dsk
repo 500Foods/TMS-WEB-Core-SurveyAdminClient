@@ -1,37 +1,32 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitNote.pas',0,1,1,1,1,0,0,,
-File_1=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Unit1.html',0,1,1,31,4,0,0,,
-File_2=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitLogin.html',0,1,1,31,4,0,0,,
-File_3=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitNote.html',0,1,1,92,10,0,0,,
-File_4=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-SurveyClientExample\Unit1.pas',0,1,151,1,158,0,0,,
-File_5=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\Unit1.pas',0,1,1,1,1,0,0,,
-File_6=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\UnitLabelName.pas',0,1,81,27,110,0,0,,
-File_7=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\labels.css',0,1,1,1,1,0,0,,
-File_8=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\Project1.html',0,1,21,38,59,0,0,,
-File_9=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\UResource.pas',0,1,1,1,1,0,0,,
-File_10=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\Unit2.pas',0,1,1,14,24,0,0,,
-File_11=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-TrackEditor\Project1.html',0,1,1,32,42,0,0,,
-File_12=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-TrackEditor\Unit1.pas',0,1,185,1,195,0,0,,
-File_13=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-TrackEditor\WebAudioAPIHelper.pas',0,1,96,124,127,0,0,,
+File_0=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\fonts\encodesanssemicondensed-regular-webfont.woff2',0,1,1,1,1,0,0,,
+File_1=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\fonts\encodesanssemicondensed-bold-webfont.woff',0,1,1,1,1,0,0,,
+File_2=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitNote.html',0,1,1,92,10,0,0,,
+File_3=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-SurveyClientExample\Unit1.pas',0,1,151,1,158,0,0,,
+File_4=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\Unit1.pas',0,1,1,1,1,0,0,,
+File_5=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\UnitLabelName.pas',0,1,81,27,110,0,0,,
+File_6=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\labels.css',0,1,1,1,1,0,0,,
+File_7=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\Project1.html',0,1,21,38,59,0,0,,
+File_8=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\UResource.pas',0,1,1,1,1,0,0,,
+File_9=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-LabelsExample\Unit2.pas',0,1,1,14,24,0,0,,
+File_10=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-TrackEditor\Project1.html',0,1,1,32,42,0,0,,
+File_11=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-WEB-Core-TrackEditor\Unit1.pas',0,1,185,1,195,0,0,,
 
 [Modules]
 Module0=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Unit1.pas
-Module1=default.htm
-Module2=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\SurveyAdminClient.dproj
-Module3=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\surveyadmin.css
-Module4=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitLogin.pas
-Module5=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Project1.html
-Count=6
+Module1=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\surveyadmin.css
+Module2=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitLogin.pas
+Module3=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Unit1.html
+Module4=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitLogin.html
+Module5=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\SurveyAdminClient.dproj
+Module6=default.htm
+Module7=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitNote.pas
+Module8=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Project1.html
+Count=9
 EditWindowCount=1
 
 [C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Unit1.pas]
 ModuleType=TSourceModule
-
-[default.htm]
-ModuleType=TURLModule
-
-[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\SurveyAdminClient.dproj]
-ModuleType=TBaseProject
 
 [C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\surveyadmin.css]
 ModuleType=TSourceModule
@@ -39,11 +34,26 @@ ModuleType=TSourceModule
 [C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitLogin.pas]
 ModuleType=TSourceModule
 
+[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Unit1.html]
+ModuleType=TSourceModule
+
+[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitLogin.html]
+ModuleType=TSourceModule
+
+[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\SurveyAdminClient.dproj]
+ModuleType=TBaseProject
+
+[default.htm]
+ModuleType=TURLModule
+
+[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitNote.pas]
+ModuleType=TSourceModule
+
 [C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Project1.html]
 ModuleType=TSourceModule
 
 [EditWindow0]
-ViewCount=6
+ViewCount=9
 CurrentEditView=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Unit1.pas
 View0=0
 View1=1
@@ -51,6 +61,9 @@ View2=2
 View3=3
 View4=4
 View5=5
+View6=6
+View7=7
+View8=8
 PercentageSizes=1
 Create=1
 Visible=1
@@ -87,9 +100,9 @@ WelcomePageURL=bds:/default.htm
 [View1]
 CustomEditViewType=TEditView
 Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Unit1.pas
-CursorX=1
-CursorY=2897
-TopLine=2893
+CursorX=85
+CursorY=768
+TopLine=735
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -98,42 +111,75 @@ EditViewName=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-We
 [View2]
 CustomEditViewType=TEditView
 Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitLogin.pas
-CursorX=24
-CursorY=169
-TopLine=135
+CursorX=3
+CursorY=266
+TopLine=248
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitLogin.pas
+EditViewName=Borland.FormDesignerView
 
 [View3]
 CustomEditViewType=TEditView
+Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Unit1.html
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Unit1.html
+
+[View4]
+CustomEditViewType=TEditView
 Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\SurveyAdminClient.dpr
 CursorX=3
-CursorY=17
+CursorY=16
 TopLine=1
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\SurveyAdminClient.dpr
 
-[View4]
+[View5]
 CustomEditViewType=TEditView
 Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\surveyadmin.css
-CursorX=15
-CursorY=159
-TopLine=130
+CursorX=18
+CursorY=163
+TopLine=133
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\surveyadmin.css
 
-[View5]
+[View6]
+CustomEditViewType=TEditView
+Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitLogin.html
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitLogin.html
+
+[View7]
+CustomEditViewType=TEditView
+Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\UnitNote.pas
+CursorX=1
+CursorY=1
+TopLine=3
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=Borland.FormDesignerView
+
+[View8]
 CustomEditViewType=TEditView
 Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-Web-Core-SurveyAdminClient\Project1.html
-CursorX=31
-CursorY=10
-TopLine=12
+CursorX=100
+CursorY=21
+TopLine=23
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -196,14 +242,14 @@ Create=1
 Visible=1
 Docked=0
 State=2
-Left=146
-Top=269
-Width=8932
-Height=8519
+Left=0
+Top=0
+Width=10083
+Height=10154
 MaxLeft=-5
 MaxTop=-10
-MaxWidth=8932
-MaxHeight=8519
+MaxWidth=10083
+MaxHeight=10154
 ClientWidth=10021
 ClientHeight=9788
 BottomPanelSize=8963
@@ -279,8 +325,8 @@ Width=1786
 Height=6115
 MaxLeft=-5
 MaxTop=-10
-ClientWidth=1703
-ClientHeight=5740
+ClientWidth=1724
+ClientHeight=5750
 TBDockHeight=6115
 LRDockWidth=1786
 Dockable=1
@@ -305,6 +351,11 @@ LRDockWidth=1896
 Dockable=1
 StayOnTop=0
 SplitPos=111
+
+[PropInspDesignerSelection]
+ArrangeBy=Name
+SelectedItem=ElementClassName,CustomHint
+ExpandedItems=Font=0,LiveBindings=0,"LiveBindings Designer=0",Margins=1,HorzScrollBar=0,VertScrollBar=0,Anchors=0,Padding=0,Control=0
 
 [frmDesignPreview]
 PercentageSizes=1

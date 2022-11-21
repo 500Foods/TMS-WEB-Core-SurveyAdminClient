@@ -22,34 +22,43 @@ uses
   WEBLib.WebTools,
   WEBLib.JSON,
 
+  Unit1,
+
   Vcl.StdCtrls,
   Vcl.Controls, WEBLib.ExtCtrls;
 
 type
   TLoginForm = class(TWebForm)
     divLoginMain: TWebHTMLDiv;
-    WebHTMLDiv3: TWebHTMLDiv;
-    WebHTMLDiv4: TWebHTMLDiv;
+    divLoginTitle: TWebHTMLDiv;
+    tmrOpen: TWebTimer;
+    divLoginElements: TWebHTMLDiv;
+    divLoginEMailHolder: TWebHTMLDiv;
+    divLoginUsernameLabel: TWebHTMLDiv;
     edtLoginEMail: TWebEdit;
     divLoginPasswordHolder: TWebHTMLDiv;
-    WebHTMLDiv2: TWebHTMLDiv;
+    divLoginPasswordLabel: TWebHTMLDiv;
     edtLoginPassword: TWebEdit;
-    divLoginTitle: TWebHTMLDiv;
+    labelLoginProgress: TWebLabel;
     divLoginButtons: TWebHTMLDiv;
     btnLogin: TWebButton;
     btnForgot: TWebButton;
     btnRegister: TWebButton;
-    labelLoginProgress: TWebLabel;
-    tmrOpen: TWebTimer;
     [async] procedure btnLoginClick(Sender: TObject);
     procedure edtLoginEMailKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure WebFormShow(Sender: TObject);
-    procedure tmrOpenTimer(Sender: TObject);
+    [async] procedure tmrOpenTimer(Sender: TObject);
+    procedure WebFormCreate(Sender: TObject);
+    procedure WebFormResize(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    AppVer: String;
+    AppRel: String;
+    AppRelH: String;
+    Form1: TForm1;
   end;
 
 var
@@ -59,7 +68,6 @@ implementation
 
 {$R *.dfm}
 
-uses Unit1;
 
 procedure TLoginForm.btnLoginClick(Sender: TObject);
 var
@@ -106,7 +114,7 @@ begin
   // We've got a connection, let's make the request
   Form1.LogActivity('');
   Form1.LogActivity('Authenticating.');
-  labelLoginProgress.Caption := 'Authorizing';
+  labelLoginProgress.Caption := 'Authenticating';
   if (Form1.ServerConn.Connected) then
   begin
     try
@@ -115,7 +123,9 @@ begin
       Form1.JWT := '';
       Response := await(ClientConn.RawInvokeAsync('ISurveyAdminService.Login', [
         edtLoginEmail.Text,
-        edtLoginPassword.Text
+        edtLoginPassword.Text,
+        'SA/'+Form1.AppVer,
+        Form1.AppRel
       ]));
       Blob := Response.Result;
       Data := Blob;
@@ -124,9 +134,9 @@ begin
       end;
     except on E: Exception do
       begin
-        Form1.LogActivity('Authorization Error: ['+E.ClassName+'] '+E.Message);
-        console.log('Authorization Error: ['+E.ClassName+'] '+E.Message);
-        labelLoginProgress.Caption := 'Authorization Error - Please Try Again';
+        Form1.LogActivity('Authentication Error: ['+E.ClassName+'] '+E.Message);
+        console.log('Authentication Error: ['+E.ClassName+'] '+E.Message);
+        labelLoginProgress.Caption := 'Authentication Error - Please Try Again';
       end;
     end;
   end;
@@ -178,18 +188,25 @@ begin
 
       // Preload data for available functions
       if Copy(Form1.Account_Security,1,1) <> 'N' then Form1.btnSurveyReloadClick(Sender);
-      if Copy(Form1.Account_Security,4,1) <> 'N' then Form1.btnAccountsReloadClick(Sender);
-      if Copy(Form1.Account_Security,4,1) <> 'N' then Form1.btnIssuesReloadClick(Sender);
-      if Copy(Form1.Account_Security,5,1) <> 'N' then Form1.btnLoggingReloadClick(Sender);
+//      if Copy(Form1.Account_Security,4,1) <> 'N' then Form1.btnAccountsReloadClick(Sender);
+//      if Copy(Form1.Account_Security,4,1) <> 'N' then Form1.btnIssuesReloadClick(Sender);
+//      if Copy(Form1.Account_Security,5,1) <> 'N' then Form1.btnLoggingReloadClick(Sender);
 
       // Personalize Account button
       Form1.btnAccount.Caption := '<div class="mx-2"><i class="fa-solid fa-user me-2 fa-xl"></i>'+Form1.Account_First+'</div>';
       Form1.btnAccount.Hint := 'Change Account Settings for '+Form1.Account_First+' '+Form1.Account_Last;
 
       // Close Login Form and continue in main application
-      ModalResult := mrOk;
-      Form1.divBlocker.Visible := False;
-      Form1.divBlocker.ElementClassName := '';
+//      ModalResult := mrOk;
+      Form1.divBlocker.ElementClassName := 'Run';
+      divLoginMain.ElementHandle.classList.replace('Open','Close');
+
+      asm
+        setTimeout(function() {
+          divBlocker.style.display = 'none';
+          divLoginMain.style.display = 'none';
+        },1000);
+      end;
     end
     else
     begin
@@ -229,19 +246,119 @@ begin
 end;
 
 procedure TLoginForm.tmrOpenTimer(Sender: TObject);
+//  procedure AfterCreate(AForm: TObject);
+//  begin
+//    console.log('Form Created: '+FormatDateTime('hh:nn:ss.zzz',Now));
+//    asm pas.Unit1.Form1 = pas.UnitLogin.LoginForm.Form1; end;
+//  end;
 begin
+//  console.log('Timer Start: '+FormatDateTime('hh:nn:ss.zzz',Now));
+  // This is kicked off at initialization
   tmrOpen.Enabled := False;
+
+  // Load the form.  Ideally in the background
+// console.log('Create Start: '+FormatDateTime('hh:nn:ss.zzz',Now));
+  Form1 := TForm1.Create(Self);
+  asm pas.Unit1.Form1 = pas.UnitLogin.LoginForm.Form1; end;
+//  console.log('Load Start: '+FormatDateTime('hh:nn:ss.zzz',Now));
+  await(TForm1, Form1.Load);
+//  Form1 := TForm1.CreateNew(@AfterCreate);
+//  console.log('Load Finish: '+FormatDateTime('hh:nn:ss.zzz',Now));
+
+  // Ready to accept infput
+  document.body.classList.add('Ready');
+  LabelLoginProgress.Caption := 'Please Login';
+  edtLoginEMail.SetFocus;
+
+//  console.log('Timer End: '+FormatDateTime('hh:nn:ss.zzz',Now));
+
+end;
+
+procedure TLoginForm.WebFormCreate(Sender: TObject);
+begin
+//  console.log('Login WFC Start: '+FormatDateTime('hh:nn:ss.zzz',Now));
+
+  // Output Version Information
   asm
-    document.getElementById('edtLoginEMail').focus();
-    document.body.classList.add('Ready');
+    this.AppVer = ProjectName.replaceAll('_','.').substr(ProjectName.indexOf('_')+1);
+    this.AppRel = luxon.DateTime.fromJSDate(new Date(document.lastModified)).toISO();
+    this.AppRelH = luxon.DateTime.fromJSDate(new Date(document.lastModified)).toFormat('yyyy-MMM-dd');
   end;
+
+  // Set Page Title
+  Caption := 'Survey Admin Client '+AppVer;
+
+  // Set Login "window" title"
+  divLoginTitle.HTML.Text := '<div style="width:100%; text-align:center;">Survey Admin Client<span style="margin-left:25px;;font-size: 14px; opacity:0.5;">Ver. '+AppVer+' &nbsp;&nbsp; Rel. '+AppRelH+'</span></div>';
+
+  // Indicate that we have to wait
+  LabelLoginProgress.Caption := 'Initializing... Please Wait';
+
+  tmrOpen.Enabled := True;
+//  console.log('Login WFC End: '+FormatDateTime('hh:nn:ss.zzz',Now));
+end;
+
+procedure TLoginForm.WebFormResize(Sender: TObject);
+begin
+
+  asm
+    if (pas.UnitLogin.LoginForm.Form1 !== null ) {
+      setTimeout(() => { window.dispatchEvent(new Event('resize')); pas.Unit1.Form1.ResizeQRCode(); }, 0);
+    }
+  end;
+
+  if divLoginMain.ElementHandle.style.getPropertyvalue('display') <> 'none' then
+  begin
+    divLoginMain.Top := ((Height - divLoginMain.Height) div 2);
+    divLoginMain.Left := ((Width - divLoginMain.Width) div 2);
+  end;
+
 end;
 
 procedure TLoginForm.WebFormShow(Sender: TObject);
 begin
-  tmrOpen.Enabled := True;
-  divLoginMain.Top := ((Height - divLoginMain.Height) div 2);
-  divLoginMain.Left := ((Width - divLoginMain.Width) div 2);
+
+  asm
+    if (pas.UnitLogin.LoginForm.Form1 !== null ) {
+      setTimeout(() => { window.dispatchEvent(new Event('resize')); pas.Unit1.Form1.ResizeQRCode(); }, 0);
+    }
+  end;
+
+  if divLoginMain.ElementHandle.style.getPropertyvalue('display') <> 'none' then
+  begin
+
+    divLoginMain.Top := ((Height - divLoginMain.Height) div 2);
+    divLoginMain.Left := ((Width - divLoginMain.Width) div 2);
+
+    asm
+      edtLoginEMail.addEventListener("keyup", function(event) {
+        if (event.getModifierState("CapsLock")) {
+          edtLoginEMail.classList.add("bg-warning");
+        }
+        else {
+          edtLoginEMail.classList.remove("bg-warning");
+        }
+      });
+      edtLoginEMail.addEventListener("focusout", function(event) {
+        edtLoginEMail.classList.remove("bg-warning");
+      });
+
+      edtLoginPassword.addEventListener("keyup", function(event) {
+      if (event.getModifierState("CapsLock")) {
+          edtLoginPassword.classList.add("bg-warning");
+        }
+        else {
+          edtLoginPassword.classList.remove("bg-warning");
+        }
+      });
+      edtLoginPassword.addEventListener("focusout", function(event) {
+        edtLoginPassword.classList.remove("bg-warning");
+      });
+
+      setTimeout(function(){ edtLoginEMail.focus(); }, 2000);
+
+    end;
+  end;
 end;
 
 end.

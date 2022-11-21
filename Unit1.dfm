@@ -1,9 +1,10 @@
 object Form1: TForm1
-  Width = 956
-  Height = 587
+  Width = 1241
+  Height = 846
   Align = alClient
   Color = clBlack
   CSSLibrary = cssBootstrap
+  ElementClassName = 'F1 w-100 h-100 border-0 d-flex flex-column overflow-hidden'
   ElementFont = efCSS
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +12,8 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   ParentFont = False
+  Shadow = False
+  ShowClose = False
   ShowHint = True
   OnCreate = WebFormCreate
   OnResize = WebFormResize
@@ -18,44 +21,43 @@ object Form1: TForm1
   object divTop: TWebHTMLDiv
     Left = 0
     Top = 0
-    Width = 956
-    Height = 50
+    Width = 1233
+    Height = 48
+    ElementClassName = 'order-0 ButtonBarBig justify-content-between'
     ElementID = 'divTop'
-    Align = alTop
+    HeightStyle = ssAuto
+    WidthStyle = ssAuto
+    ChildOrder = 1
+    ElementPosition = epRelative
     ElementFont = efCSS
     Role = ''
     object panelTopLeft: TWebPanel
-      AlignWithMargins = True
       Left = 8
       Top = 4
       Width = 481
-      Height = 42
-      Margins.Left = 8
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      ElementClassName = 'rounded border border-dark bg-white'
-      ElementID = 'panelTopMenu'
+      Height = 40
+      ElementClassName = 
+        'order-0 d-flex align-items-center Rounded8 border border-dark bg' +
+        '-white'
+      ElementID = 'panelTopLeft'
+      HeightStyle = ssAuto
       WidthStyle = ssAuto
-      Align = alLeft
+      Alignment = taLeftJustify
       BorderColor = clNone
       BorderStyle = bsNone
       Color = clWhite
       ElementBodyClassName = 'btn-group m-1'
       ElementFont = efCSS
+      ElementPosition = epRelative
       object btnSurveys: TWebButton
-        AlignWithMargins = True
         Left = 3
         Top = 3
         Width = 50
-        Height = 34
-        Margins.Right = 0
-        Margins.Bottom = 5
-        Align = alLeft
+        Height = 32
         Caption = 
           '<div class="mx-2"><i class="fa-solid fa-clipboard-list me-2 fa-x' +
           'l"></i> Surveys</div>'
-        ElementClassName = 'btn btn-dark btn-sm'
+        ElementClassName = 'btn btn-dark btn-sm border border-1 border-dark'
         ElementID = 'btnSurveys'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -67,20 +69,15 @@ object Form1: TForm1
       end
       object btnResponses: TWebButton
         Tag = 1
-        AlignWithMargins = True
         Left = 53
         Top = 3
         Width = 50
-        Height = 34
-        Margins.Left = 0
-        Margins.Right = 0
-        Margins.Bottom = 5
-        Align = alLeft
+        Height = 32
         Caption = 
           '<div class="mx-2"><i class="fa-solid fa-clipboard-check me-2 fa-' +
           'xl"></i> Responses</div>'
         ChildOrder = 1
-        ElementClassName = 'btn btn-dark btn-sm'
+        ElementClassName = 'btn btn-dark btn-sm border border-1 border-dark'
         ElementID = 'btnReponses'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -92,20 +89,15 @@ object Form1: TForm1
       end
       object btnQuestions: TWebButton
         Tag = 2
-        AlignWithMargins = True
         Left = 103
         Top = 3
         Width = 50
-        Height = 34
-        Margins.Left = 0
-        Margins.Right = 0
-        Margins.Bottom = 5
-        Align = alLeft
+        Height = 32
         Caption = 
           '<div class="mx-2"><i class="fa-solid fa-clipboard-question me-2 ' +
           'fa-xl"></i> Library</div>'
         ChildOrder = 2
-        ElementClassName = 'btn btn-dark btn-sm'
+        ElementClassName = 'btn btn-dark btn-sm border border-1 border-dark'
         ElementID = 'btnQuestions'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -117,19 +109,15 @@ object Form1: TForm1
       end
       object btnAccounts: TWebButton
         Tag = 3
-        AlignWithMargins = True
         Left = 153
         Top = 3
         Width = 50
-        Height = 34
-        Margins.Left = 0
-        Margins.Bottom = 5
-        Align = alLeft
+        Height = 32
         Caption = 
           '<div class="mx-2"><i class="fa-solid fa-clipboard-user me-2 fa-x' +
           'l"></i> Administration</div>'
         ChildOrder = 3
-        ElementClassName = 'btn btn-dark btn-sm'
+        ElementClassName = 'btn btn-dark btn-sm border border-1 border-dark'
         ElementID = 'btnAccounts'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -141,19 +129,15 @@ object Form1: TForm1
       end
       object btnLogging: TWebButton
         Tag = 4
-        AlignWithMargins = True
         Left = 206
         Top = 3
         Width = 50
-        Height = 34
-        Margins.Left = 0
-        Margins.Bottom = 5
-        Align = alLeft
+        Height = 32
         Caption = 
           '<div class="mx-2"><i class="fa-solid fa-clipboard me-2 fa-xl"></' +
-          'i> Server Log</div>'
+          'i>Server Log</div>'
         ChildOrder = 4
-        ElementClassName = 'btn btn-dark btn-sm'
+        ElementClassName = 'btn btn-dark btn-sm border border-1 border-dark'
         ElementID = 'btnLogging'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -165,38 +149,32 @@ object Form1: TForm1
       end
     end
     object panelTopRight: TWebPanel
-      AlignWithMargins = True
-      Left = 584
+      Left = 869
       Top = 4
       Width = 364
-      Height = 42
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 8
-      Margins.Bottom = 4
-      ElementClassName = 'rounded border border-dark bg-white'
-      ElementID = 'panelTopMenu'
+      Height = 40
+      ElementClassName = 
+        'order-1 d-flex align-items-center Rounded8 border border-dark bg' +
+        '-white'
+      ElementID = 'panelTopRight'
+      HeightStyle = ssAuto
       WidthStyle = ssAuto
-      Align = alRight
       BorderColor = clNone
       BorderStyle = bsNone
       ChildOrder = 1
       Color = clWhite
-      ElementBodyClassName = ' m-1'
+      ElementBodyClassName = 'd-flex m-1 gap-1'
       ElementFont = efCSS
+      ElementPosition = epRelative
       object btnAccount: TWebButton
-        AlignWithMargins = True
-        Left = 172
-        Top = 3
+        Left = 166
+        Top = 5
         Width = 96
-        Height = 34
-        Margins.Right = 0
-        Margins.Bottom = 5
-        Align = alRight
+        Height = 32
         Caption = 
           '<div class="mx-2"><i class="fa-solid fa-user me-2 fa-xl"></i>Acc' +
           'ount</div>'
-        ElementClassName = 'btn btn-success btn-sm me-1'
+        ElementClassName = 'btn btn-success btn-sm border border-1 border-dark'
         ElementID = 'btnAccount'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -207,20 +185,15 @@ object Form1: TForm1
         OnClick = btnAccountClick
       end
       object btnLogout: TWebButton
-        AlignWithMargins = True
         Left = 268
         Top = 3
         Width = 96
-        Height = 34
-        Margins.Left = 0
-        Margins.Right = 0
-        Margins.Bottom = 5
-        Align = alRight
+        Height = 32
         Caption = 
           '<div class="mx-2"><i class="fa-solid fa-right-from-bracket me-2 ' +
           'fa-xl"></i> Logout</div>'
         ChildOrder = 1
-        ElementClassName = 'btn btn-danger btn-sm'
+        ElementClassName = 'btn btn-danger btn-sm border border-1 border-dark'
         ElementID = 'btnLogout'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -234,47 +207,43 @@ object Form1: TForm1
   end
   object divBottom: TWebHTMLDiv
     Left = 0
-    Top = 539
-    Width = 956
+    Top = 774
+    Width = 1233
     Height = 48
+    ElementClassName = 'order-2 ButtonBarBig justify-content-between'
     ElementID = 'divBottom'
-    Align = alBottom
-    ChildOrder = 1
+    HeightStyle = ssAuto
+    WidthStyle = ssAuto
+    ChildOrder = 3
+    ElementPosition = epRelative
     ElementFont = efCSS
     Role = ''
     object panelBottomRight: TWebPanel
-      AlignWithMargins = True
-      Left = 676
+      Left = 962
       Top = 4
       Width = 272
       Height = 40
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 8
-      Margins.Bottom = 4
-      ElementClassName = 'rounded border border-dark bg-white'
-      ElementID = 'panelTopMenu'
+      ElementClassName = 
+        'order-1 d-flex align-items-center Rounded8 border border-dark bg' +
+        '-white'
+      ElementID = 'panelBottomRight'
       WidthStyle = ssAuto
-      Align = alRight
       BorderColor = clNone
       BorderStyle = bsNone
       ChildOrder = 1
       Color = clWhite
-      ElementBodyClassName = ' m-1'
+      ElementBodyClassName = 'd-flex m-1 gap-1'
       ElementFont = efCSS
+      ElementPosition = epRelative
       object btnBlog: TWebButton
-        AlignWithMargins = True
         Left = 80
-        Top = 3
+        Top = 2
         Width = 96
         Height = 32
-        Margins.Right = 0
-        Margins.Bottom = 5
-        Align = alRight
         Caption = 
           '<div class="mx-2"><i class="fa-solid fa-feather-pointed me-2 fa-' +
-          'xl"></i>Blog</div>'
-        ElementClassName = 'btn btn-secondary btn-sm me-1'
+          'xl"></i>TMS Software Blog</div>'
+        ElementClassName = 'order-0 btn btn-secondary btn-sm border border-1 border-dark'
         ElementID = 'btnBlog'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -285,20 +254,15 @@ object Form1: TForm1
         OnClick = btnBlogClick
       end
       object btnGitHub: TWebButton
-        AlignWithMargins = True
         Left = 176
         Top = 3
         Width = 96
         Height = 32
-        Margins.Left = 0
-        Margins.Right = 0
-        Margins.Bottom = 5
-        Align = alRight
         Caption = 
           '<div class="mx-2"><i class="fa-brands fa-github me-2 fa-xl"></i>' +
           ' GitHub</div>'
         ChildOrder = 1
-        ElementClassName = 'btn btn-secondary btn-sm'
+        ElementClassName = 'order-1 btn btn-secondary btn-sm border border-1 border-dark'
         ElementID = 'btnGitHub'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -310,39 +274,31 @@ object Form1: TForm1
       end
     end
     object panelBottomLeft: TWebPanel
-      AlignWithMargins = True
       Left = 8
       Top = 4
       Width = 272
       Height = 40
-      Margins.Left = 8
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      ElementClassName = 'rounded border border-dark bg-white'
-      ElementID = 'panelTopMenu'
+      ElementClassName = 
+        'order-0 d-flex align-items-center Rounded8 border border-dark bg' +
+        '-white'
+      ElementID = 'panelBottomLeft'
       WidthStyle = ssAuto
-      Align = alLeft
       BorderColor = clNone
       BorderStyle = bsNone
-      ChildOrder = 1
       Color = clWhite
-      ElementBodyClassName = ' m-1'
+      ElementBodyClassName = 'd-flex m-1 gap-1'
       ElementFont = efCSS
+      ElementPosition = epRelative
       object btnEmail: TWebButton
-        AlignWithMargins = True
         Left = 99
         Top = 3
         Width = 96
         Height = 32
-        Margins.Right = 0
-        Margins.Bottom = 5
-        Align = alLeft
         Caption = 
           '<div class="mx-2"><i class="fa-solid fa-paper-plane me-2 fa-xl">' +
           '</i>E-Mail Support</div>'
         ChildOrder = 1
-        ElementClassName = 'btn btn-success btn-sm me-1'
+        ElementClassName = 'order-1 btn btn-success btn-sm border border-1 border-dark'
         ElementID = 'btnEMail'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -353,20 +309,15 @@ object Form1: TForm1
         OnClick = btnEmailClick
       end
       object btnDiscord: TWebButton
-        AlignWithMargins = True
         Left = 195
         Top = 3
         Width = 96
         Height = 32
-        Margins.Left = 0
-        Margins.Right = 0
-        Margins.Bottom = 5
-        Align = alLeft
         Caption = 
           '<div class="mx-2"><i class="fa-brands fa-discord me-2 fa-xl"></i' +
           '> Discord</div>'
         ChildOrder = 2
-        ElementClassName = 'btn btn-primary btn-sm'
+        ElementClassName = 'order-2 btn btn-primary btn-sm border border-1 border-dark'
         ElementID = 'btnDiscord'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -377,19 +328,14 @@ object Form1: TForm1
         OnClick = btnDiscordClick
       end
       object btnTicket: TWebButton
-        AlignWithMargins = True
         Left = 0
         Top = 3
         Width = 96
         Height = 32
-        Margins.Left = 0
-        Margins.Right = 0
-        Margins.Bottom = 5
-        Align = alLeft
         Caption = 
           '<div class="mx-2"><i class="fa-solid fa-tag me-2 fa-xl"></i> Rep' +
           'ort an Issue</div>'
-        ElementClassName = 'btn btn-danger btn-sm me-1'
+        ElementClassName = 'order-0 btn btn-danger btn-sm  border border-1 border-dark'
         ElementID = 'btnTicket'
         ElementFont = efCSS
         ElementPosition = epRelative
@@ -402,80 +348,68 @@ object Form1: TForm1
     end
   end
   object pagecontrolMain: TWebPageControl
-    AlignWithMargins = True
     Left = 8
-    Top = 50
-    Width = 940
-    Height = 487
-    Margins.Left = 8
-    Margins.Top = 0
-    Margins.Right = 8
-    Margins.Bottom = 2
-    ElementClassName = 'overflow-visible'
+    Top = 52
+    Width = 1225
+    Height = 716
+    ElementClassName = 'order-1 flex-fill overflow-visible position-relative'
     ElementID = 'pagecontrolMain'
-    Align = alClient
+    HeightStyle = ssAuto
+    WidthStyle = ssAuto
     ChildOrder = 2
     ElementFont = efCSS
     TabIndex = 0
     ShowTabs = False
     TabOrder = 2
+    Visible = False
     object pageSurveys: TWebTabSheet
-      AlignWithMargins = True
       Left = 0
       Top = 20
-      Width = 940
-      Height = 467
-      Margins.Left = 0
-      Margins.Top = 0
-      Margins.Right = 0
-      ElementClassName = 'rounded border border-dark bg-light'
+      Width = 1225
+      Height = 696
+      ElementClassName = 'Page Rounded10 w-100 h-100 border border-dark bg-light'
       ElementID = 'pageSurveys'
-      Align = alClient
+      HeightStyle = ssAuto
+      WidthStyle = ssAuto
       Caption = 'Surveys'
       ElementFont = efCSS
+      ElementPosition = epRelative
+      OnShow = pageSurveysShow
       object divSurveysSurveyHolder: TWebHTMLDiv
-        AlignWithMargins = True
         Left = 4
         Top = 4
         Width = 250
-        Height = 459
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ElementClassName = 'overflow-hidden rounded border border-dark  bg-white'
+        Height = 621
+        ElementClassName = 
+          'RightSplitter flex-shrink-0 d-flex flex-column overflow-hidden R' +
+          'ounded8 border border-dark  bg-white'
         ElementID = 'divSurveysSurveyHolder'
-        Align = alLeft
+        HeightStyle = ssAuto
+        ElementPosition = epRelative
         ElementFont = efCSS
         Role = ''
         object divSurveysButtons: TWebHTMLDiv
-          AlignWithMargins = True
           Left = 4
           Top = 0
           Width = 244
           Height = 32
-          Margins.Left = 4
-          Margins.Top = 0
-          Margins.Right = 2
-          Margins.Bottom = 0
-          ElementClassName = 'd-flex align-items-center justify-content-stretch'
+          ElementClassName = 'm-1 d-flex align-items-center justify-content-stretch gap-1'
           ElementID = 'divSurveysButtons'
-          Align = alTop
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
+          ElementPosition = epRelative
           ElementFont = efCSS
           Role = ''
           object btnSurveyNew: TWebButton
-            AlignWithMargins = True
-            Left = 3
-            Top = 3
+            Left = 52
+            Top = 5
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 1
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-plus me-1 "></i> New'
             ChildOrder = 1
-            ElementClassName = 'ShortButton flex-fill btn btn-primary btn-sm'
+            ElementClassName = 
+              'order-1 ShortButton flex-fill btn btn-primary btn-sm border bord' +
+              'er-1 border-dark'
             ElementID = 'btnSurveyNew'
             ElementFont = efCSS
             ElementPosition = epRelative
@@ -487,18 +421,15 @@ object Form1: TForm1
           end
           object btnSurveyDelete: TWebButton
             Tag = 1
-            AlignWithMargins = True
-            Left = 53
-            Top = 3
+            Left = 104
+            Top = 5
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 1
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-trash-can me-1"></i>Delete'
             ChildOrder = 2
-            ElementClassName = 'ShortButton flex-fill btn btn-danger btn-sm'
+            ElementClassName = 
+              'order-2 ShortButton flex-fill btn btn-danger btn-sm border borde' +
+              'r-1 border-dark'
             ElementID = 'btnSurveyDelete'
             ElementFont = efCSS
             ElementPosition = epRelative
@@ -510,18 +441,15 @@ object Form1: TForm1
           end
           object btnSurveyClone: TWebButton
             Tag = 2
-            AlignWithMargins = True
-            Left = 103
-            Top = 3
+            Left = 155
+            Top = 5
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-clone me-1"></i> Clone'
             ChildOrder = 3
-            ElementClassName = 'ShortButton flex-fill  btn btn-success btn-sm'
+            ElementClassName = 
+              'order-3 ShortButton flex-fill  btn btn-success btn-sm border bor' +
+              'der-1 border-dark'
             ElementID = 'btnSurveyClone'
             ElementFont = efCSS
             ElementPosition = epRelative
@@ -533,1552 +461,1698 @@ object Form1: TForm1
           end
           object btnSurveyReload: TWebButton
             Tag = 2
-            AlignWithMargins = True
-            Left = 153
-            Top = 3
+            Left = 0
+            Top = 5
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
-            Caption = '<i class="fa-solid fa-rotate"></i>'
-            ElementClassName = 'ShortButton flex-fill  btn btn-secondary btn-sm'
+            Caption = '<i class="fa-solid fa-rotate fa-spin"></i>'
+            ElementClassName = 
+              'order-0 ReloadButton btn btn-secondary btn-sm border border-1 bo' +
+              'rder-dark'
             ElementID = 'btnSurveyReload'
             ElementFont = efCSS
             ElementPosition = epRelative
             HeightPercent = 100.000000000000000000
             TabOrder = 30
-            WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
             OnClick = btnSurveyReloadClick
           end
         end
         object divSurveysSurveyList: TWebHTMLDiv
           Left = 0
-          Top = 32
+          Top = 45
           Width = 250
-          Height = 427
-          ElementClassName = 'overflow-hidden border border-0'
+          Height = 442
+          ElementClassName = 'w-100 flex-fill rounded-bottom overflow-hidden border border-0'
           ElementID = 'divSurveysSurveyList'
-          Align = alClient
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
           ChildOrder = 1
+          ElementPosition = epRelative
           ElementFont = efCSS
           Role = ''
         end
-      end
-      object splitterSurveyMain: TWebSplitter
-        AlignWithMargins = True
-        Left = 258
-        Top = 50
-        Width = 6
-        Height = 367
-        Cursor = crHSplit
-        Margins.Left = 0
-        Margins.Top = 50
-        Margins.Right = 0
-        Margins.Bottom = 50
-        ElementClassName = 'rounded'
-        ElementID = 'splitterSurveyMain'
-        Align = alLeft
-        ChildOrder = 2
-        Color = 8222060
-        GripColor = 8222060
-        OnMove = splitterSurveyMainMove
+        object divSurveysHolderResize: TWebHTMLDiv
+          Left = 64
+          Top = 512
+          Width = 100
+          Height = 41
+          ElementClassName = 'ResizeElement'
+          ElementID = 'divSurveysHolderResize'
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
+          ChildOrder = 2
+          ElementPosition = epIgnore
+          ElementFont = efCSS
+          HTML.Strings = (
+            '<div class="InnerTriangle1"></div>'
+            '<div class="InnerTriangle2"></div>')
+          Role = ''
+        end
       end
       object divSurveysMain: TWebHTMLDiv
-        Left = 264
-        Top = 0
-        Width = 676
-        Height = 467
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Left = 267
+        Top = 1
+        Width = 961
+        Height = 672
+        ElementClassName = 'overflow-hidden flex-fill d-flex flex-column gap-1 w-100 h-100 '
         ElementID = 'divSurveysMain'
-        Align = alClient
+        HeightStyle = ssPercent
+        WidthStyle = ssPercent
         ChildOrder = 1
+        ElementPosition = epRelative
         ElementFont = efCSS
         Role = ''
         object pageControlSurveys: TWebPageControl
-          AlignWithMargins = True
-          Left = 0
-          Top = 48
-          Width = 676
-          Height = 418
-          Margins.Left = 0
-          Margins.Top = 0
-          Margins.Right = 0
-          Margins.Bottom = 1
-          ElementClassName = 'overflow-visible'
+          Left = -3
+          Top = 49
+          Width = 961
+          Height = 609
+          ElementClassName = 'order-1 flex-fill overflow-visible position-relative'
           ElementID = 'pagecontrolSurveys'
-          Align = alClient
+          HeightStyle = ssAuto
           ChildOrder = 1
           ElementFont = efCSS
           TabIndex = 0
           ShowTabs = False
           TabOrder = 0
+          Visible = False
           object pageConfig: TWebTabSheet
-            AlignWithMargins = True
             Left = 0
             Top = 20
-            Width = 676
-            Height = 398
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            ElementClassName = 'bg-light'
+            Width = 961
+            Height = 589
+            ElementClassName = 'bg-light PageNP w-100 h-100'
             ElementID = 'pageConfig'
+            HeightStyle = ssAuto
+            WidthStyle = ssAuto
             Caption = 'Config'
             ElementFont = efCSS
-            object divSurveysOptions: TWebHTMLDiv
-              AlignWithMargins = True
-              Left = 4
-              Top = 0
-              Width = 169
-              Height = 394
-              Margins.Left = 4
-              Margins.Top = 0
-              Margins.Right = 4
-              Margins.Bottom = 4
-              ElementClassName = 'overflow-hidden rounded border border-dark  bg-white'
-              ElementID = 'divSurveysOptions'
-              Align = alLeft
+            ElementPosition = epRelative
+            object divConfigHolder: TWebHTMLDiv
+              Left = 186
+              Top = 3
+              Width = 663
+              Height = 583
+              ElementClassName = 'order-1 d-flex flex-fill w-100 h-100 '
+              ElementID = 'divConfigHolder'
+              HeightStyle = ssAuto
+              WidthStyle = ssAuto
+              ChildOrder = 2
+              ElementPosition = epRelative
               ElementFont = efCSS
               Role = ''
-            end
-            object splitterSurveyConfig: TWebSplitter
-              AlignWithMargins = True
-              Left = 177
-              Top = 50
-              Width = 6
-              Height = 298
-              Cursor = crHSplit
-              Margins.Left = 0
-              Margins.Top = 50
-              Margins.Right = 0
-              Margins.Bottom = 50
-              ElementClassName = 'rounded'
-              ElementID = 'splitterSurveysMain'
-              Align = alLeft
-              ChildOrder = 2
-              Color = 8222060
-              GripColor = 8222060
-              OnMove = splitterSurveyConfigMove
-            end
-            object pagecontrolSurveysConfig: TWebPageControl
-              AlignWithMargins = True
-              Left = 187
-              Top = 0
-              Width = 485
-              Height = 393
-              Margins.Left = 4
-              Margins.Top = 0
-              Margins.Right = 4
-              Margins.Bottom = 5
-              ElementClassName = ' overflow-visible bg-info'
-              Align = alClient
-              ChildOrder = 2
-              ElementFont = efCSS
-              TabIndex = 0
-              ShowTabs = False
-              TabOrder = 2
-              object pageConfigBasic: TWebTabSheet
-                AlignWithMargins = True
-                Left = 0
-                Top = 20
-                Width = 485
-                Height = 373
-                Margins.Left = 4
-                Margins.Top = 0
-                Margins.Right = 4
-                Margins.Bottom = 5
-                ElementClassName = 'rounded border border-dark  bg-info'
-                Caption = 'Base'
+              object pagecontrolSurveysConfig: TWebPageControl
+                Left = -1
+                Top = 0
+                Width = 770
+                Height = 553
+                ElementClassName = 'bg-info w-100 h-100'
+                ElementID = 'pagecontrolSurveyConfig'
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
+                ChildOrder = 2
                 ElementFont = efCSS
-                object scrollConfigBasic: TWebScrollBox
+                TabIndex = 0
+                ShowTabs = False
+                TabOrder = 0
+                Visible = False
+                object pageConfigBasic: TWebTabSheet
                   Left = 0
-                  Top = 0
-                  Width = 485
-                  Height = 373
-                  ElementClassName = 'rounded '
-                  ElementID = 'scrollConfigBasic'
-                  Align = alClient
-                  BorderStyle = bsNone
-                  Color = clWindow
-                  object divConfigBasicName: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 76
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBasicName'
-                    Align = alTop
-                    ChildOrder = 2
-                    ElementFont = efCSS
-                    Role = ''
-                    object divConfigBasicNameLabel: TWebHTMLDiv
-                      Left = 0
-                      Top = 0
-                      Width = 100
-                      Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigBasicNameLabel'
-                      Align = alLeft
-                      ElementFont = efCSS
-                      HTML.Strings = (
-                        'Survey Name')
-                      Role = ''
-                    end
-                    object edtConfigBasicName: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
-                      Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
-                      ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
-                      ElementID = 'edtConfigBasicName'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      SpellCheck = False
-                      TabOrder = 102
-                      WidthPercent = 100.000000000000000000
-                      OnChange = SurveyChanged
-                    end
-                  end
-                  object divConfigBasicID: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 4
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 4
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBasicIDHolder'
-                    Align = alTop
-                    ElementFont = efCSS
-                    Role = ''
-                    object divConfigBasicIDLabel: TWebHTMLDiv
-                      Left = 0
-                      Top = 0
-                      Width = 100
-                      Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigBasicIDLabel'
-                      Align = alLeft
-                      ElementFont = efCSS
-                      HTML.Strings = (
-                        'Survey ID')
-                      Role = ''
-                    end
-                    object edtConfigBasicID: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
-                      Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
-                      ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark bg-info text-dark'
-                      ElementID = 'edtConfigBasicID'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      ReadOnly = True
-                      SpellCheck = False
-                      TabOrder = 100
-                      WidthPercent = 100.000000000000000000
-                      OnChange = SurveyChanged
-                    end
-                  end
-                  object divConfigBasicLink: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 112
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 4
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBasicLink'
-                    Align = alTop
-                    ChildOrder = 3
-                    ElementFont = efCSS
-                    Role = ''
-                    object divConfigBasicLinkLabel: TWebHTMLDiv
-                      Left = 0
-                      Top = 0
-                      Width = 100
-                      Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigBasicLinkLabel'
-                      Align = alLeft
-                      ElementFont = efCSS
-                      HTML.Strings = (
-                        'Link Identifier')
-                      Role = ''
-                    end
-                    object edtConfigBasicLink: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
-                      Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
-                      ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
-                      ElementID = 'edtConfigBasicLink'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      MaxLength = 20
-                      SpellCheck = False
-                      TabOrder = 103
-                      WidthPercent = 100.000000000000000000
-                      OnChange = edtConfigBasicLinkChange
-                    end
-                  end
+                  Top = 20
+                  Width = 770
+                  Height = 533
+                  ElementClassName = 'w-100 h-100 PageNP Rounded8 border border-dark  bg-info'
+                  ElementID = 'pageConfigBasic'
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  Caption = 'Base'
+                  ChildOrder = 3
+                  ElementBodyClassName = 'd-flex flex-column  gap-1 m-1 overflow-visible'
+                  ElementFont = efCSS
+                  ElementPosition = epRelative
                   object divConfigBasicGroup: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 40
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                    Left = 0
+                    Top = 76
+                    Width = 770
+                    Height = 38
+                    ElementClassName = 'order-1 FieldHolder'
                     ElementID = 'divConfigBasicLink'
-                    Align = alTop
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
                     ChildOrder = 1
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
                     object divConfigBasicGroupLabel: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 100
+                      Width = 80
                       Height = 32
-                      ElementClassName = 'ConfigLabel'
+                      ElementClassName = 'FieldLabel'
                       ElementID = 'divConfigBasicNameLabel'
-                      Align = alLeft
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
                         'Survey Group')
                       Role = ''
                     end
                     object edtConfigBasicGroup: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
+                      Left = 100
+                      Top = 0
+                      Width = 670
                       Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
                       ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
+                      ElementClassName = 'FieldEdit'
                       ElementID = 'edtConfigBasicGroup'
                       ElementFont = efCSS
+                      ElementPosition = epRelative
                       HeightPercent = 100.000000000000000000
                       SpellCheck = False
                       TabOrder = 101
+                      WidthStyle = ssAuto
                       WidthPercent = 100.000000000000000000
                       OnChange = SurveyChanged
                     end
                   end
-                  object divSurveyInfoHolder: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 224
-                    Width = 477
-                    Height = 145
-                    Margins.Left = 4
-                    Margins.Top = 0
-                    Margins.Right = 4
-                    Margins.Bottom = 4
-                    ElementClassName = 'overflow-hidden rounded border border-dark  bg-dark'
-                    ElementID = 'divSurveyInfoHolder'
-                    Align = alClient
-                    ChildOrder = 4
+                  object divConfigBasicID: TWebHTMLDiv
+                    Left = 0
+                    Top = 14
+                    Width = 770
+                    Height = 38
+                    ElementClassName = 'order-0 FieldHolder'
+                    ElementID = 'divConfigBasicIDHolder'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 1
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
-                    object divSurveyInfoButtons: TWebHTMLDiv
-                      AlignWithMargins = True
+                    object divConfigBasicIDLabel: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 477
+                      Width = 80
                       Height = 32
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      ElementClassName = 'bg-white'
-                      ElementID = 'divSurveyInfoButtons'
-                      Align = alTop
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigBasicIDLabel'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
+                      HTML.Strings = (
+                        'Survey ID')
                       Role = ''
-                      object btnSurveyInfoReload: TWebButton
-                        Tag = 1
-                        AlignWithMargins = True
-                        Left = 4
-                        Top = 4
-                        Width = 50
-                        Height = 24
-                        Margins.Left = 0
-                        Margins.Top = 0
-                        Margins.Right = 0
-                        Margins.Bottom = 0
-                        Caption = '<i class="fa-solid fa-rotate"></i>'
-                        ElementClassName = 'ShortButton btn btn-secondary btn-sm'
-                        ElementID = 'btnSurveyInfoReload'
-                        ElementFont = efCSS
-                        HeightPercent = 100.000000000000000000
-                        TabOrder = 104
-                        WidthStyle = ssAuto
-                        WidthPercent = 100.000000000000000000
-                        OnClick = btnSurveyInfoReloadClick
-                      end
                     end
-                    object divSurveyInfo: TWebHTMLDiv
-                      AlignWithMargins = True
-                      Left = 0
-                      Top = 32
-                      Width = 477
-                      Height = 113
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      ElementClassName = 'overflow-hidden border border-0'
-                      ElementID = 'divSurveyInfo'
-                      Align = alClient
+                    object edtConfigBasicID: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 670
+                      Height = 28
+                      AutoSelect = False
                       ChildOrder = 1
+                      ElementClassName = 'FieldEdit bg-info'
+                      ElementID = 'edtConfigBasicID'
                       ElementFont = efCSS
+                      ElementPosition = epRelative
+                      HeightPercent = 100.000000000000000000
+                      ReadOnly = True
+                      SpellCheck = False
+                      TabOrder = 100
+                      WidthStyle = ssAuto
+                      WidthPercent = 100.000000000000000000
+                      OnChange = SurveyChanged
+                    end
+                  end
+                  object divConfigBasicLink: TWebHTMLDiv
+                    Left = 0
+                    Top = 172
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-3 FieldHolder'
+                    ElementID = 'divConfigBasicLink'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 3
+                    ElementPosition = epRelative
+                    ElementFont = efCSS
+                    Role = ''
+                    object divConfigBasicLinkLabel: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 80
+                      Height = 32
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigBasicLinkLabel'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      HTML.Strings = (
+                        'Link Identifier')
                       Role = ''
+                    end
+                    object edtConfigBasicLink: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 670
+                      Height = 28
+                      ChildOrder = 1
+                      ElementClassName = 'FieldEdit'
+                      ElementID = 'edtConfigBasicLink'
+                      ElementFont = efCSS
+                      ElementPosition = epRelative
+                      HeightPercent = 100.000000000000000000
+                      MaxLength = 20
+                      SpellCheck = False
+                      TabOrder = 103
+                      WidthStyle = ssAuto
+                      WidthPercent = 100.000000000000000000
+                      OnChange = edtConfigBasicLinkChange
                     end
                   end
                   object divConfigBasicLiveLinkHolder: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 188
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 4
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                    Left = 0
+                    Top = 275
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-5 FieldHolder'
                     ElementID = 'divConfigBasicLiveLinkHolder'
-                    Align = alTop
-                    ChildOrder = 3
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 5
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
                     object divConfigBasicLiveLinkLabel: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 100
+                      Width = 80
                       Height = 32
-                      ElementClassName = 'ConfigLabel'
+                      ElementClassName = 'FieldLabel'
                       ElementID = 'divConfigBasicLiveLinkLabel'
-                      Align = alLeft
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
                         'Live Link')
                       Role = ''
                     end
                     object divConfigBasicLiveLink: TWebHTMLDiv
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
+                      Left = 100
+                      Top = 0
+                      Width = 670
                       Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      ElementClassName = 
-                        'text-decoration-none bg-info rounded-1 ps-2 border border-dark t' +
-                        'ext-white'
+                      ElementClassName = 'FieldEdit bg-info'
                       ElementID = 'divConfigBasicLiveLink'
-                      Align = alClient
+                      WidthStyle = ssAuto
                       ChildOrder = 1
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                   end
+                  object divConfigBasicName: TWebHTMLDiv
+                    Left = 0
+                    Top = 119
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-2 FieldHolder'
+                    ElementID = 'divConfigBasicName'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 2
+                    ElementPosition = epRelative
+                    ElementFont = efCSS
+                    Role = ''
+                    object divConfigBasicNameLabel: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 80
+                      Height = 32
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigBasicNameLabel'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      HTML.Strings = (
+                        'Survey Name')
+                      Role = ''
+                    end
+                    object edtConfigBasicName: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 670
+                      Height = 28
+                      ChildOrder = 1
+                      ElementClassName = 'FieldEdit'
+                      ElementID = 'edtConfigBasicName'
+                      ElementFont = efCSS
+                      ElementPosition = epRelative
+                      HeightPercent = 100.000000000000000000
+                      SpellCheck = False
+                      TabOrder = 102
+                      WidthStyle = ssAuto
+                      WidthPercent = 100.000000000000000000
+                      OnChange = SurveyChanged
+                    end
+                  end
                   object divConfigBasicTestLinkHolder: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 150
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 4
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                    Left = 0
+                    Top = 222
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-4 FieldHolder'
                     ElementID = 'divConfigBasicTestLinkHolder'
-                    Align = alTop
-                    ChildOrder = 3
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 4
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
                     object divConfigBasicTestLinkLabel: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 100
+                      Width = 80
                       Height = 32
-                      ElementClassName = 'ConfigLabel'
+                      ElementClassName = 'FieldLabel'
                       ElementID = 'divConfigBasicTestLinkLabel'
-                      Align = alLeft
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
                         'Test Link')
                       Role = ''
                     end
                     object divConfigBasicTestLink: TWebHTMLDiv
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
+                      Left = 100
+                      Top = 0
+                      Width = 670
                       Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      ElementClassName = 
-                        'text-decoration-none bg-info rounded-1 ps-2 border border-dark t' +
-                        'ext-white'
+                      ElementClassName = 'FieldEdit bg-info'
                       ElementID = 'divConfigBasicTestLink'
-                      Align = alClient
+                      WidthStyle = ssAuto
                       ChildOrder = 1
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      Role = ''
+                    end
+                  end
+                  object divSurveyInfoHolder: TWebHTMLDiv
+                    Left = 0
+                    Top = 328
+                    Width = 770
+                    Height = 200
+                    ElementClassName = 
+                      'order-6 d-flex flex-fill flex-column overflow-hidden border bord' +
+                      'er-0  bg-white'
+                    ElementID = 'divSurveyInfoHolder'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 6
+                    ElementPosition = epRelative
+                    ElementFont = efCSS
+                    Role = ''
+                    object divSurveyInfoButtons: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 770
+                      Height = 32
+                      ElementClassName = 'ButtonBar'
+                      ElementID = 'divSurveyInfoButtons'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      Role = ''
+                      object btnSurveyInfoReload: TWebButton
+                        Tag = 1
+                        Left = 0
+                        Top = 0
+                        Width = 50
+                        Height = 24
+                        Caption = '<i class="fa-solid fa-rotate fa-spin"></i>'
+                        ElementClassName = 
+                          'order-0 ButtonBarReload btn btn-secondary btn-sm border border-1' +
+                          ' border-dark'
+                        ElementID = 'btnSurveyInfoReload'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        HeightStyle = ssAuto
+                        HeightPercent = 100.000000000000000000
+                        TabOrder = 104
+                        WidthStyle = ssAuto
+                        WidthPercent = 100.000000000000000000
+                        OnClick = btnSurveyInfoReloadClick
+                      end
+                      object panelSurveyInfoExport: TWebPanel
+                        Left = 58
+                        Top = 1
+                        Width = 339
+                        Height = 24
+                        ElementClassName = 'order-1 ButtonBarGroup'
+                        ElementID = 'panelSurveyInfoExport'
+                        HeightStyle = ssAuto
+                        WidthStyle = ssAuto
+                        BorderColor = clNone
+                        BorderStyle = bsNone
+                        ChildOrder = 2
+                        Color = clWhite
+                        ElementBodyClassName = 'btn-group'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        object btnSurveyInfoExport: TWebButton
+                          Tag = 4
+                          Left = 16
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-download fa-lg me-1"></i> Export'
+                          ElementClassName = 'order-0 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnSurveyInfoExport'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = btnSurveyInfoExportClick
+                        end
+                        object btnSurveyInfoExportCSV: TWebButton
+                          Left = 62
+                          Top = 2
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-csv fa-lg me-1"></i> CSV'
+                          ChildOrder = 1
+                          ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnSurveyInfoExportCSV'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuSurveyInfoExport
+                        end
+                        object btnSurveyInfoExportExcel: TWebButton
+                          Tag = 1
+                          Left = 112
+                          Top = 2
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-excel fa-lg me-1"></i> XLSX'
+                          ChildOrder = 2
+                          ElementClassName = 'order-2 ShortestButton btn btn-dark btn-sm '
+                          ElementID = 'btnSurveyInfoExportExcel'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuSurveyInfoExport
+                        end
+                        object btnSurveyInfoExportJSON: TWebButton
+                          Tag = 2
+                          Left = 162
+                          Top = 2
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-code fa-lg me-1"></i>  JSON'
+                          ChildOrder = 3
+                          ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnSurveyInfoExportJSON'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuSurveyInfoExport
+                        end
+                        object btnSurveyInfoExportPDF: TWebButton
+                          Tag = 3
+                          Left = 215
+                          Top = 2
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-pdf fa-lg me-1"></i>  PDF'
+                          ChildOrder = 4
+                          ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnSurveyInfoExportPDF'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuSurveyInfoExport
+                        end
+                        object btnSurveyInfoExportPrint: TWebButton
+                          Tag = 4
+                          Left = 265
+                          Top = 2
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-print fa-lg me-1"></i> Print'
+                          ChildOrder = 5
+                          ElementClassName = 'order-5 ShortestButton btn btn-primary btn-sm'
+                          ElementID = 'btnSurveyInfoExportPrint'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuSurveyInfoExport
+                        end
+                      end
+                    end
+                    object divSurveyInfo: TWebHTMLDiv
+                      Left = -2
+                      Top = 48
+                      Width = 770
+                      Height = 108
+                      ElementClassName = 'rounded-bottom flex-fill overflow-hidden border border-0'
+                      ElementID = 'divSurveyInfo'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ChildOrder = 1
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                   end
                 end
-              end
-              object pageNotes: TWebTabSheet
-                Left = 0
-                Top = 20
-                Width = 485
-                Height = 373
-                ElementClassName = 'border border-0'
-                ElementID = 'pageNotes'
-                Caption = 'Nts'
-                ChildOrder = 9
-                ElementFont = efCSS
-                object divNotesHolder: TWebHTMLDiv
-                  AlignWithMargins = True
+                object pageNotes: TWebTabSheet
                   Left = 0
-                  Top = 0
-                  Width = 485
-                  Height = 373
-                  Margins.Left = 0
-                  Margins.Top = 0
-                  Margins.Right = 0
-                  Margins.Bottom = 0
-                  ElementClassName = 'overflow-hidden rounded-1 border border-dark  bg-white'
-                  ElementID = 'divNotesHolder'
-                  Align = alClient
+                  Top = 20
+                  Width = 770
+                  Height = 533
+                  ElementClassName = 'w-100 h-100 PageNP '
+                  ElementID = 'pageNotes'
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  Caption = 'Nts'
+                  ChildOrder = 9
+                  ElementBodyClassName = 'd-flex flex-column  gap-1 m-1'
                   ElementFont = efCSS
-                  Role = ''
-                  object divNotesButtons: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 0
-                    Width = 479
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 0
-                    Margins.Right = 2
-                    Margins.Bottom = 0
-                    ElementClassName = 'd-flex align-items-center '
-                    ElementID = 'divNotesButtons'
-                    Align = alTop
-                    ElementFont = efCSS
-                    Role = ''
-                    object btnNotesAdd: TWebButton
-                      Tag = 1
-                      AlignWithMargins = True
-                      Left = 50
-                      Top = 0
-                      Width = 50
-                      Height = 24
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      Caption = '<i class="fa-solid fa-plus me-1"></i> Add '
-                      ChildOrder = 1
-                      ElementClassName = 'ShortButton btn btn-primary btn-sm'
-                      ElementID = 'btnNotesAdd'
-                      ElementFont = efCSS
-                      ElementPosition = epRelative
-                      HeightPercent = 100.000000000000000000
-                      WidthStyle = ssAuto
-                      WidthPercent = 100.000000000000000000
-                      OnClick = btnNotesAddClick
-                    end
-                    object btnNotesDelete: TWebButton
-                      Tag = 1
-                      AlignWithMargins = True
-                      Left = 90
-                      Top = 0
-                      Width = 50
-                      Height = 24
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      Caption = '<i class="fa-solid fa-trash-can me-1"></i> Delete'
-                      ChildOrder = 2
-                      ElementClassName = 'ShortButton btn btn-danger btn-sm'
-                      ElementID = 'btnNotesDelete'
-                      ElementFont = efCSS
-                      ElementPosition = epRelative
-                      HeightPercent = 100.000000000000000000
-                      WidthStyle = ssAuto
-                      WidthPercent = 100.000000000000000000
-                      OnClick = btnNotesDeleteClick
-                    end
-                    object btnNotesReload: TWebButton
-                      Tag = 1
-                      AlignWithMargins = True
-                      Left = 0
-                      Top = 0
-                      Width = 50
-                      Height = 24
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      Caption = '<i class="fa-solid fa-rotate"></i>'
-                      ElementClassName = 'ShortButton btn btn-secondary btn-sm'
-                      ElementID = 'btnNotesReload'
-                      ElementFont = efCSS
-                      ElementPosition = epRelative
-                      HeightPercent = 100.000000000000000000
-                      WidthStyle = ssAuto
-                      WidthPercent = 100.000000000000000000
-                      OnClick = btnNotesReloadClick
-                    end
-                    object btnNotesPrint: TWebButton
-                      Tag = 1
-                      AlignWithMargins = True
-                      Left = 140
-                      Top = 0
-                      Width = 50
-                      Height = 24
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      Caption = '<i class="fa-solid fa-print me-1"></i> Print'
-                      ChildOrder = 3
-                      ElementClassName = 'ShortButton btn btn-dark btn-sm'
-                      ElementID = 'btnNotesPrint'
-                      ElementFont = efCSS
-                      ElementPosition = epRelative
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 131
-                      WidthStyle = ssAuto
-                      WidthPercent = 100.000000000000000000
-                      OnClick = btnNotesPrintClick
-                    end
-                  end
-                  object divNotes: TWebHTMLDiv
+                  ElementPosition = epRelative
+                  object divNotesHolder: TWebHTMLDiv
                     AlignWithMargins = True
                     Left = 0
-                    Top = 32
-                    Width = 485
-                    Height = 341
+                    Top = 0
+                    Width = 770
+                    Height = 533
                     Margins.Left = 0
                     Margins.Top = 0
                     Margins.Right = 0
                     Margins.Bottom = 0
-                    ElementClassName = 'overflow-hidden border border-0'
-                    ElementID = 'divNotes'
+                    ElementClassName = 
+                      'w-100 h-100 d-flex flex-column  overflow-hidden Rounded8 border ' +
+                      'border-dark  bg-white'
+                    ElementID = 'divNotesHolder'
                     Align = alClient
-                    ChildOrder = 1
                     ElementFont = efCSS
                     Role = ''
+                    object divNotesButtons: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 770
+                      Height = 32
+                      ElementClassName = 'ButtonBar w-100'
+                      ElementID = 'divNotesButtons'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      Role = ''
+                      object btnNotesAdd: TWebButton
+                        Tag = 1
+                        Left = 50
+                        Top = 0
+                        Width = 50
+                        Height = 24
+                        Caption = '<i class="fa-solid fa-plus me-1"></i> Add '
+                        ChildOrder = 1
+                        ElementClassName = 
+                          'order-1 ButtonBarElement btn btn-primary btn-sm border border-1 ' +
+                          'border-dark'
+                        ElementID = 'btnNotesAdd'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        HeightStyle = ssAuto
+                        HeightPercent = 100.000000000000000000
+                        WidthStyle = ssAuto
+                        WidthPercent = 100.000000000000000000
+                        OnClick = btnNotesAddClick
+                      end
+                      object btnNotesDelete: TWebButton
+                        Tag = 1
+                        Left = 99
+                        Top = 1
+                        Width = 50
+                        Height = 24
+                        Caption = '<i class="fa-solid fa-trash-can me-1"></i> Delete'
+                        ChildOrder = 2
+                        ElementClassName = 
+                          'order-2 ButtonBarElement btn btn-danger btn-sm border border-1 b' +
+                          'order-dark'
+                        ElementID = 'btnNotesDelete'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        HeightStyle = ssAuto
+                        HeightPercent = 100.000000000000000000
+                        WidthStyle = ssAuto
+                        WidthPercent = 100.000000000000000000
+                        OnClick = btnNotesDeleteClick
+                      end
+                      object btnNotesReload: TWebButton
+                        Tag = 1
+                        Left = 0
+                        Top = 0
+                        Width = 50
+                        Height = 24
+                        Caption = '<i class="fa-solid fa-rotate"></i>'
+                        ElementClassName = 
+                          'order-0 ButtonBarReload btn btn-secondary btn-sm border border-1' +
+                          ' border-dark'
+                        ElementID = 'btnNotesReload'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        HeightStyle = ssAuto
+                        HeightPercent = 100.000000000000000000
+                        WidthStyle = ssAuto
+                        WidthPercent = 100.000000000000000000
+                        OnClick = btnNotesReloadClick
+                      end
+                      object panelNotesExport: TWebPanel
+                        Left = 157
+                        Top = 1
+                        Width = 339
+                        Height = 24
+                        ElementClassName = 'order-3 ButtonBarGroup'
+                        ElementID = 'panelNotesExport'
+                        HeightStyle = ssAuto
+                        WidthStyle = ssAuto
+                        Alignment = taLeftJustify
+                        BorderColor = clNone
+                        BorderStyle = bsNone
+                        ChildOrder = 3
+                        Color = clWhite
+                        ElementBodyClassName = 'btn-group'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        object btnNotesExport: TWebButton
+                          Tag = 4
+                          Left = 24
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-download fa-lg me-1"></i> Export'
+                          ElementClassName = 'order-0 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnNotesExport'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = btnNotesExportClick
+                        end
+                        object btnNotesExportCSV: TWebButton
+                          Left = 70
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-csv fa-lg me-1"></i> CSV'
+                          ChildOrder = 1
+                          ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnNotesExportCSV'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuNotesExport
+                        end
+                        object btnNotesExportExcel: TWebButton
+                          Tag = 1
+                          Left = 120
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-excel fa-lg me-1"></i> XLSX'
+                          ChildOrder = 2
+                          ElementClassName = 'order-2 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnNotesExportExcel'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuNotesExport
+                        end
+                        object btnNotesExportJSON: TWebButton
+                          Tag = 2
+                          Left = 170
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-code fa-lg me-1"></i>  JSON'
+                          ChildOrder = 3
+                          ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnNotesExportJSON'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuNotesExport
+                        end
+                        object btnNotesExportPDF: TWebButton
+                          Tag = 3
+                          Left = 220
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-pdf fa-lg me-1"></i>  PDF'
+                          ChildOrder = 4
+                          ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnNotesExportPDF'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuNotesExport
+                        end
+                        object btnNotesExportPrint: TWebButton
+                          Tag = 4
+                          Left = 265
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-print fa-lg me-1"></i> Print'
+                          ChildOrder = 5
+                          ElementClassName = 'order-5 ShortestButton btn btn-primary btn-sm'
+                          ElementID = 'btnNotesExportPrint'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuNotesExport
+                        end
+                      end
+                    end
+                    object divNotes: TWebHTMLDiv
+                      Left = 0
+                      Top = 32
+                      Width = 770
+                      Height = 348
+                      ElementClassName = 
+                        'w-100 h-100 rounded-bottom flex-fill overflow-hidden border bord' +
+                        'er-0'
+                      ElementID = 'divNotes'
+                      HeightStyle = ssAuto
+                      ChildOrder = 1
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      Role = ''
+                    end
                   end
                 end
-              end
-              object pageAvailability: TWebTabSheet
-                Left = 0
-                Top = 20
-                Width = 485
-                Height = 373
-                ElementClassName = 'border border-0'
-                ElementID = 'pageAvailability'
-                Caption = 'Avail'
-                ChildOrder = 3
-                ElementFont = efCSS
-                object divAvailabilityHolder: TWebHTMLDiv
-                  AlignWithMargins = True
+                object pageAvailability: TWebTabSheet
                   Left = 0
-                  Top = 0
-                  Width = 485
-                  Height = 373
-                  Margins.Left = 0
-                  Margins.Top = 0
-                  Margins.Right = 0
-                  Margins.Bottom = 0
-                  ElementClassName = 'overflow-hidden rounded border border-dark  bg-white'
-                  ElementID = 'divAvailabilityHolder'
-                  Align = alClient
+                  Top = 20
+                  Width = 770
+                  Height = 533
+                  ElementClassName = 'w-100 h-100 PageNP '
+                  ElementID = 'pageAvailability'
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  Caption = 'Avail'
+                  ChildOrder = 3
+                  ElementBodyClassName = 'd-flex flex-column  gap-1'
                   ElementFont = efCSS
-                  Role = ''
-                  object divAvailabilityButtons: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 0
-                    Width = 479
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 0
-                    Margins.Right = 2
-                    Margins.Bottom = 0
-                    ElementClassName = 'd-flex align-items-center '
-                    ElementID = 'divAvailabilityButtons'
-                    Align = alTop
-                    ElementFont = efCSS
-                    Role = ''
-                    object labelAvailabilityCountdown: TWebLabel
-                      AlignWithMargins = True
-                      Left = 366
-                      Top = 3
-                      Width = 110
-                      Height = 26
-                      Align = alRight
-                      Alignment = taCenter
-                      AutoSize = False
-                      Caption = 'Countdown: 0d 0h 0m 0s'
-                      ElementClassName = 'ShortButton CountDown btn btn-warning px-2'
-                      ElementID = 'labelAvailabilityCountdown'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      WidthPercent = 100.000000000000000000
-                      ExplicitLeft = 376
-                    end
-                    object labelAvailabilityStatus: TWebLabel
-                      AlignWithMargins = True
-                      Left = 302
-                      Top = 3
-                      Width = 60
-                      Height = 26
-                      Margins.Right = 1
-                      Align = alRight
-                      Alignment = taCenter
-                      AutoSize = False
-                      Caption = 'Status'
-                      ChildOrder = 4
-                      ElementClassName = 'ShortButton btn btn-secondary'
-                      ElementID = 'labelAvailabilityStatus'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      WidthPercent = 100.000000000000000000
-                      ExplicitLeft = 282
-                    end
-                    object btnAvailabilityAdd: TWebButton
-                      Tag = 1
-                      AlignWithMargins = True
-                      Left = 0
-                      Top = 8
-                      Width = 50
-                      Height = 24
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      Caption = '<i class="fa-solid fa-plus me-1"></i> Add '
-                      ChildOrder = 1
-                      ElementClassName = 'ShortButton btn btn-primary btn-sm'
-                      ElementID = 'btnAvailabilityAdd'
-                      ElementFont = efCSS
-                      ElementPosition = epRelative
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 130
-                      WidthStyle = ssAuto
-                      WidthPercent = 100.000000000000000000
-                      OnClick = btnAvailabilityAddClick
-                    end
-                    object btnAvailabilityDelete: TWebButton
-                      Tag = 1
-                      AlignWithMargins = True
-                      Left = 50
-                      Top = 8
-                      Width = 50
-                      Height = 24
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      Caption = '<i class="fa-solid fa-trash-can me-1"></i> Delete'
-                      ChildOrder = 2
-                      ElementClassName = 'ShortButton btn btn-danger btn-sm'
-                      ElementID = 'btnAvailabilityDelete'
-                      ElementFont = efCSS
-                      ElementPosition = epRelative
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 131
-                      WidthStyle = ssAuto
-                      WidthPercent = 100.000000000000000000
-                      OnClick = btnAvailabilityDeleteClick
-                    end
-                    object btnAvailabilityPrint: TWebButton
-                      Tag = 1
-                      AlignWithMargins = True
-                      Left = 103
-                      Top = 8
-                      Width = 50
-                      Height = 24
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      Caption = '<i class="fa-solid fa-print me-1"></i> Print'
-                      ChildOrder = 3
-                      ElementClassName = 'ShortButton btn btn-dark btn-sm'
-                      ElementID = 'btnAvailabilityPrint'
-                      ElementFont = efCSS
-                      ElementPosition = epRelative
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 131
-                      WidthStyle = ssAuto
-                      WidthPercent = 100.000000000000000000
-                      OnClick = btnAvailabilityPrintClick
-                    end
-                    object btnAvailabilityReload: TWebButton
-                      Tag = 1
-                      AlignWithMargins = True
-                      Left = 153
-                      Top = 8
-                      Width = 70
-                      Height = 24
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      Caption = '<i class="fa-solid fa-rotate"></i>'
-                      ElementClassName = 'ShortButton btn btn-secondary btn-sm'
-                      ElementID = 'btnAvailabilityReload'
-                      ElementFont = efCSS
-                      ElementPosition = epRelative
-                      HeightPercent = 100.000000000000000000
-                      WidthStyle = ssAuto
-                      WidthPercent = 100.000000000000000000
-                      OnClick = btnAvailabilityReloadClick
-                    end
-                  end
-                  object divAvailability: TWebHTMLDiv
-                    AlignWithMargins = True
+                  ElementPosition = epRelative
+                  object divAvailabilityHolder: TWebHTMLDiv
                     Left = 0
-                    Top = 32
-                    Width = 485
-                    Height = 341
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    ElementClassName = 'overflow-hidden border border-0'
-                    ElementID = 'divAvailability'
-                    Align = alClient
-                    ChildOrder = 1
+                    Top = 0
+                    Width = 770
+                    Height = 380
+                    ElementClassName = 
+                      'w-100 h-100 d-flex flex-column  overflow-hidden Rounded8 border ' +
+                      'border-dark  bg-white'
+                    ElementID = 'divAvailabilityHolder'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
+                    object divAvailabilityButtons: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 765
+                      Height = 32
+                      ElementClassName = 'ButtonBar w-100 pe-2'
+                      ElementID = 'divAvailabilityButtons'
+                      HeightStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      Role = ''
+                      object labelAvailabilityCountdown: TWebLabel
+                        Left = 650
+                        Top = 4
+                        Width = 110
+                        Height = 24
+                        Alignment = taCenter
+                        AutoSize = False
+                        Caption = 'Countdown: 0d 0h 0m 0s'
+                        ChildOrder = 5
+                        ElementClassName = 
+                          'order-5 rounded-1 CountDown btn btn-warning px-2 border border-1' +
+                          ' border-dark'
+                        ElementID = 'labelAvailabilityCountdown'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        HeightStyle = ssAuto
+                        HeightPercent = 100.000000000000000000
+                        WidthPercent = 100.000000000000000000
+                      end
+                      object btnAvailabilityAdd: TWebButton
+                        Tag = 1
+                        Left = 50
+                        Top = 0
+                        Width = 50
+                        Height = 24
+                        Caption = '<i class="fa-solid fa-plus me-1"></i> Add '
+                        ChildOrder = 1
+                        ElementClassName = 
+                          'order-1 ButtonBarElement btn btn-primary btn-sm border border-1 ' +
+                          'border-dark'
+                        ElementID = 'btnAvailabilityAdd'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        HeightStyle = ssAuto
+                        HeightPercent = 100.000000000000000000
+                        TabOrder = 130
+                        WidthStyle = ssAuto
+                        WidthPercent = 100.000000000000000000
+                        OnClick = btnAvailabilityAddClick
+                      end
+                      object btnAvailabilityDelete: TWebButton
+                        Tag = 1
+                        Left = 101
+                        Top = -1
+                        Width = 50
+                        Height = 24
+                        Caption = '<i class="fa-solid fa-trash-can me-1"></i> Delete'
+                        ChildOrder = 2
+                        ElementClassName = 
+                          'order-2 ButtonBarElement btn btn-danger btn-sm border border-1 b' +
+                          'order-dark'
+                        ElementID = 'btnAvailabilityDelete'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        HeightStyle = ssAuto
+                        HeightPercent = 100.000000000000000000
+                        TabOrder = 131
+                        WidthStyle = ssAuto
+                        WidthPercent = 100.000000000000000000
+                        OnClick = btnAvailabilityDeleteClick
+                      end
+                      object btnAvailabilityReload: TWebButton
+                        Tag = 1
+                        Left = 0
+                        Top = 0
+                        Width = 50
+                        Height = 24
+                        Caption = '<i class="fa-solid fa-rotate"></i>'
+                        ElementClassName = 
+                          'order-0 ButtonBarReload btn btn-secondary btn-sm border border-1' +
+                          ' border-dark'
+                        ElementID = 'btnAvailabilityReload'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        HeightStyle = ssAuto
+                        HeightPercent = 100.000000000000000000
+                        WidthStyle = ssAuto
+                        WidthPercent = 100.000000000000000000
+                        OnClick = btnAvailabilityReloadClick
+                      end
+                      object btnAvailabilityStatus: TWebButton
+                        Tag = 1
+                        Left = 581
+                        Top = 0
+                        Width = 70
+                        Height = 32
+                        Caption = '<i class="fa-solid fa-rotate"></i>'
+                        ChildOrder = 4
+                        ElementClassName = 
+                          'order-4 ButtonBarEnd btn btn-secondary btn-sm border border-1 bo' +
+                          'rder-dark'
+                        ElementID = 'btnAvailabilityStatus'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        HeightStyle = ssAuto
+                        HeightPercent = 100.000000000000000000
+                        WidthStyle = ssAuto
+                        WidthPercent = 100.000000000000000000
+                        OnClick = btnAvailabilityReloadClick
+                      end
+                      object panelAvailabiltyExport: TWebPanel
+                        Left = 154
+                        Top = 1
+                        Width = 339
+                        Height = 24
+                        ElementClassName = 'order-3 ButtonBarGroup'
+                        ElementID = 'panelAvailabiltyExport'
+                        HeightStyle = ssAuto
+                        WidthStyle = ssAuto
+                        BorderColor = clNone
+                        BorderStyle = bsNone
+                        ChildOrder = 3
+                        Color = clWhite
+                        ElementBodyClassName = 'btn-group'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        object btnAvailabilityExport: TWebButton
+                          Tag = 4
+                          Left = 32
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-download fa-lg me-1"></i> Export'
+                          ElementClassName = 'order-0 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnAvailabilityExport'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = btnAvailabilityExportClick
+                        end
+                        object btnAvailabilityExportCSV: TWebButton
+                          Left = 78
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-csv fa-lg me-1"></i> CSV'
+                          ChildOrder = 1
+                          ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm '
+                          ElementID = 'btnAvailabilityExportCSV'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuAvailabilityExport
+                        end
+                        object btnAvailabilityExportExcel: TWebButton
+                          Tag = 1
+                          Left = 128
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-excel fa-lg me-1"></i> XLSX'
+                          ChildOrder = 2
+                          ElementClassName = 'order-2 ShortestButton btn btn-dark btn-sm '
+                          ElementID = 'btnAvailabilityExportExcel'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuAvailabilityExport
+                        end
+                        object btnAvailabilityExportJSON: TWebButton
+                          Tag = 2
+                          Left = 178
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-code fa-lg me-1"></i>  JSON'
+                          ChildOrder = 3
+                          ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnAvailabilityExportJSON'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuAvailabilityExport
+                        end
+                        object btnAvailabilityExportPDF: TWebButton
+                          Tag = 3
+                          Left = 228
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-pdf fa-lg me-1"></i>  PDF'
+                          ChildOrder = 4
+                          ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnAvailabilityExportPDF'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuAvailabilityExport
+                        end
+                        object btnAvailabilityExportPrint: TWebButton
+                          Tag = 4
+                          Left = 273
+                          Top = 0
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-print fa-lg me-1"></i> Print'
+                          ChildOrder = 5
+                          ElementClassName = 'order-4 ShortestButton btn btn-primary btn-sm'
+                          ElementID = 'btnAvailabilityExportPrint'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuAvailabilityExport
+                        end
+                      end
+                    end
+                    object divAvailability: TWebHTMLDiv
+                      Left = 0
+                      Top = 32
+                      Width = 770
+                      Height = 348
+                      ElementClassName = 'rounded-bottom flex-fill overflow-hidden border border-0'
+                      ElementID = 'divAvailability'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ChildOrder = 1
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      Role = ''
+                    end
                   end
                 end
-              end
-              object pageBanner: TWebTabSheet
-                AlignWithMargins = True
-                Left = 0
-                Top = 20
-                Width = 485
-                Height = 373
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
-                ElementClassName = 'rounded border border-dark  bg-info'
-                ElementID = 'pageBanner'
-                Caption = 'Bnr'
-                ChildOrder = 1
-                ElementFont = efCSS
-                object scrollConfigBanner: TWebScrollBox
+                object pageBanner: TWebTabSheet
                   Left = 0
-                  Top = 0
-                  Width = 485
-                  Height = 373
-                  ElementClassName = 'rounded '
-                  ElementID = 'scrollConfigBanner'
-                  Align = alClient
-                  BorderStyle = bsNone
-                  Color = clWindow
-                  object divConfigBannerTitle: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 4
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 4
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBannerTitle'
-                    Align = alTop
-                    ChildOrder = 2
-                    ElementFont = efCSS
-                    Role = ''
-                    object divConfigBannerTitleLabel: TWebHTMLDiv
-                      Left = 0
-                      Top = 0
-                      Width = 100
-                      Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigBannerTitleLabel'
-                      Align = alLeft
-                      ElementFont = efCSS
-                      HTML.Strings = (
-                        'Banner Title')
-                      Role = ''
-                    end
-                    object edtConfigBannerTitle: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
-                      Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
-                      ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
-                      ElementID = 'edtConfigBannerTitle'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 140
-                      WidthPercent = 100.000000000000000000
-                      OnChange = SurveyChanged
-                    end
-                  end
-                  object divConfigBannerFooter: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 40
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBannerFooter'
-                    Align = alTop
-                    ChildOrder = 2
-                    ElementFont = efCSS
-                    Role = ''
-                    object divConfigBannerFooterLabel: TWebHTMLDiv
-                      Left = 0
-                      Top = 0
-                      Width = 100
-                      Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigBannerFooterLabel'
-                      Align = alLeft
-                      ElementFont = efCSS
-                      HTML.Strings = (
-                        'Banner Footer')
-                      Role = ''
-                    end
-                    object edtConfigBannerFooter: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
-                      Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
-                      ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
-                      ElementID = 'edtConfigBannerFooter'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 141
-                      WidthPercent = 100.000000000000000000
-                      OnChange = SurveyChanged
-                    end
-                  end
+                  Top = 20
+                  Width = 770
+                  Height = 533
+                  ElementClassName = 'w-100 h-100 Rounded8 border border-dark  bg-info'
+                  ElementID = 'pageBanner'
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  Caption = 'Bnr'
+                  ChildOrder = 1
+                  ElementBodyClassName = 'd-flex flex-column  gap-1 m-1 h-100'
+                  ElementFont = efCSS
+                  ElementPosition = epRelative
                   object divConfigBannerContentHolder: TWebHTMLDiv
-                    AlignWithMargins = True
                     Left = 4
-                    Top = 76
-                    Width = 477
-                    Height = 293
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 4
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                    Top = 90
+                    Width = 762
+                    Height = 272
+                    ElementClassName = 
+                      'order-2 mb-2 d-flex flex-column flex-fill overflow-hidden rounde' +
+                      'd border border-dark bg-secondary'
                     ElementID = 'divConfigBannerContentHolder'
-                    Align = alClient
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
                     ChildOrder = 2
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
                     object divConfigBannerContentHeader: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 477
+                      Width = 762
                       Height = 50
-                      ElementClassName = 'sun-editor'
+                      ElementClassName = 'order-0 flex-shrink-0 sun-editor'
                       ElementID = 'divConfigBannerContentHeader'
                       HeightStyle = ssAuto
-                      WidthStyle = ssPercent
-                      Align = alTop
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                     object divConfigBannerContentFooter: TWebHTMLDiv
                       Left = 0
-                      Top = 275
-                      Width = 477
-                      Height = 18
-                      ElementClassName = 'sun-editor d-flex overflow-hidden'
+                      Top = 254
+                      Width = 762
+                      Height = 20
+                      ElementClassName = 'order-2 flex-shrink-0 sun-editor d-flex overflow-hidden'
                       ElementID = 'divConfigBannerContentFooter'
-                      WidthStyle = ssPercent
-                      Align = alBottom
-                      ChildOrder = 1
+                      WidthStyle = ssAuto
+                      ChildOrder = 2
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                     object divConfigBannerContent: TWebHTMLDiv
-                      AlignWithMargins = True
                       Left = 0
                       Top = 50
-                      Width = 477
-                      Height = 224
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 1
+                      Width = 762
+                      Height = 200
+                      ElementClassName = 'order-1 flex-fill overflow-hidden'
                       ElementID = 'divConfigBannerContent'
-                      Align = alClient
-                      ChildOrder = 2
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ChildOrder = 1
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
                         '<textarea id="divConfigBannerContentText">')
                       Role = ''
                     end
                   end
+                  object divConfigBannerFooter: TWebHTMLDiv
+                    Left = 4
+                    Top = 48
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-1 FieldHolder'
+                    ElementID = 'divConfigBannerFooter'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 1
+                    ElementPosition = epRelative
+                    ElementFont = efCSS
+                    Role = ''
+                    object divConfigBannerFooterLabel: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 80
+                      Height = 32
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigBannerFooterLabel'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      HTML.Strings = (
+                        'Banner Footer')
+                      Role = ''
+                    end
+                    object edtConfigBannerFooter: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 658
+                      Height = 28
+                      ChildOrder = 1
+                      ElementClassName = 'FieldEdit'
+                      ElementID = 'edtConfigBannerFooter'
+                      ElementFont = efCSS
+                      ElementPosition = epRelative
+                      HeightPercent = 100.000000000000000000
+                      TabOrder = 141
+                      WidthStyle = ssAuto
+                      WidthPercent = 100.000000000000000000
+                      OnChange = SurveyChanged
+                    end
+                  end
+                  object divConfigBannerTitle: TWebHTMLDiv
+                    Left = 4
+                    Top = 6
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-0 FieldHolder'
+                    ElementID = 'divConfigBannerTitle'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 2
+                    ElementPosition = epRelative
+                    ElementFont = efCSS
+                    Role = ''
+                    object divConfigBannerTitleLabel: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 80
+                      Height = 32
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigBannerTitleLabel'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      HTML.Strings = (
+                        'Banner Title')
+                      Role = ''
+                    end
+                    object edtConfigBannerTitle: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 658
+                      Height = 28
+                      ChildOrder = 1
+                      ElementClassName = 'FieldEdit'
+                      ElementID = 'edtConfigBannerTitle'
+                      ElementFont = efCSS
+                      ElementPosition = epRelative
+                      HeightPercent = 100.000000000000000000
+                      TabOrder = 140
+                      WidthStyle = ssAuto
+                      WidthPercent = 100.000000000000000000
+                      OnChange = SurveyChanged
+                    end
+                  end
                 end
-              end
-              object pageBannerPre: TWebTabSheet
-                AlignWithMargins = True
-                Left = 0
-                Top = 20
-                Width = 485
-                Height = 373
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
-                ElementClassName = 'rounded border border-dark  bg-info'
-                ElementID = 'pageBannerPre'
-                Caption = 'Pre'
-                ChildOrder = 4
-                ElementFont = efCSS
-                object scrollConfigBannerPre: TWebScrollBox
+                object pageBannerPre: TWebTabSheet
                   Left = 0
-                  Top = 0
-                  Width = 485
-                  Height = 373
-                  ElementClassName = 'rounded '
-                  ElementID = 'scrollConfigBannerPre'
-                  Align = alClient
-                  BorderStyle = bsNone
-                  Color = clWindow
-                  object divConfigBannerPreTitle: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 4
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 4
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBannerPreTitle'
-                    Align = alTop
-                    ChildOrder = 2
-                    ElementFont = efCSS
-                    Role = ''
-                    object divConfigBannerPreTitleLabel: TWebHTMLDiv
-                      Left = 0
-                      Top = 0
-                      Width = 100
-                      Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigBannerPreTitleLabel'
-                      Align = alLeft
-                      ElementFont = efCSS
-                      HTML.Strings = (
-                        'Pre Title')
-                      Role = ''
-                    end
-                    object edtConfigBannerPreTitle: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
-                      Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
-                      ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
-                      ElementID = 'edtConfigBannerPreTitle'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 150
-                      WidthPercent = 100.000000000000000000
-                      OnChange = SurveyChanged
-                    end
-                  end
-                  object divConfigBannerPreFooter: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 40
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBannerPreFooter'
-                    Align = alTop
-                    ChildOrder = 2
-                    ElementFont = efCSS
-                    Role = ''
-                    object divConfigBannerPreFooterLabel: TWebHTMLDiv
-                      Left = 0
-                      Top = 0
-                      Width = 100
-                      Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigBannerPreFooterLabel'
-                      Align = alLeft
-                      ElementFont = efCSS
-                      HTML.Strings = (
-                        'Pre Footer')
-                      Role = ''
-                    end
-                    object edtConfigBannerPreFooter: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
-                      Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
-                      ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
-                      ElementID = 'edtConfigBannerPreFooter'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 151
-                      WidthPercent = 100.000000000000000000
-                      OnChange = SurveyChanged
-                    end
-                  end
+                  Top = 20
+                  Width = 770
+                  Height = 533
+                  ElementClassName = 'w-100 h-100 Rounded8 border border-dark  bg-info'
+                  ElementID = 'pageBannerPre'
+                  Caption = 'Pre'
+                  ChildOrder = 4
+                  ElementBodyClassName = 'd-flex flex-column  gap-1 m-1 h-100'
+                  ElementFont = efCSS
                   object divConfigBannerPreContentHolder: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 76
-                    Width = 477
-                    Height = 293
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 4
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                    Left = 8
+                    Top = 84
+                    Width = 762
+                    Height = 286
+                    ElementClassName = 
+                      'order-2 mb-2 d-flex flex-column flex-fill overflow-hidden rounde' +
+                      'd border border-dark bg-secondary'
                     ElementID = 'divConfigBannerPreContentHolder'
-                    Align = alClient
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
                     ChildOrder = 2
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
                     object divConfigBannerPreContentHeader: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 477
+                      Width = 762
                       Height = 50
-                      ElementClassName = 'sun-editor'
+                      ElementClassName = 'order-0 flex-shrink-0 sun-editor'
                       ElementID = 'divConfigBannerPreContentHeader'
                       HeightStyle = ssAuto
-                      WidthStyle = ssPercent
-                      Align = alTop
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                     object divConfigBannerPreContentFooter: TWebHTMLDiv
                       Left = 0
-                      Top = 275
-                      Width = 477
-                      Height = 18
-                      ElementClassName = 'sun-editor d-flex overflow-hidden'
+                      Top = 266
+                      Width = 762
+                      Height = 20
+                      ElementClassName = 'order-2 flex-shrink-0 sun-editor d-flex overflow-hidden'
                       ElementID = 'divConfigBannerPreContentFooter'
-                      WidthStyle = ssPercent
-                      Align = alBottom
+                      WidthStyle = ssAuto
                       ChildOrder = 1
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                     object divConfigBannerPreContent: TWebHTMLDiv
-                      AlignWithMargins = True
                       Left = 0
                       Top = 50
-                      Width = 477
-                      Height = 224
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 1
+                      Width = 762
+                      Height = 215
+                      ElementClassName = 'order-1 flex-fill overflow-hidden'
                       ElementID = 'divConfigBannerPreContent'
-                      Align = alClient
-                      ChildOrder = 2
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ChildOrder = 1
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
                         '<textarea id="divConfigBannerPreContentText">')
                       Role = ''
                     end
                   end
+                  object divConfigBannerPreFooter: TWebHTMLDiv
+                    Left = 8
+                    Top = 48
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-1 FieldHolder'
+                    ElementID = 'divConfigBannerPreFooter'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 1
+                    ElementPosition = epRelative
+                    ElementFont = efCSS
+                    Role = ''
+                    object divConfigBannerPreFooterLabel: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 80
+                      Height = 32
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigBannerPreFooterLabel'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      HTML.Strings = (
+                        'Pre Footer')
+                      Role = ''
+                    end
+                    object edtConfigBannerPreFooter: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 658
+                      Height = 28
+                      ChildOrder = 1
+                      ElementClassName = 'FieldEdit'
+                      ElementID = 'edtConfigBannerPreFooter'
+                      ElementFont = efCSS
+                      ElementPosition = epRelative
+                      HeightPercent = 100.000000000000000000
+                      TabOrder = 151
+                      WidthStyle = ssAuto
+                      WidthPercent = 100.000000000000000000
+                      OnChange = SurveyChanged
+                    end
+                  end
+                  object divConfigBannerPreTitle: TWebHTMLDiv
+                    Left = 8
+                    Top = 12
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-0 FieldHolder'
+                    ElementID = 'divConfigBannerPreTitle'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 2
+                    ElementPosition = epRelative
+                    ElementFont = efCSS
+                    Role = ''
+                    object divConfigBannerPreTitleLabel: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 80
+                      Height = 32
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigBannerPreTitleLabel'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      HTML.Strings = (
+                        'Pre Title')
+                      Role = ''
+                    end
+                    object edtConfigBannerPreTitle: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 658
+                      Height = 28
+                      ChildOrder = 1
+                      ElementClassName = 'FieldEdit'
+                      ElementID = 'edtConfigBannerPreTitle'
+                      ElementFont = efCSS
+                      ElementPosition = epRelative
+                      HeightPercent = 100.000000000000000000
+                      TabOrder = 150
+                      WidthStyle = ssAuto
+                      WidthPercent = 100.000000000000000000
+                      OnChange = SurveyChanged
+                    end
+                  end
                 end
-              end
-              object pageBannerPause: TWebTabSheet
-                AlignWithMargins = True
-                Left = 0
-                Top = 20
-                Width = 485
-                Height = 373
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
-                ElementClassName = 'rounded border border-dark  bg-info'
-                ElementID = 'pageBannerPause'
-                Caption = 'Pause'
-                ChildOrder = 5
-                ElementFont = efCSS
-                object scrollConfigBannerPause: TWebScrollBox
+                object pageBannerPause: TWebTabSheet
                   Left = 0
-                  Top = 0
-                  Width = 485
-                  Height = 373
-                  ElementClassName = 'rounded '
-                  ElementID = 'scrollConfigBannerPause'
-                  Align = alClient
-                  BorderStyle = bsNone
-                  Color = clWindow
-                  object divConfigBannerPauseTitle: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 4
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 4
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBannerPauseTitle'
-                    Align = alTop
-                    ChildOrder = 2
-                    ElementFont = efCSS
-                    Role = ''
-                    object divConfigBannerPauseTitleLabel: TWebHTMLDiv
-                      Left = 0
-                      Top = 0
-                      Width = 100
-                      Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigBannerPauseTitleLabel'
-                      Align = alLeft
-                      ElementFont = efCSS
-                      HTML.Strings = (
-                        'Pause Title')
-                      Role = ''
-                    end
-                    object edtConfigBannerPauseTitle: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
-                      Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
-                      ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
-                      ElementID = 'edtConfigBannerPauseTitle'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 160
-                      WidthPercent = 100.000000000000000000
-                      OnChange = SurveyChanged
-                    end
-                  end
-                  object divConfigBannerPauseFooter: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 40
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBannerPauseFooter'
-                    Align = alTop
-                    ChildOrder = 2
-                    ElementFont = efCSS
-                    Role = ''
-                    object divConfigBannerPauseFooterLabel: TWebHTMLDiv
-                      Left = 0
-                      Top = 0
-                      Width = 100
-                      Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigBannerPauseFooterLabel'
-                      Align = alLeft
-                      ElementFont = efCSS
-                      HTML.Strings = (
-                        'Pause Footer')
-                      Role = ''
-                    end
-                    object edtConfigBannerPauseFooter: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
-                      Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
-                      ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
-                      ElementID = 'edtConfigBannerPauseFooter'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 161
-                      WidthPercent = 100.000000000000000000
-                      OnChange = SurveyChanged
-                    end
-                  end
+                  Top = 20
+                  Width = 770
+                  Height = 533
+                  ElementClassName = 'w-100 h-100 Rounded8 border border-dark  bg-info'
+                  ElementID = 'pageBannerPause'
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  Caption = 'Pause'
+                  ChildOrder = 5
+                  ElementBodyClassName = 'd-flex flex-column  gap-1 m-1 h-100'
+                  ElementFont = efCSS
+                  ElementPosition = epRelative
                   object divConfigBannerPauseContentHolder: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 76
-                    Width = 477
-                    Height = 293
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 4
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                    Left = 8
+                    Top = 92
+                    Width = 762
+                    Height = 286
+                    ElementClassName = 
+                      'order-2 mb-2 d-flex flex-column flex-fill overflow-hidden rounde' +
+                      'd border border-dark bg-secondary'
                     ElementID = 'divConfigBannerPauseContentHolder'
-                    Align = alClient
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
                     ChildOrder = 2
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
                     object divConfigBannerPauseContentHeader: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 477
+                      Width = 762
                       Height = 50
-                      ElementClassName = 'sun-editor'
+                      ElementClassName = 'order-0 flex-shrink-0 sun-editor'
                       ElementID = 'divConfigBannerPauseContentHeader'
                       HeightStyle = ssAuto
-                      WidthStyle = ssPercent
-                      Align = alTop
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                     object divConfigBannerPauseContentFooter: TWebHTMLDiv
                       Left = 0
-                      Top = 275
-                      Width = 477
-                      Height = 18
-                      ElementClassName = 'sun-editor d-flex overflow-hidden'
+                      Top = 268
+                      Width = 762
+                      Height = 20
+                      ElementClassName = 'order-2 flex-shrink-0 sun-editor d-flex overflow-hidden'
                       ElementID = 'divConfigBannerPauseContentFooter'
-                      WidthStyle = ssPercent
-                      Align = alBottom
-                      ChildOrder = 1
+                      WidthStyle = ssAuto
+                      ChildOrder = 2
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                     object divConfigBannerPauseContent: TWebHTMLDiv
-                      AlignWithMargins = True
                       Left = 0
                       Top = 50
-                      Width = 477
-                      Height = 224
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 1
+                      Width = 762
+                      Height = 217
+                      ElementClassName = 'order-1 flex-fill overflow-hidden'
                       ElementID = 'divConfigBannerPauseContent'
-                      Align = alClient
-                      ChildOrder = 2
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ChildOrder = 1
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
                         '<textarea id="divConfigBannerPauseContentText">')
                       Role = ''
                     end
                   end
-                end
-              end
-              object pageBannerPost: TWebTabSheet
-                AlignWithMargins = True
-                Left = 0
-                Top = 20
-                Width = 485
-                Height = 373
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
-                ElementClassName = 'rounded border border-dark  bg-info'
-                ElementID = 'pageBannerPost'
-                Caption = 'Post'
-                ChildOrder = 6
-                ElementFont = efCSS
-                object scrollConfigBannerPost: TWebScrollBox
-                  Left = 0
-                  Top = 0
-                  Width = 485
-                  Height = 373
-                  ElementClassName = 'rounded '
-                  ElementID = 'scrollConfigBannerPost'
-                  Align = alClient
-                  BorderStyle = bsNone
-                  Color = clWindow
-                  object divConfigBannerPostTitle: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 4
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 4
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBannerPostTitle'
-                    Align = alTop
-                    ChildOrder = 2
+                  object divConfigBannerPauseFooter: TWebHTMLDiv
+                    Left = 8
+                    Top = 56
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-1 FieldHolder'
+                    ElementID = 'divConfigBannerPauseFooter'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 1
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
-                    object divConfigBannerPostTitleLabel: TWebHTMLDiv
+                    object divConfigBannerPauseFooterLabel: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 100
+                      Width = 80
                       Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigBannerPostTitleLabel'
-                      Align = alLeft
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigBannerPauseFooterLabel'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
-                        'Post Title')
+                        'Pause Footer')
                       Role = ''
                     end
-                    object edtConfigBannerPostTitle: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
+                    object edtConfigBannerPauseFooter: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 658
                       Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
                       ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
-                      ElementID = 'edtConfigBannerPostTitle'
+                      ElementClassName = 'FieldEdit'
+                      ElementID = 'edtConfigBannerPauseFooter'
                       ElementFont = efCSS
+                      ElementPosition = epRelative
                       HeightPercent = 100.000000000000000000
-                      TabOrder = 170
+                      TabOrder = 161
+                      WidthStyle = ssAuto
                       WidthPercent = 100.000000000000000000
                       OnChange = SurveyChanged
                     end
                   end
-                  object divConfigBannerPostFooter: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 40
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBannerPostFooter'
-                    Align = alTop
+                  object divConfigBannerPauseTitle: TWebHTMLDiv
+                    Left = 8
+                    Top = 20
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-0 FieldHolder'
+                    ElementID = 'divConfigBannerPauseTitle'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
                     ChildOrder = 2
+                    ElementPosition = epRelative
+                    ElementFont = efCSS
+                    Role = ''
+                    object divConfigBannerPauseTitleLabel: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 80
+                      Height = 32
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigBannerPauseTitleLabel'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      HTML.Strings = (
+                        'Pause Title')
+                      Role = ''
+                    end
+                    object edtConfigBannerPauseTitle: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 658
+                      Height = 28
+                      ChildOrder = 1
+                      ElementClassName = 'FieldEdit'
+                      ElementID = 'edtConfigBannerPauseTitle'
+                      ElementFont = efCSS
+                      ElementPosition = epRelative
+                      HeightPercent = 100.000000000000000000
+                      TabOrder = 160
+                      WidthStyle = ssAuto
+                      WidthPercent = 100.000000000000000000
+                      OnChange = SurveyChanged
+                    end
+                  end
+                end
+                object pageBannerPost: TWebTabSheet
+                  Left = 0
+                  Top = 20
+                  Width = 770
+                  Height = 533
+                  ElementClassName = 'w-100 h-100 Rounded8 border border-dark  bg-info'
+                  ElementID = 'pageBannerPost'
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  Caption = 'Post'
+                  ChildOrder = 6
+                  ElementBodyClassName = 'd-flex flex-column  gap-1 m-1 h-100'
+                  ElementFont = efCSS
+                  ElementPosition = epRelative
+                  object divConfigBannerPostContentHolder: TWebHTMLDiv
+                    Left = 4
+                    Top = 114
+                    Width = 762
+                    Height = 248
+                    ElementClassName = 
+                      'order-2 mb-2 d-flex flex-column flex-fill overflow-hidden rounde' +
+                      'd border border-dark bg-secondary'
+                    ElementID = 'divConfigBannerPostContentHolder'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 2
+                    ElementPosition = epRelative
+                    ElementFont = efCSS
+                    Role = ''
+                    object divConfigBannerPostContentHeader: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 762
+                      Height = 50
+                      ElementClassName = 'order-0 flex-shrink-0 sun-editor'
+                      ElementID = 'divConfigBannerPostContentHeader'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      Role = ''
+                    end
+                    object divConfigBannerPostContentFooter: TWebHTMLDiv
+                      Left = 3
+                      Top = 210
+                      Width = 762
+                      Height = 20
+                      ElementClassName = 'order-2 flex-shrink-0 sun-editor d-flex overflow-hidden'
+                      ElementID = 'divConfigBannerPostContentFooter'
+                      WidthStyle = ssAuto
+                      ChildOrder = 2
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      Role = ''
+                    end
+                    object divConfigBannerPostContent: TWebHTMLDiv
+                      Left = 0
+                      Top = 50
+                      Width = 762
+                      Height = 150
+                      ElementClassName = 'order-1 flex-fill overflow-hidden'
+                      ElementID = 'divConfigBannerPostContent'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ChildOrder = 1
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      HTML.Strings = (
+                        '<textarea id="divConfigBannerPostContentText">')
+                      Role = ''
+                    end
+                  end
+                  object divConfigBannerPostFooter: TWebHTMLDiv
+                    Left = 8
+                    Top = 64
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-1 FieldHolder'
+                    ElementID = 'divConfigBannerPostFooter'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 1
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
                     object divConfigBannerPostFooterLabel: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 100
+                      Width = 80
                       Height = 32
-                      ElementClassName = 'ConfigLabel'
+                      ElementClassName = 'FieldLabel'
                       ElementID = 'divConfigBannerPostFooterLabel'
-                      Align = alLeft
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
                         'Post Footer')
@@ -2086,606 +2160,683 @@ object Form1: TForm1
                     end
                     object edtConfigBannerPostFooter: TWebEdit
                       AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
+                      Left = 100
+                      Top = 0
+                      Width = 678
                       Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
                       ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
+                      ElementClassName = 'FieldEdit'
                       ElementID = 'edtConfigBannerPostFooter'
                       ElementFont = efCSS
+                      ElementPosition = epRelative
                       HeightPercent = 100.000000000000000000
                       TabOrder = 171
+                      WidthStyle = ssAuto
                       WidthPercent = 100.000000000000000000
                       OnChange = SurveyChanged
                     end
                   end
-                  object divConfigBannerPostContentHolder: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 76
-                    Width = 477
-                    Height = 293
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 4
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigBannerPostContentHolder'
-                    Align = alClient
+                  object divConfigBannerPostTitle: TWebHTMLDiv
+                    Left = 8
+                    Top = 28
+                    Width = 762
+                    Height = 32
+                    ElementClassName = 'order-0 FieldHolder'
+                    ElementID = 'divConfigBannerPostTitle'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
                     ChildOrder = 2
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
-                    object divConfigBannerPostContentHeader: TWebHTMLDiv
+                    object divConfigBannerPostTitleLabel: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 477
-                      Height = 50
-                      ElementClassName = 'sun-editor'
-                      ElementID = 'divConfigBannerPostContentHeader'
+                      Width = 80
+                      Height = 32
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigBannerPostTitleLabel'
                       HeightStyle = ssAuto
-                      WidthStyle = ssPercent
-                      Align = alTop
-                      ElementFont = efCSS
-                      Role = ''
-                    end
-                    object divConfigBannerPostContentFooter: TWebHTMLDiv
-                      Left = 0
-                      Top = 275
-                      Width = 477
-                      Height = 18
-                      ElementClassName = 'sun-editor d-flex overflow-hidden'
-                      ElementID = 'divConfigBannerPostContentFooter'
-                      WidthStyle = ssPercent
-                      Align = alBottom
-                      ChildOrder = 1
-                      ElementFont = efCSS
-                      Role = ''
-                    end
-                    object divConfigBannerPostContent: TWebHTMLDiv
-                      AlignWithMargins = True
-                      Left = 0
-                      Top = 50
-                      Width = 477
-                      Height = 224
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 1
-                      ElementID = 'divConfigBannerPostContent'
-                      Align = alClient
-                      ChildOrder = 2
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
-                        '<textarea id="divConfigBannerPostContentText">')
+                        'Post Title')
                       Role = ''
+                    end
+                    object edtConfigBannerPostTitle: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 658
+                      Height = 28
+                      ChildOrder = 1
+                      ElementClassName = 'FieldEdit'
+                      ElementID = 'edtConfigBannerPostTitle'
+                      ElementFont = efCSS
+                      ElementPosition = epRelative
+                      HeightPercent = 100.000000000000000000
+                      TabOrder = 170
+                      WidthStyle = ssAuto
+                      WidthPercent = 100.000000000000000000
+                      OnChange = SurveyChanged
                     end
                   end
                 end
-              end
-              object pageAbout: TWebTabSheet
-                AlignWithMargins = True
-                Left = 0
-                Top = 20
-                Width = 485
-                Height = 373
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
-                ElementClassName = 'rounded border border-dark  bg-info'
-                ElementID = 'pageAbout'
-                Caption = 'Abt'
-                ChildOrder = 7
-                ElementFont = efCSS
-                object scrollConfigAbout: TWebScrollBox
+                object pageAbout: TWebTabSheet
                   Left = 0
-                  Top = 0
-                  Width = 485
-                  Height = 373
-                  ElementClassName = 'rounded '
-                  ElementID = 'scrollConfigAbout'
-                  Align = alClient
-                  BorderStyle = bsNone
-                  Color = clWindow
-                  object divConfigAboutTitle: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 4
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 4
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigAboutTitle'
-                    Align = alTop
-                    ChildOrder = 2
-                    ElementFont = efCSS
-                    Role = ''
-                    object divConfigAboutTitleLabel: TWebHTMLDiv
-                      Left = 0
-                      Top = 0
-                      Width = 100
-                      Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigAboutTitleLabel'
-                      Align = alLeft
-                      ElementFont = efCSS
-                      HTML.Strings = (
-                        'About Title')
-                      Role = ''
-                    end
-                    object edtConfigAboutTitle: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
-                      Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
-                      ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
-                      ElementID = 'edtConfigAboutTitle'
-                      ElementFont = efCSS
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 180
-                      WidthPercent = 100.000000000000000000
-                      OnChange = SurveyChanged
-                    end
-                  end
+                  Top = 20
+                  Width = 770
+                  Height = 533
+                  ElementClassName = 'w-100 h-100 Rounded8 border border-dark  bg-info'
+                  ElementID = 'pageAbout'
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  Caption = 'Abt'
+                  ChildOrder = 7
+                  ElementBodyClassName = 'd-flex flex-column  gap-1 m-1 h-100'
+                  ElementFont = efCSS
+                  ElementPosition = epRelative
                   object divConfigAboutContentHolder: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 40
-                    Width = 477
-                    Height = 329
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 4
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                    Left = 8
+                    Top = 72
+                    Width = 762
+                    Height = 322
+                    ElementClassName = 
+                      'order-1 mb-2 d-flex flex-column flex-fill overflow-hidden rounde' +
+                      'd border border-dark bg-secondary'
                     ElementID = 'divConfigAboutContentHolder'
-                    Align = alClient
-                    ChildOrder = 2
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 1
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
                     object divConfigAboutContentHeader: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 477
+                      Width = 762
                       Height = 50
-                      ElementClassName = 'sun-editor'
+                      ElementClassName = 'order-0 flex-shrink-0 sun-editor'
                       ElementID = 'divConfigAboutContentHeader'
                       HeightStyle = ssAuto
-                      WidthStyle = ssPercent
-                      Align = alTop
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                     object divConfigAboutContentFooter: TWebHTMLDiv
                       Left = 0
-                      Top = 311
-                      Width = 477
-                      Height = 18
-                      ElementClassName = 'sun-editor d-flex overflow-hidden'
+                      Top = 304
+                      Width = 762
+                      Height = 20
+                      ElementClassName = 'order-2 flex-shrink-0 sun-editor d-flex overflow-hidden'
                       ElementID = 'divConfigAboutContentFooter'
-                      WidthStyle = ssPercent
-                      Align = alBottom
-                      ChildOrder = 1
+                      WidthStyle = ssAuto
+                      ChildOrder = 2
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                     object divConfigAboutContent: TWebHTMLDiv
-                      AlignWithMargins = True
                       Left = 0
                       Top = 50
-                      Width = 477
-                      Height = 260
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 1
+                      Width = 762
+                      Height = 253
+                      ElementClassName = 'order-1 flex-fill overflow-hidden'
                       ElementID = 'divConfigAboutContent'
-                      Align = alClient
-                      ChildOrder = 2
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ChildOrder = 1
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
                         '<textarea id="divConfigAboutContentText">')
                       Role = ''
                     end
                   end
-                end
-              end
-              object pageFeedback: TWebTabSheet
-                AlignWithMargins = True
-                Left = 0
-                Top = 20
-                Width = 485
-                Height = 373
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
-                ElementClassName = 'rounded border border-dark  bg-info'
-                ElementID = 'pageFeedback'
-                Caption = 'Fb'
-                ChildOrder = 8
-                ElementFont = efCSS
-                object scrollConfigFeedback: TWebScrollBox
-                  Left = 0
-                  Top = 0
-                  Width = 485
-                  Height = 373
-                  ElementClassName = 'rounded '
-                  ElementID = 'scrollConfigFeedback'
-                  Align = alClient
-                  BorderStyle = bsNone
-                  Color = clWindow
-                  object divConfigFeedbackTitle: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 4
-                    Width = 477
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 4
-                    Margins.Right = 4
-                    Margins.Bottom = 2
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
-                    ElementID = 'divConfigFeedbackTitle'
-                    Align = alTop
-                    ChildOrder = 2
+                  object divConfigAboutTitle: TWebHTMLDiv
+                    Left = 3
+                    Top = 18
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-0 FieldHolder'
+                    ElementID = 'divConfigAboutTitle'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 1
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
-                    object divConfigFeedbackTitleLabel: TWebHTMLDiv
+                    object divConfigAboutTitleLabel: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 100
+                      Width = 80
                       Height = 32
-                      ElementClassName = 'ConfigLabel'
-                      ElementID = 'divConfigFeedbackTitleLabel'
-                      Align = alLeft
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigAboutTitleLabel'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
-                        'Feedback Title')
+                        'About Title')
                       Role = ''
                     end
-                    object edtConfigFeedbackTitle: TWebEdit
-                      AlignWithMargins = True
-                      Left = 102
-                      Top = 2
-                      Width = 373
+                    object edtConfigAboutTitle: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 658
                       Height = 28
-                      Margins.Left = 2
-                      Margins.Top = 2
-                      Margins.Right = 2
-                      Margins.Bottom = 2
-                      Align = alClient
                       ChildOrder = 1
-                      ElementClassName = 'rounded-1 ps-2 border border-dark'
-                      ElementID = 'edtConfigFeedbackTitle'
+                      ElementClassName = 'FieldEdit'
+                      ElementID = 'edtConfigAboutTitle'
                       ElementFont = efCSS
+                      ElementPosition = epRelative
                       HeightPercent = 100.000000000000000000
-                      TabOrder = 190
+                      TabOrder = 180
+                      WidthStyle = ssAuto
                       WidthPercent = 100.000000000000000000
                       OnChange = SurveyChanged
                     end
                   end
+                end
+                object pageFeedback: TWebTabSheet
+                  Left = 0
+                  Top = 20
+                  Width = 770
+                  Height = 533
+                  ElementClassName = 'w-100 h-100 Rounded8 border border-dark  bg-info'
+                  ElementID = 'pageFeedback'
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  Caption = 'Fb'
+                  ChildOrder = 8
+                  ElementBodyClassName = 'd-flex flex-column  gap-1 m-1 h-100'
+                  ElementFont = efCSS
+                  ElementPosition = epRelative
                   object divConfigFeedbackContentHolder: TWebHTMLDiv
-                    AlignWithMargins = True
                     Left = 4
                     Top = 40
-                    Width = 477
-                    Height = 329
-                    Margins.Left = 4
-                    Margins.Top = 2
-                    Margins.Right = 4
-                    Margins.Bottom = 4
-                    ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                    Width = 762
+                    Height = 322
+                    ElementClassName = 
+                      'order-1 mb-2 d-flex flex-column flex-fill overflow-hidden rounde' +
+                      'd border border-dark bg-secondary'
                     ElementID = 'divConfigFeedbackContentHolder'
-                    Align = alClient
-                    ChildOrder = 2
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ChildOrder = 1
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
                     object divConfigFeedbackContentHeader: TWebHTMLDiv
                       Left = 0
                       Top = 0
-                      Width = 477
+                      Width = 762
                       Height = 50
-                      ElementClassName = 'sun-editor'
+                      ElementClassName = 'order-0 flex-shrink-0 sun-editor'
                       ElementID = 'divConfigFeedbackContentHeader'
                       HeightStyle = ssAuto
-                      WidthStyle = ssPercent
-                      Align = alTop
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                     object divConfigFeedbackContentFooter: TWebHTMLDiv
                       Left = 0
-                      Top = 311
-                      Width = 477
-                      Height = 18
-                      ElementClassName = 'sun-editor d-flex overflow-hidden'
+                      Top = 304
+                      Width = 762
+                      Height = 20
+                      ElementClassName = 'order-2 flex-shrink-0 sun-editor d-flex overflow-hidden'
                       ElementID = 'divConfigFeedbackContentFooter'
-                      WidthStyle = ssPercent
-                      Align = alBottom
-                      ChildOrder = 1
+                      WidthStyle = ssAuto
+                      ChildOrder = 2
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       Role = ''
                     end
                     object divConfigFeedbackContent: TWebHTMLDiv
-                      AlignWithMargins = True
                       Left = 0
                       Top = 50
-                      Width = 477
-                      Height = 260
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 1
+                      Width = 762
+                      Height = 253
+                      ElementClassName = 'order-1 flex-fill overflow-hidden'
                       ElementID = 'divConfigFeedbackContent'
-                      Align = alClient
-                      ChildOrder = 2
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ChildOrder = 1
+                      ElementPosition = epRelative
                       ElementFont = efCSS
                       HTML.Strings = (
                         '<textarea id="divConfigFeedbackContentText">')
                       Role = ''
                     end
                   end
-                end
-              end
-              object pageChangeHistory: TWebTabSheet
-                Left = 0
-                Top = 20
-                Width = 485
-                Height = 373
-                ElementClassName = 'border border-0'
-                ElementID = 'pageChangeHistory'
-                Caption = 'Chg'
-                ChildOrder = 2
-                ElementFont = efCSS
-                object divChangeHistoryHolder: TWebHTMLDiv
-                  AlignWithMargins = True
-                  Left = 0
-                  Top = 0
-                  Width = 485
-                  Height = 373
-                  Margins.Left = 0
-                  Margins.Top = 0
-                  Margins.Right = 0
-                  Margins.Bottom = 0
-                  ElementClassName = 'overflow-hidden rounded border border-dark  bg-white'
-                  ElementID = 'divChangeHistoryHolder'
-                  Align = alClient
-                  ElementFont = efCSS
-                  Role = ''
-                  object divChangeHistoryButtons: TWebHTMLDiv
-                    AlignWithMargins = True
+                  object divConfigFeedbackTitle: TWebHTMLDiv
                     Left = 4
-                    Top = 0
-                    Width = 479
-                    Height = 32
-                    Margins.Left = 4
-                    Margins.Top = 0
-                    Margins.Right = 2
-                    Margins.Bottom = 0
-                    ElementClassName = 'd-flex align-items-center '
-                    ElementID = 'divChangeHistoryButtons'
-                    Align = alTop
-                    ElementFont = efCSS
-                    Role = ''
-                    object btnChangeHistoryReload: TWebButton
-                      Tag = 1
-                      AlignWithMargins = True
-                      Left = 0
-                      Top = 3
-                      Width = 50
-                      Height = 24
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      Caption = '<i class="fa-solid fa-rotate"></i>'
-                      ElementClassName = 'ShortButton btn btn-secondary btn-sm'
-                      ElementID = 'btnChangeHistoryReload'
-                      ElementFont = efCSS
-                      ElementPosition = epRelative
-                      HeightPercent = 100.000000000000000000
-                      WidthStyle = ssAuto
-                      WidthPercent = 100.000000000000000000
-                      OnClick = btnChangeHistoryReloadClick
-                    end
-                    object btnChangeHistoryPrint: TWebButton
-                      Tag = 1
-                      AlignWithMargins = True
-                      Left = 50
-                      Top = 3
-                      Width = 50
-                      Height = 24
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 0
-                      Caption = '<i class="fa-solid fa-print me-1"></i> Print'
-                      ChildOrder = 2
-                      ElementClassName = 'ShortButton btn btn-dark btn-sm'
-                      ElementID = 'btnChangeHistoryPrint'
-                      ElementFont = efCSS
-                      ElementPosition = epRelative
-                      HeightPercent = 100.000000000000000000
-                      TabOrder = 131
-                      WidthStyle = ssAuto
-                      WidthPercent = 100.000000000000000000
-                      OnClick = btnChangeHistoryPrintClick
-                    end
-                  end
-                  object divChangeHistory: TWebHTMLDiv
-                    AlignWithMargins = True
-                    Left = 0
-                    Top = 32
-                    Width = 485
-                    Height = 341
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    ElementClassName = 'overflow-hidden border border-0'
-                    ElementID = 'divChangeHistory'
-                    Align = alClient
+                    Top = 2
+                    Width = 762
+                    Height = 38
+                    ElementClassName = 'order-0 FieldHolder'
+                    ElementID = 'divConfigFeedbackTitle'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
                     ChildOrder = 1
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
+                    object divConfigFeedbackTitleLabel: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 80
+                      Height = 32
+                      ElementClassName = 'FieldLabel'
+                      ElementID = 'divConfigFeedbackTitleLabel'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      HTML.Strings = (
+                        'Feedback Title')
+                      Role = ''
+                    end
+                    object edtConfigFeedbackTitle: TWebEdit
+                      Left = 100
+                      Top = 0
+                      Width = 658
+                      Height = 28
+                      ChildOrder = 1
+                      ElementClassName = 'FieldEdit'
+                      ElementID = 'edtConfigFeedbackTitle'
+                      ElementFont = efCSS
+                      ElementPosition = epRelative
+                      HeightPercent = 100.000000000000000000
+                      TabOrder = 190
+                      WidthStyle = ssAuto
+                      WidthPercent = 100.000000000000000000
+                      OnChange = SurveyChanged
+                    end
                   end
                 end
-              end
-              object pageQRCode: TWebTabSheet
-                AlignWithMargins = True
-                Left = 0
-                Top = 20
-                Width = 485
-                Height = 373
-                Margins.Left = 4
-                Margins.Top = 0
-                Margins.Right = 4
-                Margins.Bottom = 5
-                ElementClassName = 'rounded border border-dark  bg-info'
-                ElementID = 'pageQRCode'
-                Caption = 'QRCode'
-                ChildOrder = 10
-                ElementFont = efCSS
-                MaterialGlyphColor = clBlack
-                object divQRCodeHolder: TWebHTMLDiv
-                  AlignWithMargins = True
-                  Left = 4
-                  Top = 4
-                  Width = 477
-                  Height = 365
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
-                  ElementClassName = 'rounded border border-dark bg-white'
-                  ElementID = 'divQRCodeHolder'
-                  Align = alClient
+                object pageChangeHistory: TWebTabSheet
+                  Left = 0
+                  Top = 20
+                  Width = 770
+                  Height = 533
+                  ElementClassName = 'w-100 h-100 PageNP '
+                  ElementID = 'pageChangeHistory'
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  Caption = 'Chg'
+                  ChildOrder = 2
+                  ElementBodyClassName = 'd-flex flex-column  gap-1'
                   ElementFont = efCSS
-                  Role = ''
-                  object divQRCodeConstraints: TWebHTMLDiv
-                    AlignWithMargins = True
+                  ElementPosition = epRelative
+                  object divChangeHistoryHolder: TWebHTMLDiv
                     Left = 0
                     Top = 0
-                    Width = 308
-                    Height = 365
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    ElementID = 'divQRCodeConstraints'
-                    ChildOrder = 1
+                    Width = 770
+                    Height = 380
+                    ElementClassName = 
+                      'w-100 h-100 d-flex flex-column  overflow-hidden Rounded8 border ' +
+                      'border-dark  bg-white'
+                    ElementID = 'divChangeHistoryHolder'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ElementPosition = epRelative
                     ElementFont = efCSS
                     Role = ''
-                    object qrcode: TTMSFNCWXQRCode
-                      AlignWithMargins = True
-                      Left = 20
-                      Top = 20
-                      Width = 268
-                      Height = 325
-                      Margins.Left = 20
-                      Margins.Top = 20
-                      Margins.Right = 20
-                      Margins.Bottom = 20
-                      Align = alClient
-                      ParentDoubleBuffered = False
-                      DoubleBuffered = True
-                      ParentShowHint = False
-                      ShowHint = False
-                      TabOrder = 0
-                      ShowAcceleratorChar = False
-                      Text = '123456'
-                      Settings.ColorDark = clMaroon
-                      Settings.PositionColor.TopLeftInnerColor = clMaroon
-                      Settings.PositionColor.TopRightInnerColor = clMaroon
-                      Settings.PositionColor.BottomRightInnerColor = clMaroon
-                      Settings.TimingHorizonalColor = clMaroon
-                      Settings.TimingVerticalColor = clMaroon
-                      Settings.TitleFont.Charset = DEFAULT_CHARSET
-                      Settings.TitleFont.Color = clWindowText
-                      Settings.TitleFont.Height = -11
-                      Settings.TitleFont.Name = 'Tahoma'
-                      Settings.TitleFont.Style = []
-                      Settings.SubTitleFont.Charset = DEFAULT_CHARSET
-                      Settings.SubTitleFont.Color = clWindowText
-                      Settings.SubTitleFont.Height = -11
-                      Settings.SubTitleFont.Name = 'Tahoma'
-                      Settings.SubTitleFont.Style = []
-                      Settings.QuietZoneColor = clBlack
-                      Settings.AutoColorDark = clMaroon
-                      Settings.AutoColorDarkAlpha = 0.600000023841857900
-                      Settings.AutoColorLightAlpha = 0.699999988079071000
+                    object divChangeHistoryButtons: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 770
+                      Height = 32
+                      ElementClassName = 'ButtonBar'
+                      ElementID = 'divChangeHistoryButtons'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      Role = ''
+                      object btnChangeHistoryReload: TWebButton
+                        Tag = 1
+                        Left = 0
+                        Top = 0
+                        Width = 50
+                        Height = 24
+                        Caption = '<i class="fa-solid fa-rotate"></i>'
+                        ElementClassName = 
+                          'order-0 ButtonBarReload btn btn-secondary btn-sm border border-1' +
+                          ' border-dark'
+                        ElementID = 'btnChangeHistoryReload'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        HeightStyle = ssAuto
+                        HeightPercent = 100.000000000000000000
+                        WidthStyle = ssAuto
+                        WidthPercent = 100.000000000000000000
+                        OnClick = btnChangeHistoryReloadClick
+                      end
+                      object panelChangeHistoryExport: TWebPanel
+                        Left = 54
+                        Top = 2
+                        Width = 339
+                        Height = 24
+                        Margins.Left = 4
+                        Margins.Top = 4
+                        Margins.Right = 4
+                        Margins.Bottom = 4
+                        ElementClassName = 'order-1 ButtonBarGroup'
+                        ElementID = 'panelChangeHistoryExport'
+                        HeightStyle = ssAuto
+                        WidthStyle = ssAuto
+                        BorderColor = clNone
+                        BorderStyle = bsNone
+                        ChildOrder = 6
+                        Color = clWhite
+                        ElementBodyClassName = 'btn-group'
+                        ElementFont = efCSS
+                        ElementPosition = epRelative
+                        object btnChangeHistoryExport: TWebButton
+                          Tag = 4
+                          Left = 0
+                          Top = -1
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-download fa-lg me-1"></i> Export'
+                          ElementClassName = 'order-0 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnChangeHistoryExport'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = btnChangeHistoryExportClick
+                        end
+                        object btnChangeHistoryExportCSV: TWebButton
+                          Left = 70
+                          Top = 2
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-csv fa-lg me-1"></i> CSV'
+                          ChildOrder = 1
+                          ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnChangeHistoryExportCSV'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuChangeHistoryExport
+                        end
+                        object btnChangeHistoryExportExcel: TWebButton
+                          Tag = 1
+                          Left = 120
+                          Top = 2
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-excel fa-lg me-1"></i> XLSX'
+                          ChildOrder = 2
+                          ElementClassName = 'order-2 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnChangeHistoryExportExcel'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuChangeHistoryExport
+                        end
+                        object btnChangeHistoryExportJSON: TWebButton
+                          Tag = 2
+                          Left = 170
+                          Top = 2
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-code fa-lg me-1"></i>  JSON'
+                          ChildOrder = 3
+                          ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnChangeHistoryExportJSON'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuChangeHistoryExport
+                        end
+                        object btnChangeHistoryExportPDF: TWebButton
+                          Tag = 3
+                          Left = 212
+                          Top = 2
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-file-pdf fa-lg me-1"></i>  PDF'
+                          ChildOrder = 4
+                          ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm'
+                          ElementID = 'btnChangeHistoryExportPDF'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuChangeHistoryExport
+                        end
+                        object btnChangeHistoryExportPrint: TWebButton
+                          Tag = 4
+                          Left = 273
+                          Top = 2
+                          Width = 50
+                          Height = 22
+                          Caption = '<i class="fa-solid fa-print fa-lg me-1"></i> Print'
+                          ChildOrder = 5
+                          ElementClassName = 'order-5 ShortestButton btn btn-primary btn-sm'
+                          ElementID = 'btnChangeHistoryExportPrint'
+                          ElementFont = efCSS
+                          ElementPosition = epRelative
+                          HeightPercent = 100.000000000000000000
+                          TabOrder = 10
+                          WidthStyle = ssAuto
+                          WidthPercent = 100.000000000000000000
+                          OnClick = MenuChangeHistoryExport
+                        end
+                      end
+                    end
+                    object divChangeHistory: TWebHTMLDiv
+                      Left = 0
+                      Top = 33
+                      Width = 770
+                      Height = 348
+                      ElementClassName = 'rounded-bottom flex-fill overflow-hidden border border-0'
+                      ElementID = 'divChangeHistory'
+                      HeightStyle = ssAuto
+                      WidthStyle = ssAuto
+                      ChildOrder = 1
+                      ElementPosition = epRelative
+                      ElementFont = efCSS
+                      Role = ''
+                    end
+                  end
+                end
+                object pageQRCode: TWebTabSheet
+                  Left = 0
+                  Top = 20
+                  Width = 770
+                  Height = 533
+                  ElementClassName = 'w-100 h-100 Page Rounded8 border border-dark  bg-info'
+                  ElementID = 'pageQRCode'
+                  Caption = 'QRCode'
+                  ChildOrder = 10
+                  ElementBodyClassName = 'd-flex'
+                  ElementFont = efCSS
+                  MaterialGlyphColor = clBlack
+                  object divQRCodeHolder: TWebHTMLDiv
+                    Left = 4
+                    Top = 5
+                    Width = 762
+                    Height = 372
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
+                    ElementClassName = 'overflow-hidden flex-fill rounded border border-dark bg-white'
+                    ElementID = 'divQRCodeHolder'
+                    HeightStyle = ssAuto
+                    WidthStyle = ssAuto
+                    ElementPosition = epRelative
+                    ElementFont = efCSS
+                    Role = ''
+                    object divQRCodeConstraints: TWebHTMLDiv
+                      Left = 0
+                      Top = 0
+                      Width = 308
+                      Height = 365
+                      Margins.Left = 0
+                      Margins.Top = 0
+                      Margins.Right = 0
+                      Margins.Bottom = 0
+                      ElementID = 'divQRCodeConstraints'
+                      ChildOrder = 1
+                      ElementFont = efCSS
+                      Role = ''
+                      object qrcode: TTMSFNCWXQRCode
+                        AlignWithMargins = True
+                        Left = 20
+                        Top = 20
+                        Width = 268
+                        Height = 325
+                        Margins.Left = 20
+                        Margins.Top = 20
+                        Margins.Right = 20
+                        Margins.Bottom = 20
+                        Align = alClient
+                        ParentDoubleBuffered = False
+                        DoubleBuffered = True
+                        ParentShowHint = False
+                        ShowHint = False
+                        TabOrder = 0
+                        ShowAcceleratorChar = False
+                        Text = '123456'
+                        Settings.ColorDark = clMaroon
+                        Settings.PositionColor.TopLeftInnerColor = clMaroon
+                        Settings.PositionColor.TopRightInnerColor = clMaroon
+                        Settings.PositionColor.BottomRightInnerColor = clMaroon
+                        Settings.TimingHorizonalColor = clMaroon
+                        Settings.TimingVerticalColor = clMaroon
+                        Settings.TitleFont.Charset = DEFAULT_CHARSET
+                        Settings.TitleFont.Color = clWindowText
+                        Settings.TitleFont.Height = -11
+                        Settings.TitleFont.Name = 'Tahoma'
+                        Settings.TitleFont.Style = []
+                        Settings.SubTitleFont.Charset = DEFAULT_CHARSET
+                        Settings.SubTitleFont.Color = clWindowText
+                        Settings.SubTitleFont.Height = -11
+                        Settings.SubTitleFont.Name = 'Tahoma'
+                        Settings.SubTitleFont.Style = []
+                        Settings.QuietZoneColor = clBlack
+                        Settings.AutoColorDark = clMaroon
+                        Settings.AutoColorDarkAlpha = 0.600000023841857900
+                        Settings.AutoColorLightAlpha = 0.699999988079071000
+                      end
                     end
                   end
                 end
               end
             end
+            object divSurveysOptionsHolder: TWebHTMLDiv
+              Left = 0
+              Top = 12
+              Width = 168
+              Height = 514
+              ElementClassName = 
+                'RightSplitter order-0 d-flex flex-shrink-0 overflow-hidden Round' +
+                'ed8 border border-dark  bg-dark'
+              ElementID = 'divSurveysOptionsHolder'
+              HeightStyle = ssAuto
+              WidthStyle = ssAuto
+              ElementPosition = epRelative
+              ElementFont = efCSS
+              Role = ''
+              object divSurveysOptionsResize: TWebHTMLDiv
+                Left = 24
+                Top = 456
+                Width = 100
+                Height = 41
+                ElementClassName = 'ResizeElement'
+                ElementID = 'divSurveysOptionsResize'
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
+                ChildOrder = 2
+                ElementPosition = epIgnore
+                ElementFont = efCSS
+                HTML.Strings = (
+                  '<div class="InnerTriangle1"></div>'
+                  '<div class="InnerTriangle2"></div>')
+                Role = ''
+              end
+              object divSurveysOptions: TWebHTMLDiv
+                Left = 0
+                Top = 2
+                Width = 142
+                Height = 393
+                ElementClassName = 'flex-fill w-100 h-100 border border-0'
+                ElementID = 'divSurveysOptions'
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
+                ChildOrder = 1
+                ElementPosition = epRelative
+                ElementFont = efCSS
+                Role = ''
+              end
+            end
           end
           object pageQuestion: TWebTabSheet
-            AlignWithMargins = True
             Left = 0
             Top = 20
-            Width = 676
-            Height = 398
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            ElementClassName = 'bg-light'
+            Width = 961
+            Height = 589
+            ElementClassName = 'w-100 h-100 PageNP bg-light'
             ElementID = 'pageQuestion'
+            HeightStyle = ssAuto
+            WidthStyle = ssAuto
             Caption = 'Questions'
             ChildOrder = 1
             ElementFont = efCSS
+            ElementPosition = epRelative
             object divQuestionsHolder: TWebHTMLDiv
-              AlignWithMargins = True
-              Left = 4
+              Left = 2
               Top = 0
               Width = 250
-              Height = 394
-              Margins.Left = 4
-              Margins.Top = 0
-              Margins.Right = 4
-              Margins.Bottom = 4
-              ElementClassName = 'overflow-hidden rounded border border-dark  bg-white'
+              Height = 537
+              ElementClassName = 
+                'RightSplitter flex-shrink-0 d-flex flex-column overflow-hidden R' +
+                'ounded8 border border-dark  bg-white'
               ElementID = 'divQuestionsHolder'
-              Align = alLeft
+              HeightStyle = ssAuto
+              WidthStyle = ssAuto
               ChildOrder = 1
+              ElementPosition = epRelative
               ElementFont = efCSS
               Role = ''
               object divQuestionsButtons: TWebHTMLDiv
-                AlignWithMargins = True
                 Left = 4
                 Top = 0
-                Width = 244
+                Width = 267
                 Height = 32
-                Margins.Left = 4
-                Margins.Top = 0
-                Margins.Right = 2
-                Margins.Bottom = 0
-                ElementClassName = 'd-flex align-items-center justify-content-stretch'
+                ElementClassName = 'm-1 d-flex align-items-center justify-content-stretch gap-1'
                 ElementID = 'divQuestionsButtons'
-                Align = alTop
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 Role = ''
                 object btnQuestionsNew: TWebButton
                   AlignWithMargins = True
-                  Left = 3
-                  Top = 3
+                  Left = 50
+                  Top = 5
                   Width = 50
                   Height = 24
                   Margins.Left = 0
@@ -2694,7 +2845,9 @@ object Form1: TForm1
                   Margins.Bottom = 0
                   Caption = '<i class="fa-solid fa-plus me-1 "></i> New'
                   ChildOrder = 1
-                  ElementClassName = 'ShortButton flex-fill btn btn-primary btn-sm'
+                  ElementClassName = 
+                    'order-1 ShortButton flex-fill btn btn-primary btn-sm border bord' +
+                    'er-1 border-dark'
                   ElementID = 'btnQuestionsNew'
                   ElementFont = efCSS
                   ElementPosition = epRelative
@@ -2707,8 +2860,8 @@ object Form1: TForm1
                 object btnQuestionsDelete: TWebButton
                   Tag = 1
                   AlignWithMargins = True
-                  Left = 53
-                  Top = 3
+                  Left = 101
+                  Top = 5
                   Width = 50
                   Height = 24
                   Margins.Left = 0
@@ -2717,7 +2870,9 @@ object Form1: TForm1
                   Margins.Bottom = 0
                   Caption = '<i class="fa-solid fa-trash-can me-1"></i>Delete'
                   ChildOrder = 2
-                  ElementClassName = 'ShortButton flex-fill btn btn-danger btn-sm'
+                  ElementClassName = 
+                    'order-2 ShortButton flex-fill btn btn-danger btn-sm border borde' +
+                    'r-1 border-dark'
                   ElementID = 'btnQuestionsDelete'
                   ElementFont = efCSS
                   ElementPosition = epRelative
@@ -2730,8 +2885,8 @@ object Form1: TForm1
                 object btnQuestionsClone: TWebButton
                   Tag = 2
                   AlignWithMargins = True
-                  Left = 103
-                  Top = 3
+                  Left = 152
+                  Top = 5
                   Width = 50
                   Height = 24
                   Margins.Left = 0
@@ -2740,7 +2895,9 @@ object Form1: TForm1
                   Margins.Bottom = 0
                   Caption = '<i class="fa-solid fa-clone me-1"></i> Clone'
                   ChildOrder = 3
-                  ElementClassName = 'ShortButton flex-fill  btn btn-success btn-sm'
+                  ElementClassName = 
+                    'order-3 ShortButton flex-fill  btn btn-success btn-sm border bor' +
+                    'der-1 border-dark'
                   ElementID = 'btnQuestionsClone'
                   ElementFont = efCSS
                   ElementPosition = epRelative
@@ -2753,8 +2910,8 @@ object Form1: TForm1
                 object btnQuestionsReload: TWebButton
                   Tag = 2
                   AlignWithMargins = True
-                  Left = 153
-                  Top = 4
+                  Left = 0
+                  Top = 5
                   Width = 50
                   Height = 24
                   Margins.Left = 0
@@ -2762,107 +2919,102 @@ object Form1: TForm1
                   Margins.Right = 0
                   Margins.Bottom = 0
                   Caption = '<i class="fa-solid fa-rotate"></i>'
-                  ElementClassName = 'ShortButton flex-fill  btn btn-secondary btn-sm'
+                  ElementClassName = 
+                    'order-0 ReloadButton btn btn-secondary btn-sm border border-1 bo' +
+                    'rder-dark'
                   ElementID = 'btnQuestionsReload'
                   ElementFont = efCSS
                   ElementPosition = epRelative
                   HeightPercent = 100.000000000000000000
                   TabOrder = 30
-                  WidthStyle = ssAuto
                   WidthPercent = 100.000000000000000000
                   OnClick = btnQuestionsReloadClick
                 end
               end
               object divQuestions: TWebHTMLDiv
                 Left = 0
-                Top = 32
+                Top = 31
                 Width = 250
-                Height = 362
-                ElementClassName = 'overflow-hidden border border-0'
+                Height = 432
+                ElementClassName = 'w-100 flex-fill rounded-bottom overflow-hidden border border-0'
                 ElementID = 'divQuestions'
-                Align = alClient
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
                 ChildOrder = 1
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 Role = ''
               end
-            end
-            object splitterQuestions: TWebSplitter
-              AlignWithMargins = True
-              Left = 258
-              Top = 50
-              Width = 6
-              Height = 298
-              Cursor = crHSplit
-              Margins.Left = 0
-              Margins.Top = 50
-              Margins.Right = 0
-              Margins.Bottom = 50
-              ElementClassName = 'rounded'
-              ElementID = 'splitterQuestions'
-              Align = alLeft
-              ChildOrder = 2
-              Color = 8222060
-              GripColor = 8222060
-              OnMove = splitterQuestionsMove
+              object divQuestionsHolderResize: TWebHTMLDiv
+                Left = 75
+                Top = 493
+                Width = 100
+                Height = 41
+                ElementClassName = 'ResizeElement'
+                ElementID = 'divQuestionsHolderResize'
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
+                ChildOrder = 2
+                ElementPosition = epIgnore
+                ElementFont = efCSS
+                HTML.Strings = (
+                  '<div class="InnerTriangle1"></div>'
+                  '<div class="InnerTriangle2"></div>')
+                Role = ''
+              end
             end
             object divQuestion: TWebHTMLDiv
-              AlignWithMargins = True
-              Left = 268
+              Left = 293
               Top = 0
-              Width = 404
-              Height = 394
-              Margins.Left = 4
-              Margins.Top = 0
-              Margins.Right = 4
-              Margins.Bottom = 4
-              ElementClassName = 'overflow-hidden rounded border border-dark  bg-info'
+              Width = 664
+              Height = 529
+              ElementClassName = 
+                'p-1 gap-1 order-1 w-100 h-100 d-flex flex-column Rounded8 border' +
+                ' border-dark  bg-info'
               ElementID = 'divQuestion'
-              Align = alClient
+              HeightStyle = ssAuto
+              WidthStyle = ssAuto
               ChildOrder = 2
+              ElementPosition = epRelative
               ElementFont = efCSS
               Role = ''
+              Visible = False
               object divQuestionTypeHolder: TWebHTMLDiv
-                AlignWithMargins = True
-                Left = 4
-                Top = 156
-                Width = 396
-                Height = 32
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 2
-                ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                Left = 5
+                Top = 157
+                Width = 656
+                Height = 38
+                ElementClassName = 'order-4 FieldHolder'
                 ElementID = 'divQuestionTypeHolder'
-                Align = alTop
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 Role = ''
                 object divQuestionType: TWebHTMLDiv
                   Left = 0
                   Top = 0
-                  Width = 100
+                  Width = 80
                   Height = 32
-                  ElementClassName = 'ConfigLabel'
+                  ElementClassName = 'FieldLabel'
                   ElementID = 'divQuestionType'
-                  Align = alLeft
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  ElementPosition = epRelative
                   ElementFont = efCSS
                   HTML.Strings = (
                     'Type')
                   Role = ''
                 end
                 object ddQuestionType: TWebDropDownControl
-                  AlignWithMargins = True
-                  Left = 102
-                  Top = 2
-                  Width = 292
+                  Left = 100
+                  Top = 0
+                  Width = 552
                   Height = 28
                   Cursor = crHandPoint
-                  Margins.Left = 2
-                  Margins.Top = 2
-                  Margins.Right = 2
-                  Margins.Bottom = 2
-                  ElementClassName = 'd-flex rounded-1 border border-dark bg-white overflow-hidden'
+                  ElementClassName = 'overflow-hidden FieldEdit bg-white border border-1 border-dark'
                   ElementID = 'ddQuestionType'
-                  Align = alClient
+                  WidthStyle = ssAuto
                   AutoDropDown = True
                   ChildOrder = 1
                   Color = clNone
@@ -2873,6 +3025,7 @@ object Form1: TForm1
                   DropDownWidth = 450
                   ElementInputClassName = 'ddQuestionTypeInput'
                   ElementFont = efCSS
+                  ElementPosition = epRelative
                   ParentColor = False
                   TabOrder = 1
                   Text = ''
@@ -2880,162 +3033,148 @@ object Form1: TForm1
                 end
               end
               object divQuestionNameHolder: TWebHTMLDiv
-                AlignWithMargins = True
-                Left = 4
-                Top = 42
-                Width = 396
-                Height = 32
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 2
-                ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                Left = 5
+                Top = 38
+                Width = 656
+                Height = 38
+                ElementClassName = 'order-1 FieldHolder'
                 ElementID = 'divQuestionNameHolder'
-                Align = alTop
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
                 ChildOrder = 1
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 Role = ''
                 object divQuestionName: TWebHTMLDiv
                   Left = 0
                   Top = 0
-                  Width = 100
+                  Width = 80
                   Height = 32
-                  ElementClassName = 'ConfigLabel'
+                  ElementClassName = 'FieldLabel'
                   ElementID = 'divQuestionName'
-                  Align = alLeft
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  ElementPosition = epRelative
                   ElementFont = efCSS
                   HTML.Strings = (
                     'Name')
                   Role = ''
                 end
                 object edtQuestionName: TWebEdit
-                  AlignWithMargins = True
-                  Left = 102
-                  Top = 2
-                  Width = 292
+                  Left = 100
+                  Top = 0
+                  Width = 552
                   Height = 28
-                  Margins.Left = 2
-                  Margins.Top = 2
-                  Margins.Right = 2
-                  Margins.Bottom = 2
-                  Align = alClient
                   ChildOrder = 1
-                  ElementClassName = 'rounded-1 ps-2 border border-dark'
+                  ElementClassName = 'FieldEdit'
                   ElementID = 'edtQuestionName'
                   ElementFont = efCSS
+                  ElementPosition = epRelative
                   HeightPercent = 100.000000000000000000
                   SpellCheck = False
                   TabOrder = 100
+                  WidthStyle = ssAuto
                   WidthPercent = 100.000000000000000000
                   OnChange = QuestionChanged
                 end
               end
               object divQuestionIDHolder: TWebHTMLDiv
-                AlignWithMargins = True
-                Left = 4
-                Top = 4
-                Width = 396
-                Height = 32
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 2
-                ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                Left = 5
+                Top = 0
+                Width = 658
+                Height = 38
+                ElementClassName = 'order-0 FieldHolder'
                 ElementID = 'divQuestionIDHolder'
-                Align = alTop
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
                 ChildOrder = 2
+                ElementPosition = epIgnore
                 ElementFont = efCSS
                 Role = ''
                 object divQuestionID: TWebHTMLDiv
                   Left = 0
                   Top = 0
-                  Width = 100
+                  Width = 80
                   Height = 32
-                  ElementClassName = 'ConfigLabel'
+                  ElementClassName = 'FieldLabel'
                   ElementID = 'divQuestionID'
-                  Align = alLeft
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  ElementPosition = epRelative
                   ElementFont = efCSS
                   HTML.Strings = (
                     'Question ID')
                   Role = ''
                 end
                 object edtQuestionID: TWebEdit
-                  AlignWithMargins = True
-                  Left = 102
-                  Top = 2
-                  Width = 292
+                  Left = 100
+                  Top = 0
+                  Width = 552
                   Height = 28
-                  Margins.Left = 2
-                  Margins.Top = 2
-                  Margins.Right = 2
-                  Margins.Bottom = 2
-                  Align = alClient
                   ChildOrder = 1
-                  ElementClassName = 'rounded-1 ps-2 border border-dark bg-info text-dark'
+                  ElementClassName = 'FieldEdit'
                   ElementID = 'edtQuestionID'
                   ElementFont = efCSS
+                  ElementPosition = epRelative
                   HeightPercent = 100.000000000000000000
                   ReadOnly = True
                   SpellCheck = False
                   TabOrder = 100
+                  WidthStyle = ssAuto
                   WidthPercent = 100.000000000000000000
                 end
               end
               object divQuestionContentHolder: TWebHTMLDiv
-                AlignWithMargins = True
                 Left = 4
-                Top = 266
-                Width = 396
-                Height = 124
-                Margins.Left = 4
-                Margins.Top = 2
-                Margins.Right = 4
-                Margins.Bottom = 4
-                ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                Top = 320
+                Width = 656
+                Height = 206
+                ElementClassName = 
+                  'order-7 d-flex flex-column flex-fill overflow-hidden rounded bor' +
+                  'der border-dark bg-secondary'
                 ElementID = 'divQuestionContentHolder'
-                Align = alClient
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
                 ChildOrder = 2
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 Role = ''
                 object divQuestionContentHeader: TWebHTMLDiv
                   Left = 0
-                  Top = 0
-                  Width = 396
+                  Top = 3
+                  Width = 656
                   Height = 50
-                  ElementClassName = 'sun-editor'
+                  ElementClassName = 'order-0 sun-editor'
                   ElementID = 'divQuestionContentHeader'
                   HeightStyle = ssAuto
-                  WidthStyle = ssPercent
-                  Align = alTop
+                  WidthStyle = ssAuto
+                  ElementPosition = epRelative
                   ElementFont = efCSS
                   Role = ''
                 end
                 object divQuestionContentFooter: TWebHTMLDiv
                   Left = 0
-                  Top = 106
-                  Width = 396
-                  Height = 18
-                  ElementClassName = 'sun-editor d-flex overflow-hidden'
+                  Top = 184
+                  Width = 656
+                  Height = 20
+                  ElementClassName = 'order-2 sun-editor d-flex overflow-hidden'
                   ElementID = 'divQuestionContentFooter'
-                  WidthStyle = ssPercent
-                  Align = alBottom
+                  WidthStyle = ssAuto
                   ChildOrder = 1
+                  ElementPosition = epRelative
                   ElementFont = efCSS
                   Role = ''
                 end
                 object divQuestionContent: TWebHTMLDiv
-                  AlignWithMargins = True
                   Left = 0
-                  Top = 50
-                  Width = 396
-                  Height = 55
-                  Margins.Left = 0
-                  Margins.Top = 0
-                  Margins.Right = 0
-                  Margins.Bottom = 1
+                  Top = 53
+                  Width = 656
+                  Height = 125
+                  ElementClassName = 'order-1 flex-fill overflow-hidden'
                   ElementID = 'divQuestionContent'
-                  Align = alClient
+                  WidthStyle = ssAuto
                   ChildOrder = 2
+                  ElementPosition = epRelative
                   ElementFont = efCSS
                   HTML.Strings = (
                     '<textarea id="divQuestionContentText">')
@@ -3043,52 +3182,47 @@ object Form1: TForm1
                 end
               end
               object divQuestionOptionsHolder: TWebHTMLDiv
-                AlignWithMargins = True
-                Left = 4
-                Top = 194
-                Width = 396
-                Height = 32
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 2
-                ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                Left = 5
+                Top = 203
+                Width = 656
+                Height = 38
+                ElementClassName = 'order-5 FieldHolder'
                 ElementID = 'divQuestionOptionsHolder'
-                Align = alTop
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
                 ChildOrder = 1
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 Role = ''
                 object divQuestionOptions: TWebHTMLDiv
                   Left = 0
                   Top = 0
-                  Width = 100
+                  Width = 80
                   Height = 32
-                  ElementClassName = 'ConfigLabel'
+                  ElementClassName = 'FieldLabel'
                   ElementID = 'divQuestionOptions'
-                  Align = alLeft
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  ElementPosition = epRelative
                   ElementFont = efCSS
                   HTML.Strings = (
                     'Options')
                   Role = ''
                 end
                 object edtQuestionOptions: TWebEdit
-                  AlignWithMargins = True
-                  Left = 102
-                  Top = 2
-                  Width = 292
+                  Left = 100
+                  Top = 0
+                  Width = 552
                   Height = 28
-                  Margins.Left = 2
-                  Margins.Top = 2
-                  Margins.Right = 2
-                  Margins.Bottom = 2
-                  Align = alClient
                   ChildOrder = 1
-                  ElementClassName = 'rounded-1 ps-2 border border-dark'
+                  ElementClassName = 'FieldEdit'
                   ElementID = 'edtQuestionOptions'
                   ElementFont = efCSS
+                  ElementPosition = epRelative
                   HeightPercent = 100.000000000000000000
                   SpellCheck = False
                   TabOrder = 100
+                  WidthStyle = ssAuto
                   WidthPercent = 100.000000000000000000
                   OnChange = QuestionChanged
                 end
@@ -3096,18 +3230,16 @@ object Form1: TForm1
               object divQuestionOptionsInfo: TWebHTMLDiv
                 AlignWithMargins = True
                 Left = 4
-                Top = 230
-                Width = 396
+                Top = 244
+                Width = 656
                 Height = 32
-                Margins.Left = 4
-                Margins.Top = 2
-                Margins.Right = 4
-                Margins.Bottom = 2
-                ElementClassName = 'overflow-hidden rounded border border-dark bg-light'
+                ElementClassName = 
+                  'w-100 flex-shrink-0 order-6 overflow-hidden rounded border borde' +
+                  'r-dark bg-light'
                 ElementID = 'divQuestionOptionsInfo'
                 HeightStyle = ssAuto
-                Align = alTop
                 ChildOrder = 1
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 HTML.Strings = (
                   '+Title: Display alternate title<br />'
@@ -3116,103 +3248,93 @@ object Form1: TForm1
                 Role = ''
               end
               object divQuestionTitleHolder: TWebHTMLDiv
-                AlignWithMargins = True
-                Left = 4
-                Top = 80
-                Width = 396
-                Height = 32
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 2
-                ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                Left = 5
+                Top = 79
+                Width = 656
+                Height = 38
+                ElementClassName = 'order-2 FieldHolder'
                 ElementID = 'divQuestionTitleHolder'
-                Align = alTop
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
                 ChildOrder = 1
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 Role = ''
                 object divQuestionTitle: TWebHTMLDiv
                   Left = 0
                   Top = 0
-                  Width = 100
+                  Width = 80
                   Height = 32
-                  ElementClassName = 'ConfigLabel'
+                  ElementClassName = 'FieldLabel'
                   ElementID = 'divQuestionTitle'
-                  Align = alLeft
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  ElementPosition = epRelative
                   ElementFont = efCSS
                   HTML.Strings = (
                     'Title')
                   Role = ''
                 end
                 object edtQuestionTitle: TWebEdit
-                  AlignWithMargins = True
-                  Left = 102
-                  Top = 2
-                  Width = 292
+                  Left = 100
+                  Top = 0
+                  Width = 552
                   Height = 28
-                  Margins.Left = 2
-                  Margins.Top = 2
-                  Margins.Right = 2
-                  Margins.Bottom = 2
-                  Align = alClient
                   ChildOrder = 1
-                  ElementClassName = 'rounded-1 ps-2 border border-dark'
+                  ElementClassName = 'FieldEdit'
                   ElementID = 'edtQuestionTitle'
                   ElementFont = efCSS
+                  ElementPosition = epRelative
                   HeightPercent = 100.000000000000000000
                   SpellCheck = False
                   TabOrder = 100
+                  WidthStyle = ssAuto
                   WidthPercent = 100.000000000000000000
                   OnChange = QuestionChanged
                 end
               end
               object divQuestionFooterHolder: TWebHTMLDiv
-                AlignWithMargins = True
-                Left = 4
-                Top = 118
-                Width = 396
-                Height = 32
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 2
-                ElementClassName = 'overflow-hidden rounded border border-dark bg-secondary'
+                Left = 5
+                Top = 115
+                Width = 656
+                Height = 38
+                ElementClassName = 'order-3 FieldHolder'
                 ElementID = 'divQuestionFooterHolder'
-                Align = alTop
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
                 ChildOrder = 1
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 Role = ''
                 object divQuestionFooter: TWebHTMLDiv
                   Left = 0
                   Top = 0
-                  Width = 100
+                  Width = 80
                   Height = 32
-                  ElementClassName = 'ConfigLabel'
+                  ElementClassName = 'FieldLabel'
                   ElementID = 'divQuestionFooter'
-                  Align = alLeft
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  ElementPosition = epRelative
                   ElementFont = efCSS
                   HTML.Strings = (
                     'Footer')
                   Role = ''
                 end
                 object edtQuestionFooter: TWebEdit
-                  AlignWithMargins = True
-                  Left = 102
-                  Top = 2
-                  Width = 292
+                  Left = 100
+                  Top = 0
+                  Width = 552
                   Height = 28
-                  Margins.Left = 2
-                  Margins.Top = 2
-                  Margins.Right = 2
-                  Margins.Bottom = 2
-                  Align = alClient
                   ChildOrder = 1
-                  ElementClassName = 'rounded-1 ps-2 border border-dark'
+                  ElementClassName = 'FieldEdit'
                   ElementID = 'edtQuestionFooter'
                   ElementFont = efCSS
+                  ElementPosition = epRelative
                   HeightPercent = 100.000000000000000000
                   SpellCheck = False
                   TabOrder = 100
+                  WidthStyle = ssAuto
                   WidthPercent = 100.000000000000000000
                   OnChange = QuestionChanged
                 end
@@ -3220,400 +3342,431 @@ object Form1: TForm1
             end
           end
           object pagePermissions: TWebTabSheet
-            AlignWithMargins = True
             Left = 0
             Top = 20
-            Width = 676
-            Height = 398
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            ElementClassName = 'bg-light'
+            Width = 961
+            Height = 589
+            ElementClassName = 'w-100 h-100 PageNP'
             ElementID = 'pagePermissions'
+            HeightStyle = ssAuto
+            WidthStyle = ssAuto
             Caption = 'Permissions'
             ChildOrder = 3
             ElementFont = efCSS
+            ElementPosition = epRelative
             object divPermissionsHolder: TWebHTMLDiv
-              AlignWithMargins = True
               Left = 4
               Top = 0
-              Width = 668
-              Height = 394
-              Margins.Left = 4
-              Margins.Top = 0
-              Margins.Right = 4
-              Margins.Bottom = 4
-              ElementClassName = 'overflow-hidden rounded border border-dark  bg-white'
+              Width = 498
+              Height = 464
+              ElementClassName = 
+                'Rounded8 d-flex flex-fill flex-column overflow-hidden border bor' +
+                'der-1 border-dark  bg-white'
               ElementID = 'divPermissionsHolder'
-              Align = alClient
+              HeightStyle = ssAuto
+              WidthStyle = ssAuto
               ChildOrder = 1
+              ElementPosition = epRelative
               ElementFont = efCSS
               Role = ''
-              object WebHTMLDiv2: TWebHTMLDiv
-                AlignWithMargins = True
-                Left = 4
+              object divPermissionsButtons: TWebHTMLDiv
+                Left = 0
                 Top = 0
-                Width = 662
+                Width = 490
                 Height = 32
-                Margins.Left = 4
-                Margins.Top = 0
-                Margins.Right = 2
-                Margins.Bottom = 0
-                ElementClassName = 'd-flex align-items-center '
-                ElementID = 'divIssuesButtons'
-                Align = alTop
+                ElementClassName = 'order-0 ButtonBar'
+                ElementID = 'divPermissionsButtons'
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 Role = ''
                 object btnPermissionsReload: TWebButton
                   Tag = 1
-                  AlignWithMargins = True
                   Left = 0
                   Top = 0
                   Width = 50
                   Height = 24
-                  Margins.Left = 0
-                  Margins.Top = 0
-                  Margins.Right = 0
-                  Margins.Bottom = 0
                   Caption = '<i class="fa-solid fa-rotate"></i>'
-                  ElementClassName = 'ShortButton btn btn-secondary btn-sm'
+                  ElementClassName = 
+                    'order-0 ButtonBarReload btn btn-secondary btn-sm border border-1' +
+                    ' border-dark'
                   ElementID = 'divPermissionsReload'
                   ElementFont = efCSS
                   ElementPosition = epRelative
+                  HeightStyle = ssAuto
                   HeightPercent = 100.000000000000000000
                   WidthStyle = ssAuto
                   WidthPercent = 100.000000000000000000
                   OnClick = btnPermissionsReloadClick
                 end
-                object btnPermissionsPrint: TWebButton
-                  Tag = 1
-                  AlignWithMargins = True
-                  Left = 50
+                object panelPermissionsExport: TWebPanel
+                  Left = 58
                   Top = 0
-                  Width = 50
+                  Width = 339
                   Height = 24
-                  Margins.Left = 0
-                  Margins.Top = 0
-                  Margins.Right = 0
-                  Margins.Bottom = 0
-                  Caption = '<i class="fa-solid fa-print me-1"></i> Print'
-                  ChildOrder = 4
-                  ElementClassName = 'ShortButton btn btn-dark btn-sm'
-                  ElementID = 'divPermissionsPrint'
+                  ElementClassName = 'order-1 ButtonBarGroup'
+                  ElementID = 'panelPermissionsExport'
+                  HeightStyle = ssAuto
+                  WidthStyle = ssAuto
+                  BorderColor = clNone
+                  BorderStyle = bsNone
+                  ChildOrder = 6
+                  Color = clWhite
+                  ElementBodyClassName = 'btn-group'
                   ElementFont = efCSS
                   ElementPosition = epRelative
-                  HeightPercent = 100.000000000000000000
-                  WidthStyle = ssAuto
-                  WidthPercent = 100.000000000000000000
-                  OnClick = btnPermissionsPrintClick
+                  object btnPermissionsExport: TWebButton
+                    Tag = 4
+                    Left = 40
+                    Top = 0
+                    Width = 50
+                    Height = 22
+                    Caption = '<i class="fa-solid fa-download fa-lg me-1"></i> Export'
+                    ElementClassName = 'order-0 ShortestButton btn btn-dark btn-sm'
+                    ElementID = 'btnPermissionsExport'
+                    ElementFont = efCSS
+                    ElementPosition = epRelative
+                    HeightPercent = 100.000000000000000000
+                    TabOrder = 10
+                    WidthStyle = ssAuto
+                    WidthPercent = 100.000000000000000000
+                    OnClick = btnPermissionsExportClick
+                  end
+                  object btnPermissionsExportCSV: TWebButton
+                    Left = 86
+                    Top = 0
+                    Width = 50
+                    Height = 22
+                    Caption = '<i class="fa-solid fa-file-csv fa-lg me-1"></i> CSV'
+                    ChildOrder = 1
+                    ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm'
+                    ElementID = 'btnPermissionsExportCSV'
+                    ElementFont = efCSS
+                    ElementPosition = epRelative
+                    HeightPercent = 100.000000000000000000
+                    TabOrder = 10
+                    WidthStyle = ssAuto
+                    WidthPercent = 100.000000000000000000
+                    OnClick = MenuPermissionsExport
+                  end
+                  object btnPermissionsExportExcel: TWebButton
+                    Tag = 1
+                    Left = 136
+                    Top = 0
+                    Width = 50
+                    Height = 22
+                    Caption = '<i class="fa-solid fa-file-excel fa-lg me-1"></i> XLSX'
+                    ChildOrder = 2
+                    ElementClassName = 'order-2 ShortestButton btn btn-dark btn-sm'
+                    ElementID = 'btnPermissionsExportExcel'
+                    ElementFont = efCSS
+                    ElementPosition = epRelative
+                    HeightPercent = 100.000000000000000000
+                    TabOrder = 10
+                    WidthStyle = ssAuto
+                    WidthPercent = 100.000000000000000000
+                    OnClick = MenuPermissionsExport
+                  end
+                  object btnPermissionsExportJSON: TWebButton
+                    Tag = 2
+                    Left = 186
+                    Top = 0
+                    Width = 50
+                    Height = 22
+                    Caption = '<i class="fa-solid fa-file-code fa-lg me-1"></i>  JSON'
+                    ChildOrder = 3
+                    ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
+                    ElementID = 'btnPermissionsExportJSON'
+                    ElementFont = efCSS
+                    ElementPosition = epRelative
+                    HeightPercent = 100.000000000000000000
+                    TabOrder = 10
+                    WidthStyle = ssAuto
+                    WidthPercent = 100.000000000000000000
+                    OnClick = MenuPermissionsExport
+                  end
+                  object btnPermissionsExportPDF: TWebButton
+                    Tag = 3
+                    Left = 236
+                    Top = 0
+                    Width = 50
+                    Height = 22
+                    Caption = '<i class="fa-solid fa-file-pdf fa-lg me-1"></i>  PDF'
+                    ChildOrder = 4
+                    ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm'
+                    ElementID = 'btnPermissionsExportPDF'
+                    ElementFont = efCSS
+                    ElementPosition = epRelative
+                    HeightPercent = 100.000000000000000000
+                    TabOrder = 10
+                    WidthStyle = ssAuto
+                    WidthPercent = 100.000000000000000000
+                    OnClick = MenuPermissionsExport
+                  end
+                  object btnPermissionsExportPrint: TWebButton
+                    Tag = 4
+                    Left = 282
+                    Top = 1
+                    Width = 50
+                    Height = 22
+                    Caption = '<i class="fa-solid fa-print fa-lg me-1"></i> Print'
+                    ChildOrder = 5
+                    ElementClassName = 'order-5 ShortestButton btn btn-primary btn-sm'
+                    ElementID = 'btnPermissionsExportPrint'
+                    ElementFont = efCSS
+                    ElementPosition = epRelative
+                    HeightPercent = 100.000000000000000000
+                    TabOrder = 10
+                    WidthStyle = ssAuto
+                    WidthPercent = 100.000000000000000000
+                    OnClick = MenuPermissionsExport
+                  end
                 end
               end
               object divPermissions: TWebHTMLDiv
-                AlignWithMargins = True
                 Left = 0
-                Top = 32
-                Width = 668
-                Height = 362
-                Margins.Left = 0
-                Margins.Top = 0
-                Margins.Right = 0
-                Margins.Bottom = 0
-                ElementClassName = 'overflow-hidden border border-0'
+                Top = 0
+                Width = 498
+                Height = 464
+                ElementClassName = 'rounded-bottom flex-fill overflow-hidden border border-0'
                 ElementID = 'divPermissions'
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
                 Align = alClient
                 ChildOrder = 1
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 Role = ''
               end
             end
           end
           object pagePreview: TWebTabSheet
-            AlignWithMargins = True
             Left = 0
             Top = 20
-            Width = 676
-            Height = 398
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            ElementClassName = 'bg-light'
+            Width = 961
+            Height = 589
+            ElementClassName = 'w-100 h-100 PageNP'
             ElementID = 'pagePreview'
+            HeightStyle = ssAuto
+            WidthStyle = ssAuto
             Caption = 'Preview'
             ChildOrder = 2
             ElementFont = efCSS
+            ElementPosition = epRelative
             object divPreviewHolder: TWebHTMLDiv
-              AlignWithMargins = True
-              Left = 4
+              Left = 0
               Top = 0
-              Width = 668
-              Height = 394
-              Margins.Left = 4
-              Margins.Top = 0
-              Margins.Right = 4
-              Margins.Bottom = 4
-              ElementClassName = 'overflow-hidden rounded border border-dark  bg-white'
+              Width = 953
+              Height = 464
+              ElementClassName = 
+                'Rounded8 d-flex flex-fill flex-column overflow-hidden border bor' +
+                'der-1 border-dark  bg-white'
               ElementID = 'divPreviewHolder'
-              Align = alClient
+              HeightStyle = ssAuto
+              WidthStyle = ssAuto
               ChildOrder = 1
+              ElementPosition = epRelative
               ElementFont = efCSS
               Role = ''
-              object WebHTMLDiv3: TWebHTMLDiv
-                AlignWithMargins = True
-                Left = 4
+              object divPreviewButtons: TWebHTMLDiv
+                Left = 3
                 Top = 0
-                Width = 662
+                Width = 948
                 Height = 32
-                Margins.Left = 4
-                Margins.Top = 0
-                Margins.Right = 2
-                Margins.Bottom = 0
-                ElementClassName = 'd-flex align-items-center '
-                ElementID = 'divIssuesButtons'
-                Align = alTop
+                ElementClassName = 'order-0 ButtonBar w-100 pe-2'
+                ElementID = 'divPreviewButtons'
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
+                ElementPosition = epRelative
                 ElementFont = efCSS
                 Role = ''
+                object labelPreviewAvailabilityCountdown: TWebLabel
+                  Left = 838
+                  Top = 3
+                  Width = 110
+                  Height = 24
+                  Alignment = taCenter
+                  AutoSize = False
+                  Caption = 'Countdown: 0d 0h 0m 0s'
+                  ChildOrder = 4
+                  ElementClassName = 
+                    'order-5 rounded-1 CountDown btn btn-warning px-2 border border-1' +
+                    ' border-dark'
+                  ElementID = 'labelPreviewAvailabilityCountdown'
+                  ElementFont = efCSS
+                  ElementPosition = epRelative
+                  HeightStyle = ssAuto
+                  HeightPercent = 100.000000000000000000
+                  WidthPercent = 100.000000000000000000
+                end
                 object btnPreviewReload: TWebButton
                   Tag = 2
-                  AlignWithMargins = True
                   Left = 0
                   Top = 5
                   Width = 50
                   Height = 24
-                  Margins.Left = 0
-                  Margins.Top = 0
-                  Margins.Right = 0
-                  Margins.Bottom = 0
                   Caption = '<i class="fa-solid fa-rotate"></i>'
-                  ElementClassName = 'ShortButton btn btn-secondary btn-sm'
+                  ElementClassName = 
+                    'order-0 ButtonBarReload btn btn-secondary btn-sm border border-1' +
+                    ' border-dark'
                   ElementID = 'divPermissionsReload'
                   ElementFont = efCSS
                   ElementPosition = epRelative
+                  HeightStyle = ssAuto
                   HeightPercent = 100.000000000000000000
                   WidthStyle = ssAuto
                   WidthPercent = 100.000000000000000000
                   OnClick = btnPreviewReloadClick
                 end
-                object WebPanel1: TWebPanel
+                object panelPreviewSize: TWebPanel
                   AlignWithMargins = True
-                  Left = 58
-                  Top = 4
-                  Width = 261
+                  Left = 144
+                  Top = 5
+                  Width = 181
                   Height = 24
-                  Margins.Left = 8
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
-                  ElementClassName = 'd-flex align-items-center'
-                  ElementID = 'panelTopMenu'
+                  ElementClassName = 'order-2 ButtonBarGroup'
+                  ElementID = 'panelPreviewSize'
+                  HeightStyle = ssAuto
                   WidthStyle = ssAuto
                   BorderColor = clNone
                   BorderStyle = bsNone
                   ChildOrder = 1
                   Color = clWhite
-                  ElementBodyClassName = 'btn-group m-1'
+                  ElementBodyClassName = 'btn-group'
                   ElementFont = efCSS
                   ElementPosition = epRelative
                   object btnPreviewSize0: TWebButton
-                    AlignWithMargins = True
-                    Left = 4
+                    Left = 10
                     Top = 0
-                    Width = 50
-                    Height = 24
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    Caption = '<i style="font-size: 6px;" class="fa-solid fa-circle"></i>'
-                    ElementClassName = 'ShorterButton btn btn-dark btn-sm'
+                    Width = 27
+                    Height = 22
+                    Caption = '<i class="Circle0"></i>'
+                    ElementClassName = 'order-0 ShorterButton btn btn-dark btn-sm'
                     ElementID = 'btnPreviewSize0'
                     ElementFont = efCSS
                     ElementPosition = epRelative
                     HeightPercent = 100.000000000000000000
                     TabOrder = 10
-                    WidthStyle = ssAuto
-                    WidthPercent = 100.000000000000000000
-                    OnClick = btnPreviewSizeClick
-                  end
-                  object btnPreviewSize2: TWebButton
-                    Tag = 2
-                    AlignWithMargins = True
-                    Left = 104
-                    Top = 0
-                    Width = 50
-                    Height = 24
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    Caption = '<i style="font-size: 12px;" class="fa-solid fa-circle"></i>'
-                    ChildOrder = 2
-                    ElementClassName = 'ShorterButton btn btn-primary btn-sm'
-                    ElementID = 'btnPreviewSize2'
-                    ElementFont = efCSS
-                    ElementPosition = epRelative
-                    HeightPercent = 100.000000000000000000
-                    TabOrder = 10
-                    WidthStyle = ssAuto
-                    WidthPercent = 100.000000000000000000
-                    OnClick = btnPreviewSizeClick
-                  end
-                  object btnPreviewSize3: TWebButton
-                    Tag = 3
-                    AlignWithMargins = True
-                    Left = 154
-                    Top = 0
-                    Width = 50
-                    Height = 24
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    Caption = 
-                      '<i style="font-size: 16px; margin-top:-1px;" class="fa-solid fa-' +
-                      'circle"></i>'
-                    ChildOrder = 3
-                    ElementClassName = 'ShorterButton btn btn-dark btn-sm'
-                    ElementID = 'btnPreviewSize3'
-                    ElementFont = efCSS
-                    ElementPosition = epRelative
-                    HeightPercent = 100.000000000000000000
-                    TabOrder = 10
-                    WidthStyle = ssAuto
-                    WidthPercent = 100.000000000000000000
-                    OnClick = btnPreviewSizeClick
-                  end
-                  object btnPreviewSize4: TWebButton
-                    Tag = 4
-                    AlignWithMargins = True
-                    Left = 204
-                    Top = 0
-                    Width = 50
-                    Height = 24
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    Caption = 
-                      '<i style="font-size: 18px;margin-top:-2px;" class="fa-solid fa-c' +
-                      'ircle"></i>'
-                    ChildOrder = 4
-                    ElementClassName = 'ShorterButton btn btn-dark btn-sm'
-                    ElementID = 'btnPreviewSize4'
-                    ElementFont = efCSS
-                    ElementPosition = epRelative
-                    HeightPercent = 100.000000000000000000
-                    TabOrder = 10
-                    WidthStyle = ssAuto
                     WidthPercent = 100.000000000000000000
                     OnClick = btnPreviewSizeClick
                   end
                   object btnPreviewSize1: TWebButton
                     Tag = 1
-                    AlignWithMargins = True
-                    Left = 54
+                    Left = 43
                     Top = 0
-                    Width = 50
-                    Height = 24
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    Caption = '<i style="font-size: 8px;" class="fa-solid fa-circle"></i>'
+                    Width = 27
+                    Height = 22
+                    Caption = '<i class="Circle1"></i>'
                     ChildOrder = 1
-                    ElementClassName = 'ShorterButton btn btn-dark btn-sm'
+                    ElementClassName = 'order-1 ShorterButton btn btn-dark btn-sm'
                     ElementID = 'btnPreviewSize1'
                     ElementFont = efCSS
                     ElementPosition = epRelative
                     HeightPercent = 100.000000000000000000
                     TabOrder = 10
-                    WidthStyle = ssAuto
+                    WidthPercent = 100.000000000000000000
+                    OnClick = btnPreviewSizeClick
+                  end
+                  object btnPreviewSize2: TWebButton
+                    Tag = 2
+                    Left = 76
+                    Top = 0
+                    Width = 27
+                    Height = 22
+                    Caption = '<i class="Circle2"></i>'
+                    ChildOrder = 2
+                    ElementClassName = 'order-2 ShorterButton btn btn-primary btn-sm'
+                    ElementID = 'btnPreviewSize2'
+                    ElementFont = efCSS
+                    ElementPosition = epRelative
+                    HeightPercent = 100.000000000000000000
+                    TabOrder = 10
+                    WidthPercent = 100.000000000000000000
+                    OnClick = btnPreviewSizeClick
+                  end
+                  object btnPreviewSize3: TWebButton
+                    Tag = 3
+                    Left = 104
+                    Top = 0
+                    Width = 27
+                    Height = 22
+                    Caption = '<i class="Circle3"></i>'
+                    ChildOrder = 3
+                    ElementClassName = 'order-3 ShorterButton btn btn-dark btn-sm'
+                    ElementID = 'btnPreviewSize3'
+                    ElementFont = efCSS
+                    ElementPosition = epRelative
+                    HeightPercent = 100.000000000000000000
+                    TabOrder = 10
+                    WidthPercent = 100.000000000000000000
+                    OnClick = btnPreviewSizeClick
+                  end
+                  object btnPreviewSize4: TWebButton
+                    Tag = 4
+                    Left = 137
+                    Top = 0
+                    Width = 27
+                    Height = 22
+                    Caption = '<i class="Circle4"></i>'
+                    ChildOrder = 4
+                    ElementClassName = 'order-4 ShorterButton btn btn-dark btn-sm'
+                    ElementID = 'btnPreviewSize4'
+                    ElementFont = efCSS
+                    ElementPosition = epRelative
+                    HeightPercent = 100.000000000000000000
+                    TabOrder = 10
                     WidthPercent = 100.000000000000000000
                     OnClick = btnPreviewSizeClick
                   end
                 end
-                object WebPanel2: TWebPanel
+                object panelPreviewStatus: TWebPanel
                   AlignWithMargins = True
                   Left = 331
                   Top = 4
                   Width = 302
                   Height = 24
-                  Margins.Left = 8
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
-                  ElementClassName = 'd-flex align-items-center'
-                  ElementID = 'panelTopMenu'
+                  ElementClassName = 'order-3 ButtonBarGroup'
+                  ElementID = 'panelPreviewStatus'
+                  HeightStyle = ssAuto
                   WidthStyle = ssAuto
                   BorderColor = clNone
                   BorderStyle = bsNone
                   ChildOrder = 2
                   Color = clWhite
-                  ElementBodyClassName = 'btn-group m-1'
+                  ElementBodyClassName = 'btn-group'
                   ElementFont = efCSS
                   ElementPosition = epRelative
-                  object btnPreviewActive: TWebButton
-                    Tag = 1
-                    AlignWithMargins = True
-                    Left = 4
+                  object btnPreviewAuto: TWebButton
+                    Left = 10
                     Top = 0
                     Width = 50
                     Height = 24
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
+                    Caption = 'Auto'
+                    ElementClassName = 'order-0 ShortestButton btn btn-primary btn-sm'
+                    ElementID = 'btnPreviewAuto'
+                    ElementFont = efCSS
+                    ElementPosition = epRelative
+                    HeightStyle = ssAuto
+                    HeightPercent = 100.000000000000000000
+                    TabOrder = 10
+                    WidthStyle = ssAuto
+                    WidthPercent = 100.000000000000000000
+                    OnClick = btnPreviewTimeClick
+                  end
+                  object btnPreviewActive: TWebButton
+                    Tag = 1
+                    Left = 52
+                    Top = 0
+                    Width = 50
+                    Height = 24
                     Caption = 'Active'
                     ChildOrder = 1
                     ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm'
                     ElementID = 'btnPreviewActive'
                     ElementFont = efCSS
                     ElementPosition = epRelative
-                    HeightPercent = 100.000000000000000000
-                    TabOrder = 10
-                    WidthStyle = ssAuto
-                    WidthPercent = 100.000000000000000000
-                    OnClick = btnPreviewTimeClick
-                  end
-                  object btnPreviewPause: TWebButton
-                    Tag = 3
-                    AlignWithMargins = True
-                    Left = 104
-                    Top = 0
-                    Width = 50
-                    Height = 24
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    Caption = 'Pause'
-                    ChildOrder = 3
-                    ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
-                    ElementID = 'btnPreviewPause'
-                    ElementFont = efCSS
-                    ElementPosition = epRelative
-                    HeightPercent = 100.000000000000000000
-                    TabOrder = 10
-                    WidthStyle = ssAuto
-                    WidthPercent = 100.000000000000000000
-                    OnClick = btnPreviewTimeClick
-                  end
-                  object btnPreviewPost: TWebButton
-                    Tag = 4
-                    AlignWithMargins = True
-                    Left = 154
-                    Top = 0
-                    Width = 50
-                    Height = 24
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    Caption = 'Post'
-                    ChildOrder = 4
-                    ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm'
-                    ElementID = 'btnPreviewPost'
-                    ElementFont = efCSS
-                    ElementPosition = epRelative
+                    HeightStyle = ssAuto
                     HeightPercent = 100.000000000000000000
                     TabOrder = 10
                     WidthStyle = ssAuto
@@ -3622,42 +3775,55 @@ object Form1: TForm1
                   end
                   object btnPreviewPre: TWebButton
                     Tag = 2
-                    AlignWithMargins = True
-                    Left = 54
+                    Left = 102
                     Top = 0
                     Width = 50
                     Height = 24
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    Caption = 'Pre'
+                    Caption = 'Preview'
                     ChildOrder = 2
                     ElementClassName = 'order-2 ShortestButton btn btn-dark btn-sm'
                     ElementID = 'btnPreviewPre'
                     ElementFont = efCSS
                     ElementPosition = epRelative
+                    HeightStyle = ssAuto
                     HeightPercent = 100.000000000000000000
                     TabOrder = 10
                     WidthStyle = ssAuto
                     WidthPercent = 100.000000000000000000
                     OnClick = btnPreviewTimeClick
                   end
-                  object btnPreviewAuto: TWebButton
-                    AlignWithMargins = True
-                    Left = 204
+                  object btnPreviewPause: TWebButton
+                    Tag = 3
+                    Left = 152
                     Top = 0
                     Width = 50
                     Height = 24
-                    Margins.Left = 0
-                    Margins.Top = 0
-                    Margins.Right = 0
-                    Margins.Bottom = 0
-                    Caption = 'Auto'
-                    ElementClassName = 'order-0 ShortestButton btn btn-primary btn-sm'
-                    ElementID = 'btnPreviewAuto'
+                    Caption = 'Paused'
+                    ChildOrder = 3
+                    ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
+                    ElementID = 'btnPreviewPause'
                     ElementFont = efCSS
                     ElementPosition = epRelative
+                    HeightStyle = ssAuto
+                    HeightPercent = 100.000000000000000000
+                    TabOrder = 10
+                    WidthStyle = ssAuto
+                    WidthPercent = 100.000000000000000000
+                    OnClick = btnPreviewTimeClick
+                  end
+                  object btnPreviewPost: TWebButton
+                    Tag = 4
+                    Left = 202
+                    Top = 0
+                    Width = 50
+                    Height = 24
+                    Caption = 'Ended'
+                    ChildOrder = 4
+                    ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm'
+                    ElementID = 'btnPreviewPost'
+                    ElementFont = efCSS
+                    ElementPosition = epRelative
+                    HeightStyle = ssAuto
                     HeightPercent = 100.000000000000000000
                     TabOrder = 10
                     WidthStyle = ssAuto
@@ -3665,35 +3831,62 @@ object Form1: TForm1
                     OnClick = btnPreviewTimeClick
                   end
                 end
+                object btnPreviewAvailabilityStatus: TWebButton
+                  Tag = 1
+                  Left = 760
+                  Top = 4
+                  Width = 70
+                  Height = 24
+                  Caption = '<i class="fa-solid fa-rotate"></i>'
+                  ChildOrder = 3
+                  ElementClassName = 
+                    'order-4 ButtonBarEnd btn btn-secondary btn-sm border border-1 bo' +
+                    'rder-dark'
+                  ElementID = 'btnPreviewAvailabilityStatus'
+                  ElementFont = efCSS
+                  ElementPosition = epRelative
+                  HeightStyle = ssAuto
+                  HeightPercent = 100.000000000000000000
+                  WidthStyle = ssAuto
+                  WidthPercent = 100.000000000000000000
+                  OnClick = btnAvailabilityReloadClick
+                end
+                object btnPreviewPrint: TWebButton
+                  Tag = 4
+                  Left = 57
+                  Top = 4
+                  Width = 50
+                  Height = 24
+                  Caption = '<i class="fa-solid fa-print fa-lg me-1"></i> Print'
+                  ChildOrder = 5
+                  ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm'
+                  ElementID = 'btnPreviewPrint'
+                  ElementFont = efCSS
+                  ElementPosition = epRelative
+                  HeightStyle = ssAuto
+                  HeightPercent = 100.000000000000000000
+                  TabOrder = 10
+                  Visible = False
+                  WidthStyle = ssAuto
+                  WidthPercent = 100.000000000000000000
+                  OnClick = btnPreviewPrintClick
+                end
               end
-              object scrollPreview: TWebScrollBox
+              object divPreview: TWebHTMLDiv
                 Left = 0
                 Top = 32
-                Width = 668
-                Height = 362
-                ElementClassName = 'border-0 bg-info'
-                ElementID = 'scrollPreview'
-                Align = alClient
-                BorderStyle = bsSingle
-                ChildOrder = 2
-                ScrollBars = ssVertical
-                object divPreview: TWebHTMLDiv
-                  AlignWithMargins = True
-                  Left = 0
-                  Top = 0
-                  Width = 668
-                  Height = 362
-                  Margins.Left = 0
-                  Margins.Top = 0
-                  Margins.Right = 0
-                  Margins.Bottom = 0
-                  ElementClassName = 'd-flex justify-content-center align-items-center bg-info'
-                  ElementID = 'divPreview'
-                  Align = alClient
-                  ChildOrder = 1
-                  ElementFont = efCSS
-                  Role = ''
-                end
+                Width = 953
+                Height = 432
+                ElementClassName = 
+                  'w-100 h-100 overflow-auto d-flex justify-content-center align-it' +
+                  'ems-center overflow-auto flex-fill bg-info'
+                ElementID = 'divPreview'
+                HeightStyle = ssAuto
+                WidthStyle = ssAuto
+                ChildOrder = 1
+                ElementPosition = epRelative
+                ElementFont = efCSS
+                Role = ''
               end
             end
           end
@@ -3701,164 +3894,41 @@ object Form1: TForm1
         object divSurveyMenu: TWebHTMLDiv
           Left = 0
           Top = 0
-          Width = 676
+          Width = 953
           Height = 48
+          ElementClassName = 'm-0 w-100 order-0 ButtonBar justify-content-between'
           ElementID = 'divSurveyMenu'
-          Align = alTop
-          ChildOrder = 2
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
           ElementFont = efCSS
           Role = ''
-          object divSurveyMenuLeft: TWebPanel
-            AlignWithMargins = True
-            Left = 4
-            Top = 4
-            Width = 332
-            Height = 40
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            ElementClassName = 'rounded-1 border border-dark bg-white'
-            ElementID = 'divSurveyMenuLeft'
-            WidthStyle = ssAuto
-            Align = alLeft
-            BorderColor = clNone
-            BorderStyle = bsNone
-            Color = clWhite
-            ElementBodyClassName = 'btn-group m-1'
-            ElementFont = efCSS
-            object btnSurveyOptions: TWebButton
-              AlignWithMargins = True
-              Left = 3
-              Top = 3
-              Width = 50
-              Height = 32
-              Margins.Right = 0
-              Margins.Bottom = 5
-              Align = alLeft
-              Caption = 
-                '<div class="mx-2"><i class="fa-solid fa-list-check me-2 fa-lg"><' +
-                '/i> Options</div>'
-              ElementClassName = 'btn btn-primary btn-sm'
-              ElementID = 'btnSurveys'
-              ElementFont = efCSS
-              ElementPosition = epRelative
-              HeightPercent = 100.000000000000000000
-              TabOrder = 50
-              WidthStyle = ssAuto
-              WidthPercent = 100.000000000000000000
-              OnClick = btnSurveyMenuClick
-            end
-            object btnSurveyQuestions: TWebButton
-              Tag = 1
-              AlignWithMargins = True
-              Left = 53
-              Top = 3
-              Width = 50
-              Height = 32
-              Margins.Left = 0
-              Margins.Right = 0
-              Margins.Bottom = 5
-              Align = alLeft
-              Caption = 
-                '<div class="mx-2"><i class="fa-solid fa-list-ol me-2 fa-lg"></i>' +
-                'Questions</div>'
-              ChildOrder = 1
-              ElementClassName = 'btn btn-dark btn-sm'
-              ElementID = 'btnReponses'
-              ElementFont = efCSS
-              ElementPosition = epRelative
-              HeightPercent = 100.000000000000000000
-              TabOrder = 51
-              WidthStyle = ssAuto
-              WidthPercent = 100.000000000000000000
-              OnClick = btnSurveyMenuClick
-            end
-            object btnSurveyPreview: TWebButton
-              Tag = 3
-              AlignWithMargins = True
-              Left = 153
-              Top = 3
-              Width = 50
-              Height = 32
-              Margins.Left = 0
-              Margins.Right = 0
-              Margins.Bottom = 5
-              Align = alLeft
-              Caption = 
-                '<div class="mx-2"><i class="fa-solid fa-eye me-2 fa-lg"></i> Pre' +
-                'view</div>'
-              ChildOrder = 4
-              ElementClassName = 'btn btn-dark btn-sm'
-              ElementID = 'btnQuestions'
-              ElementFont = efCSS
-              ElementPosition = epRelative
-              HeightPercent = 100.000000000000000000
-              TabOrder = 53
-              WidthStyle = ssAuto
-              WidthPercent = 100.000000000000000000
-              OnClick = btnSurveyMenuClick
-            end
-            object btnSurveyPermissions: TWebButton
-              Tag = 2
-              AlignWithMargins = True
-              Left = 103
-              Top = 3
-              Width = 50
-              Height = 32
-              Margins.Left = 0
-              Margins.Right = 0
-              Margins.Bottom = 5
-              Align = alLeft
-              Caption = 
-                '<div class="mx-2"><i class="fa-solid fa-key me-2 fa-lg"></i> Per' +
-                'missions</div>'
-              ChildOrder = 2
-              ElementClassName = 'btn btn-dark btn-sm'
-              ElementID = 'btnSurveyPermissions'
-              ElementFont = efCSS
-              ElementPosition = epRelative
-              HeightPercent = 100.000000000000000000
-              TabOrder = 52
-              WidthStyle = ssAuto
-              WidthPercent = 100.000000000000000000
-              OnClick = btnSurveyMenuClick
-            end
-          end
           object divSurveyMenuRight: TWebPanel
-            AlignWithMargins = True
-            Left = 344
+            Left = 458
             Top = 4
             Width = 328
             Height = 40
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            ElementClassName = 'rounded-1 border border-dark bg-white'
+            ElementClassName = 'order-1 Rounded8 border border-dark bg-white'
             ElementID = 'divSurveyMenuRight'
+            HeightStyle = ssAuto
             WidthStyle = ssAuto
-            Align = alRight
+            Alignment = taLeftJustify
             BorderColor = clNone
             BorderStyle = bsNone
             ChildOrder = 1
             Color = clWhite
-            ElementBodyClassName = 'm-1'
+            ElementBodyClassName = 'd-flex m-1 gap-1'
             ElementFont = efCSS
+            ElementPosition = epRelative
             object btnSurveyCancel: TWebButton
-              AlignWithMargins = True
               Left = 136
               Top = 3
               Width = 96
               Height = 32
-              Margins.Right = 0
-              Margins.Bottom = 5
-              Align = alRight
               Caption = 
                 '<div class="mx-2"><i class="fa-solid fa-xmark me-2 fa-lg"></i>Ca' +
                 'ncel</div>'
               ChildOrder = 3
-              ElementClassName = 'btn btn-secondary btn-sm me-1'
+              ElementClassName = 'btn btn-secondary btn-sm me-1 border border-1 border-dark'
               ElementID = 'btnSurveyCancel'
               ElementFont = efCSS
               ElementPosition = epRelative
@@ -3870,20 +3940,15 @@ object Form1: TForm1
               OnClick = btnSurveyCancelClick
             end
             object btnSurveySave: TWebButton
-              AlignWithMargins = True
               Left = 232
               Top = 3
               Width = 96
               Height = 32
-              Margins.Left = 0
-              Margins.Right = 0
-              Margins.Bottom = 5
-              Align = alRight
               Caption = 
                 '<div class="mx-2"><i class="fa-solid fa-check me-2 fa-lg"></i> S' +
                 'ave</div>'
               ChildOrder = 1
-              ElementClassName = 'btn btn-warning btn-sm'
+              ElementClassName = 'btn btn-warning btn-sm border border-1 border-dark'
               ElementID = 'btnSurveySave'
               ElementFont = efCSS
               ElementPosition = epRelative
@@ -3895,206 +3960,487 @@ object Form1: TForm1
               OnClick = btnSurveySaveClick
             end
           end
+          object divSurveyMenuLeft: TWebHTMLDiv
+            Left = 4
+            Top = 3
+            Width = 283
+            Height = 40
+            ElementClassName = 
+              'order-0 p-1 Rounded8 d-flex align-items-center border border-dar' +
+              'k bg-white btn-group '
+            ElementID = 'divSurveyMenuLeft'
+            HeightStyle = ssAuto
+            WidthStyle = ssAuto
+            ElementPosition = epRelative
+            ElementFont = efCSS
+            Role = ''
+            object btnSurveyOptions: TWebButton
+              Left = 6
+              Top = 3
+              Width = 50
+              Height = 32
+              Caption = 
+                '<div class="mx-2"><i class="fa-solid fa-list-check me-2 fa-lg"><' +
+                '/i> Options</div>'
+              ElementClassName = 
+                'order-0 btn btn-primary ButtonBarBigElement btn-sm border border' +
+                '-1 border-dark'
+              ElementID = 'btnSurveyOptions'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 50
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = btnSurveyMenuClick
+            end
+            object btnSurveyQuestions: TWebButton
+              Tag = 1
+              Left = 55
+              Top = 3
+              Width = 50
+              Height = 32
+              Caption = 
+                '<div class="mx-2"><i class="fa-solid fa-list-ol me-2 fa-lg"></i>' +
+                'Questions</div>'
+              ChildOrder = 1
+              ElementClassName = 
+                'order-1 ButtonBarBigElement  btn btn-dark btn-sm border border-1' +
+                ' border-dark'
+              ElementID = 'btnSurveyQuestions'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 51
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = btnSurveyMenuClick
+            end
+            object btnSurveyPermissions: TWebButton
+              Tag = 2
+              Left = 107
+              Top = 3
+              Width = 50
+              Height = 32
+              Caption = 
+                '<div class="mx-2"><i class="fa-solid fa-key me-2 fa-lg"></i> Per' +
+                'missions</div>'
+              ChildOrder = 2
+              ElementClassName = 
+                'order-2 ButtonBarBigElement btn btn-dark btn-sm  border border-1' +
+                ' border-dark'
+              ElementID = 'btnSurveyPermissions'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 52
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = btnSurveyMenuClick
+            end
+            object btnSurveyPreview: TWebButton
+              Tag = 3
+              Left = 161
+              Top = 3
+              Width = 50
+              Height = 32
+              Caption = 
+                '<div class="mx-2"><i class="fa-solid fa-eye me-2 fa-lg"></i> Pre' +
+                'view</div>'
+              ChildOrder = 3
+              ElementClassName = 
+                'order-3 ButtonBarBigElement  btn btn-dark btn-sm  border border-' +
+                '1 border-dark'
+              ElementID = 'btnSurveyPreview'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 53
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = btnSurveyMenuClick
+            end
+          end
         end
       end
     end
     object pageResponses: TWebTabSheet
-      AlignWithMargins = True
       Left = 0
       Top = 20
-      Width = 940
-      Height = 467
-      Margins.Left = 0
-      Margins.Top = 0
-      Margins.Right = 0
-      ElementClassName = 'rounded border border-dark bg-light'
+      Width = 1225
+      Height = 696
+      ElementClassName = 'w-100 h-100 Page Rounded10 border border-dark bg-light'
       ElementID = 'pageResponses'
+      HeightStyle = ssAuto
+      WidthStyle = ssAuto
       Caption = 'Responses'
       ChildOrder = 1
       ElementFont = efCSS
+      ElementPosition = epRelative
+      OnShow = pageResponsesShow
       object divResponsesHolder: TWebHTMLDiv
-        AlignWithMargins = True
         Left = 4
         Top = 4
-        Width = 517
-        Height = 459
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ElementClassName = 'overflow-hidden rounded-1 border border-dark  bg-white'
+        Width = 800
+        Height = 688
+        ElementClassName = 
+          'RightSplitter d-flex flex-column overflow-hidden rounded border ' +
+          'border-dark  bg-white'
         ElementID = 'divResponsesHolder'
-        Align = alLeft
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ElementPosition = epRelative
         ElementFont = efCSS
         Role = ''
         object divResponsesButtons: TWebHTMLDiv
           AlignWithMargins = True
           Left = 4
           Top = 0
-          Width = 511
+          Width = 794
           Height = 32
-          Margins.Left = 4
-          Margins.Top = 0
-          Margins.Right = 2
-          Margins.Bottom = 0
-          ElementClassName = 'd-flex align-items-center '
+          ElementClassName = 'ButtonBar w-100'
           ElementID = 'divResponsesButtons'
-          Align = alTop
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
           ElementFont = efCSS
           Role = ''
           object btnResponsesReload: TWebButton
             Tag = 1
-            AlignWithMargins = True
-            Left = 3
+            Left = 0
             Top = 5
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-rotate"></i>'
-            ElementClassName = 'ShortButton btn btn-secondary btn-sm'
+            ElementClassName = 
+              'order-0 ReloadButton btn btn-secondary btn-sm border border-1 bo' +
+              'rder-dark'
             ElementID = 'btnResponsesReload'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
             OnClick = btnResponsesReloadClick
           end
-          object btnResponsesPrint: TWebButton
+          object btnResponsesClearFilters: TWebButton
             Tag = 1
-            AlignWithMargins = True
             Left = 54
             Top = 5
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
-            Caption = '<i class="fa-solid fa-print me-1"></i> Print'
-            ChildOrder = 3
-            ElementClassName = 'ShortButton btn btn-dark btn-sm'
-            ElementID = 'btnResponsesPrint'
+            Caption = '<i class="fa-solid fa-broom me-1"></i> Clear Filters'
+            ChildOrder = 1
+            ElementClassName = 
+              'order-1 ShortButton btn btn-info btn-sm border border-1 border-d' +
+              'ark'
+            ElementID = 'btnResponsesClearFilters'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
-            OnClick = btnResponsesPrintClick
+            OnClick = btnResponsesClearFiltersClick
+          end
+          object panelResponsesExport: TWebPanel
+            Left = 247
+            Top = 4
+            Width = 339
+            Height = 24
+            ElementClassName = 'order-3 ButtonBarGroup'
+            ElementID = 'panelResponsesExport'
+            HeightStyle = ssAuto
+            WidthStyle = ssAuto
+            BorderColor = clNone
+            BorderStyle = bsNone
+            ChildOrder = 3
+            Color = clWhite
+            ElementBodyClassName = 'btn-group'
+            ElementFont = efCSS
+            ElementPosition = epRelative
+            object btnResponsesExport: TWebButton
+              Tag = 4
+              Left = 48
+              Top = 0
+              Width = 50
+              Height = 22
+              Margins.Left = 0
+              Margins.Top = 0
+              Margins.Right = 0
+              Margins.Bottom = 0
+              Caption = '<i class="fa-solid fa-download fa-lg me-1"></i> Export'
+              ElementClassName = 'order-0 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnResponsesExport'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = btnResponsesExportClick
+            end
+            object btnResponsesExportCSV: TWebButton
+              Left = 94
+              Top = 0
+              Width = 50
+              Height = 22
+              Margins.Left = 0
+              Margins.Top = 0
+              Margins.Right = 0
+              Margins.Bottom = 0
+              Caption = '<i class="fa-solid fa-file-csv fa-lg me-1"></i> CSV'
+              ChildOrder = 1
+              ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnResponsesExportCSV'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuResponsesExport
+            end
+            object btnResponsesExportExcel: TWebButton
+              Tag = 1
+              Left = 144
+              Top = 0
+              Width = 50
+              Height = 22
+              Margins.Left = 0
+              Margins.Top = 0
+              Margins.Right = 0
+              Margins.Bottom = 0
+              Caption = '<i class="fa-solid fa-file-excel fa-lg me-1"></i> XLSX'
+              ChildOrder = 2
+              ElementClassName = 'order-2 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnResponsesExportExcel'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuResponsesExport
+            end
+            object btnResponsesExportJSON: TWebButton
+              Tag = 2
+              Left = 194
+              Top = 0
+              Width = 50
+              Height = 22
+              Margins.Left = 0
+              Margins.Top = 0
+              Margins.Right = 0
+              Margins.Bottom = 0
+              Caption = '<i class="fa-solid fa-file-code fa-lg me-1"></i>  JSON'
+              ChildOrder = 3
+              ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnResponsesExportJSON'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuResponsesExport
+            end
+            object btnResponsesExportPDF: TWebButton
+              Tag = 3
+              Left = 244
+              Top = 0
+              Width = 50
+              Height = 22
+              Margins.Left = 0
+              Margins.Top = 0
+              Margins.Right = 0
+              Margins.Bottom = 0
+              Caption = '<i class="fa-solid fa-file-pdf fa-lg me-1"></i>  PDF'
+              ChildOrder = 4
+              ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnResponsesExportPDF'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuResponsesExport
+            end
+            object btnResponsesExportPrint: TWebButton
+              Tag = 4
+              Left = 281
+              Top = 0
+              Width = 50
+              Height = 22
+              Margins.Left = 0
+              Margins.Top = 0
+              Margins.Right = 0
+              Margins.Bottom = 0
+              Caption = '<i class="fa-solid fa-print fa-lg me-1"></i> Print'
+              ChildOrder = 5
+              ElementClassName = 'order-5 ShortestButton btn btn-primary btn-sm'
+              ElementID = 'btnResponsesExportPrint'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuResponsesExport
+            end
+          end
+          object divResponsesGroupingHolder: TWebHTMLDiv
+            Left = 107
+            Top = 2
+            Width = 120
+            Height = 24
+            ElementClassName = 
+              'order-2 overflow-hidden d-flex align-items-center ButtonBarEleme' +
+              'nt bg-info rounded-1 border ps-0 border-1 border-dark'
+            ElementID = 'divResponsesGroupingHolder'
+            WidthStyle = ssAuto
+            ChildOrder = 2
+            ElementPosition = epRelative
+            ElementFont = efCSS
+            Role = ''
+            object comboResponsesGrouping: TWebComboBox
+              Left = 34
+              Top = 0
+              Width = 100
+              Height = 26
+              Cursor = crHandPoint
+              ChildOrder = 2
+              ElementClassName = 'order-2 ButtonBarCombo rounded-1 bg-info border border-0'
+              ElementID = 'comboResponsesGrouping'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              ShowFocus = False
+              Text = 'No Grouping'
+              WidthPercent = 100.000000000000000000
+              OnChange = comboResponsesGroupingChange
+              ItemIndex = 0
+              Items.Strings = (
+                'No Grouping'
+                'by Survey'
+                'by Client ID'
+                'by Question'
+                'by IP Address')
+            end
+            object btnResponsesGrouping: TWebButton
+              Left = 0
+              Top = 2
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-bars fa-xl fa-fw me-1"></i> Group'
+              ChildOrder = 1
+              ElementClassName = 'FS12 order-0 btn btn-info btn-sm pt-1 px-1 rounded-0 border-0'
+              ElementID = 'btnResponsesGrouping'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = btnResponsesGroupingClick
+            end
           end
         end
         object divResponses: TWebHTMLDiv
-          AlignWithMargins = True
           Left = 0
           Top = 32
-          Width = 517
-          Height = 427
-          Margins.Left = 0
-          Margins.Top = 0
-          Margins.Right = 0
-          Margins.Bottom = 0
-          ElementClassName = 'overflow-hidden border border-0'
+          Width = 800
+          Height = 656
+          ElementClassName = 'rounded-bottom flex-fill overflow-hidden border border-0'
           ElementID = 'divResponses'
-          Align = alClient
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
           ChildOrder = 1
+          ElementPosition = epRelative
           ElementFont = efCSS
+          Role = ''
+        end
+        object divResponsesHolderResize: TWebHTMLDiv
+          Left = 72
+          Top = 520
+          Width = 100
+          Height = 41
+          ElementClassName = 'ResizeElement'
+          ElementID = 'divResponsesHolderResize'
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
+          ChildOrder = 2
+          ElementPosition = epIgnore
+          ElementFont = efCSS
+          HTML.Strings = (
+            '<div class="InnerTriangle1"></div>'
+            '<div class="InnerTriangle2"></div>'
+            '')
           Role = ''
         end
       end
       object divFeedbackHolder: TWebHTMLDiv
-        AlignWithMargins = True
-        Left = 535
+        Left = 818
         Top = 4
-        Width = 401
-        Height = 459
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ElementClassName = 'overflow-hidden rounded-1 border border-dark  bg-white'
+        Width = 403
+        Height = 688
+        ElementClassName = 
+          'flex-fill d-flex flex-column overflow-hidden rounded border bord' +
+          'er-dark  bg-white'
         ElementID = 'divFeedbackHolder'
-        Align = alClient
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
         ChildOrder = 1
+        ElementPosition = epRelative
         ElementFont = efCSS
         Role = ''
         object divFeedbackButtons: TWebHTMLDiv
-          AlignWithMargins = True
           Left = 4
           Top = 0
-          Width = 395
-          Height = 32
-          Margins.Left = 4
-          Margins.Top = 0
-          Margins.Right = 2
-          Margins.Bottom = 0
-          ElementClassName = 'd-flex align-items-center '
+          Width = 397
+          Height = 73
+          ElementClassName = 'ButtonBar w-100'
           ElementID = 'divFeedbackButtons'
-          Align = alTop
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
+          ElementPosition = epRelative
           ElementFont = efCSS
           Role = ''
           object btnFeedbackReload: TWebButton
             Tag = 1
-            AlignWithMargins = True
             Left = 15
             Top = 8
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-rotate"></i>'
-            ElementClassName = 'ShortButton btn btn-secondary btn-sm'
+            ElementClassName = 
+              'order-0 ReloadButton btn btn-secondary btn-sm border border-1 bo' +
+              'rder-dark'
             ElementID = 'btnFeedbackReload'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
             OnClick = btnFeedbackReloadClick
           end
-          object btnFeedbackPrint: TWebButton
-            Tag = 1
-            AlignWithMargins = True
-            Left = 289
-            Top = 8
-            Width = 50
-            Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
-            Caption = '<i class="fa-solid fa-print me-1"></i> Print'
-            ChildOrder = 4
-            ElementClassName = 'ShortButton btn btn-dark btn-sm'
-            ElementID = 'btnFeedbackPrint'
-            ElementFont = efCSS
-            ElementPosition = epRelative
-            HeightPercent = 100.000000000000000000
-            WidthStyle = ssAuto
-            WidthPercent = 100.000000000000000000
-            OnClick = btnIssuesPrintClick
-          end
           object btnFeedbackStatusNew: TWebButton
             Tag = 1
-            AlignWithMargins = True
             Left = 75
             Top = 8
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-tag me-1"></i> Set Status: New'
             ChildOrder = 1
-            ElementClassName = 'ShortButton btn btn-warning btn-sm'
+            ElementClassName = 
+              'order-1 ShortButton btn btn-warning btn-sm border border-1 borde' +
+              'r-dark'
             ElementID = 'btnFeedbackStatusNew'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             Visible = False
             WidthStyle = ssAuto
@@ -4103,21 +4449,19 @@ object Form1: TForm1
           end
           object btnFeedbackStatusInProgress: TWebButton
             Tag = 1
-            AlignWithMargins = True
             Left = 125
             Top = 8
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-tag me-1"></i> In Progress'
             ChildOrder = 2
-            ElementClassName = 'ShortButton btn btn-primary btn-sm'
+            ElementClassName = 
+              'order-2 ShortButton btn btn-primary btn-sm border border-1 borde' +
+              'r-dark'
             ElementID = 'btnFeedbackStatusInProgress'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             Visible = False
             WidthStyle = ssAuto
@@ -4126,21 +4470,19 @@ object Form1: TForm1
           end
           object btnFeedbackStatusClosed: TWebButton
             Tag = 1
-            AlignWithMargins = True
             Left = 181
             Top = 8
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-tag me-1"></i> Closed'
             ChildOrder = 3
-            ElementClassName = 'ShortButton btn btn-success btn-sm'
+            ElementClassName = 
+              'order-3 ShortButton btn btn-success btn-sm border border-1 borde' +
+              'r-dark'
             ElementID = 'btnFeedbackStatusClosed'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             Visible = False
             WidthStyle = ssAuto
@@ -4149,85 +4491,183 @@ object Form1: TForm1
           end
           object btnFeedbackActivityLog: TWebButton
             Tag = 1
-            AlignWithMargins = True
             Left = 231
             Top = 8
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-scroll me-1"></i> View Activity Log'
             ChildOrder = 4
-            ElementClassName = 'ShortButton btn btn-secondary btn-sm'
+            ElementClassName = 
+              'order-4 ShortButton btn btn-secondary btn-sm border border-1 bor' +
+              'der-dark'
             ElementID = 'btnFeedbackActivityLog'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
             OnClick = btnFeedbackActivityLogClick
           end
+          object panelFeedbackExport: TWebPanel
+            Left = 35
+            Top = 40
+            Width = 339
+            Height = 24
+            ElementClassName = 'order-5 ButtonBarGroup'
+            ElementID = 'panelFeedbackExport'
+            HeightStyle = ssAuto
+            WidthStyle = ssAuto
+            BorderColor = clNone
+            BorderStyle = bsNone
+            ChildOrder = 6
+            Color = clWhite
+            ElementBodyClassName = 'btn-group'
+            ElementFont = efCSS
+            ElementPosition = epRelative
+            object btnFeedbackExport: TWebButton
+              Tag = 4
+              Left = 0
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-download fa-lg me-1"></i> Export'
+              ElementClassName = 'order-0 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnFeedbackExport'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = btnFeedbackExportClick
+            end
+            object btnFeedbackExportCSV: TWebButton
+              Left = 66
+              Top = -1
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-csv fa-lg me-1"></i> CSV'
+              ChildOrder = 1
+              ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnFeedbackExportCSV'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuFeedbackExport
+            end
+            object btnFeedbackExportExcel: TWebButton
+              Tag = 1
+              Left = 160
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-excel fa-lg me-1"></i> XLSX'
+              ChildOrder = 2
+              ElementClassName = 'order-2 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnFeedbackExportExcel'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuFeedbackExport
+            end
+            object btnFeedbackExportJSON: TWebButton
+              Tag = 2
+              Left = 210
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-code fa-lg me-1"></i>  JSON'
+              ChildOrder = 3
+              ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnFeedbackExportJSON'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuFeedbackExport
+            end
+            object btnFeedbackExportPDF: TWebButton
+              Tag = 3
+              Left = 252
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-pdf fa-lg me-1"></i>  PDF'
+              ChildOrder = 4
+              ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnFeedbackExportPDF'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuFeedbackExport
+            end
+            object btnFeedbackExportPrint: TWebButton
+              Tag = 4
+              Left = 289
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-print fa-lg me-1"></i> Print'
+              ChildOrder = 5
+              ElementClassName = 'order-5 ShortestButton btn btn-primary btn-sm'
+              ElementID = 'btnFeedbackExportPrint'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuFeedbackExport
+            end
+          end
         end
         object divFeedback: TWebHTMLDiv
-          AlignWithMargins = True
           Left = 0
-          Top = 32
-          Width = 401
-          Height = 427
-          Margins.Left = 0
-          Margins.Top = 0
-          Margins.Right = 0
-          Margins.Bottom = 0
-          ElementClassName = 'overflow-hidden border border-0'
+          Top = 77
+          Width = 403
+          Height = 611
+          ElementClassName = 'rounded-bottom flex-fill overflow-hidden border border-0'
           ElementID = 'divFeedback'
-          Align = alClient
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
           ChildOrder = 1
+          ElementPosition = epRelative
           ElementFont = efCSS
           Role = ''
         end
       end
-      object splitterResponses: TWebSplitter
-        AlignWithMargins = True
-        Left = 525
-        Top = 50
-        Width = 6
-        Height = 367
-        Cursor = crHSplit
-        Margins.Left = 0
-        Margins.Top = 50
-        Margins.Right = 0
-        Margins.Bottom = 50
-        ElementClassName = 'rounded'
-        ElementID = 'splitterResponses'
-        Align = alLeft
-        ChildOrder = 2
-        Color = 8222060
-        GripColor = 8222060
-        OnMove = splitterResponsesMove
-      end
     end
     object pageQuestions: TWebTabSheet
-      AlignWithMargins = True
       Left = 0
       Top = 20
-      Width = 940
-      Height = 467
-      Margins.Left = 0
-      Margins.Top = 0
-      Margins.Right = 0
-      ElementClassName = 'rounded border border-dark bg-light'
+      Width = 1225
+      Height = 696
+      ElementClassName = 'Rounded10 border border-dark bg-light'
       ElementID = 'pageLibrary'
+      HeightStyle = ssPercent
+      WidthStyle = ssPercent
       Caption = 'Library'
       ChildOrder = 2
       ElementFont = efCSS
+      ElementPosition = epRelative
       object divLibrary: TWebHTMLDiv
         AlignWithMargins = True
         Left = 268
         Top = 4
-        Width = 668
-        Height = 459
+        Width = 953
+        Height = 688
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -4242,7 +4682,7 @@ object Form1: TForm1
           AlignWithMargins = True
           Left = 4
           Top = 80
-          Width = 660
+          Width = 945
           Height = 32
           Margins.Left = 4
           Margins.Top = 4
@@ -4270,7 +4710,7 @@ object Form1: TForm1
             AlignWithMargins = True
             Left = 102
             Top = 2
-            Width = 556
+            Width = 841
             Height = 28
             Margins.Left = 2
             Margins.Top = 2
@@ -4293,7 +4733,7 @@ object Form1: TForm1
           AlignWithMargins = True
           Left = 4
           Top = 42
-          Width = 660
+          Width = 945
           Height = 32
           Margins.Left = 4
           Margins.Top = 4
@@ -4322,7 +4762,7 @@ object Form1: TForm1
             AlignWithMargins = True
             Left = 102
             Top = 2
-            Width = 556
+            Width = 841
             Height = 28
             Margins.Left = 2
             Margins.Top = 2
@@ -4345,7 +4785,7 @@ object Form1: TForm1
           AlignWithMargins = True
           Left = 4
           Top = 4
-          Width = 660
+          Width = 945
           Height = 32
           Margins.Left = 4
           Margins.Top = 4
@@ -4374,7 +4814,7 @@ object Form1: TForm1
             AlignWithMargins = True
             Left = 102
             Top = 2
-            Width = 556
+            Width = 841
             Height = 28
             Margins.Left = 2
             Margins.Top = 2
@@ -4397,8 +4837,8 @@ object Form1: TForm1
           AlignWithMargins = True
           Left = 4
           Top = 116
-          Width = 660
-          Height = 339
+          Width = 945
+          Height = 568
           Margins.Left = 4
           Margins.Top = 2
           Margins.Right = 4
@@ -4412,7 +4852,7 @@ object Form1: TForm1
           object divLibraryContentHeader: TWebHTMLDiv
             Left = 0
             Top = 0
-            Width = 660
+            Width = 945
             Height = 50
             ElementClassName = 'sun-editor'
             ElementID = 'divLibraryContentHeader'
@@ -4424,8 +4864,8 @@ object Form1: TForm1
           end
           object divLibraryContentFooter: TWebHTMLDiv
             Left = 0
-            Top = 321
-            Width = 660
+            Top = 550
+            Width = 945
             Height = 18
             ElementClassName = 'sun-editor d-flex overflow-hidden'
             ElementID = 'divLibraryContentFooter'
@@ -4439,8 +4879,8 @@ object Form1: TForm1
             AlignWithMargins = True
             Left = 0
             Top = 50
-            Width = 660
-            Height = 270
+            Width = 945
+            Height = 499
             Margins.Left = 0
             Margins.Top = 0
             Margins.Right = 0
@@ -4458,28 +4898,27 @@ object Form1: TForm1
       object splitterLibrary: TWebSplitter
         AlignWithMargins = True
         Left = 258
-        Top = 50
+        Top = 48
         Width = 6
-        Height = 367
+        Height = 600
         Cursor = crHSplit
         Margins.Left = 0
-        Margins.Top = 50
+        Margins.Top = 48
         Margins.Right = 0
-        Margins.Bottom = 50
+        Margins.Bottom = 48
         ElementClassName = 'rounded'
         ElementID = 'splitterLibrary'
         Align = alLeft
         ChildOrder = 2
         Color = 8222060
         GripColor = 8222060
-        OnMove = splitterLibraryMove
       end
       object divLibraryListHolder: TWebHTMLDiv
         AlignWithMargins = True
         Left = 4
         Top = 4
         Width = 250
-        Height = 459
+        Height = 688
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -4585,7 +5024,7 @@ object Form1: TForm1
             Margins.Right = 0
             Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-rotate"></i>'
-            ElementClassName = 'ShortButton flex-fill  btn btn-secondary btn-sm'
+            ElementClassName = 'ReloadButton flex-fill  btn btn-secondary btn-sm'
             ElementID = 'btnLibraryListReload'
             ElementFont = efCSS
             ElementPosition = epRelative
@@ -4600,8 +5039,8 @@ object Form1: TForm1
           Left = 0
           Top = 32
           Width = 250
-          Height = 427
-          ElementClassName = 'overflow-hidden border border-0'
+          Height = 656
+          ElementClassName = 'rounded-bottom overflow-hidden border border-0'
           ElementID = 'divLibraryList'
           Align = alClient
           ChildOrder = 1
@@ -4611,109 +5050,79 @@ object Form1: TForm1
       end
     end
     object pageAccounts: TWebTabSheet
-      AlignWithMargins = True
       Left = 0
       Top = 20
-      Width = 940
-      Height = 467
-      Margins.Left = 0
-      Margins.Top = 0
-      Margins.Right = 0
-      ElementClassName = 'rounded border border-dark bg-light'
+      Width = 1225
+      Height = 696
+      ElementClassName = 'w-100 h-100 Page Rounded10 border border-dark bg-light'
       ElementID = 'pageAccounts'
+      HeightStyle = ssAuto
+      WidthStyle = ssAuto
       Caption = 'Accounts'
       ChildOrder = 3
       ElementFont = efCSS
+      ElementPosition = epRelative
+      OnShow = pageAccountsShow
       object divAccountsHolder: TWebHTMLDiv
-        AlignWithMargins = True
         Left = 4
         Top = 4
-        Width = 433
-        Height = 459
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ElementClassName = 'overflow-hidden rounded-1 border border-dark  bg-white'
+        Width = 600
+        Height = 688
+        ElementClassName = 
+          'RightSplitter d-flex flex-column overflow-hidden rounded border ' +
+          'border-dark  bg-white'
         ElementID = 'divAccountsHolder'
-        Align = alLeft
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ElementPosition = epRelative
         ElementFont = efCSS
         Role = ''
         object divAccountsButtons: TWebHTMLDiv
-          AlignWithMargins = True
-          Left = 4
+          Left = 0
           Top = 0
-          Width = 427
+          Width = 600
           Height = 32
-          Margins.Left = 4
-          Margins.Top = 0
-          Margins.Right = 2
-          Margins.Bottom = 0
-          ElementClassName = 'd-flex align-items-center '
+          ElementClassName = 'ButtonBar w-100'
           ElementID = 'divAccountsButtons'
-          Align = alTop
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
+          ElementPosition = epRelative
           ElementFont = efCSS
           Role = ''
           object btnAccountsReload: TWebButton
             Tag = 1
-            AlignWithMargins = True
             Left = 3
             Top = 5
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-rotate"></i>'
-            ElementClassName = 'ShortButton btn btn-secondary btn-sm'
+            ElementClassName = 
+              'order-0 ButtonBarReload btn btn-secondary btn-sm border border-1' +
+              ' border-dark'
             ElementID = 'btnAccountsReload'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
             OnClick = btnAccountsReloadClick
           end
-          object btnAccountsPrint: TWebButton
-            Tag = 1
-            AlignWithMargins = True
-            Left = 187
-            Top = 5
-            Width = 50
-            Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
-            Caption = '<i class="fa-solid fa-print me-1"></i> Print'
-            ChildOrder = 3
-            ElementClassName = 'ShortButton btn btn-dark btn-sm'
-            ElementID = 'btnAcountsPrint'
-            ElementFont = efCSS
-            ElementPosition = epRelative
-            HeightPercent = 100.000000000000000000
-            WidthStyle = ssAuto
-            WidthPercent = 100.000000000000000000
-            OnClick = btnAccountsPrintClick
-          end
           object btnAddUser: TWebButton
             Tag = 1
-            AlignWithMargins = True
             Left = 54
             Top = 5
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-user-plus me-1"></i> Add'
             ChildOrder = 1
-            ElementClassName = 'ShortButton btn btn-primary btn-sm'
+            ElementClassName = 
+              'order-1 ButtonBarElement btn btn-primary btn-sm border border-1 ' +
+              'border-dark'
             ElementID = 'btnAddUser'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
@@ -4721,21 +5130,19 @@ object Form1: TForm1
           end
           object btnDeleteUser: TWebButton
             Tag = 1
-            AlignWithMargins = True
-            Left = 121
+            Left = 104
             Top = 5
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-user-minus me-1"></i> Delete'
             ChildOrder = 2
-            ElementClassName = 'ShortButton btn btn-danger btn-sm'
+            ElementClassName = 
+              'order-2 ButtonBarElement btn btn-danger btn-sm border border-1 b' +
+              'order-dark'
             ElementID = 'btnDeleteUser'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
@@ -4743,156 +5150,256 @@ object Form1: TForm1
           end
           object btnSetPassword: TWebButton
             Tag = 1
-            AlignWithMargins = True
-            Left = 237
+            Left = 154
             Top = 5
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-key me-1"></i> Set Password'
-            ChildOrder = 4
-            ElementClassName = 'ShortButton btn btn-secondary btn-sm'
+            ChildOrder = 3
+            ElementClassName = 
+              'order-3 ButtonBarElement btn btn-secondary btn-sm border border-' +
+              '1 border-dark'
             ElementID = 'btnSetPassword'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
             OnClick = btnSetPasswordClick
           end
           object edtSetPassword: TWebEdit
-            AlignWithMargins = True
-            Left = 289
-            Top = 4
-            Width = 150
+            Left = 207
+            Top = 5
+            Width = 125
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
-            ChildOrder = 5
-            ElementClassName = 'ShortButton border border-secondary rounded-1'
+            ChildOrder = 4
+            ElementClassName = 'order-4 ButtonBarElement border border-1 border-dark rounded-1'
             ElementID = 'edtSetPassword'
             ElementFont = efCSS
             ElementPosition = epRelative
             HeightPercent = 100.000000000000000000
             SpellCheck = False
-            WidthStyle = ssPercent
             WidthPercent = 100.000000000000000000
+          end
+          object panelAccountsExport: TWebPanel
+            Left = 324
+            Top = 4
+            Width = 339
+            Height = 24
+            ElementClassName = 'order-5 ButtonBarGroup'
+            ElementID = 'panelAccountsExport'
+            HeightStyle = ssAuto
+            WidthStyle = ssAuto
+            BorderColor = clNone
+            BorderStyle = bsNone
+            ChildOrder = 5
+            Color = clWhite
+            ElementBodyClassName = 'btn-group'
+            ElementFont = efCSS
+            ElementPosition = epRelative
+            object btnAccountsExport: TWebButton
+              Tag = 4
+              Left = 7
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-download fa-lg me-1"></i> Export'
+              ElementClassName = 'order-0 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnAccountsExport'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = btnAccountsExportClick
+            end
+            object btnAccountsExportCSV: TWebButton
+              Left = 54
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-csv fa-lg me-1"></i> CSV'
+              ChildOrder = 1
+              ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnAccountsExportCSV'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuAccountsExport
+            end
+            object btnAccountsExportExcel: TWebButton
+              Tag = 1
+              Left = 106
+              Top = -1
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-excel fa-lg me-1"></i> XLSX'
+              ChildOrder = 2
+              ElementClassName = 'order-2 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnAccountsExportExcel'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuAccountsExport
+            end
+            object btnAccountsExportJSON: TWebButton
+              Tag = 2
+              Left = 155
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-code fa-lg me-1"></i>  JSON'
+              ChildOrder = 3
+              ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnAccountsExportJSON'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuAccountsExport
+            end
+            object btnAccountsExportPDF: TWebButton
+              Tag = 3
+              Left = 203
+              Top = -1
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-pdf fa-lg me-1"></i>  PDF'
+              ChildOrder = 4
+              ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnAccountsExportPDF'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuAccountsExport
+            end
+            object btnAccountsExportPrint: TWebButton
+              Tag = 4
+              Left = 232
+              Top = -1
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-print fa-lg me-1"></i> Print'
+              ChildOrder = 5
+              ElementClassName = 'order-5 ShortestButton btn btn-primary btn-sm'
+              ElementID = 'btnAccountsExportPrint'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuAccountsExport
+            end
           end
         end
         object divAccounts: TWebHTMLDiv
-          AlignWithMargins = True
           Left = 0
           Top = 32
-          Width = 433
-          Height = 427
-          Margins.Left = 0
-          Margins.Top = 0
-          Margins.Right = 0
-          Margins.Bottom = 0
-          ElementClassName = 'overflow-hidden border border-0'
+          Width = 600
+          Height = 656
+          ElementClassName = 'rounded-bottom flex-fill overflow-hidden border border-0'
           ElementID = 'divAccounts'
-          Align = alClient
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
           ChildOrder = 1
+          ElementPosition = epRelative
           ElementFont = efCSS
+          Role = ''
+        end
+        object divAccountsHolderResize: TWebHTMLDiv
+          Left = 80
+          Top = 528
+          Width = 100
+          Height = 41
+          ElementClassName = 'ResizeElement'
+          ElementID = 'divAccountsHolderResize'
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
+          ChildOrder = 2
+          ElementPosition = epIgnore
+          ElementFont = efCSS
+          HTML.Strings = (
+            '<div class="InnerTriangle1"></div>'
+            '<div class="InnerTriangle2"></div>'
+            '')
           Role = ''
         end
       end
       object divIssuesHolder: TWebHTMLDiv
-        AlignWithMargins = True
-        Left = 451
+        Left = 618
         Top = 4
-        Width = 485
-        Height = 459
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ElementClassName = 'overflow-hidden rounded-1 border border-dark  bg-white'
+        Width = 603
+        Height = 688
+        ElementClassName = 
+          'flex-fill d-flex flex-column overflow-hidden rounded border bord' +
+          'er-dark  bg-white'
         ElementID = 'divIssuesHolder'
-        Align = alClient
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
         ChildOrder = 1
+        ElementPosition = epRelative
         ElementFont = efCSS
         Role = ''
         object divIssuesButtons: TWebHTMLDiv
-          AlignWithMargins = True
-          Left = 4
+          Left = 0
           Top = 0
-          Width = 479
+          Width = 603
           Height = 32
-          Margins.Left = 4
-          Margins.Top = 0
-          Margins.Right = 2
-          Margins.Bottom = 0
-          ElementClassName = 'd-flex align-items-center '
+          ElementClassName = 'ButtonBar w-100'
           ElementID = 'divIssuesButtons'
-          Align = alTop
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
+          ElementPosition = epRelative
           ElementFont = efCSS
           Role = ''
           object btnIssuesReload: TWebButton
             Tag = 1
-            AlignWithMargins = True
-            Left = 15
-            Top = 8
+            Left = 0
+            Top = 0
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-rotate"></i>'
-            ElementClassName = 'ShortButton btn btn-secondary btn-sm'
+            ElementClassName = 
+              'order-0 ButtonBarReload btn btn-secondary btn-sm border border-1' +
+              ' border-dark'
             ElementID = 'btnIssuesReload'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
             OnClick = btnIssuesReloadClick
           end
-          object btnIssuesPrint: TWebButton
-            Tag = 1
-            AlignWithMargins = True
-            Left = 289
-            Top = 8
-            Width = 50
-            Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
-            Caption = '<i class="fa-solid fa-print me-1"></i> Print'
-            ChildOrder = 4
-            ElementClassName = 'ShortButton btn btn-dark btn-sm'
-            ElementID = 'btnIssuesPrint'
-            ElementFont = efCSS
-            ElementPosition = epRelative
-            HeightPercent = 100.000000000000000000
-            WidthStyle = ssAuto
-            WidthPercent = 100.000000000000000000
-            OnClick = btnIssuesPrintClick
-          end
           object btnIssueStatusNew: TWebButton
             Tag = 1
-            AlignWithMargins = True
-            Left = 75
-            Top = 8
+            Left = 50
+            Top = 0
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-tag me-1"></i> Set Status: New'
             ChildOrder = 1
-            ElementClassName = 'ShortButton btn btn-warning btn-sm'
+            ElementClassName = 
+              'order-1 ButtonBarElement btn btn-warning btn-sm border border-1 ' +
+              'border-dark'
             ElementID = 'btnIssueStatusNew'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
@@ -4900,21 +5407,19 @@ object Form1: TForm1
           end
           object btnIssueStatusInProgress: TWebButton
             Tag = 1
-            AlignWithMargins = True
-            Left = 125
-            Top = 8
+            Left = 100
+            Top = 0
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-tag me-1"></i> In Progress'
             ChildOrder = 2
-            ElementClassName = 'ShortButton btn btn-primary btn-sm'
+            ElementClassName = 
+              'order-2 ButtonBarElement btn btn-primary btn-sm border border-1 ' +
+              'border-dark'
             ElementID = 'btnIssueStatusInProgress'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
@@ -4922,21 +5427,19 @@ object Form1: TForm1
           end
           object btnIssueStatusClosed: TWebButton
             Tag = 1
-            AlignWithMargins = True
-            Left = 181
-            Top = 8
+            Left = 150
+            Top = 0
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-tag me-1"></i> Closed'
             ChildOrder = 3
-            ElementClassName = 'ShortButton btn btn-success btn-sm'
+            ElementClassName = 
+              'order-3 ButtonBarElement btn btn-success btn-sm border border-1 ' +
+              'border-dark'
             ElementID = 'btnIssueStatusClosed'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
@@ -4944,144 +5447,228 @@ object Form1: TForm1
           end
           object btnViewActivityLog: TWebButton
             Tag = 1
-            AlignWithMargins = True
-            Left = 231
-            Top = 8
+            Left = 200
+            Top = 0
             Width = 50
             Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 0
-            Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-scroll me-1"></i> View Activity Log'
             ChildOrder = 4
-            ElementClassName = 'ShortButton btn btn-secondary btn-sm'
+            ElementClassName = 
+              'order-4 ButtonBarElement btn btn-secondary btn-sm border border-' +
+              '1 border-dark'
             ElementID = 'btnViewActivityLog'
             ElementFont = efCSS
             ElementPosition = epRelative
+            HeightStyle = ssAuto
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
             OnClick = btnViewActivityLogClick
           end
+          object panelIssuesExport: TWebPanel
+            Left = 303
+            Top = 4
+            Width = 339
+            Height = 24
+            ElementClassName = 'order-5 ButtonBarGroup'
+            ElementID = 'panelIssuesExport'
+            HeightStyle = ssAuto
+            WidthStyle = ssAuto
+            BorderColor = clNone
+            BorderStyle = bsNone
+            ChildOrder = 6
+            Color = clWhite
+            ElementBodyClassName = 'btn-group'
+            ElementFont = efCSS
+            ElementPosition = epRelative
+            object btnIssuesExport: TWebButton
+              Tag = 4
+              Left = 16
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-download fa-lg me-1"></i> Export'
+              ElementClassName = 'order-0 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnIssuesExport'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = btnIssuesExportClick
+            end
+            object btnIssuesExportCSV: TWebButton
+              Left = 66
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-csv fa-lg me-1"></i> CSV'
+              ChildOrder = 1
+              ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnIssuesExportCSV'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuIssuesExport
+            end
+            object btnIssuesExportExcel: TWebButton
+              Tag = 1
+              Left = 168
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-excel fa-lg me-1"></i> XLSX'
+              ChildOrder = 2
+              ElementClassName = 'order-2 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnIssuesExportExcel'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuIssuesExport
+            end
+            object btnIssuesExportJSON: TWebButton
+              Tag = 2
+              Left = 116
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-code fa-lg me-1"></i>  JSON'
+              ChildOrder = 3
+              ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnIssuesExportJSON'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuIssuesExport
+            end
+            object btnIssuesExportPDF: TWebButton
+              Tag = 3
+              Left = 204
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-pdf fa-lg me-1"></i>  PDF'
+              ChildOrder = 4
+              ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnIssuesExportPDF'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuIssuesExport
+            end
+            object btnIssuesExportPrint: TWebButton
+              Tag = 4
+              Left = 257
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-print fa-lg me-1"></i> Print'
+              ChildOrder = 5
+              ElementClassName = 'order-5 ShortestButton btn btn-primary btn-sm'
+              ElementID = 'btnIssuesExportPrint'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuIssuesExport
+            end
+          end
         end
         object divIssues: TWebHTMLDiv
-          AlignWithMargins = True
           Left = 0
           Top = 32
-          Width = 485
-          Height = 427
-          Margins.Left = 0
-          Margins.Top = 0
-          Margins.Right = 0
-          Margins.Bottom = 0
-          ElementClassName = 'overflow-hidden border border-0'
+          Width = 603
+          Height = 656
+          ElementClassName = 'rounded-bottom flex-fill overflow-hidden border border-0'
           ElementID = 'divIssues'
-          Align = alClient
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
           ChildOrder = 1
+          ElementPosition = epRelative
           ElementFont = efCSS
           Role = ''
         end
       end
-      object splitterAccounts: TWebSplitter
-        AlignWithMargins = True
-        Left = 441
-        Top = 50
-        Width = 6
-        Height = 367
-        Cursor = crHSplit
-        Margins.Left = 0
-        Margins.Top = 50
-        Margins.Right = 0
-        Margins.Bottom = 50
-        ElementClassName = 'rounded'
-        ElementID = 'splitterAccounts'
-        Align = alLeft
-        ChildOrder = 2
-        Color = 8222060
-        GripColor = 8222060
-        OnMove = splitterAccountsMove
-      end
     end
     object pageLogging: TWebTabSheet
-      AlignWithMargins = True
       Left = 0
       Top = 20
-      Width = 940
-      Height = 467
-      Margins.Left = 0
-      Margins.Top = 0
-      Margins.Right = 0
-      ElementClassName = 'rounded border border-dark bg-light'
+      Width = 1225
+      Height = 696
+      ElementClassName = 'Page Rounded10 border border-dark bg-light'
       ElementID = 'pageLogging'
+      HeightStyle = ssPercent
+      WidthStyle = ssPercent
       Caption = 'Logging'
       ChildOrder = 4
       ElementFont = efCSS
+      OnShow = pageLoggingShow
       object divLoggingHolder: TWebHTMLDiv
-        AlignWithMargins = True
         Left = 4
         Top = 4
-        Width = 932
-        Height = 459
+        Width = 1217
+        Height = 453
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ElementClassName = 'overflow-hidden rounded-1 border border-dark  bg-white'
+        ElementClassName = 
+          'w-100 h-100 d-flex flex-column overflow-hidden rounded border bo' +
+          'rder-dark  bg-white'
         ElementID = 'divLoggingHolder'
-        Align = alClient
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ElementPosition = epRelative
         ElementFont = efCSS
         Role = ''
         object divLoggingButtons: TWebHTMLDiv
           AlignWithMargins = True
           Left = 4
           Top = 0
-          Width = 926
+          Width = 1211
           Height = 32
           Margins.Left = 4
           Margins.Top = 0
           Margins.Right = 2
           Margins.Bottom = 0
-          ElementClassName = 'd-flex align-items-center '
+          ElementClassName = 'ButtonBar w-100'
           ElementID = 'divLoggingButtons'
+          HeightStyle = ssAuto
           Align = alTop
+          ElementPosition = epRelative
           ElementFont = efCSS
           Role = ''
-          object btnLoggingToday: TWebButton
-            AlignWithMargins = True
-            Left = 2
-            Top = 3
-            Width = 50
-            Height = 24
-            Margins.Left = 0
-            Margins.Top = 0
-            Margins.Right = 1
-            Margins.Bottom = 0
-            Caption = '<i class="fa-solid fa-calendar-day me-1 "></i> Today'
-            ChildOrder = 1
-            ElementClassName = 'ShortButton btn btn-secondary btn-sm'
-            ElementID = 'btnLoggingToday'
-            ElementFont = efCSS
-            ElementPosition = epRelative
-            HeightPercent = 100.000000000000000000
-            WidthStyle = ssAuto
-            WidthPercent = 100.000000000000000000
-            OnClick = btnLoggingTodayClick
-          end
           object btnLogging7Days: TWebButton
             Tag = 1
             AlignWithMargins = True
-            Left = 53
-            Top = 3
+            Left = 276
+            Top = 0
             Width = 50
             Height = 24
             Margins.Left = 0
             Margins.Top = 0
             Margins.Right = 1
             Margins.Bottom = 0
-            Caption = '<i class="fa-solid fa-calendar-week me-1"></i>Past 7 days'
-            ChildOrder = 2
-            ElementClassName = 'ShortButton  btn btn-secondary btn-sm'
+            Caption = '<i class="fa-solid fa-calendar-week me-1"></i> Past 7 Days'
+            ChildOrder = 4
+            ElementClassName = 
+              'order-4 ButtonBarElement  btn btn-success btn-sm border border-1' +
+              ' border-dark'
             ElementID = 'btnLogging7Days'
             ElementFont = efCSS
             ElementPosition = epRelative
@@ -5093,8 +5680,8 @@ object Form1: TForm1
           object btnLoggingAllData: TWebButton
             Tag = 2
             AlignWithMargins = True
-            Left = 103
-            Top = 3
+            Left = 327
+            Top = 0
             Width = 50
             Height = 24
             Margins.Left = 0
@@ -5102,8 +5689,10 @@ object Form1: TForm1
             Margins.Right = 0
             Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-calendar-days me-1"></i> All Data'
-            ChildOrder = 3
-            ElementClassName = 'ShortButton btn btn-secondary btn-sm'
+            ChildOrder = 5
+            ElementClassName = 
+              'order-5 ButtonBarElement btn btn-success btn-sm border border-1 ' +
+              'border-dark'
             ElementID = 'btnLoggingAllData'
             ElementFont = efCSS
             ElementPosition = epRelative
@@ -5112,11 +5701,35 @@ object Form1: TForm1
             WidthPercent = 100.000000000000000000
             OnClick = btnLoggingAllDataClick
           end
+          object btnLoggingClearFilters: TWebButton
+            Tag = 1
+            AlignWithMargins = True
+            Left = 58
+            Top = 8
+            Width = 50
+            Height = 24
+            Margins.Left = 0
+            Margins.Top = 0
+            Margins.Right = 0
+            Margins.Bottom = 0
+            Caption = '<i class="fa-solid fa-broom me-1"></i> Clear Filters'
+            ChildOrder = 1
+            ElementClassName = 
+              'order-1 ButtonBarElement btn btn-info btn-sm border border-1 bor' +
+              'der-dark text-dark'
+            ElementID = 'btnLoggingClearFilters'
+            ElementFont = efCSS
+            ElementPosition = epRelative
+            HeightPercent = 100.000000000000000000
+            WidthStyle = ssAuto
+            WidthPercent = 100.000000000000000000
+            OnClick = btnLoggingClearFiltersClick
+          end
           object btnLoggingReload: TWebButton
             Tag = 1
             AlignWithMargins = True
-            Left = 153
-            Top = 3
+            Left = 8
+            Top = 8
             Width = 50
             Height = 24
             Margins.Left = 0
@@ -5124,7 +5737,9 @@ object Form1: TForm1
             Margins.Right = 0
             Margins.Bottom = 0
             Caption = '<i class="fa-solid fa-rotate"></i>'
-            ElementClassName = 'ShortButton btn btn-secondary btn-sm'
+            ElementClassName = 
+              'order-0 ButtonBarReload  btn btn-secondary btn-sm border border-' +
+              '1 border-dark'
             ElementID = 'btnLoggingReload'
             ElementFont = efCSS
             ElementPosition = epRelative
@@ -5133,43 +5748,307 @@ object Form1: TForm1
             WidthPercent = 100.000000000000000000
             OnClick = btnLoggingReloadClick
           end
-          object btnLoggingPrint: TWebButton
-            Tag = 1
+          object btnLoggingToday: TWebButton
             AlignWithMargins = True
-            Left = 206
-            Top = 3
+            Left = 225
+            Top = 0
             Width = 50
             Height = 24
             Margins.Left = 0
             Margins.Top = 0
-            Margins.Right = 0
+            Margins.Right = 1
             Margins.Bottom = 0
-            Caption = '<i class="fa-solid fa-print me-1"></i> Print'
-            ChildOrder = 4
-            ElementClassName = 'ShortButton btn btn-dark btn-sm'
-            ElementID = 'btnLoggingPrint'
+            Caption = '<i class="fa-solid fa-calendar-day me-1 "></i> Today'
+            ChildOrder = 3
+            ElementClassName = 
+              'order-3 ButtonBarElement btn btn-success btn-sm border border-1 ' +
+              'border-dark'
+            ElementID = 'btnLoggingToday'
             ElementFont = efCSS
             ElementPosition = epRelative
             HeightPercent = 100.000000000000000000
             WidthStyle = ssAuto
             WidthPercent = 100.000000000000000000
-            OnClick = btnLoggingPrintClick
+            OnClick = btnLoggingTodayClick
+          end
+          object divLoggingDateRangeHolder: TWebHTMLDiv
+            AlignWithMargins = True
+            Left = 381
+            Top = 0
+            Width = 373
+            Height = 24
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            ElementClassName = 
+              'order-6 ButtonBarElement d-flex align-items-center overflow-hidd' +
+              'en Rounded5  bg-success border border-1 border-dark'
+            ElementID = 'divLoggingDateRangeHolder'
+            WidthStyle = ssAuto
+            ChildOrder = 6
+            ElementPosition = epRelative
+            ElementFont = efCSS
+            Role = ''
+            object labelLoggingDateRange: TWebLabel
+              AlignWithMargins = True
+              Left = 8
+              Top = 0
+              Width = 77
+              Height = 24
+              Margins.Left = 8
+              Margins.Top = 0
+              Margins.Right = 8
+              Margins.Bottom = 0
+              Align = alLeft
+              AutoSize = False
+              Caption = 'Date Range'
+              ElementClassName = 'text-white '
+              ElementID = 'labelLoggingDateRange'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              HTML = '<i class="fa-solid fa-calendar-check me-1"></i> Range'
+              Layout = tlCenter
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              ExplicitHeight = 13
+            end
+            object divLoggingStart: TWebHTMLDiv
+              Left = 93
+              Top = -3
+              Width = 98
+              Height = 22
+              ElementClassName = 
+                'overflow-hidden DateEdit rounded-1 bg-white border border-1 ps-1' +
+                ' border-success'
+              ElementID = 'divLoggingStart'
+              ChildOrder = 3
+              ElementPosition = epRelative
+              ElementFont = efCSS
+              Role = ''
+            end
+            object divLoggingEnd: TWebHTMLDiv
+              Left = 218
+              Top = -3
+              Width = 98
+              Height = 22
+              ElementClassName = 
+                'overflow-hidden DateEdit rounded-1 bg-white border border-1 ps-1' +
+                ' border-success'
+              ElementID = 'divLoggingEnd'
+              ChildOrder = 3
+              ElementPosition = epRelative
+              ElementFont = efCSS
+              Role = ''
+            end
+          end
+          object divLoggingGroupingHolder: TWebHTMLDiv
+            Left = 110
+            Top = 8
+            Width = 120
+            Height = 24
+            ElementClassName = 
+              'order-2 overflow-hidden d-flex align-items-center ButtonBarEleme' +
+              'nt bg-info rounded-1 border border-1 border-dark'
+            ElementID = 'divLoggingGroupingHolder'
+            WidthStyle = ssAuto
+            ChildOrder = 2
+            ElementPosition = epRelative
+            ElementFont = efCSS
+            Role = ''
+            object labelLoggingGroupingLabel: TWebLabel
+              AlignWithMargins = True
+              Left = 0
+              Top = 0
+              Width = 335
+              Height = 18
+              Cursor = crHandPoint
+              Margins.Left = 0
+              Margins.Top = 0
+              Margins.Right = 0
+              Margins.Bottom = 0
+              ElementClassName = 'text-dark'
+              ElementID = 'labelLoggingGroupingLabel'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightStyle = ssAuto
+              HeightPercent = 100.000000000000000000
+              HTML = '<i class="fa-solid fa-bars fa-fw me-1"></i> Group:'
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = labelLoggingGroupingLabelClick
+            end
+            object comboLoggingGrouping: TWebComboBox
+              Left = 34
+              Top = 0
+              Width = 100
+              Height = 26
+              Cursor = crHandPoint
+              ChildOrder = 2
+              ElementClassName = 'ButtonBarCombo rounded-1 bg-info border border-0'
+              ElementID = 'comboLoggingGrouping'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              ShowFocus = False
+              Text = 'No Grouping'
+              WidthPercent = 100.000000000000000000
+              OnChange = comboLoggingGroupingChange
+              ItemIndex = 0
+              Items.Strings = (
+                'No Grouping'
+                'by Survey'
+                'by Account'
+                'by E-Mail'
+                'by IP Address'
+                'by Endpoint'
+                'by Version')
+            end
+          end
+          object panelLoggingExport: TWebPanel
+            AlignWithMargins = True
+            Left = 755
+            Top = 0
+            Width = 339
+            Height = 24
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            ElementClassName = 'order-7 ButtonBarGroup'
+            ElementID = 'panelLoggingExport'
+            WidthStyle = ssAuto
+            BorderColor = clNone
+            BorderStyle = bsNone
+            ChildOrder = 7
+            Color = clWhite
+            ElementBodyClassName = 'btn-group'
+            ElementFont = efCSS
+            ElementPosition = epRelative
+            object btnLoggingExport: TWebButton
+              Tag = 4
+              Left = 1
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-download fa-lg  me-1"></i> Export'
+              ElementClassName = 'order-0 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnLoggingExport'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = btnLoggingExportClick
+            end
+            object btnLoggingExportCSV: TWebButton
+              Left = 62
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-csv fa-lg me-1"></i> CSV'
+              ChildOrder = 1
+              ElementClassName = 'order-1 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnLoggingExportCSV'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuLoggingExport
+            end
+            object btnLoggingExportExcel: TWebButton
+              Tag = 1
+              Left = 112
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-excel fa-lg me-1"></i> XLSX'
+              ChildOrder = 2
+              ElementClassName = 'order-2 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnLoggingExportExcel'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuLoggingExport
+            end
+            object btnLoggingExportJSON: TWebButton
+              Tag = 2
+              Left = 162
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-code fa-lg me-1"></i>  JSON'
+              ChildOrder = 3
+              ElementClassName = 'order-3 ShortestButton btn btn-dark btn-sm'
+              ElementID = 'btnLoggingExportJSON'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuLoggingExport
+            end
+            object btnLoggingExportPDF: TWebButton
+              Tag = 3
+              Left = 212
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-file-pdf fa-lg me-1"></i>  PDF'
+              ChildOrder = 4
+              ElementClassName = 'order-4 ShortestButton btn btn-dark btn-sm '
+              ElementID = 'btnLoggingExportPDF'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuLoggingExport
+            end
+            object btnLoggingExportPrint: TWebButton
+              Tag = 4
+              Left = 261
+              Top = 0
+              Width = 50
+              Height = 22
+              Caption = '<i class="fa-solid fa-print fa-lg me-1"></i> Print'
+              ChildOrder = 5
+              ElementClassName = 'order-4 ShortestButton btn btn-primary btn-sm'
+              ElementID = 'btnLoggingExportPrint'
+              ElementFont = efCSS
+              ElementPosition = epRelative
+              HeightPercent = 100.000000000000000000
+              TabOrder = 10
+              WidthStyle = ssAuto
+              WidthPercent = 100.000000000000000000
+              OnClick = MenuLoggingExport
+            end
           end
         end
         object divLogging: TWebHTMLDiv
           AlignWithMargins = True
           Left = 0
           Top = 32
-          Width = 932
-          Height = 427
+          Width = 1217
+          Height = 421
           Margins.Left = 0
           Margins.Top = 0
           Margins.Right = 0
           Margins.Bottom = 0
-          ElementClassName = 'overflow-hidden border border-0'
+          ElementClassName = 'w-100 rounded-bottom flex-fill overflow-hidden border border-0'
           ElementID = 'divLogging'
           Align = alClient
           ChildOrder = 1
+          ElementPosition = epRelative
           ElementFont = efCSS
           Role = ''
         end
@@ -5183,7 +6062,6 @@ object Form1: TForm1
     Height = 41
     ElementClassName = 'Open'
     ElementID = 'divBlocker'
-    ChildOrder = 3
     ElementFont = efCSS
     Role = ''
   end
@@ -5197,7 +6075,7 @@ object Form1: TForm1
       'ndary'
     ElementID = 'panelQuestionTypes'
     Caption = 'panelQuestionTypes'
-    ChildOrder = 1
+    ChildOrder = 4
     ElementFont = efCSS
     Visible = False
   end
