@@ -1,5 +1,11 @@
 # TMS-Web-Core-SurveyAdminClient
+This is a component of the [TMS WEB Core](https://www.tmssoftware.com/site/tmswebcore.asp) (Delphi web app) and [TMS XData](https://www.tmssoftware.com/site/xdata.asp) (Delphi REST API) project that implements a complete web-based survey app. The complete set includes the following.
 
+1. [Survey Server example](https://github.com/500Foods/TMS-XData-SurveyServerExample) (REST API implemented with TMS XData)
+2. [Survey Admin Client](https://github.com/500Foods/TMS-Web-Core-SurveyAdminClient) (web app implemented with TMS WEB Core)
+3. [Survey Client Example](https://github.com/500Foods/TMS-WEB-Core-SurveyClientExample) (web app implemented with TMS WEB Core)
+
+The project first appeared as a mini-series on the [TMS Software Blog](https://www.tmssoftware.com/site/blog.asp). The first of the three parts is available [here](https://www.tmssoftware.com/site/tmswebcore.asp).
 ## Repository Information
 [![Count Lines of Code](https://github.com/500Foods/TMS-Web-Core-SurveyAdminClient/actions/workflows/main.yml/badge.svg)](https://github.com/500Foods/TMS-Web-Core-SurveyAdminClient/actions/workflows/main.yml)
 ```
