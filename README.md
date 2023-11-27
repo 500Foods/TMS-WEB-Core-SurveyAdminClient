@@ -10,17 +10,19 @@ The project first appeared as a mini-series on the [TMS Software Blog](https://w
 [![Count Lines of Code](https://github.com/500Foods/TMS-Web-Core-SurveyAdminClient/actions/workflows/main.yml/badge.svg)](https://github.com/500Foods/TMS-Web-Core-SurveyAdminClient/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last Updated at 2023-11-27 01:52:22 UTC
+Last Updated at 2023-11-27 02:26:34 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Pascal                           2             48             62            160
-Delphi Form                      1              0              0             39
-Markdown                         1              8              2             39
-YAML                             2             11             13             33
-HTML                             2              7              0             23
+Delphi Form                      3              2              0           6584
+Pascal                           4            620           1292           3548
+CSS                              4            288             99           1601
+HTML                             5            251             15           1227
+YAML                             2              8             12             33
+Markdown                         1              4              2             24
+Text                             1              1              0              4
 -------------------------------------------------------------------------------
-SUM:                             8             74             77            294
+SUM:                            20           1174           1420          13021
 -------------------------------------------------------------------------------
 ```
 <!--CLOC-END-->
