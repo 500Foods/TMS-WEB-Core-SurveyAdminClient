@@ -3023,7 +3023,6 @@ object Form1: TForm1
                   DropDownHeight = 437
                   DropDownShadow = False
                   DropDownWidth = 450
-                  ElementInputClassName = 'ddQuestionTypeInput'
                   ElementFont = efCSS
                   ElementPosition = epRelative
                   ParentColor = False

@@ -81,12 +81,12 @@ begin
   // Development server or Production server?
   if GetQueryParam('Development') <> '' then
   begin
-    Form1.ServerName := 'http://localhost:2001/tms/xdata';
+    Form1.ServerName := 'http ://localhost:10101/500surveys';
     Form1.LogActivity('Development Mode Specified');
   end
   else
   begin
-    Form1.ServerName := 'https://carnival.500foods.com:10101/500Surveys';
+    Form1.ServerName := 'https://carnival.500foods.com:10101/500surveys';
   end;
   Form1.LogActivity('Connecting to '+Form1.ServerName);
   labelLoginProgress.Caption := Form1.ServerName;
